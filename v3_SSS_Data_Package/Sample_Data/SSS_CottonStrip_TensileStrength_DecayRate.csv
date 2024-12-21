@@ -1,0 +1,207 @@
+#Columns,7,,,,,,
+#Header_Rows,12,,,,,,
+Field_Name,Sample_Name,Material,Tensile_Strength_pounds,Total_Incubation_days,Decay_Rate_per_day,Methods_Deviation,Appearance_Notes
+Unit,N/A,N/A,pounds,days,per_day,N/A,N/A
+Unit_Basis,N/A,N/A,as_force,N/A,N/A,N/A,N/A
+MethodID_Analysis,N/A,N/A,COT_T_AN_000,N/A,COT_T_AN_000,N/A,N/A
+MethodID_Inspection,N/A,N/A,COT_T_IN_000,N/A,COT_T_IN_000,N/A,N/A
+MethodID_Storage,N/A,N/A,COT_T_ST_000,N/A,COT_T_ST_000,N/A,N/A
+MethodID_Preservation,N/A,N/A,COT_T_PRES_000,N/A,COT_T_PRES_000,N/A,N/A
+MethodID_Preparation,N/A,N/A,COT_T_PREP_000,N/A,COT_T_PREP_000,N/A,N/A
+MethodID_DataProcessing,N/A,N/A,COT_T_DP_000,N/A,COT_T_DP_000,N/A,N/A
+Analysis_DetectionLimit,-9999,-9999,0.1,-9999,-9999,N/A,N/A
+Analysis_Precision,-9999,-9999,-9999,-9999,-9999,N/A,N/A
+Data_Status,N/A,N/A,ready_to_use,N/A,ready_to_use,N/A,N/A
+#Start_Data,SSS001_COT-1,Other,33.3,34.9201,0.0201,COT_003,Relatively clean with minimal purple/grey staining.
+N/A,SSS001_COT-2,Other,37.6,34.9201,0.0167,COT_003,Relatively clean with minimal purple/grey staining.
+N/A,SSS001_COT-3,Other,31.1,34.9201,0.0221,COT_003,Relatively clean with minimal purple/grey staining.
+N/A,SSS001_COT-4,Other,33.7,34.9201,0.0198,COT_003,Relatively clean with minimal purple/grey staining.
+N/A,SSS002_COT-1,Other,17,34.8382,0.0395,COT_009,Relatively clean with some orange; purple; and grey staining.
+N/A,SSS002_COT-2,Other,13.6,34.8382,0.0459,N/A,Relatively clean with some orange; purple; and grey staining.
+N/A,SSS002_COT-3,Other,26.2,34.8382,0.0271,N/A,Relatively clean with some orange; purple; and grey staining.
+N/A,SSS002_COT-4,Other,13.4,34.8382,0.0463,N/A,Relatively clean with some orange; purple; and grey staining.
+N/A,SSS003_COT-1,Other,8.1,34.9111,0.0606,COT_009; COT_004,Some fringe missing; minimal orange staining and sediment caked on.
+N/A,SSS003_COT-2,Other,7.4,34.9111,0.0632,N/A,Some orange and dark grey staining.
+N/A,SSS003_COT-3,Other,11,34.9111,0.0519,COT_009; COT_004,Minimal staining; some fringe missing.
+N/A,SSS003_COT-4,Other,16.3,34.9111,0.0406,COT_004,Some orange and brown staining; some fringe missing.
+N/A,SSS004_COT-1,Other,14.2,34.9618,0.0445,COT_008; COT_009,Large dark orange stain; sediment caked on.
+N/A,SSS004_COT-2,Other,8.2,34.9618,0.0602,COT_008,Large dark orange stains; sediment caked on.
+N/A,SSS004_COT-3,Other,19.9,34.9618,0.0349,COT_008,One large dark orange stain on one side.
+N/A,SSS004_COT-4,Other,24.9,34.9618,0.0284,COT_008,One large dark orange stain on one side.
+N/A,SSS005_COT-1,Other,8.8,34.8139,0.0584,COT_004,Dark grey stains; large orange stain on one side; most fringe gone.
+N/A,SSS005_COT-2,Other,5.2,34.8139,0.0735,COT_004,Dark grey stains; orange stain on one side; some fringe gone.
+N/A,SSS005_COT-3,Other,6.2,34.8139,0.0685,COT_004,Dark grey stains; all fringe gone.
+N/A,SSS005_COT-4,Other,7.3,34.8139,0.0638,COT_009,Dark grey stains; sediment caked on.
+N/A,SSS006_COT-1,Other,1,34.9597,0.1204,COT_003; COT_009; COT_004,Lots of sediment caked on; all fringe gone on each strip.
+N/A,SSS006_COT-2,Other,1.2,34.9597,0.1152,COT_003; COT_009; COT_004,Lots of sediment caked on; all fringe gone on each strip.
+N/A,SSS006_COT-3,Other,0.4,34.9597,0.1466,COT_003; COT_004,Lots of sediment caked on; all fringe gone on each strip.
+N/A,SSS006_COT-4,Other,0.7,34.9597,0.1306,COT_003; COT_009; COT_004,Lots of sediment caked on; all fringe gone on each strip.
+N/A,SSS007_COT-1,Other,24.1,35.0868,0.0293,N/A,Relatively clean except for some sediment caked on.
+N/A,SSS007_COT-2,Other,28,35.0868,0.025,N/A,Relatively clean except for some sediment caked on.
+N/A,SSS007_COT-3,Other,18.6,35.0868,0.0367,N/A,Relatively clean except for some sediment caked on.
+N/A,SSS007_COT-4,Other,17.5,35.0868,0.0384,N/A,Relatively clean except for some sediment caked on.
+N/A,SSS008_COT-1,Other,28.2,34.7993,0.025,COT_003; COT_002; COT_005,Some brown staining and sediment caked on.
+N/A,SSS008_COT-2,Other,38.1,34.7993,0.0163,COT_003; COT_002; COT_005,Some brown staining and sediment caked on.
+N/A,SSS008_COT-3,Other,34.7,34.7993,0.019,COT_003; COT_002; COT_005,Some brown staining and sediment caked on.
+N/A,SSS008_COT-4,Other,20.3,34.7993,0.0344,COT_003; COT_002; COT_005,Some brown staining and sediment caked on.
+N/A,SSS009_COT-1,Other,44.4,34.8604,0.0119,N/A,Some brown staining and sediment caked on.
+N/A,SSS009_COT-2,Other,34,34.8604,0.0196,N/A,Some brown staining and sediment caked on.
+N/A,SSS009_COT-3,Other,19.4,34.8604,0.0357,COT_010,Some brown staining and sediment caked on.
+N/A,SSS009_COT-4,Other,37.2,34.8604,0.017,N/A,Some brown staining and sediment caked on.
+N/A,SSS010_COT-1,Other,29.6,35.175,0.0234,N/A,Relatively clean with some light staining (purple; green; grey; few black spots).
+N/A,SSS010_COT-2,Other,28,35.175,0.0249,N/A,Relatively clean with some light staining (purple; green; grey; few black spots).
+N/A,SSS010_COT-3,Other,26.2,35.175,0.0268,N/A,Relatively clean with some light staining (purple; green; grey; few black spots).
+N/A,SSS010_COT-4,Other,27,35.175,0.026,N/A,Relatively clean with some light staining (purple; green; grey; few black spots).
+N/A,SSS011_COT-1,Other,6.7,35.2049,0.0655,COT_004,Some fringe missing (mainly on short ends); black spots; brown and green stains; sediment caked on.
+N/A,SSS011_COT-2,Other,9.5,35.2049,0.0556,COT_004,Some fringe missing (mainly on short ends); black spots; brown and green stains; sediment caked on.
+N/A,SSS011_COT-3,Other,8.2,35.2049,0.0598,COT_004,Some fringe missing (mainly on short ends); black spots; brown and green stains; sediment caked on.
+N/A,SSS011_COT-4,Other,7,35.2049,0.0643,COT_009; COT_004,Some fringe missing (mainly on short ends); black spots; brown and green stains; sediment caked on.
+N/A,SSS012_COT-1,Other,16.6,35.0917,0.0399,COT_009,Stained and lots of sediment caked on.
+N/A,SSS012_COT-2,Other,12.1,35.0917,0.0489,N/A,Stained and lots of sediment caked on.
+N/A,SSS012_COT-3,Other,12.6,35.0917,0.0477,COT_009,Stained and lots of sediment caked on.
+N/A,SSS012_COT-4,Other,11.6,35.0917,0.0501,N/A,Stained and lots of sediment caked on.
+N/A,SSS013_COT-1,Other,1,35.1979,0.1196,COT_006,N/A
+N/A,SSS013_COT-2,Other,2.4,35.1979,0.0947,COT_009; COT_004,Most fringe missing; orange and brown staining; very degraded.
+N/A,SSS013_COT-3,Other,0.05,35.1979,0.2047,COT_006,N/A
+N/A,SSS013_COT-4,Other,0.05,35.1979,0.2047,COT_006,N/A
+N/A,SSS014_COT-1,Other,-9999,34.8521,-9999,COT_001,N/A
+N/A,SSS014_COT-2,Other,-9999,34.8521,-9999,COT_001,N/A
+N/A,SSS014_COT-3,Other,-9999,34.8521,-9999,COT_001,N/A
+N/A,SSS014_COT-4,Other,-9999,34.8521,-9999,COT_001,N/A
+N/A,SSS015_COT-1,Other,2.5,34.8174,0.0946,COT_009; COT_004,Most/all fringe missing; orange and brown staining; sediment caked on.
+N/A,SSS015_COT-2,Other,0.5,34.8174,0.1408,COT_009; COT_004,Most/all fringe missing; orange and brown staining; sediment caked on.
+N/A,SSS015_COT-3,Other,4.5,34.8174,0.0777,COT_009; COT_004,Most/all fringe missing; orange and brown staining; sediment caked on.
+N/A,SSS015_COT-4,Other,2.7,34.8174,0.0924,COT_004,Most/all fringe missing; orange and brown staining; sediment caked on.
+N/A,SSS016_COT-1,Other,5.6,34.9236,0.0712,COT_007,Moderate brown and orange staining.
+N/A,SSS016_COT-2,Other,10.4,34.9236,0.0535,COT_007,Moderate brown and orange staining.
+N/A,SSS016_COT-3,Other,30.1,34.9236,0.023,COT_007,Light purple and brown staining.
+N/A,SSS016_COT-4,Other,32.4,34.9236,0.0209,COT_007,Light purple and brown staining.
+N/A,SSS017_COT-1,Other,3.6,34.916,0.0839,COT_004,Most fringe missing.
+N/A,SSS017_COT-2,Other,4.2,34.916,0.0795,COT_004,Most fringe missing.
+N/A,SSS017_COT-3,Other,16.1,34.916,0.041,N/A,Orange and brown staining on one side.
+N/A,SSS017_COT-4,Other,7.6,34.916,0.0625,COT_004,Minimal staining; little bit of fringe missing.
+N/A,SSS018_COT-1,Other,31.6,34.8785,0.0217,COT_003,Fairly clean with some light staining.
+N/A,SSS018_COT-2,Other,23.9,34.8785,0.0297,COT_003; COT 009,Fairly clean with some light staining.
+N/A,SSS018_COT-3,Other,24.5,34.8785,0.029,COT_003; COT 009,Fairly clean with some light staining.
+N/A,SSS018_COT-4,Other,13.7,34.8785,0.0456,COT_003,Fairly clean with some light staining.
+N/A,SSS019_COT-1,Other,11.9,34.8333,0.0497,N/A,Fairly clean with some light staining.
+N/A,SSS019_COT-2,Other,17.4,34.8333,0.0388,N/A,Fairly clean with some light staining.
+N/A,SSS019_COT-3,Other,8.2,34.8333,0.0604,N/A,Fairly clean with some light staining.
+N/A,SSS019_COT-4,Other,21.2,34.8333,0.0332,COT_009,Fairly clean with some light staining.
+N/A,SSS020_COT-1,Other,23.2,34.9326,0.0305,N/A,Fairly clean with some light staining.
+N/A,SSS020_COT-2,Other,24.7,34.9326,0.0287,N/A,Fairly clean with some light staining.
+N/A,SSS020_COT-3,Other,19.8,34.9326,0.035,COT_009,Fairly clean with some light staining.
+N/A,SSS020_COT-4,Other,14.9,34.9326,0.0432,N/A,Fairly clean with some light staining.
+N/A,SSS021_COT-1,Other,56.5,35.0611,0.005,COT_010,Very clean/white.
+N/A,SSS021_COT-2,Other,48.6,35.0611,0.0093,N/A,Very clean/white.
+N/A,SSS021_COT-3,Other,58.6,35.0611,0.0039,N/A,Very clean/white.
+N/A,SSS021_COT-4,Other,62.3,35.0611,0.0022,N/A,Very clean/white.
+N/A,SSS022_COT-1,Other,45.4,35.0569,0.0112,COT_003; COT_009,Very clean/white.
+N/A,SSS022_COT-2,Other,53.3,35.0569,0.0067,COT_003; COT_010,Very clean/white.
+N/A,SSS022_COT-3,Other,54.7,35.0569,0.0059,COT_003; COT_010,Very clean/white.
+N/A,SSS022_COT-4,Other,55.4,35.0569,0.0056,COT_003,Very clean/white.
+N/A,SSS023_COT-1,Other,4.8,34.9125,0.0756,COT_004,All had some fringe missing; some staining; and sediment caked on.
+N/A,SSS023_COT-2,Other,3.2,34.9125,0.0872,COT_004,All had some fringe missing; some staining; and sediment caked on.
+N/A,SSS023_COT-3,Other,4,34.9125,0.0809,COT_004,All had some fringe missing; some staining; and sediment caked on.
+N/A,SSS023_COT-4,Other,3.8,34.9125,0.0823,COT_004,All had some fringe missing; some staining; and sediment caked on.
+N/A,SSS024_COT-1,Other,4.8,34.9688,0.0755,COT_009; COT_004,Some fringe missing; light; brown staining.
+N/A,SSS024_COT-2,Other,1.9,34.9688,0.102,N/A,Some light staining and sediment caked on.
+N/A,SSS024_COT-3,Other,0.8,34.9688,0.1268,COT_009; COT_004,Some fringe missing; light staining.
+N/A,SSS024_COT-4,Other,2.5,34.9688,0.0942,COT_004,Some fringe missing; light staining; sediment caked on.
+N/A,SSS025_COT-1,Other,0.05,34.8847,0.2065,COT_006,N/A
+N/A,SSS025_COT-2,Other,0.05,34.8847,0.2065,COT_006,N/A
+N/A,SSS025_COT-3,Other,0.05,34.8847,0.2065,COT_006,N/A
+N/A,SSS025_COT-4,Other,0.05,34.8847,0.2065,COT_006,N/A
+N/A,SSS026_COT-1,Other,0.05,34.834,0.2068,COT_006,N/A
+N/A,SSS026_COT-2,Other,0.05,34.834,0.2068,COT_006,N/A
+N/A,SSS026_COT-3,Other,0.05,34.834,0.2068,COT_006,N/A
+N/A,SSS026_COT-4,Other,0.05,34.834,0.2068,COT_006,N/A
+N/A,SSS027_COT-1,Other,13.5,34.9597,0.046,N/A,Huge dark orange stain; brown stains; sediment caked on.
+N/A,SSS027_COT-2,Other,18.9,34.9597,0.0363,COT_004,Small orange stain; brown stains; sediment caked on; some fringe missing.
+N/A,SSS027_COT-3,Other,4.3,34.9597,0.0787,COT_004,Most fringe missing; sediment caked on; large orange stain.
+N/A,SSS027_COT-4,Other,10.7,34.9597,0.0526,COT_004,Fringe missing; large orange stain; lots of sediment caked on.
+N/A,SSS028_COT-1,Other,21.9,34.9813,0.0321,N/A,Large brown stains.
+N/A,SSS028_COT-2,Other,32,34.9813,0.0213,N/A,Large brown stains.
+N/A,SSS028_COT-3,Other,21,34.9813,0.0333,N/A,Large brown stains; one orange stain.
+N/A,SSS028_COT-4,Other,32.1,34.9813,0.0212,N/A,Large brown stains.
+N/A,SSS029_COT-1,Other,4.7,34.9521,0.0761,COT_004,Large dark stains and some orange stains; some sediment caked on; some fringe missing.
+N/A,SSS029_COT-2,Other,17.6,34.9521,0.0384,N/A,Large dark stains and some orange stains; some sediment caked on.
+N/A,SSS029_COT-3,Other,13,34.9521,0.047,COT_004,Large dark stains and some orange stains; some sediment caked on; some fringe missing.
+N/A,SSS029_COT-4,Other,5.3,34.9521,0.0727,COT_004,Large dark stains and some orange stains; some sediment caked on; some fringe missing.
+N/A,SSS030_COT-1,Other,11.7,34.9514,0.0501,COT_007,Relatively clean with moderate staining and sediment caked on.
+N/A,SSS030_COT-2,Other,17.6,34.9514,0.0384,COT_007,Relatively clean with moderate staining and sediment caked on.
+N/A,SSS030_COT-3,Other,17.1,34.9514,0.0392,COT_007; COT_009,Relatively clean with moderate staining and sediment caked on.
+N/A,SSS030_COT-4,Other,14.9,34.9514,0.0431,COT_007; COT_009,Relatively clean with moderate staining and sediment caked on.
+N/A,SSS031_COT-1,Other,22.6,34.9319,0.0312,N/A,Small black stains; lots of sediment caked on; several dead bugs of the same spp. in tube.
+N/A,SSS031_COT-2,Other,17,34.9319,0.0394,N/A,Small black stains; lots of sediment caked on; several dead bugs of the same spp. in tube.
+N/A,SSS031_COT-3,Other,17,34.9319,0.0394,N/A,Small black stains; lots of sediment caked on; several dead bugs of the same spp. in tube.
+N/A,SSS031_COT-4,Other,22,34.9319,0.032,N/A,Small black stains; lots of sediment caked on; several dead bugs of the same spp. in tube.
+N/A,SSS032_COT-1,Other,20.6,34.9806,0.0338,N/A,Sediment caked on.
+N/A,SSS032_COT-2,Other,14.9,34.9806,0.0431,COT_009,Sediment caked on.
+N/A,SSS032_COT-3,Other,18.8,34.9806,0.0365,N/A,Sediment caked on.
+N/A,SSS032_COT-4,Other,18.1,34.9806,0.0375,COT_009,Sediment caked on.
+N/A,SSS033_COT-1,Other,38.7,35.0264,0.0158,N/A,Clean/white.
+N/A,SSS033_COT-2,Other,32.6,35.0264,0.0207,COT_009,Clean/white.
+N/A,SSS033_COT-3,Other,47.1,35.0264,0.0102,N/A,Clean/white.
+N/A,SSS033_COT-4,Other,30,35.0264,0.0231,N/A,Clean/white.
+N/A,SSS034_COT-1,Other,58.7,35.059,0.0039,COT_003,Clean/white.
+N/A,SSS034_COT-2,Other,56.4,35.059,0.005,COT_003,Clean/white.
+N/A,SSS034_COT-3,Other,56.6,35.059,0.0049,COT_003,Clean/white.
+N/A,SSS034_COT-4,Other,50.6,35.059,0.0081,COT_003,Clean/white.
+N/A,SSS035_COT-1,Other,55.9,35.0597,0.0053,N/A,Clean/white with some light brown staining.
+N/A,SSS035_COT-2,Other,51.5,35.0597,0.0076,N/A,Clean/white with some light brown staining.
+N/A,SSS035_COT-3,Other,58.6,35.0597,0.0039,N/A,Clean/white with some light brown staining.
+N/A,SSS035_COT-4,Other,58.1,35.0597,0.0042,N/A,Clean/white with some light brown staining.
+N/A,SSS036_COT-1,Other,12.3,35.0069,0.0485,N/A,One orange stain and few light brown stains.
+N/A,SSS036_COT-2,Other,12,35.0069,0.0493,N/A,Dark orange and brown stain on one side.
+N/A,SSS036_COT-3,Other,21,35.0069,0.0333,N/A,One large light orange and brown stain.
+N/A,SSS036_COT-4,Other,11.4,35.0069,0.0507,N/A,Some dark brown stains.
+N/A,SSS037_COT-1,Other,9.4,34.9576,0.0563,COT_009,Light with dark brown stains and sediment caked on.
+N/A,SSS037_COT-2,Other,9.6,34.9576,0.0557,N/A,Light with dark brown stains and sediment caked on.
+N/A,SSS037_COT-3,Other,5.4,34.9576,0.0722,N/A,Light with dark brown stains and sediment caked on.
+N/A,SSS037_COT-4,Other,9.8,34.9576,0.0551,N/A,Light with dark brown stains and sediment caked on.
+N/A,SSS038_COT-1,Other,58.6,34.9507,0.004,N/A,All look similar' very clean/white with some light orange and yellow staining.
+N/A,SSS038_COT-2,Other,63.5,34.9507,0.0017,N/A,All look similar' very clean/white with some light orange and yellow staining.
+N/A,SSS038_COT-3,Other,53.3,34.9507,0.0067,N/A,All look similar' very clean/white with some light orange and yellow staining.
+N/A,SSS038_COT-4,Other,59.3,34.9507,0.0036,N/A,All look similar' very clean/white with some light orange and yellow staining.
+N/A,SSS039_COT-1,Other,2.6,34.9417,0.0931,COT_009,Many dark stains; some sediment caked on.
+N/A,SSS039_COT-2,Other,4.2,34.9417,0.0794,N/A,Large orange stain on one side; some dark brown stains.
+N/A,SSS039_COT-3,Other,14.2,34.9417,0.0445,N/A,Few large light brown stains.
+N/A,SSS039_COT-4,Other,2.8,34.9417,0.091,COT_009,Brown stains.
+N/A,SSS040_COT-1,Other,45.9,34.9507,0.0109,COT_009,Clean with few light brown stains.
+N/A,SSS040_COT-2,Other,19.9,34.9507,0.0349,N/A,Clean with few light brown stains; unclear why this one was so much lower than others.
+N/A,SSS040_COT-3,Other,48,34.9507,0.0097,N/A,Clean with few light brown stains.
+N/A,SSS040_COT-4,Other,42.4,34.9507,0.0132,COT_009,Clean with few light brown stains.
+N/A,SSS041_COT-1,Other,12.5,34.9417,0.0482,COT_003,Different degrees of staining; clean except large grey and orange stain.
+N/A,SSS041_COT-2,Other,3.6,34.9417,0.0838,COT_003,Different degrees of staining; lots of sediment caked on; couldn't get straight in jaws.
+N/A,SSS041_COT-3,Other,26,34.9417,0.0272,COT_003,Different degrees of staining.
+N/A,SSS041_COT-4,Other,25.9,34.9417,0.0273,COT_003; COT_009,Different degrees of staining; clean.
+N/A,SSS042_COT-1,Other,29.6,34.9319,0.0235,COT_009,Clean with a few light brown stains.
+N/A,SSS042_COT-2,Other,22,34.9319,0.032,N/A,Clean with a few light brown stains.
+N/A,SSS042_COT-3,Other,8.4,34.9319,0.0596,N/A,Clean with a few light brown stains; didn't look obviously different from others - not sure why it's lower.
+N/A,SSS042_COT-4,Other,16.6,34.9319,0.0401,COT_009,Clean with a few light brown stains.
+N/A,SSS043_COT-1,Other,23.7,34.9875,0.0298,N/A,Some light purple and brown stains.
+N/A,SSS043_COT-2,Other,22.6,34.9875,0.0312,COT_009,Some light purple and brown stains.
+N/A,SSS043_COT-3,Other,13.2,34.9875,0.0466,N/A,Some light purple and brown stains.
+N/A,SSS043_COT-4,Other,26.3,34.9875,0.0269,N/A,Some light purple and brown stains.
+N/A,SSS044_COT-1,Other,28.7,34.95,0.0244,N/A,Look fairly clean with a few brown stains.
+N/A,SSS044_COT-2,Other,22.5,34.95,0.0313,COT_009,Look fairly clean with a few brown stains.
+N/A,SSS044_COT-3,Other,35,34.95,0.0187,N/A,Look fairly clean with a few brown stains.
+N/A,SSS044_COT-4,Other,27.4,34.95,0.0257,N/A,Look fairly clean with a few brown stains.
+N/A,SSS045_COT-1,Other,38.8,34.9521,0.0158,COT_003; COT_007,Clean with just a few light brown stains.
+N/A,SSS045_COT-2,Other,30,34.9521,0.0231,COT_003; COT_007,Clean with just a few light brown stains.
+N/A,SSS045_COT-3,Other,30.1,34.9521,0.023,COT_003; COT_007,Clean with just a few light brown stains.
+N/A,SSS045_COT-4,Other,32.5,34.9521,0.0208,COT_003; COT_007,Clean with just a few light brown stains.
+N/A,SSS046_COT-1,Other,56,35.066,0.0052,COT_003; COT_009,Clean with a few brown stains.
+N/A,SSS046_COT-2,Other,53.7,35.066,0.0064,COT_003; COT_009,Clean with a few brown stains.
+N/A,SSS046_COT-3,Other,52.4,35.066,0.0071,COT_003,Clean with a few brown stains.
+N/A,SSS046_COT-4,Other,58.2,35.066,0.0041,COT_003,Clean with a few brown stains.
+N/A,SSS047_COT-1,Other,-9999,35.0264,-9999,COT_001,N/A
+N/A,SSS047_COT-2,Other,-9999,35.0264,-9999,COT_001,N/A
+N/A,SSS047_COT-3,Other,-9999,35.0264,-9999,COT_001,N/A
+N/A,SSS047_COT-4,Other,-9999,35.0264,-9999,COT_001,N/A
+N/A,SSS048_COT-1,Other,31.5,34.8104,0.0218,COT_009,All have sediment caked on.
+N/A,SSS048_COT-2,Other,19.5,34.8104,0.0356,COT_009,All have sediment caked on; large dark orange stain.
+N/A,SSS048_COT-3,Other,28.2,34.8104,0.025,N/A,All have sediment caked on; large dark orange stain.
+N/A,SSS048_COT-4,Other,24.8,34.8104,0.0287,N/A,All have sediment caked on; light orange stain.
+#End_Data,,,,,,,

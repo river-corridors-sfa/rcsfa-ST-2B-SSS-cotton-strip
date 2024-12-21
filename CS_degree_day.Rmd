@@ -1,0 +1,105 @@
+---
+title: "CS_degree_day"
+author: "MML"
+date: "2023-03-21"
+output: html_document
+---
+
+```{r libraries}
+library(tidyverse);library(dplyr);library(ggplot2)
+
+```
+
+
+```{r Data}
+
+site_id_full <- read.csv("v3_SSS_Data_Package/v2_SSS_Field_Metadata.csv")
+
+site_id <- site_id_full %>% 
+  mutate(Site_ID = ifelse(Site_ID == "S55","S55N", Site_ID)) %>% 
+  mutate(Site_ID = ifelse(Site_ID == "S56", "S56N", Site_ID)) %>% 
+  dplyr::select(c(Site_ID, Parent_ID, Latitude, Longitude))
+
+
+cs <- read.csv("v3_SSS_Data_Package/Sample_Data/SSS_CottonStrip_TensileStrength_DecayRate.csv", skip = 2, header = TRUE)
+
+tensile <- cs[-c(1:11), -c(1)]
+
+##using HOBO data because miniDOT makes R crash
+mean.temp <- ("v3_SSS_Data_Package/Sensor_Data/DepthHOBO/Data/")
+
+import_data = function(mean.temp){ 
+  
+  #pull a list of files in target folder with correct pattern
+
+  ##read in the rest of the sites
+   
+  temp.file <-  list.files(mean.temp, recursive = T, pattern = "\\.csv$",full.names = T)
+  
+   temp<- lapply(temp.file, read.csv, skip = 5, header = TRUE)
+  
+   temp.final <- 
+    do.call(rbind,temp)
+}
+
+all.temp = import_data(mean.temp)
+
+all.temp <- all.temp %>% 
+  mutate(Site_ID = ifelse(Site_ID == "S55","S55N", Site_ID)) %>% 
+  mutate(Site_ID = ifelse(Site_ID == "S56", "S56N", Site_ID)) 
+
+
+##to calculate degree day: calculate sum of mean daily temperature over entire incubation period and then swap that number in for the days deployed in the same Kd equation
+
+all.temp$Time <- format(as.POSIXct(all.temp$DateTime), format = "%H:%M:%S")
+
+all.temp$Date <- as.Date(all.temp$DateTime)
+
+mean.daily <- all.temp %>% 
+  group_by(Parent_ID, Date) %>% 
+  mutate(mean_daily_temp = mean(Temperature)) %>% 
+  distinct(Parent_ID, Date, .keep_all = TRUE)
+
+deg.day <- mean.daily %>% 
+  group_by(Parent_ID) %>% 
+  mutate(sum_mean_daily_temp = sum(mean_daily_temp)) %>% 
+  distinct(Parent_ID, .keep_all = TRUE) %>% 
+  dplyr::select(-c("DateTime", "Time","Absolute_Pressure","Temperature","mean_daily_temp", "Date"))
+
+##take out missing sites
+merged <- tensile %>% 
+  separate(Sample_Name, into = c("Parent_ID", "Replicate_ID"), sep = "_") %>% 
+  subset(Parent_ID != "SSS014") %>% 
+  subset(Parent_ID != "SSS047") %>% 
+  dplyr::select(c("Parent_ID", "Replicate_ID", "Tensile_Strength_pounds", "Total_Incubation_days", "Decay_Rate_per_day")) %>% 
+    na.omit() 
+
+```
+
+
+```{r means}
+
+merged$Tensile_Strength_pounds <- as.numeric(merged$Tensile_Strength_pounds)
+  
+means <- merged %>% 
+  group_by(Parent_ID) %>% 
+  mutate(mean_Tensile_Strength_pounds = mean(Tensile_Strength_pounds)) %>% 
+  mutate(sd_Tensile_Strength_pounds = sd(Tensile_Strength_pounds))
+
+means<-left_join(means, deg.day, by=c('Parent_ID'))
+
+decay <- means %>% 
+  mutate(degree_decay_rate = (-log(Tensile_Strength_pounds/67.3))/sum_mean_daily_temp) %>% 
+  #mutate(mean_tens_decay_rate = (-log(mean_Tensile_Strength_pounds/67.3))/sum_mean_daily_temp) %>% 
+  group_by(Parent_ID) %>% 
+  mutate(mean_degree_decay_rate = mean(degree_decay_rate))
+
+
+
+decay_site_id <- left_join(decay, site_id, by = c('Parent_ID', 'Site_ID'))
+
+write_csv(decay_site_id, "Outputs/Decay_Data.csv") 
+
+
+```
+

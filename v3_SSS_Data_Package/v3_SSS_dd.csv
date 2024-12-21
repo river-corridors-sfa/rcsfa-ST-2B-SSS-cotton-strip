@@ -1,0 +1,235 @@
+Column_or_Row_Name,Unit,Definition,Data_Type,Term_Type
+00530_TSS_mg_per_L,milligrams per liter,Total suspended solids. 5-digit prefix refers to a US Geological Survey parameter code.,numeric,column_header
+Absolute_Pressure,millibars,Absolute pressure.,numeric,column_header
+Absolute_Pressure_Max,millibars,Maximum absolute pressure in time series.,numeric,column_header
+Absolute_Pressure_Mean,millibars,Mean absolute pressure in time series.,numeric,column_header
+Absolute_Pressure_Median,millibars,Median absolute pressure in time series.,numeric,column_header
+Absolute_Pressure_Min,millibars,Minimum absolute pressure in time series.,numeric,column_header
+Air_Temperature,degree celsius,Air temperature.,numeric,column_header
+Air_Temperature_Max,degree celsius,Maximum air temperature in time series.,numeric,column_header
+Air_Temperature_Mean,degree celsius,Mean air temperature in time series.,numeric,column_header
+Air_Temperature_Median,degree celsius,Median air temperature in time series.,numeric,column_header
+Air_Temperature_Min,degree celsius,Minimum air temperature in time series.,numeric,column_header
+Appearance_Notes,N/A,Notes about appearance of cotton strips taken upon measuring tensile strength.,text,column_header
+Average_Depth,centimeters,Average depth.,numeric,column_header
+Average_River_Width,meters,Average river width.,numeric,column_header
+Battery,volts,Remaining sensor internal battery voltage.,numeric,column_header
+Battery_1,volts,Remaining sensor internal battery voltage of miniDOT 1 of 3.,numeric,column_header
+Battery_2,volts,Remaining sensor internal battery voltage of miniDOT 2 of 3.,numeric,column_header
+Battery_3,volts,Remaining sensor internal battery voltage of miniDOT 3 of 3.,numeric,column_header
+Chlorophyll_A,micrograms per liter,Chlorophyll A (measured with blue excitation).,numeric,column_header
+Chlorophyll_A_Max,micrograms per liter,Maximum chlorophyll A (measured with blue excitation) in time series.,numeric,column_header
+Chlorophyll_A_Mean,micrograms per liter,Mean chlorophyll A (measured with blue excitation) in time series.,numeric,column_header
+Chlorophyll_A_Median,micrograms per liter,Median chlorophyll A (measured with blue excitation) in time series.,numeric,column_header
+Chlorophyll_A_Min,micrograms per liter,Minimum chlorophyll A (measured with blue excitation) in time series.,numeric,column_header
+Collection_Date,YYYY-MM-DD,Date of sample collection.,date,column_header
+Collection_Method,N/A,Method of sample collection registered in the System for Earth Sample Registration (SESAR; https://www.geosamples.org/about/services#igsnregistration) system. Controlled vocabulary from SESAR.,text,column_header
+Collection_Method_Description,N/A,Description of how sample was collected.,text,column_header
+Collector_Chief_Scientist,N/A,Name of person who collected the sample or primary contact.,text,column_header
+Column_or_Row_Name,N/A,Column or row headers from each csv file in the dataset.,text,column_header
+Comment,N/A,Name of study associated with sample.,text,column_header
+Country,N/A,Country where sample was collected.,text,column_header
+Data_Type,N/A,Type of data (numeric; text; date; time; datetime).,text,column_header
+Date,YYYY-MM-DD,Date.,date,column_header
+DateTime,YYYY-MM-DD hh:mm:ss,Date and time of measurement.,DateTime,column_header
+DateTime_End,YYYY-MM-DD hh:mm:ss,Last date and time in the time series.,DateTime,column_header
+DateTime_Start,YYYY-MM-DD hh:mm:ss,First date and time in the time series.,DateTime,column_header
+Decay_Rate_per_day,per day,Decay rate (Kd) of cotton strips. Calculated using tensile strength and total incubation days based on the equation in Mancuso et al. (2022).,numeric,column_header
+Definition,N/A,Description of the information in a given column or row in the dataset.,text,column_header
+Deploy_Atmospheric_Sensor_Notes,N/A,Notes from deployment of BarotrollAtm sensor.,text,column_header
+Deploy_Cotton_Strip_Notes,N/A,Notes from deployment of cotton strips.,text,column_header
+Deploy_Date,YYYY-MM-DD,Date of sensor and cotton strip deployment.,date,column_header
+Deploy_miniDOT_Notes,N/A,Notes from deployment of miniDOT sensor.,text,column_header
+Deploy_Notes,N/A,General notes from deployment.,text,column_header
+Depth_Hobo_Depth_cm,centimeters,Depth at which the depth HOBO sensor was in the stream.,numeric,column_header
+Dissolved_Oxygen,milligrams per liter,Dissolved oxygen.,numeric,column_header
+Dissolved_Oxygen_1,milligrams per liter,Dissolved oxygen from miniDOT 1 of 3.,numeric,column_header
+Dissolved_Oxygen_1_Max,milligrams per liter,Maximum dissolved oxygen from miniDOT 1.,numeric,column_header
+Dissolved_Oxygen_1_Mean,milligrams per liter,Mean dissolved oxygen from miniDOT 1.,numeric,column_header
+Dissolved_Oxygen_1_Median,milligrams per liter,Median dissolved oxygen from miniDOT 1.,numeric,column_header
+Dissolved_Oxygen_1_Min,milligrams per liter,Minimum dissolved oxygen from miniDOT 1.,numeric,column_header
+Dissolved_Oxygen_1_NRMSE,N/A,Normalized root mean square error (NRMSE) for the linear regression of miniDOT 1 dissolved oxygen data against time.,numeric,column_header
+Dissolved_Oxygen_1_RMSE,milligrams per liter,The root mean square error (RMSE) for the linear regression of miniDOT 1 dissolved oxygen data against time.,numeric,column_header
+Dissolved_Oxygen_1_Rsquared,N/A,R-squared value for the linear regression of miniDOT 1 dissolved oxygen data against time.,numeric,column_header
+Dissolved_Oxygen_1_Slope,milligrams per liter per minute,Slope of the line for the linear regression of miniDOT 1 dissolved oxygen sample data against time.,numeric,column_header
+Dissolved_Oxygen_2,milligrams per liter,Dissolved oxygen from miniDOT 2 of 3.,numeric,column_header
+Dissolved_Oxygen_2_Max,milligrams per liter,Maximum dissolved oxygen from miniDOT 2.,numeric,column_header
+Dissolved_Oxygen_2_Mean,milligrams per liter,Mean dissolved oxygen from miniDOT 2.,numeric,column_header
+Dissolved_Oxygen_2_Median,milligrams per liter,Median dissolved oxygen from miniDOT 2.,numeric,column_header
+Dissolved_Oxygen_2_Min,milligrams per liter,Minimum dissolved oxygen from miniDOT 2.,numeric,column_header
+Dissolved_Oxygen_2_NRMSE,N/A,Normalized root mean square error (NRMSE) for the linear regression of miniDOT 2 dissolved oxygen data against time.,numeric,column_header
+Dissolved_Oxygen_2_RMSE,milligrams per liter,The root mean square error (RMSE) for the linear regression of miniDOT 2 dissolved oxygen data against time.,numeric,column_header
+Dissolved_Oxygen_2_Rsquared,N/A,R-squared value for the linear regression of miniDOT 2 dissolved oxygen data against time.,numeric,column_header
+Dissolved_Oxygen_2_Slope,milligrams per liter per minute,Slope of the line for the linear regression of miniDOT 2 dissolved oxygen sample data against time.,numeric,column_header
+Dissolved_Oxygen_3,milligrams per liter,Dissolved oxygen from miniDOT 3 of 3.,numeric,column_header
+Dissolved_Oxygen_3_Max,milligrams per liter,Maximum dissolved oxygen from miniDOT 3.,numeric,column_header
+Dissolved_Oxygen_3_Mean,milligrams per liter,Mean dissolved oxygen from miniDOT 3.,numeric,column_header
+Dissolved_Oxygen_3_Median,milligrams per liter,Median dissolved oxygen from miniDOT 3.,numeric,column_header
+Dissolved_Oxygen_3_Min,milligrams per liter,Minimum dissolved oxygen from miniDOT 3.,numeric,column_header
+Dissolved_Oxygen_3_NRMSE,N/A,Normalized root mean square error (NRMSE) for the linear regression of miniDOT 3 dissolved oxygen data against time.,numeric,column_header
+Dissolved_Oxygen_3_RMSE,milligrams per liter,The root mean square error (RMSE) for the linear regression of miniDOT 3 dissolved oxygen data against time.,numeric,column_header
+Dissolved_Oxygen_3_Rsquared,N/A,R-squared value for the linear regression of miniDOT 3 dissolved oxygen data against time.,numeric,column_header
+Dissolved_Oxygen_3_Slope,milligrams per liter per minute,Slope of the line for the linear regression of miniDOT 3 dissolved oxygen sample data against time.,numeric,column_header
+Dissolved_Oxygen_Max,milligrams per liter,Maximum dissolved oxygen.,numeric,column_header
+Dissolved_Oxygen_Mean,milligrams per liter,Mean dissolved oxygen.,numeric,column_header
+Dissolved_Oxygen_Median,milligrams per liter,Median dissolved oxygen.,numeric,column_header
+Dissolved_Oxygen_Min,milligrams per liter,Minimum dissolved oxygen.,numeric,column_header
+Dissolved_Oxygen_Saturation,percent,Dissolved oxygen saturation. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_1,percent,Dissolved oxygen saturation from miniDOT 1 of 3. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_1_Max,percent,Maximum dissolved oxygen saturation from miniDOT 1. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_1_Mean,percent,Mean dissolved oxygen saturation from miniDOT 1. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_1_Median,percent,Median dissolved oxygen saturation from miniDOT 1. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_1_Min,percent,Minimum dissolved oxygen saturation from miniDOT 1. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_2,percent,Dissolved oxygen saturation from miniDOT 2 of 3. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_2_Max,percent,Maximum dissolved oxygen saturation from miniDOT 2. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_2_Mean,percent,Mean dissolved oxygen saturation from miniDOT 2. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_2_Median,percent,Median dissolved oxygen saturation from miniDOT 2. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_2_Min,percent,Minimum dissolved oxygen saturation from miniDOT 2. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_3,percent,Dissolved oxygen saturation from miniDOT 3 of 3.,numeric,column_header
+Dissolved_Oxygen_Saturation_3_Max,percent,Maximum dissolved oxygen saturation from miniDOT 3. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_3_Mean,percent,Mean dissolved oxygen saturation from miniDOT 3. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_3_Median,percent,Median dissolved oxygen saturation from miniDOT 3. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_3_Min,percent,Minimum dissolved oxygen saturation from miniDOT 3. Calculated using miniDOT dissolved oxygen and baroTROLL absolute pressure.,numeric,column_header
+Dissolved_Oxygen_Saturation_Max,percent,Maximum dissolved oxygen saturation.,numeric,column_header
+Dissolved_Oxygen_Saturation_Mean,percent,Mean dissolved oxygen saturation.,numeric,column_header
+Dissolved_Oxygen_Saturation_Median,percent,Median dissolved oxygen saturation.,numeric,column_header
+Dissolved_Oxygen_Saturation_Min,percent,Minimum dissolved oxygen saturation.,numeric,column_header
+Distance_to_Sensor_m,meters,Distance from the miniDOT sensor to the transect.,numeric,column_header
+End_Time,hh:mm:ss UTC-08:00,End time.,time,column_header
+Field_Name,N/A,Name of field of header rows before data.,text,column_header
+Field_Name_Informal_Classification,N/A,Informal classification of sample.,text,column_header
+Field_Program_Cruise,N/A,Name of field program or cruise registered in the System for Earth Sample Registration (SESAR; https://www.geosamples.org/about/services#igsnregistration) system.,text,column_header
+Framesize,bytes,The size of each individual data frame captured by the sonar.,numeric,column_header
+General_Vegetation,N/A,General vegetation type from provided controlled vocabulary during sediment sampling. From provided controlled vocabulary with the option to select up to 2 if mixed.,text,column_header
+GPS_Accuracy_ft,feet,Accuracy of the GPS measurements.,numeric,column_header
+GPS_Speed,knots,Speed of the sonar GPS.,numeric,column_header
+HOBO_Redeployed_Same_Location,N/A,Indicator of whether or not the depth HOBO sensor was placed in the same spot after downloading data.,text,column_header
+Hydrogeomorphology,N/A,General hydrogeomorphology of river. One of the following classes may be selected: multi-channel (braided); single-channel straight; single-channel meandering.,text,column_header
+Hydrograph_Online,N/A,Link to hydrograph if available.,text,column_header
+IGSN,N/A,International Generic Sample Numbers (IGSNs) registered with System for Earth Sample Registration (SESAR; https://www.geosamples.org/about/services#igsnregistration).,text,column_header
+InstallationMethod_Description,N/A,Free text field to describe the sensor installation/deployment design; structure; or general information.,text,column_header
+InstallationMethod_ID,N/A,Unique user-determined ID for a method described in the InstallationMethods_Description column in InstallationMethods.csv and listed as a metadata header row term in the data files.,text,column_header
+Intermittent_or_Perennial,N/A,Indicator of if the stream is intermittent or perennial.,text,column_header
+Latitude,decimal degrees WGS1984,Geographic location (latitude).,numeric,column_header
+Latitude_mercator,mercator meters,Geographic location (latitude).,numeric,column_header
+Locality,N/A,Name of field site where sample was collected.,text,column_header
+Locality_Description,N/A,Description of the locality.,text,column_header
+Longitude,decimal degrees WGS1984,Geographic location (longitude).,numeric,column_header
+Longitude_mercator,mercator meters,Geographic location (longitude).,numeric,column_header
+Material,N/A,Type of sample (e.g. Liquid>aqueous; sediment; etc.). Uses a controlled vocabulary from System for Earth Sample Registration (SESAR; https://www.geosamples.org/about/services#igsnregistration) system.,text,column_header
+Mean_Decay_Rate_per_day,per day,"Mean decay rate. For each sampling event (e.g. SSS005_COT); the decay rate of each of the four biological replicates (e.g.SSS005_COT-1; SSS005_COT-2; SSS005_COT-3; SSS005_COT-4) are averaged. The replicate data was visually inspected to determine if there were outliers. No outliers were apparent; and therefore no values were removed from the mean. The ""Mean_Missing_Reps"" column indicates if a mean does not include all four replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean (i.e. a sample was lost).",numeric,column_header
+Mean_Missing_Reps,N/A,Indication of whether all replicates (reps) are included in the calculation of the mean (with a FALSE flag) or all replicates are not included (with a TRUE flag).,text,column_header
+Mean_Tensile_Strength_pounds,pounds,"Mean tensile strength. For each sampling event (e.g. SSS005_COT); the tensile strength of each of the four biological replicates (e.g.SSS005_COT-1; SSS005_COT-2; SSS005_COT-3; SSS005_COT-4) are averaged. The replicate data was visually inspected to determine if there were outliers. No outliers were apparent; and therefore no values were removed from the mean. The ""Mean_Missing_Reps"" column indicates if a mean does not include all four replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean (i.e. a sample was lost).",numeric,column_header
+Method_Description,N/A,Description of method code.,text,column_header
+Method_ID,N/A,Alphanumeric ID associated with method code.,text,column_header
+Method_Instrument,N/A,Instrument used in method code.,text,column_header
+Method_Lab,N/A,Laboratory in which methods were completed.,text,column_header
+Method_Name,N/A,Name of method code category.,text,column_header
+Method_Type,N/A,Type of method.,text,column_header
+Methods_Deviation,N/A,Deviations from the methods codes listed in the header rows. If a row has a methods deviation; it indicates that the sample from that row uses the methods indicated in the deviations column when they conflict with the methods written in the header rows above (MethodID_*).,text,column_header
+miniDOT_Window_Condition,N/A,Indicator of the condition of the sensor window of the miniDOT.,text,column_header
+Notes,N/A,Free text field to record notes related to the site visit; including weather; site disturbance; or other information relevant to the quality of data collected.,text,column_header
+Number_of_Points,N/A,Number of points used to calculate summary values.,numeric,column_header
+Other_Names,N/A,Other names used for the site.,text,column_header
+Outlier,N/A,Indicates an outlier was identified using interquartile range (IQR). The column contains the column header of the data type that contains the outlier. Outliers are removed prior to calculating the summary file.,text,column_header
+Parent_ID,N/A,The ID associated with the entire kit of supplies and data used by the collaborator to collect data.,text,column_header
+Parent_IGSN,N/A,The IGSN for each site ID.,text,column_header
+Percent_Algal_Mat_Coverage,percent,Estimated algal mat cover on riverbed. One of the following classes may be selected: >70%; 30-70%; 5-30%; or none.,text,column_header
+Percent_Canopy_Coverage,percent,Estimated canopy cover over the river only. Total riparian zone canopy cover does not apply. One of the following classes may be selected: >70%; 30-70%; 5-30%; or none.,text,column_header
+Percent_Macrophyte_Coverage,percent,Estimated macrophyte cover in the river. One of the following classes may be selected: >70%; 30-70%; 5-30%; or none.,text,column_header
+pH,pH,pH.,numeric,column_header
+pH_Max,pH,Maximum pH.,numeric,column_header
+pH_Mean,pH,Mean pH.,numeric,column_header
+pH_Median,pH,Median pH.,numeric,column_header
+pH_Min,pH,Minimum pH.,numeric,column_header
+Physiographic_Feature_Name,N/A,Name of the physiographic feature (stream).,text,column_header
+Point_A_Depth_cm,centimeters,Depth at point A along the cross-stream transect.,numeric,column_header
+Point_B_Depth_cm,centimeters,Depth at point B along the cross-stream transect.,numeric,column_header
+Point_C_Depth_cm,centimeters,Depth at point C along the cross-stream transect.,numeric,column_header
+Point_D_Depth_cm,centimeters,Depth at point D along the cross-stream transect.,numeric,column_header
+Point_E_Depth_cm,centimeters,Depth at point E along the cross-stream transect.,numeric,column_header
+Point_F_Depth_cm,centimeters,Depth at point F along the cross-stream transect.,numeric,column_header
+Pressure,millibars,Pressure.,numeric,column_header
+Pressure_Max,millibars,Maximum pressure.,numeric,column_header
+Pressure_Mean,millibars,Mean pressure.,numeric,column_header
+Pressure_Median,millibars,Median pressure.,numeric,column_header
+Pressure_Min,millibars,Minimum pressure.,numeric,column_header
+Primary_Physiographic_Feature,N/A,Type of physical feature that sample was collected from using suggested vocabulary from System for Earth Sample Registration (SESAR; https://www.geosamples.org/about/services#igsnregistration) system. Controlled vocabulary from SESAR.).,text,column_header
+Related_URL,N/A,Related URL associated with the samples.,text,column_header
+Related_URL_Type,N/A,Type of URL associated with the samples.,text,column_header
+Retrieve_Cotton_Strip_Notes,N/A,Notes from retrieving of cotton strips.,text,column_header
+Retrieve_Date,YYYY-MM-DD,Date of sensor and cotton strip retrieving.,date,column_header
+Retrieve_Depth_Hobo_Notes,N/A,Notes from retrieving of depth HOBO sensor.,text,column_header
+Retrieve_miniDOT_Notes,N/A,Notes from retrieving of miniDOT sensor.,text,column_header
+Retrieve_Notes,N/A,General notes from retrieving. ,text,column_header
+River_Gradient,N/A,General gradient of river. One of the following classes may be selected: relatively flat/gentle gradient (e.g.; valleys) or relatively steep gradient (e.g.; mountainous or hilly terrain).,text,column_header
+River_Width_m,meters,Width of river at the specified transect.,numeric,column_header
+Sample_Date,YYYY-MM-DD,Date of sample collection.,date,column_header
+Sample_Name,N/A,Name of sample. If the sample name includes the material (i.e. SSS005_Water); the row is referring to all of samples of that analysis of a given material. Individual samples follow the format of [Parent_ID]_[analysis-specific indicator code]-[replicate number] (i.e. SSS005_OCN-1). Not all sample types have replicates. See SSS_readme.pdf for more details.,text,column_header
+Sample_Notes,N/A,General notes from sample collection. ,text,column_header
+Sample_Time_Arriving_PST,hh:mm:ss UTC-08:00,Time field crew arrived to the site during sample week.,time,column_header
+Sample_Time_Leaving_PST,hh:mm:ss UTC-08:00,Time field crew left to the site during sample week.,time,column_header
+Sediment,N/A,Estimated dominant sediment type/size class of streambed. Size/type classes include gravel/cobble (>2 millimeters); sand; silt/mud (<0.0625 millimeters); or bedrock (primarily).,text,column_header
+Sediment_Collection_Depth_cm,centimeters,Depth of sediment collection.,text,column_header
+Sediment_Latitude,decimal degrees WGS1984,Geographic location (latitude) that sediment samples were collected at.,numeric,column_header
+Sediment_Longitude,decimal degrees WGS1984,Geographic location (longitude) that sediment samples were collected at.,numeric,column_header
+Site_ID,N/A,Site ID.,text,column_header
+Site_Name,N/A,Name of site.,text,column_header
+Specific_Conductance,microsiemens per centimeter,Specific conductance. Electrical conductivity at 25 degrees Celsius.,numeric,column_header
+Specific_Conductance_Max,microsiemens per centimeter,Maximum specific conductance.,numeric,column_header
+Specific_Conductance_Mean,microsiemens per centimeter,Mean specific conductance.,numeric,column_header
+Specific_Conductance_Median,microsiemens per centimeter,Median specific conductance.,numeric,column_header
+Specific_Conductance_Min,microsiemens per centimeter,Minimum specific conductance.,numeric,column_header
+Start_Time,hh:mm:ss UTC-08:00,Sampling start time.,time,column_header
+State,N/A,State.,text,column_header
+State_or_Province,N/A,State or province where sample was collected.,text,column_header
+Stream_Name,N/A,Stream name.,text,column_header
+Temperature,degree celsius,Temperature.,numeric,column_header
+Temperature_1,degrees celsius,Temperature from miniDOT 1 of 3.,numeric,column_header
+Temperature_1_Max,degrees celsius,Maximum temperature from miniDOT 1.,numeric,column_header
+Temperature_1_Mean,degrees celsius,Mean temperature from miniDOT 1.,numeric,column_header
+Temperature_1_Median,degrees celsius,Median temperature from miniDOT 1.,numeric,column_header
+Temperature_1_Min,degrees celsius,Minimum temperature from miniDOT 1.,numeric,column_header
+Temperature_2,degrees celsius,Temperature from miniDOT 2 of 3.,numeric,column_header
+Temperature_2_Max,degrees celsius,Maximum temperature from miniDOT 2.,numeric,column_header
+Temperature_2_Mean,degrees celsius,Mean temperature from miniDOT 2.,numeric,column_header
+Temperature_2_Median,degrees celsius,Median temperature from miniDOT 2.,numeric,column_header
+Temperature_2_Min,degrees celsius,Minimum temperature from miniDOT 2.,numeric,column_header
+Temperature_3,degrees celsius,Temperature from miniDOT 3 of 3.,numeric,column_header
+Temperature_3_Max,degrees celsius,Maximum temperature from miniDOT 3.,numeric,column_header
+Temperature_3_Mean,degrees celsius,Mean temperature from miniDOT 3.,numeric,column_header
+Temperature_3_Median,degrees celsius,Median temperature from miniDOT 3.,numeric,column_header
+Temperature_3_Min,degrees celsius,Minimum temperature from miniDOT 3.,numeric,column_header
+Temperature_Max,degrees celsius,Maximum temperature.,numeric,column_header
+Temperature_Mean,degrees celsius,Mean temperature.,numeric,column_header
+Temperature_Median,degrees celsius,Median temperature.,numeric,column_header
+Temperature_Min,degrees celsius,Minimum temperature.,numeric,column_header
+Tensile_Strength_pounds,pounds,Tensile strength of cotton strips (in pounds as force).,numeric,column_header
+Term_Type,N/A,Indicates whether the header is a column header or row header.,text,column_header
+Time,hh:mm UTC-08:00,Time.,time,column_header
+Time_Zone,N/A,Local time zone.,text,column_header
+Total_Distance,meters,Total distance from the miniDOT sensor to the last transect.,numeric,column_header
+Total_Incubation_days,days,Total days the cotton strips were deployed for. The total incubation days and tensile strength are used to calculate decay rate. See SSS_Methods_Codes.csv for more details.,numeric,column_header
+Transect,N/A,Transect number for which the measurements in the row correlate to.,numeric,column_header
+Turbidity,nephelometric turbidity units,Turbidity. ,numeric,column_header
+Turbidity_Max,nephelometric turbidity units,Maximum turbidity.,numeric,column_header
+Turbidity_Mean,nephelometric turbidity units,Mean turbidity.,numeric,column_header
+Turbidity_Median,nephelometric turbidity units,Median turbidity.,numeric,column_header
+Turbidity_Min,nephelometric turbidity units,Minimum turbidity.,numeric,column_header
+Ultrameter_pH_1,pH,First of three consecutive Ultrameter pH measurements.,numeric,column_header
+Ultrameter_pH_2,pH,Second of three consecutive Ultrameter pH measurements.,numeric,column_header
+Ultrameter_pH_3,pH,Third of three consecutive Ultrameter pH measurements.,numeric,column_header
+Ultrameter_Specific_Conductance_1,microsiemens per centimeter,First of three consecutive Ultrameter measurements of specific conductance. Electrical conductivity at 25 degrees celsius.,numeric,column_header
+Ultrameter_Specific_Conductance_2,microsiemens per centimeter,Second of three consecutive Ultrameter specific conductance measurements. Electrical conductivity at 25 degrees celsius.,numeric,column_header
+Ultrameter_Specific_Conductance_3,microsiemens per centimeter,Third of three consecutive Ultrameter specific conductance measurements. Electrical conductivity at 25 degrees celsius.,numeric,column_header
+Ultrameter_Start_Time,hh:mm,Time of Ultrameter measurements.,time,column_header
+Ultrameter_Temperature_1,degrees celsius,First of three consecutive Ultrameter temperature measurements.,numeric,column_header
+Ultrameter_Temperature_2,degrees celsius,Second of three consecutive Ultrameter temperature measurements.,numeric,column_header
+Ultrameter_Temperature_3,degrees celsius,Third of three consecutive Ultrameter temperature measurements.,numeric,column_header
+Ultrameter_Total_Dissolved_Solids_1,parts per million,First of three consecutive Ultrameter total dissolved solids measurements.,numeric,column_header
+Ultrameter_Total_Dissolved_Solids_2,parts per million,Second of three consecutive Ultrameter total dissolved solids measurements.,numeric,column_header
+Ultrameter_Total_Dissolved_Solids_3,parts per million,Third of three consecutive Ultrameter total dissolved solids measurements.,numeric,column_header
+Unit,N/A,Unit of measurement that applies to a given column or row in the data package.,text,column_or_row_header
+Water_Depth,meters,Depth of water measured by sonar. A value of 0 indicates “below the minimum depth resolvable by the sonar”.,numeric,column_header
+Water_Depth_cm,centimeters,Vertical distance between water surface and bed of sampling location.,numeric,column_header
+Weather,N/A,Weather conditions (sunny; partly cloudy; overcast; raining; other) during sample collection.,text,column_header

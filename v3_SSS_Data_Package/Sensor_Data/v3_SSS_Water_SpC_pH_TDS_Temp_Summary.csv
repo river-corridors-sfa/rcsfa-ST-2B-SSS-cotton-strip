@@ -1,0 +1,65 @@
+# HeaderRows_17,,,,,,,,,,,,,,,
+# HeaderRows_Format: Column_Header; Unit; InstallationMethod_ID; Instrument_Summary,,,,,,,,,,,,,,,
+# Date; YYYY-MM-DD ; WaterColumn_Handheld; Cellular phone (iPhone or Android) or wrist watch set to Pacific Standard Time.,,,,,,,,,,,,,,,
+# Ultrameter_Start_Time; hh:mm  UTC-08:00; WaterColumn_Handheld; Cellular phone (iPhone or Android) or wrist watch set to Pacific Standard Time recorded manually at first time point..,,,,,,,,,,,,,,,
+# Ultrameter_Specific_Conductance_1; microsiemens_per_centimeter; WaterColumn_Handheld; Ultrameter II 6PFCE with four-electrode conductivity cell.,,,,,,,,,,,,,,,
+# Ultrameter_Specific_Conductance_2; microsiemens_per_centimeter; WaterColumn_Handheld; Ultrameter II 6PFCE with four-electrode conductivity cell.,,,,,,,,,,,,,,,
+# Ultrameter_Specific_Conductance_3; microsiemens_per_centimeter; WaterColumn_Handheld; Ultrameter II 6PFCE with four-electrode conductivity cell.,,,,,,,,,,,,,,,
+# Ultrameter_pH_1; pH; WaterColumn_Handheld; Ultrameter II 6PFCE with pH sensor.,,,,,,,,,,,,,,,
+# Ultrameter_pH_2; pH; WaterColumn_Handheld; Ultrameter II 6PFCE with pH sensor.,,,,,,,,,,,,,,,
+# Ultrameter_pH_3; pH; WaterColumn_Handheld; Ultrameter II 6PFCE with pH sensor.,,,,,,,,,,,,,,,
+# Ultrameter_Total_Dissolved_Solids_1; parts_per_million; WaterColumn_Handheld; Ultrameter II 6PFCE with four-electrode conductivity cell. Specific conductance converted to total dissolved solids using standard conversion ratio for freshwater.,,,,,,,,,,,,,,,
+# Ultrameter_Total_Dissolved_Solids_2; parts_per_million; WaterColumn_Handheld; Ultrameter II 6PFCE with four-electrode conductivity cell. Specific conductance converted to total dissolved solids using standard conversion ratio for freshwater.,,,,,,,,,,,,,,,
+# Ultrameter_Total_Dissolved_Solids_3; parts_per_million; WaterColumn_Handheld; Ultrameter II 6PFCE with four-electrode conductivity cell. Specific conductance converted to total dissolved solids using standard conversion ratio for freshwater.,,,,,,,,,,,,,,,
+# Ultrameter_Temperature_1; degree_celsius; WaterColumn_Handheld; Ultrameter II 6PFCE with temperature sensor.,,,,,,,,,,,,,,,
+# Ultrameter_Temperature_2; degree_celsius; WaterColumn_Handheld; Ultrameter II 6PFCE with temperature sensor.,,,,,,,,,,,,,,,
+# Ultrameter_Temperature_3; degree_celsius; WaterColumn_Handheld; Ultrameter II 6PFCE with temperature sensor.,,,,,,,,,,,,,,,
+Date,Ultrameter_Start_Time,Parent_ID,Site_ID,Ultrameter_Specific_Conductance_1,Ultrameter_Specific_Conductance_2,Ultrameter_Specific_Conductance_3,Ultrameter_pH_1,Ultrameter_pH_2,Ultrameter_pH_3,Ultrameter_Total_Dissolved_Solids_1,Ultrameter_Total_Dissolved_Solids_2,Ultrameter_Total_Dissolved_Solids_3,Ultrameter_Temperature_1,Ultrameter_Temperature_2,Ultrameter_Temperature_3
+-9999,-9999,SSS001,S63,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS002,S30R,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS003,S31,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS004,S55N,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS005,S57,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS006,S56N,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS007,S53,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS008,S52,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS009,S45,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS010,S10,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS011,S04,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS012,S50P,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS013,T07,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS014,T02,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS015,T03,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS016,T42,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS017,S58,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS018,S08,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS019,S03,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS020,T05P,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS021,S24,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+-9999,-9999,SSS022,S15,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+ 2022-08-12,7:38,SSS023,U20,195.5,195.7,196.4,7.5,7.61,7.53,127.6,127.9,128.4,14,13.9,13.9
+-9999,-9999,SSS024,W20,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+ 2022-08-08,9:34,SSS025,S34R,269.7,270.7,270.6,7.45,7.52,7.54,178.4,180.3,180.3,18.7,18.6,18.5
+ 2022-08-08,13:13,SSS026,S36,185.8,186.3,186.3,8.79,8.82,8.88,121.2,121.5,121.7,22.1,21.9,21.9
+ 2022-08-08,16:20,SSS027,S32,97.72,98.13,98.08,8.27,8.28,8.29,62.86,63.07,63.4,24.1,23.8,23.8
+ 2022-08-09,10:10,SSS028,S42,173.6,174,174,7.7,7.69,7.69,114.9,114.9,114.9,15.8,15.7,15.7
+ 2022-08-09,13:05,SSS029,S41R,126.8,126.8,126.8,8.02,8.03,8.03,82.23,82.32,82.32,18.9,18.8,18.7
+ 2022-08-09,15:10,SSS030,S43,156.7,157.9,158.1,8.37,8.43,8.44,101.6,102,102.5,20.1,19.9,19.9
+ 2022-08-10,8:22,SSS031,S47R,51.12,51.31,51.26,8.23,8.03,7.9,34.08,34.18,34.21,9.7,9.6,9.6
+ 2022-08-10,10:11,SSS032,C21,61.98,61.99,62,7.49,7.44,7.44,41.78,41.81,41.81,6.2,6.2,6.2
+ 2022-08-10,13:37,SSS033,S48R,74.45,74.42,74.58,7.47,7.52,7.52,48.94,49.94,49.2,12.7,12.2,12.2
+ 2022-08-11,10:54,SSS034,S18R,44,44.01,43.75,7.6,7.6,7.61,28.59,28.62,28.5,15.7,15.5,15.6
+ 2022-08-11,13:40,SSS035,S17R,22.93,22.98,22.95,7.27,7.22,7.29,14.54,14.59,14.61,20.1,19.9,20
+-9999,-9999,SSS036,W10,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+ 2022-08-08,8:53,SSS037,S39,64.09,64.22,64.16,7.93,7.81,7.79,41.14,41.3,41.29,13.5,13.4,13.4
+ 2022-08-08,12:42,SSS038,S38,151.4,151.5,151.6,7.32,7.26,7.22,96.85,97.03,97.16,15.8,15.7,15.6
+ 2022-08-08,14:25,SSS039,S37,75.09,74.97,74.86,7.73,7.9,7.88,47.63,47.5,47.44,19.1,18.9,18.9
+-9999,-9999,SSS040,S54,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999
+ 2022-08-09,11:25,SSS041,S49R,87.92,83.07,81.98,7.42,7.43,7.43,55.82,53.44,52.36,16.5,16,15.6
+ 2022-08-09,12:43,SSS042,S51,71.39,69.35,68.91,8.23,8,8.03,43.55,43.89,43.8,17,17.3,16.3
+ 2022-08-10,8:20,SSS043,S11,35.12,35.13,35.13,6.92,6.92,6.92,22.32,22.33,22.33,16.4,16.4,16.4
+ 2022-08-10,10:19,SSS044,S02,39.34,39.35,39.38,7.43,7.42,7.39,28.82,24.84,24.94,18.2,18.3,18.3
+ 2022-08-10,11:39,SSS045,S01,63.22,64.52,64.98,7.8,7.51,7.51,42.51,40.83,41.49,14.8,14.8,14.7
+ 2022-08-11,8:15,SSS046,S22RR,144.4,144.6,144.4,7,6.92,6.9,92.03,92.36,92.38,16.1,16.4,16.3
+ 2022-08-11,10:20,SSS047,S23,47.93,48.18,48.05,7.58,7.54,7.52,30.56,30.76,30.75,14.4,14.1,14
+ 2022-08-11,12:45,SSS048,S29,98.76,99.44,99.03,7.52,7.57,7.64,61.45,62.98,62.64,21.6,21.6,21.6
