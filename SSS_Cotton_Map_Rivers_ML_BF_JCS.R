@@ -2,13 +2,14 @@
 #
 # Make map for Cotton Strips
 #
-# Status: Complete
+# Status: JCS plans to edit, hasn't done so
 #
 # ==============================================================================
 #
 # Author: Brieanne Forbes 
 # 4 August 2023
-#
+# Edited: JCS
+# Dec 2024
 # ==============================================================================
 library(tidyverse) #keep it tidy
 library(raster) # work with rasters, NOTE: masks dplyr::select
