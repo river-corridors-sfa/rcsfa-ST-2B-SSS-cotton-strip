@@ -2,14 +2,14 @@
 #
 # Make map for Cotton Strips
 #
-# Status: JCS plans to edit, hasn't done so
+# Status: JCS edits are complete
 #
 # ==============================================================================
 #
 # Author: Brieanne Forbes 
 # 4 August 2023
 # Edited: JCS
-# Dec 2024
+# 20 Dec 2024
 # ==============================================================================
 library(tidyverse) #keep it tidy
 library(raster) # work with rasters, NOTE: masks dplyr::select
@@ -30,17 +30,17 @@ library(viridis)
 rm(list=ls(all=T))
 
 # Setting wd to parent folder
-current_path <- rstudioapi::getActiveDocumentContext()$path 
-setwd(dirname(current_path))
-setwd("./..")
+#current_path <- rstudioapi::getActiveDocumentContext()$path 
+#setwd(dirname(current_path))
+#setwd("./..")
 
 # ================================= User inputs ================================
 
-metadata_file <- 'C:/GitHub/CottonStripPaper/data/v2_SSS_Data_Package/v2_SSS_Field_Metadata.csv'
+metadata_file <- 'v3_SSS_Data_Package/v2_SSS_Field_Metadata.csv'
 
-data_file <- 'C:/GitHub/CottonStripPaper/data/Exported Data/Decay_Data.csv'
+data_file <- 'Outputs/Decay_Data.csv'
 
-summary = read.csv("C:/GitHub/CottonStripPaper/data/v2_SSS_Data_Package/SSS_CottonStrip_TensileStrength_DecayRate_Summary.csv", skip = 2, header = TRUE)
+summary = read.csv("v3_SSS_Data_Package/Sample_Data/SSS_CottonStrip_TensileStrength_DecayRate_Summary.csv", skip = 2, header = TRUE)
 
 summary = summary %>% 
   mutate(Sample_Name = stringr::str_extract(Sample_Name,"SSS[0-9]{3}")) %>% 
@@ -48,9 +48,9 @@ summary = summary %>%
   dplyr::select(Sample_Name, Mean_Decay_Rate_per_day)
 
 
-yrb_shp_dir <- 'C:/GitHub/CottonStripPaper/data/YakimaRiverBasin_Boundary/'
+yrb_shp_dir <- 'data/YakimaRiverBasin_Boundary/'
 
-cluster_shp_dir <- 'C:/GitHub/CottonStripPaper/data/YRB_Cluster/'
+cluster_shp_dir <- 'data/YRB_Cluster/'
 
 common_crs = 4326
 
@@ -59,8 +59,12 @@ common_crs = 4326
 metadata <- read_csv(metadata_file) %>%
   dplyr::select(Parent_ID, Site_ID, Latitude, Longitude)
 
-data <- read_csv(data_file) %>%
-  dplyr::select(Parent_ID, mean_degree_decay_rate) %>% 
+data <- read_csv(data_file) %>% 
+  group_by(Parent_ID) %>% 
+  mutate(mean_Decay_Rate_per_day = mean(Decay_Rate_per_day))
+
+data <- data %>%
+  dplyr::select(Parent_ID, mean_degree_decay_rate,mean_Decay_Rate_per_day) %>% 
   distinct(Parent_ID, .keep_all = TRUE)
 
 merge <- data %>%
@@ -82,11 +86,11 @@ sites <- st_as_sf(merge, coords = c('Longitude','Latitude'), crs = common_crs)
 
 # ======================== pull NHD data and elevation =========================
 
-geometry <- 
+#geometry <- 
 
 YRB_flowlines <- get_nhdplus(AOI = YRB_boundary$geometry, streamorder = 3)
 
-elevation_raw <- get_elev_raster(YRB_boundary$geometry, z = 10)
+elevation_raw <- get_elev_raster(YRB_boundary, z = 10) # was YRB_boundary$geometry
 
 elevation_crop <- mask(elevation_raw, YRB_boundary)
 
@@ -119,12 +123,12 @@ insert <- ggplot() +
   labs(x = "", y = "")+
   theme_map()
 
-# ========================= create map of ER water column (elevation) ======================
+# ========================= create map of Decay Rate per Degree Day (elevation) ======================
 
-ER_wc_map <- ggplot()+
+kdd_map <- ggplot()+
   geom_sf(data = YRB_boundary, fill = "white")+
-  #geom_raster(data = elevation, aes(long, lat, fill = elevation), show.legend = F, alpha = 0.4)+
-  #scale_fill_gradient(low = 'white', high = 'black')+
+  geom_raster(data = elevation, aes(long, lat, fill = elevation), show.legend = F, alpha = 0.4)+
+  scale_fill_gradient(low = 'white', high = 'black')+
   geom_sf(data = YRB_flowlines, color = "royalblue", alpha = 0.6)+
   new_scale_fill()+
   geom_sf(data = sites, aes(color = mean_degree_decay_rate, size = mean_degree_decay_rate), show.legend = T) +
@@ -144,40 +148,36 @@ ER_wc_map <- ggplot()+
     # pad_y = unit(0.5, "in"),
     style = ggspatial::north_arrow_nautical(
       fill = c("black", "white"),
-      line_col = "grey20"))
+      line_col = "grey20")) +
+  theme(legend.position = c(0.75,0.7))
 
 full <- ggdraw() +
-  draw_plot(ER_wc_map) +
-  draw_plot(insert, x = 0.4, y = 0.4, width = 0.3, height = 0.3)
+  draw_plot(kdd_map) #+
+  #draw_plot(insert, x = 0.4, y = 0.4, width = 0.3, height = 0.3)
 
-ggsave('./Data/Maps/SPS_ER_Water_Column_Map.pdf',
+ggsave('Outputs/SPS_kdd_Map.pdf',
        full,
        width = 8,
        height = 5
 )
 
-# ========================= create map of ER water column (cluster) ======================
+rm('kdd_map')
 
-ER_wc_map_cluster <- ggplot()+
-  geom_sf(data = YRB_boundary)+
-  geom_sf(data = cluster, aes(fill = as.factor(ClusterNum), color = as.factor(ClusterNum)), show.legend = T)+
-  # scale_fill_manual(values = alpha(c('#1a9850', 'steelblue1', '#91cf60', '#8c510a', '#d9ef8b', '#f6e8c3'), 0.3))+
-  # scale_color_manual(values = alpha(c('#1a9850', 'steelblue1', '#91cf60', '#8c510a', '#d9ef8b', '#f6e8c3'), 0.2))+
-  scale_fill_manual(values = c('#1a9850', 'steelblue1', '#91cf60', '#8c510a', '#d9ef8b', '#f6e8c3'))+
-  scale_color_manual(values = c('#1a9850', 'steelblue1', '#91cf60', '#8c510a', '#d9ef8b', '#f6e8c3'))+
-  geom_sf(data = YRB_flowlines, color = "royalblue")+
+# ========================= create map of Decay Rate per Day (elevation) ======================
+
+kd_map <- ggplot()+
+  geom_sf(data = YRB_boundary, fill = "white")+
+  geom_raster(data = elevation, aes(long, lat, fill = elevation), show.legend = F, alpha = 0.4)+
+  scale_fill_gradient(low = 'white', high = 'black')+
+  geom_sf(data = YRB_flowlines, color = "royalblue", alpha = 0.6)+
   new_scale_fill()+
-  new_scale_color()+
-  # geom_sf(data = sites, aes(color = ER_wc, size = ER_wc), show.legend = T) +
-  # geom_sf(data = sites, aes(size = ER_wc), show.legend = T, shape = 18, fill = 'white', color = 'black') +
-  geom_sf(data = sites, show.legend = T, size = 3) +
-  # scale_fill_viridis(option = 'B', begin = 0.3)+
-  # scale_color_viridis(option = 'B', begin = 0.3)+
-  # scale_fill_gradient(low = 'white', high = 'black')+
-  # scale_color_gradient(low = 'white', high = 'black')+
-  # scale_size(range = c(0.1, 10), trans = 'reverse')+
+  geom_sf(data = sites, aes(color = mean_Decay_Rate_per_day, size = mean_Decay_Rate_per_day), show.legend = T) +
+  scale_fill_viridis(option = 'B', begin = 0.2, direction = -1)+
+  scale_color_viridis(option = 'B', begin = 0.2, direction = -1)+
+  scale_size(range = c(1.5, 6))+
   theme_map() +
-  # labs(x = "", y = "", color = "Water Column\nRespiration\n(mg O2 L-1 day-1)") +
+  labs(x = "", y = "", color = bquote(K[d])) +
+  guides(size = "none")+
   ggspatial::annotation_scale(
     location = "br",
     pad_x = unit(0.5, "in"),
@@ -188,17 +188,17 @@ ER_wc_map_cluster <- ggplot()+
     # pad_y = unit(0.5, "in"),
     style = ggspatial::north_arrow_nautical(
       fill = c("black", "white"),
-      line_col = "grey20"))
+      line_col = "grey20")) +
+  theme(legend.position = c(0.75,0.7))
 
-full_cluster <- ggdraw() +
-  draw_plot(ER_wc_map_cluster) +
-  draw_plot(insert, x = 0.4, y = 0.4, width = 0.3, height = 0.3)
+full <- ggdraw() +
+  draw_plot(kd_map) #+
+#draw_plot(insert, x = 0.4, y = 0.4, width = 0.3, height = 0.3)
 
-ggsave('./Data/Maps/SPS_ER_Water_Column_Map_Cluster.pdf',
-       full_cluster,
+ggsave('Outputs/SPS_kd_Map.pdf',
+       full,
        width = 8,
        height = 5
 )
-
 
 

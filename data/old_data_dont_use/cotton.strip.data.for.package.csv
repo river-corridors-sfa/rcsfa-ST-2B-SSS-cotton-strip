@@ -1,0 +1,193 @@
+Sample_ID,Replicate.ID,Tensile.Strength_Pounds,Notes.for.individual.reps,Notes.for.group.of.4,Deviation,Site_ID,Deploy_Date_Time,Retrieve_Date_Time,Total_Inc_Days,Decay_Rate_perday
+SSS001,A,33.3,,All look similar; Relatively clean with minimal purple/grey staining ,None,S63P,7/25/22 11:40,8/29/22 9:45,34.92,0.020149
+SSS001,B,37.6,,,None,S63P,7/25/22 11:40,8/29/22 9:45,34.92,0.016671
+SSS001,C,31.1,,,None,S63P,7/25/22 11:40,8/29/22 9:45,34.92,0.022106
+SSS001,D,33.7,,,None,S63P,7/25/22 11:40,8/29/22 9:45,34.92,0.019807
+SSS002,A,17,Tore near top vice,"All look similar; Relatively clean with some orange, purple, and grey staining",None,S30R,7/25/22 14:08,8/29/22 10:15,34.84,0.039495
+SSS002,B,13.6,,,None,S30R,7/25/22 14:08,8/29/22 10:15,34.84,0.045900
+SSS002,C,26.2,,,None,S30R,7/25/22 14:08,8/29/22 10:15,34.84,0.027079
+SSS002,D,13.4,,,None,S30R,7/25/22 14:08,8/29/22 10:15,34.84,0.046326
+SSS003,A,8.1,"Tore near top vice, some fring emissing, minimal orange staining and sediment caked on",All look similar,None,S31,7/25/22 13:00,8/29/22 10:52,34.91,0.060648
+SSS003,B,7.4,Some orange and dark grey staining ,,None,S31,7/25/22 13:00,8/29/22 10:52,34.91,0.063237
+SSS003,C,11,"Minimal staining, some fringe missing, tore at bottom vice",,None,S31,7/25/22 13:00,8/29/22 10:52,34.91,0.051882
+SSS003,D,16.3,"Some orange and brown staining, some fringe missing ",,None,S31,7/25/22 13:00,8/29/22 10:52,34.91,0.040617
+SSS004,A,14.2,"Large dark orange stain, tore near bottom vice, sediment caked on",All look similar,None,S55,7/26/22 13:26,8/30/22 12:31,34.96,0.044503
+SSS004,B,8.2,"Large dark orange stains, sediment caked on",,None,S55,7/26/22 13:26,8/30/22 12:31,34.96,0.060209
+SSS004,C,19.9,One large dark orange stain on one side ,,None,S55,7/26/22 13:26,8/30/22 12:31,34.96,0.034851
+SSS004,D,24.9,One large dark orange stain on one side ,,None,S55,7/26/22 13:26,8/30/22 12:31,34.96,0.028439
+SSS005,A,8.8,"Dark grey stains, large orange stain on one side, most fringe gone ",,None,S57,7/26/22 16:03,8/30/22 11:35,34.81,0.058437
+SSS005,B,5.2,"Dark grey stains, organge stain on one side, some fringe gone ",,None,S57,7/26/22 16:03,8/30/22 11:35,34.81,0.073548
+SSS005,C,6.2,"Dark grey stains, all fringe gone",,None,S57,7/26/22 16:03,8/30/22 11:35,34.81,0.068496
+SSS005,D,7.3,"Tore near bottom vice, dark grey stains, sediment caked on",,None,S57,7/26/22 16:03,8/30/22 11:35,34.81,0.063805
+SSS006,A,1,Already torn near one end of strip prior to pulling,All look similar; lots of sediment caked on; all fringe gone on each strip,None,S56,7/26/22 14:30,8/30/22 13:32,34.96,0.120400
+SSS006,B,1.2,Already torn in middle prior to pulling,,None,S56,7/26/22 14:30,8/30/22 13:32,34.96,0.115185
+SSS006,C,0.4,,,None,S56,7/26/22 14:30,8/30/22 13:32,34.96,0.146610
+SSS006,D,0.7,Already torn on one long side ,,None,S56,7/26/22 14:30,8/30/22 13:32,34.96,0.130603
+SSS007,A,24.1,,All look similar; relatively clean except for some sediment caked on,None,S53,7/27/22 7:30,8/31/22 9:35,35.09,0.029269
+SSS007,B,28,,,None,S53,7/27/22 7:30,8/31/22 9:35,35.09,0.024994
+SSS007,C,18.6,,,None,S53,7/27/22 7:30,8/31/22 9:35,35.09,0.036652
+SSS007,D,17.5,,,None,S53,7/27/22 7:30,8/31/22 9:35,35.09,0.038389
+SSS008,A,28.2,,All look similar; Some brown staining and sediment caked on,None,S52,7/27/22 12:00,8/31/22 7:11,34.80,0.024996
+SSS008,B,38.1,,,None,S52,7/27/22 12:00,8/31/22 7:11,34.80,0.016349
+SSS008,C,34.7,,,None,S52,7/27/22 12:00,8/31/22 7:11,34.80,0.019035
+SSS008,D,20.3,,,None,S52,7/27/22 12:00,8/31/22 7:11,34.80,0.034441
+SSS009,A,44.4,,All look similar; Some brown staining and sediment caked on,None,S45,7/27/22 11:05,8/31/22 7:44,34.86,0.011931
+SSS009,B,34,,,None,S45,7/27/22 11:05,8/31/22 7:44,34.86,0.019587
+SSS009,C,19.4,Some slippage; had to stop and re-tighten,,None,S45,7/27/22 11:05,8/31/22 7:44,34.86,0.035682
+SSS009,D,37.2,,,None,S45,7/27/22 11:05,8/31/22 7:44,34.86,0.017006
+SSS010,A,29.6,,"All look similar; relatively clean with some light staining (purple, green, grey, few black spots)",None,S10,7/28/22 8:07,9/1/22 12:19,35.18,0.023351
+SSS010,B,28,,,None,S10,7/28/22 8:07,9/1/22 12:19,35.18,0.024931
+SSS010,C,26.2,,,None,S10,7/28/22 8:07,9/1/22 12:19,35.18,0.026820
+SSS010,D,27,,,None,S10,7/28/22 8:07,9/1/22 12:19,35.18,0.025965
+SSS011,A,6.7,,All look similar; some fringe missing (mainly on short ends); black spots; brown and green stains; sediment caked on,None,S04,7/28/22 7:30,9/1/22 12:25,35.20,0.065532
+SSS011,B,9.5,,,None,S04,7/28/22 7:30,9/1/22 12:25,35.20,0.055614
+SSS011,C,8.2,,,None,S04,7/28/22 7:30,9/1/22 12:25,35.20,0.059794
+SSS011,D,7,Tore at top vice,,None,S04,7/28/22 7:30,9/1/22 12:25,35.20,0.064288
+SSS012,A,16.6,Tore near bottom vice,All look similar; stained and lots of seidment caked on,None,S50P,7/28/22 9:09,9/1/22 11:21,35.09,0.039889
+SSS012,B,12.1,,,None,S50P,7/28/22 9:09,9/1/22 11:21,35.09,0.048899
+SSS012,C,12.6,Tore near top and bottom vices,,None,S50P,7/28/22 9:09,9/1/22 11:21,35.09,0.047745
+SSS012,D,11.6,,,None,S50P,7/28/22 9:09,9/1/22 11:21,35.09,0.050102
+SSS013,A,1,VERY degraded; strip very small,,None,T07,7/25/22 7:59,8/29/22 12:44,35.20,0.119585
+SSS013,B,2.4,"Tore near top, most fringe missing, orange and brown staining, very degraded",,None,T07,7/25/22 7:59,8/29/22 12:44,35.20,0.094713
+SSS013,C,0.05,"Strip was in multiple pieces, all too small to pull ",,Too small to measure,T07,7/25/22 7:59,8/29/22 12:44,35.20,0.204697
+SSS013,D,0.05,"Strip was in multiple pieces, all too small to pull ",,Too small to measure,T07,7/25/22 7:59,8/29/22 12:44,35.20,0.204697
+SSS014,A,NA,,,No Cotton Strips Recovered,T02,7/25/22 14:48,8/29/22 11:15,34.85,NA
+SSS014,B,NA,,,No Cotton Strips Recovered,T02,7/25/22 14:48,8/29/22 11:15,34.85,NA
+SSS014,C,NA,,,No Cotton Strips Recovered,T02,7/25/22 14:48,8/29/22 11:15,34.85,NA
+SSS014,D,NA,,,No Cotton Strips Recovered,T02,7/25/22 14:48,8/29/22 11:15,34.85,NA
+SSS015,A,2.5,Tore at bottom vice,"All look similar; most/all fringe missing, orange and brown staining, sediment caked on",None,T03,7/25/22 11:58,8/29/22 7:35,34.82,0.094576
+SSS015,B,0.5,Already partly torn before pulling,,None,T03,7/25/22 11:58,8/29/22 7:35,34.82,0.140801
+SSS015,C,4.5,Tore near top and bottom vices,,None,T03,7/25/22 11:58,8/29/22 7:35,34.82,0.077694
+SSS015,D,2.7,,,None,T03,7/25/22 11:58,8/29/22 7:35,34.82,0.092365
+SSS016,A,5.6,Moderate brown and orange staining,,None,T41,7/26/22 12:53,8/30/22 11:03,34.92,0.071195
+SSS016,B,10.4,Moderate brown and orange staining,,None,T41,7/26/22 12:53,8/30/22 11:03,34.92,0.053470
+SSS016,C,30.1,Light purple and brown staining,,None,T41,7/26/22 12:53,8/30/22 11:03,34.92,0.023040
+SSS016,D,32.4,Light purple and brown staining,,None,T41,7/26/22 12:53,8/30/22 11:03,34.92,0.020931
+SSS017,A,3.6,Most fringe missing,,None,S58,7/26/22 13:34,8/30/22 11:33,34.92,0.083865
+SSS017,B,4.2,Most fringe missing,,None,S58,7/26/22 13:34,8/30/22 11:33,34.92,0.079450
+SSS017,C,16.1,Orange and brown staining on one side,,None,S58,7/26/22 13:34,8/30/22 11:33,34.92,0.040965
+SSS017,D,7.6,Minimal staining; little bit of fringe missing ,,None,S58,7/26/22 13:34,8/30/22 11:33,34.92,0.062465
+SSS018,A,31.6,,All look similar; fairly clean with some light staining,None,S08,7/27/22 12:14,8/31/22 9:19,34.88,0.021675
+SSS018,B,23.9,Tore near top vice,,None,S08,7/27/22 12:14,8/31/22 9:19,34.88,0.029683
+SSS018,C,24.5,Tore near bottom vice ,,None,S08,7/27/22 12:14,8/31/22 9:19,34.88,0.028972
+SSS018,D,13.7,,,None,S08,7/27/22 12:14,8/31/22 9:19,34.88,0.045637
+SSS019,A,11.9,,All look similar; fairly clean with some light staining,None,S03,7/27/22 13:45,8/31/22 9:45,34.83,0.049740
+SSS019,B,17.4,,,None,S03,7/27/22 13:45,8/31/22 9:45,34.83,0.038833
+SSS019,C,8.2,,,None,S03,7/27/22 13:45,8/31/22 9:45,34.83,0.060431
+SSS019,D,21.2,Tore near bottom vice,,None,S03,7/27/22 13:45,8/31/22 9:45,34.83,0.033162
+SSS020,A,23.2,,All look similar; fairly clean with some light staining,None,T05P,7/27/22 10:27,8/31/22 8:50,34.93,0.030487
+SSS020,B,24.7,,,None,T05P,7/27/22 10:27,8/31/22 8:50,34.93,0.028694
+SSS020,C,19.8,Tore at top vice,,None,T05P,7/27/22 10:27,8/31/22 8:50,34.93,0.035024
+SSS020,D,14.9,,,None,T05P,7/27/22 10:27,8/31/22 8:50,34.93,0.043163
+SSS021,A,56.5,Some slippage; had to stop and re-tighten,All look similar; very clean/white,None,S24,7/28/22 9:40,9/1/22 11:08,35.06,0.004989
+SSS021,B,48.6,,,None,S24,7/28/22 9:40,9/1/22 11:08,35.06,0.009285
+SSS021,C,58.6,,,None,S24,7/28/22 9:40,9/1/22 11:08,35.06,0.003948
+SSS021,D,62.3,,,None,S24,7/28/22 9:40,9/1/22 11:08,35.06,0.002202
+SSS022,A,45.4,Tore near top vice,All look similar; very clean/white,None,S15,7/28/22 9:18,9/1/22 10:40,35.06,0.011229
+SSS022,B,53.3,Some slippage; had to stop and re-tighten,,None,S15,7/28/22 9:18,9/1/22 10:40,35.06,0.006653
+SSS022,C,54.7,Some slippage; had to stop and re-tighten,,None,S15,7/28/22 9:18,9/1/22 10:40,35.06,0.005913
+SSS022,D,55.4,,,None,S15,7/28/22 9:18,9/1/22 10:40,35.06,0.005550
+SSS023,A,4.8,,"All look similar; all had some fringe missing, some staining, and sediment caked on ",None,U20,7/28/22 11:47,9/1/22 9:41,34.91,0.075633
+SSS023,B,3.2,,,None,U20,7/28/22 11:47,9/1/22 9:41,34.91,0.087247
+SSS023,C,4,,,None,U20,7/28/22 11:47,9/1/22 9:41,34.91,0.080855
+SSS023,D,3.8,,,None,U20,7/28/22 11:47,9/1/22 9:41,34.91,0.082325
+SSS024,A,4.8,"Some fringe missing; light, brown staining, tore near top vice",,None,W20,7/26/22 9:10,8/30/22 8:25,34.97,0.075512
+SSS024,B,1.9,Some light staining and sediment caked on,,None,W20,7/26/22 9:10,8/30/22 8:25,34.97,0.102014
+SSS024,C,0.8,"A little torn prior to pulling; some fringe missing, light staining",,None,W20,7/26/22 9:10,8/30/22 8:25,34.97,0.126750
+SSS024,D,2.5,"Some fringe missing, light staining, seidment caked on",,None,W20,7/26/22 9:10,8/30/22 8:25,34.97,0.094166
+SSS025,A,0.05,,Not enough to pull. Just a few small scraps of cotton.,Too small to measure,S34R,7/25/22 13:20,8/29/22 10:34,34.88,0.206534
+SSS025,B,0.05,,,Too small to measure,S34R,7/25/22 13:20,8/29/22 10:34,34.88,0.206534
+SSS025,C,0.05,,,Too small to measure,S34R,7/25/22 13:20,8/29/22 10:34,34.88,0.206534
+SSS025,D,0.05,,,Too small to measure,S34R,7/25/22 13:20,8/29/22 10:34,34.88,0.206534
+SSS026,A,0.05,,Not enough to pull. Just a small amount of unraveled threads.,Too small to measure,S36,7/25/22 13:58,8/29/22 9:59,34.83,0.206835
+SSS026,B,0.05,,,Too small to measure,S36,7/25/22 13:58,8/29/22 9:59,34.83,0.206835
+SSS026,C,0.05,,,Too small to measure,S36,7/25/22 13:58,8/29/22 9:59,34.83,0.206835
+SSS026,D,0.05,,,Too small to measure,S36,7/25/22 13:58,8/29/22 9:59,34.83,0.206835
+SSS027,A,13.5,"Huge dark orange stain, brown stains, sediment caked on",,None,S32,7/25/22 10:08,8/29/22 9:10,34.96,0.045952
+SSS027,B,18.9,"Small orange stain, brown stains, sediment caked on, some fringe missing",,None,S32,7/25/22 10:08,8/29/22 9:10,34.96,0.036327
+SSS027,C,4.3,"Most fringe missing, sediment caked on, large orange stain",,None,S32,7/25/22 10:08,8/29/22 9:10,34.96,0.078678
+SSS027,D,10.7,"Fringe missing, large orange stain, lots of sediment caked on",,None,S32,7/25/22 10:08,8/29/22 9:10,34.96,0.052601
+SSS028,A,21.9,,All look similar; large brown stains,None,S42,7/26/22 8:35,8/30/22 8:08,34.98,0.032094
+SSS028,B,32,,,None,S42,7/26/22 8:35,8/30/22 8:08,34.98,0.021252
+SSS028,C,21,One orange stain,,None,S42,7/26/22 8:35,8/30/22 8:08,34.98,0.033293
+SSS028,D,32.1,,,None,S42,7/26/22 8:35,8/30/22 8:08,34.98,0.021163
+SSS029,A,4.7,Some fringe missing ,"All look similar; Large dark stains and some orange stains, some sediment caked on",None,S41R,7/26/22 10:08,8/30/22 8:59,34.95,0.076150
+SSS029,B,17.6,,,None,S41R,7/26/22 10:08,8/30/22 8:59,34.95,0.038374
+SSS029,C,13,Some fringe missing,,None,S41R,7/26/22 10:08,8/30/22 8:59,34.95,0.047042
+SSS029,D,5.3,Some fringe missing,,None,S41R,7/26/22 10:08,8/30/22 8:59,34.95,0.072713
+SSS030,A,11.7,,All look similar; relatively clean with moderate staining and sediment caked on,None,S43,7/26/22 11:30,8/30/22 10:20,34.95,0.050057
+SSS030,B,17.6,,,None,S43,7/26/22 11:30,8/30/22 10:20,34.95,0.038375
+SSS030,C,17.1,Tore at top vice,,None,S43,7/26/22 11:30,8/30/22 10:20,34.95,0.039200
+SSS030,D,14.9,Tore at top vice,,None,S43,7/26/22 11:30,8/30/22 10:20,34.95,0.043140
+SSS031,A,22.6,,"All look similar; small black stains, lots of sediment caked on, several dead bugs of the same spp. in tube",None,S47R,7/27/22 9:58,8/31/22 8:20,34.93,0.031238
+SSS031,B,17,,,None,S47R,7/27/22 9:58,8/31/22 8:20,34.93,0.039389
+SSS031,C,17,,,None,S47R,7/27/22 9:58,8/31/22 8:20,34.93,0.039389
+SSS031,D,22,,,None,S47R,7/27/22 9:58,8/31/22 8:20,34.93,0.032008
+SSS032,A,20.6,,All look similar; sediment caked on,None,C21,7/27/22 9:10,8/31/22 8:42,34.98,0.033844
+SSS032,B,14.9,Tore near bottom vice,,None,C21,7/27/22 9:10,8/31/22 8:42,34.98,0.043104
+SSS032,C,18.8,,,None,C21,7/27/22 9:10,8/31/22 8:42,34.98,0.036457
+SSS032,D,18.1,Tore near top vice,,None,C21,7/27/22 9:10,8/31/22 8:42,34.98,0.037542
+SSS033,A,38.7,,All look similar; clean/white,None,S48R,7/27/22 8:27,8/31/22 9:05,35.03,0.015797
+SSS033,B,32.6,Tore near bottom vice,,None,S48R,7/27/22 8:27,8/31/22 9:05,35.03,0.020694
+SSS033,C,47.1,,,None,S48R,7/27/22 8:27,8/31/22 9:05,35.03,0.010189
+SSS033,D,30,,,None,S48R,7/27/22 8:27,8/31/22 9:05,35.03,0.023067
+SSS034,A,58.7,,All look similar; clean/white,None,S18R,7/28/22 8:00,9/1/22 9:25,35.06,0.003900
+SSS034,B,56.4,,,None,S18R,7/28/22 8:00,9/1/22 9:25,35.06,0.005040
+SSS034,C,56.6,,,None,S18R,7/28/22 8:00,9/1/22 9:25,35.06,0.004939
+SSS034,D,50.6,,,None,S18R,7/28/22 8:00,9/1/22 9:25,35.06,0.008135
+SSS035,A,55.9,,All look similar; clean/white with some light brown staining,None,S17R,7/28/22 8:31,9/1/22 9:57,35.06,0.005294
+SSS035,B,51.5,,,None,S17R,7/28/22 8:31,9/1/22 9:57,35.06,0.007632
+SSS035,C,58.6,,,None,S17R,7/28/22 8:31,9/1/22 9:57,35.06,0.003948
+SSS035,D,58.1,,,None,S17R,7/28/22 8:31,9/1/22 9:57,35.06,0.004193
+SSS036,A,12.3,One orange stain and few light brown stains,,None,W10,7/28/22 10:20,9/1/22 10:30,35.01,0.048549
+SSS036,B,12,Dark orange and brown stain on one side,,None,W10,7/28/22 10:20,9/1/22 10:30,35.01,0.049255
+SSS036,C,21,One large light orange and brown stain,,None,W10,7/28/22 10:20,9/1/22 10:30,35.01,0.033269
+SSS036,D,11.4,Some dark brown stains,,None,W10,7/28/22 10:20,9/1/22 10:30,35.01,0.050720
+SSS037,A,9.4,Tore at bottom vice,All look similar; light with dark brown stains and sediment caked on,None,S39,7/25/22 9:00,8/29/22 7:59,34.96,0.056310
+SSS037,B,9.6,,,None,S39,7/25/22 9:00,8/29/22 7:59,34.96,0.055707
+SSS037,C,5.4,,,None,S39,7/25/22 9:00,8/29/22 7:59,34.96,0.072166
+SSS037,D,9.8,,,None,S39,7/25/22 9:00,8/29/22 7:59,34.96,0.055118
+SSS038,A,58.6,,All look similar' very clean/white with some light orange and yellow staining ,None,S38,7/25/22 10:00,8/29/22 8:49,34.95,0.003961
+SSS038,B,63.5,,,None,S38,7/25/22 10:00,8/29/22 8:49,34.95,0.001663
+SSS038,C,53.3,,,None,S38,7/25/22 10:00,8/29/22 8:49,34.95,0.006673
+SSS038,D,59.3,,,None,S38,7/25/22 10:00,8/29/22 8:49,34.95,0.003621
+SSS039,A,2.6,"Already had a tear before pulling, many dark stains, some sediment caked on",,None,S37,7/25/22 10:40,8/29/22 9:16,34.94,0.093117
+SSS039,B,4.2,"Large orange stain on one side, some dark brown stains",,None,S37,7/25/22 10:40,8/29/22 9:16,34.94,0.079392
+SSS039,C,14.2,Few large light brown stains,,None,S37,7/25/22 10:40,8/29/22 9:16,34.94,0.044529
+SSS039,D,2.8,"Already torn in two pieces prior to pulling, pulled the longer piece, brown stains ",,None,S37,7/25/22 10:40,8/29/22 9:16,34.94,0.090996
+SSS040,A,45.9,Tore near bottom vice,All look similar; clean with few light brown stains,None,S54,7/26/22 10:45,8/30/22 9:34,34.95,0.010950
+SSS040,B,19.9,Unclear why this one was so much lower than others,,None,S54,7/26/22 10:45,8/30/22 9:34,34.95,0.034862
+SSS040,C,48,,,None,S54,7/26/22 10:45,8/30/22 9:34,34.95,0.009670
+SSS040,D,42.4,Tore near top vice,,None,S54,7/26/22 10:45,8/30/22 9:34,34.95,0.013219
+SSS041,A,12.5,Clean except large grey and orange stain,Different degrees of staining,None,S49R,7/26/22 11:28,8/30/22 10:04,34.94,0.048178
+SSS041,B,3.6,"Lots of seidment caked on, couldn't get straight in jaws",,None,S49R,7/26/22 11:28,8/30/22 10:04,34.94,0.083803
+SSS041,C,26,,,None,S49R,7/26/22 11:28,8/30/22 10:04,34.94,0.027219
+SSS041,D,25.9,"Clean, tore at top vice",,None,S49R,7/26/22 11:28,8/30/22 10:04,34.94,0.027329
+SSS042,A,29.6,Tore near top vice,All look similar; clean with a few light brown stains,None,S51,7/26/22 12:08,8/30/22 10:30,34.93,0.023514
+SSS042,B,22,,,None,S51,7/26/22 12:08,8/30/22 10:30,34.93,0.032008
+SSS042,C,8.4,Didn't look obviously different from others - not sure why it's lower,,None,S51,7/26/22 12:08,8/30/22 10:30,34.93,0.059571
+SSS042,D,16.6,Tore near top and bottom vices ,,None,S51,7/26/22 12:08,8/30/22 10:30,34.93,0.040071
+SSS043,A,23.7,,All look similar; some light purple and brown stains,None,S11,7/27/22 7:46,8/31/22 7:28,34.99,0.029830
+SSS043,B,22.6,Tore near top vice,,None,S11,7/27/22 7:46,8/31/22 7:28,34.99,0.031189
+SSS043,C,13.2,,,None,S11,7/27/22 7:46,8/31/22 7:28,34.99,0.046558
+SSS043,D,26.3,,,None,S11,7/27/22 7:46,8/31/22 7:28,34.99,0.026855
+SSS044,A,28.7,,All look similar; look fairly clean with a few brown stains ,None,S02,7/27/22 9:32,8/31/22 8:20,34.95,0.024385
+SSS044,B,22.5,Tore near bottom vice,,None,S02,7/27/22 9:32,8/31/22 8:20,34.95,0.031349
+SSS044,C,35,,,None,S02,7/27/22 9:32,8/31/22 8:20,34.95,0.018707
+SSS044,D,27.4,,,None,S02,7/27/22 9:32,8/31/22 8:20,34.95,0.025712
+SSS045,A,38.8,,All look similar; clean with just a few light brown stains,None,S01,7/27/22 9:13,8/31/22 8:04,34.95,0.015757
+SSS045,B,30,,,None,S01,7/27/22 9:13,8/31/22 8:04,34.95,0.023116
+SSS045,C,30.1,,,None,S01,7/27/22 9:13,8/31/22 8:04,34.95,0.023021
+SSS045,D,32.5,,,None,S01,7/27/22 9:13,8/31/22 8:04,34.95,0.020826
+SSS046,A,56,Tore near top vice,All look similar; clean with a few brown stains,None,S22RR,7/28/22 10:44,9/1/22 12:19,35.07,0.005242
+SSS046,B,53.7,Tore near top vice,,None,S22RR,7/28/22 10:44,9/1/22 12:19,35.07,0.006438
+SSS046,C,52.4,,,None,S22RR,7/28/22 10:44,9/1/22 12:19,35.07,0.007137
+SSS046,D,58.2,,,None,S22RR,7/28/22 10:44,9/1/22 12:19,35.07,0.004143
+SSS047,A,NA,,,No Cotton Strips Recovered,S23,7/28/22 11:20,9/1/22 11:58,35.03,NA
+SSS047,B,NA,,,No Cotton Strips Recovered,S23,7/28/22 11:20,9/1/22 11:58,35.03,NA
+SSS047,C,NA,,,No Cotton Strips Recovered,S23,7/28/22 11:20,9/1/22 11:58,35.03,NA
+SSS047,D,NA,,,No Cotton Strips Recovered,S23,7/28/22 11:20,9/1/22 11:58,35.03,NA
+SSS048,A,31.5,Tore near top vice,All have sediment caked on,None,S29,7/28/22 13:15,9/1/22 8:42,34.81,0.021809
+SSS048,B,19.5,"Tore near bottom and top vice, large dark orange stain",,None,S29,7/28/22 13:15,9/1/22 8:42,34.81,0.035585
+SSS048,C,28.2,Large dark orange stain,,None,S29,7/28/22 13:15,9/1/22 8:42,34.81,0.024988
+SSS048,D,24.8,Light orange stain,,None,S29,7/28/22 13:15,9/1/22 8:42,34.81,0.028679
