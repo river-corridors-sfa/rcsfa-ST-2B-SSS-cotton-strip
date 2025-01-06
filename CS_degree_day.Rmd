@@ -21,9 +21,10 @@ site_id <- site_id_full %>%
   dplyr::select(c(Site_ID, Parent_ID, Latitude, Longitude))
 
 
-cs <- read.csv("v3_SSS_Data_Package/Sample_Data/SSS_CottonStrip_TensileStrength_DecayRate.csv", skip = 2, header = TRUE)
+cs <- read.csv("v3_SSS_Data_Package/Sample_Data/SSS_CottonStrip_TensileStrength_DecayRate.csv", skip = 2, header = TRUE) %>% 
+  filter(grepl("SSS", Sample_Name)) # add this to pull out samples from data package
 
-tensile <- cs[-c(1:11), -c(1)]
+#tensile <- cs[-c(1:11), -c(1)] # don't use this line, subset this row by filtering instead
 
 ##using HOBO data because miniDOT makes R crash
 mean.temp <- ("v3_SSS_Data_Package/Sensor_Data/DepthHOBO/Data/")
@@ -67,12 +68,12 @@ deg.day <- mean.daily %>%
   dplyr::select(-c("DateTime", "Time","Absolute_Pressure","Temperature","mean_daily_temp", "Date"))
 
 ##take out missing sites
-merged <- tensile %>% 
+merged <- cs %>% #tensile %>% 
   separate(Sample_Name, into = c("Parent_ID", "Replicate_ID"), sep = "_") %>% 
   subset(Parent_ID != "SSS014") %>% 
   subset(Parent_ID != "SSS047") %>% 
-  dplyr::select(c("Parent_ID", "Replicate_ID", "Tensile_Strength_pounds", "Total_Incubation_days", "Decay_Rate_per_day")) %>% 
-    na.omit() 
+  dplyr::select(c("Parent_ID", "Replicate_ID", "Tensile_Strength_pounds", "Total_Incubation_days", "Decay_Rate_per_day")) #%>% 
+#   na.omit()  #don't need to use na.omit() anymore
 
 ```
 
