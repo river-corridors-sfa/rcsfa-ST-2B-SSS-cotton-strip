@@ -1,7 +1,7 @@
 require(readr)
 
 # read in ER data
-ER.data = read_csv("v2_SSS_Water_Sediment_Total_Respiration_GPP.csv",comment = '#')
+ER.data = read_csv("v3_SSS_Data_Package/v2_SSS_Water_Sediment_Total_Respiration_GPP.csv",comment = '#')
 head(ER.data)
 
 # read in decay rate data
@@ -30,9 +30,12 @@ length((unique(Decay.data$Parent_ID))) # should be 46 (same as length above on l
 merged.data = merge(ER.data,Decay.data,by = 'Parent_ID',all = T)
 head(merged.data)
 
-# remove sites with missing data
-merged.data = merged.data[-grep(pattern = -9999,x = merged.data$Sediment_Respiration),]
-merged.data = merged.data[-which(is.na(merged.data$mean_day_decay_rate)==T),]
+# put in NA for missing data
+for (i in 1:ncol(merged.data)) {
+  
+  merged.data[which(merged.data[,i] == -9999),i] = NA
+  
+}
 head(merged.data)
 dim(merged.data)
 
@@ -43,6 +46,18 @@ merged.data$cube.root_mean_degree_decay_rate = cube_root(merged.data$mean_degree
 merged.data$cube.root_Total_Ecosystem_Respiration = cube_root(merged.data$Total_Ecosystem_Respiration)
 merged.data$cube.root_Sediment_Respiration = cube_root(merged.data$Sediment_Respiration)
 merged.data$cube.root_Water_Column_Respiration = cube_root(merged.data$Water_Column_Respiration)
+
+# remove sites with missing data
+merged.data = merged.data[-which(is.na(merged.data$Sediment_Respiration)==T),]
+merged.data = merged.data[-which(is.na(merged.data$mean_day_decay_rate)==T),]
+head(merged.data)
+dim(merged.data)
+
+# read in and merge data on drainage area
+geospatial.dat = read_csv('https://github.com/river-corridors-sfa/Geospatial_variables/raw/refs/heads/main/v2_RCSFA_Extracted_Geospatial_Data_2023-06-21.csv')
+head(geospatial.dat)
+merged.data = merge(merged.data,geospatial.dat[,c('site','totdasqkm')],by.x = 'Site_ID',by.y = 'site')
+merged.data$cube.root_totdasqkm = cube_root(merged.data$totdasqkm)
 
 # generate the 6 panel plot
 
@@ -141,4 +156,33 @@ AIC(degree_ERtot_mod) # [1] -113.1095
 AIC(degree_mult_mod) # [1] -110.0843
 AIC(degree_mult_inter_mod) # -108.3438
 
+# do regression of rates vs. discharge area
+
+pdf(file = "Outputs/Decay_vs_Drainage.pdf",height=14,width=10)
+
+par(pty = "s", mfrow = c(2, 1), oma = c(4, 4, 4, 4), mar = c(5, 5, 2, 1), mgp = c(3.5, 1, 0))
+
+mod.to.plot = merged.data$cube.root_mean_day_decay_rate ~ merged.data$cube.root_totdasqkm
+mod.sum = summary(lm(mod.to.plot))
+plot(mod.to.plot, 
+     xlab = bquote(Drainage ~ Area ~ (km^-2)^{1/3}), 
+     ylab = bquote(Decay ~ Rate ~ (day^-1)^{1/3}), 
+     cex.lab = 2, cex.axis = 1.5)
+abline(mod.sum,lwd=3)
+mtext(bquote(R^2 == .(round(mod.sum$r.squared, digits = 2))), side = 1 , adj = 0.95, line = -3.5)
+mtext(paste0("p = ",round(mod.sum$coefficients[2,4],digits = 3)),side = 1,adj = 0.95,line = -2)
+mtext("A",cex=2,side = 1,adj = 0.05,line=-1.5)
+
+mod.to.plot = merged.data$cube.root_mean_degree_decay_rate ~ merged.data$cube.root_totdasqkm
+mod.sum = summary(lm(mod.to.plot))
+plot(mod.to.plot, 
+     xlab = bquote(Drainage ~ Area ~ (km^-2)^{1/3}), 
+     ylab = bquote(Decay ~ Rate ~ ('degree ' ~ day^-1)^{1/3}), 
+     cex.lab = 2, cex.axis = 1.5)
+abline(mod.sum,lwd=3)
+mtext(bquote(R^2 == .(round(mod.sum$r.squared, digits = 2))), side = 1, adj = 0.95, line = -3.5)
+mtext(paste0("p = ",round(mod.sum$coefficients[2,4],digits = 3)),side = 1,adj = 0.95,line = -2)
+mtext("B",cex=2,side = 1,adj = 0.05,line=-1.5)
+
+dev.off()
 
