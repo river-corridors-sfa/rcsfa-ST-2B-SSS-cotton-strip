@@ -165,7 +165,7 @@ rm('kdd_map')
 
 # ========================= create map of Decay Rate per Day (elevation) ======================
 
-kd_map <- ggplot()+
+kcd_map <- ggplot()+
   geom_sf(data = YRB_boundary, fill = "white")+
   geom_raster(data = elevation, aes(long, lat, fill = elevation), show.legend = F, alpha = 0.4)+
   scale_fill_gradient(low = 'white', high = 'black')+
@@ -176,7 +176,7 @@ kd_map <- ggplot()+
   scale_color_viridis(option = 'B', begin = 0.2, direction = -1)+
   scale_size(range = c(1.5, 6))+
   theme_map() +
-  labs(x = "", y = "", color = bquote(K[d])) +
+  labs(x = "", y = "", color = bquote(K[cd])) +
   guides(size = "none")+
   ggspatial::annotation_scale(
     location = "br",
@@ -192,10 +192,10 @@ kd_map <- ggplot()+
   theme(legend.position = c(0.75,0.7))
 
 full <- ggdraw() +
-  draw_plot(kd_map) #+
+  draw_plot(kcd_map) #+
 #draw_plot(insert, x = 0.4, y = 0.4, width = 0.3, height = 0.3)
 
-ggsave('Outputs/SPS_kd_Map.pdf',
+ggsave('Outputs/SPS_kcd_Map.pdf',
        full,
        width = 8,
        height = 5
