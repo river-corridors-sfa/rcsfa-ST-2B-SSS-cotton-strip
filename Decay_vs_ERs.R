@@ -71,7 +71,7 @@ mod.to.plot = merged.data$cube.root_mean_day_decay_rate ~ merged.data$cube.root_
 mod.sum = summary(lm(mod.to.plot))
 plot(mod.to.plot, 
      xlab = "", # expression(ER[tot]~(g~O[2]~m^-2~day^-1)^{1/3}), 
-     ylab = expression(Decay~Rate~(day^-1)^{1/3}), 
+     ylab = expression((K[cd])^{1/3}), 
      cex.lab = 2, cex.axis = 1.5)
 abline(mod.sum,lwd=3)
 mtext(bquote(R^2 == .(round(mod.sum$r.squared, digits = 2))), side = 3, adj = 0.95, line = -2)
@@ -105,7 +105,7 @@ mod.to.plot = merged.data$cube.root_mean_degree_decay_rate ~ merged.data$cube.ro
 mod.sum = summary(lm(mod.to.plot))
 plot(mod.to.plot, 
      xlab = expression(ER[tot]~(g~O[2]~m^-2~day^-1)^{1/3}), 
-     ylab = bquote(Decay ~ Rate ~ ('degree ' ~ day^-1)^{1/3}), 
+     ylab = expression((K[dd])^{1/3}), 
      cex.lab = 2, cex.axis = 1.5)
 abline(mod.sum,lwd=3)
 mtext(bquote(R^2 == .(round(mod.sum$r.squared, digits = 2))), side = 3, adj = 0.95, line = -2)
@@ -166,7 +166,7 @@ mod.to.plot = merged.data$cube.root_mean_day_decay_rate ~ merged.data$cube.root_
 mod.sum = summary(lm(mod.to.plot))
 plot(mod.to.plot, 
      xlab = bquote(Drainage ~ Area ~ (km^-2)^{1/3}), 
-     ylab = bquote(Decay ~ Rate ~ (day^-1)^{1/3}), 
+     ylab = expression((K[cd])^{1/3}), 
      cex.lab = 2, cex.axis = 1.5)
 abline(mod.sum,lwd=3)
 mtext(bquote(R^2 == .(round(mod.sum$r.squared, digits = 2))), side = 1 , adj = 0.95, line = -3.5)
@@ -177,7 +177,7 @@ mod.to.plot = merged.data$cube.root_mean_degree_decay_rate ~ merged.data$cube.ro
 mod.sum = summary(lm(mod.to.plot))
 plot(mod.to.plot, 
      xlab = bquote(Drainage ~ Area ~ (km^-2)^{1/3}), 
-     ylab = bquote(Decay ~ Rate ~ ('degree ' ~ day^-1)^{1/3}), 
+     ylab = expression((K[dd])^{1/3}), 
      cex.lab = 2, cex.axis = 1.5)
 abline(mod.sum,lwd=3)
 mtext(bquote(R^2 == .(round(mod.sum$r.squared, digits = 2))), side = 1, adj = 0.95, line = -3.5)
