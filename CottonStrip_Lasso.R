@@ -4,7 +4,7 @@
 #
 # Status: In progress
 #
-# Note: Lines saving investigation plots are commented out 
+# Note: Will need to download ERsed dp and change paths once published
 #
 # ==============================================================================
 #
@@ -22,13 +22,20 @@ rm(list=ls(all=T))
 # Setting wd to parent folder
 current_path <- rstudioapi::getActiveDocumentContext()$path 
 setwd(dirname(current_path))
-setwd("./..")
 
 # =================================== find files ===============================
 
-er_gpp <- read_csv('./v2_SSS_Water_Sediment_Total_Respiration_GPP.csv',
+er_gpp <- read_csv('../SSS_metabolism/v2_SSS_Water_Sediment_Total_Respiration_GPP.csv',
                    comment = '#', na = '-9999') %>%
-  select(Parent_ID, Site_ID, Sediment_Respiration, Gross_Primary_Production)
+  select(Parent_ID, Site_ID, Sediment_Respiration, Total_Ecosystem_Respiration, Water_Column_Respiration, Gross_Primary_Production)
+
+d50_o2 <- read_csv('../SSS_metabolism/v2_SSS_ER_d50_TotalOxygenConsumed.csv', 
+                comment = '#', na = '-9999') %>%
+  select(Parent_ID, D50_m, Total_Oxygen_Consumed_g_per_m2_per_day)
+
+slope_vel_dis <- read_csv('../SSS_metabolism/Stream_Metabolizer/Inputs/v2_SSS_Slope_Discharge_Velocity.csv',
+                          comment = '#', na = '-9999') %>%
+  select(Site_ID, Slope, Discharge, Velocity)
 
 # NHD+, streamcat, NLCD, ET0 extracted geospatial variables https://github.com/river-corridors-sfa/Geospatial_variables
 geospatial <- read_csv('https://github.com/river-corridors-sfa/Geospatial_variables/raw/refs/heads/main/v4_RCSFA_Extracted_Geospatial_Data_2025-01-31.csv') %>%
@@ -39,13 +46,7 @@ geospatial <- read_csv('https://github.com/river-corridors-sfa/Geospatial_variab
   rename(Site_ID = site)%>%
   select(Site_ID, totdasqkm, PctFst, AridityWs, PctAg, pctshrb2019ws)
 
-d50 <- read_csv('./v2_SSS_ER_d50_TotalOxygenConsumed.csv', 
-                comment = '#', na = '-9999') %>%
-  select(Parent_ID, D50_m)
 
-slope_vel_dis <- read_csv('./Stream_Metabolizer/Inputs/v2_SSS_Slope_Discharge_Velocity.csv',
-                          comment = '#', na = '-9999') %>%
-  select(Site_ID, Slope, Discharge, Velocity)
 
 # downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1969566
 tss <- read_csv('./Published_Data/v3_SSS_Data_Package/Sample_Data/SSS_Water_TSS.csv',
