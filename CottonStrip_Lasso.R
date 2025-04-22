@@ -25,6 +25,10 @@ setwd(dirname(current_path))
 
 # =================================== find files ===============================
 
+decay_temp <- read_csv('./Outputs/Decay_Data.csv') %>%
+  select(sum_mean_daily_temp, )
+
+
 er_gpp <- read_csv('../SSS_metabolism/v2_SSS_Water_Sediment_Total_Respiration_GPP.csv',
                    comment = '#', na = '-9999') %>%
   select(Parent_ID, Site_ID, Sediment_Respiration, Total_Ecosystem_Respiration, Water_Column_Respiration, Gross_Primary_Production)
@@ -39,17 +43,15 @@ slope_vel_dis <- read_csv('../SSS_metabolism/Stream_Metabolizer/Inputs/v2_SSS_Sl
 
 # NHD+, streamcat, NLCD, ET0 extracted geospatial variables https://github.com/river-corridors-sfa/Geospatial_variables
 geospatial <- read_csv('https://github.com/river-corridors-sfa/Geospatial_variables/raw/refs/heads/main/v4_RCSFA_Extracted_Geospatial_Data_2025-01-31.csv') %>%
-  select(site, totdasqkm, pctmxfst2019ws,pctconif2019ws,pctdecid2019ws, AridityWs, pctcrop2019ws, pcthay2019ws, pctshrb2019ws) %>%
+  select(site, totdasqkm, pctmxfst2019ws,pctconif2019ws,pctdecid2019ws, AridityWs, pctcrop2019ws, pcthay2019ws, pctshrb2019ws, minelevsmo) %>%
   filter(site %in% er_gpp$Site_ID)%>%
   mutate(PctFst = pctmxfst2019ws + pctdecid2019ws + pctconif2019ws,
          PctAg = pctcrop2019ws + pcthay2019ws) %>%
   rename(Site_ID = site)%>%
-  select(Site_ID, totdasqkm, PctFst, AridityWs, PctAg, pctshrb2019ws)
-
-
+  select(Site_ID, totdasqkm, PctFst, AridityWs, PctAg, pctshrb2019ws, minelevsmo)
 
 # downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1969566
-tss <- read_csv('./Published_Data/v3_SSS_Data_Package/Sample_Data/SSS_Water_TSS.csv',
+tss <- read_csv('./data/v3_SSS_Data_Package/Sample_Data/SSS_Water_TSS.csv',
                 skip = 2, na = c('', 'N/A', '-9999')) %>%
   filter(!is.na(Sample_Name)) %>%
   mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}"),
@@ -57,8 +59,13 @@ tss <- read_csv('./Published_Data/v3_SSS_Data_Package/Sample_Data/SSS_Water_TSS.
                                           TRUE ~ as.numeric(`00530_TSS_mg_per_L`)))%>%
   select(Parent_ID, contains('TSS')) 
 
+# downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1969566
+depth <- read_csv('./data/v3_SSS_Data_Package/v3_SSS_Water_Depth_Summary.csv',
+                  comment = '#', na = c('', 'N/A', '-9999')) %>%
+  select(Parent_ID, Average_Depth)
+
 #downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
-npoc_tn <- read_csv('./Published_Data/v4_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Water_NPOC_TN.csv',
+water_npoc_tn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Water_NPOC_TN.csv',
                     skip = 2, na = c('', 'N/A', '-9999'))%>%
   filter(!is.na(Sample_Name),
          str_detect(Sample_Name, 'SSS')) %>%
@@ -74,15 +81,21 @@ npoc_tn <- read_csv('./Published_Data/v4_CM_SSS_Data_Package/Sample_Data/v3_CM_S
   ) %>%
   ungroup()
 
-# downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1969566
-depth <- read_csv('./Published_Data/v3_SSS_Data_Package/v3_SSS_Water_Depth_Summary.csv',
-                  comment = '#', na = c('', 'N/A', '-9999')) %>%
-  select(Parent_ID, Average_Depth)
+#downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
+cn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Sediment_CN.csv',
+                          skip = 2, na = c('', 'N/A', '-9999'))%>%
+  filter(!is.na(Sample_Name),
+         str_detect(Sample_Name, 'SSS')) %>%
+  mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}")) %>%
+  select(Parent_ID, `01395_C_percent_per_mg`, `01397_N_percent_per_mg`)
 
-# downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1969566
-hobo_temp <- read_csv('./Published_Data/v3_SSS_Data_Package/Sensor_Data/DepthHOBO/Plots_and_Summary_Statistics/v3_SSS_Water_Press_Temp_Summary.csv',
-                      comment = '#', na = c('', 'N/A', '-9999')) %>%
-  select(Parent_ID, Temperature_Mean)
+#downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
+# ions <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Water_Ions.csv',
+#                skip = 2, na = c('', 'N/A', '-9999'))%>%
+#   filter(!is.na(Sample_Name),
+#          str_detect(Sample_Name, 'SSS')) %>%
+#   mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}")) %>%
+#   select(Parent_ID, )
 
 # =============================== cube function ===============================
 
