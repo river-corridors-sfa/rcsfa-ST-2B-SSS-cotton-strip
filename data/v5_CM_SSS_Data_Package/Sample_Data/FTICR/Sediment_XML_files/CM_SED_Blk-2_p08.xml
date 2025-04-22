@@ -1,0 +1,1598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<fileinfo appname="Bruker Compass DataAnalysis" appversion="5.2.216" app_platform="64-bit" date="2024-05-10T15:18:03" type="DataAnalysis Results" typeversion="1.1" subtype="MS Spectrum" />
+<generalinfo organisation="" user="Windows User" hostname="SOLARIX-PC64" os="Windows 10, Version 1607 (Enterprise 2016 LTSB)" architecture="64-bit"/>
+<analysis name="D:\Data\Tfaily\Alberto\James Stegen - 2024\Batch O\CM_O98.d\analysis.baf">
+<info><DateTime>2024-05-10T15:12:03-07:00</DateTime><method>2020-Usethis</method><sample></sample><comment></comment><operator>Admin</operator><instrument>solariX 2xR</instrument><instrument_serial_number>1272500.00192</instrument_serial_number><manufacturer>Bruker</manufacturer></info>
+<DataAnalysis version="DataAnalysis 5.2.216" DataAnalysisResults="">
+<DataAnalysis_processing_parameters><find_compounds_chromatogram detect_version="2" detect_areamode="1" detect_areathresholdabs="0.00000000" detect_areathresholdrel="10.00000000" detect_intensitymode="1" detect_intensitythresholdabs="0.00000000" detect_intensitythresholdrel="10.00000000" detect_sensitivity="0.20000000" add_uv_or_ms_spectra="0" spectrum_load_mode="2" background_subtraction_mode="0" MS_peaksensmode2="1" MS_pc12="0.40000000" MS_pc22="4.00000000" MS_peaksens12="99.00000000" MS_peaksens22="99.00000000" MS_areamode2="2" MS_areathresholdabs2="1000.00000000" MS_areathresholdrel2="10.00000000" MS_intensitymode2="0" MS_intensitythresholdabs2="1000.00000000" MS_intensitythresholdrel2="10.00000000" MS_basesmoothmode2="1" MS_basesmoothpts2="8" MS_basesmoothmin2="12.00000000" MS_basesmoothforce2="0.10000000" MS_startendslope2="10.00000000" MS_valleyfilterused2="1" MS_valleyfilter2="10.00000000" MS_noisecorr2="0" UV_peaksensmode2="1" UV_pc12="0.40000000" UV_pc22="4.00000000" UV_peaksens12="99.90000000" UV_peaksens22="100.00000000" UV_areamode2="0" UV_areathresholdabs2="5.00000000" UV_areathresholdrel2="1.00000000" UV_intensitymode2="1" UV_intensitythresholdabs2="1.00000000" UV_intensitythresholdrel2="0.01000000" UV_basesmoothmode2="1" UV_basesmoothpts2="8" UV_basesmoothmin2="12.00000000" UV_basesmoothforce2="1.00000000" UV_startendslope2="10.00000000" UV_valleyfilterused2="1" UV_valleyfilter2="10.00000000" UV_noisecorr2="0" detect_delcmpdsinrng="1" />
+<find_compounds_mobilogram detect_areamode="1" detect_areathresholdabs="1000.00000000" detect_areathresholdrel="5.00000000" detect_intensitymode="0" detect_intensitythresholdabs="100.00000000" detect_intensitythresholdrel="5.00000000" detect_sensitivity="99.00000000" detect_resolution="250.00000000" spectrum_load_mode="2" detect_delcmpdsinrng="1" />
+<auto_ms_n_pasef use_retention_time_window="1" retention_time_window="0.75000000" rt_unit="min" minimum_intensity_positive="10000.00000000" minimum_intensity_negative="1000.00000000" apply_max_number_compounds="1" max_number_compounds="300" spectrum_load_mode="2" background_type="0" create_compound_traces="0" detect_delcmpdsinrng="1" detect_keep_cmpds_detectedneutralloss="0" add_uv_spectra="0" advanced_precursor_determination="0" determine_alternate_precursor="0" />
+<dissect dissect_addsmoothing="0" dissect_allow_wider_peaks="0" dissect_resolving_power="1.00000000" dissect_set_expected_width="0" dissect_expected_width="3" dissect_deletepeaksinrange="1" dissect_fullrange="1" dissect_cutoff="0.05000000" dissect_sensitivity="10.00000000" dissect_maxoverlap="5" dissect_smoothwidth="1" spectrum_load_mode="0" add_uv_spectra="1" />
+<find_all_compounds min_time_points="10" min_correlation="0.70000000" background_type="0" load_spec_type="3" additional_smoothing="0" proteomics="0" chrom_sn_threshold="5.00000000" chrom_smoothingwidth="1" detect_delcmpdsinrng="1" add_MSMS_spectra="1" adducts_positive_mode="" adducts_negative_mode="" />
+<ms_peak_finder ms_peak_finder_type="FTMS" ms_manually_use_peak_finder="1" ms_peak_finder_filter_exclusion_masses="0" ><ms_peak_finder_apex minimum_intensity="100.00000000" peak_width="0.00200000" peak_width_msms="0.00200000" relative_threshold_base_peak="0.05000000" signal_to_noise="1.00000000" />
+<ms_peak_finder_centroid peak_width="0.00200000" peak_width_msms="0.00200000" signal_to_noise="1.00000000" relative_threshold_base_peak="0.05000000" minimum_intensity="100.00000000" centroid_percentage="80.00000000" />
+<ms_peak_finder_snap minimum_intensity="0.00000000" relative_threshold_base_peak="0.01000000" signal_to_noise="2.00000000" maximum_charge="20" quality_factor_threshold="0.90000000" number_of_patterns="500000" building_block_1="C 4.9384 N 1.3577 O 1.4773 S 0.0417 H 7.7583" building_block_2="" use_snap_2="1" add_detailed_results="0" />
+<ms_peak_finder_snap minimum_intensity="100.00000000" peak_width="1.00000000" use_datapoints="1" sum_width="1" relative_threshold_base_peak="0.05000000" signal_to_noise="1.00000000" baseline_type="1" baseline_flatness="1.00000000" same_sumwidth_as_acquisition="0" use_resolution="0" res="10000" instrument_sum_width="5" use_sum_of_intensities="0" />
+<ms_peak_finder_ftms signal_to_noise="7.00000000" relative_threshold_base_peak="0.01000000" minimum_intensity="100.00000000" centroid_percentage="80.00000000" use_centroid="0" />
+<ms_peak_finder_line_spectra apply_line_spectra_threshold="0" line_spectra_threshold="10.00000000" />
+</ms_peak_finder>
+<deconvolution clear_prev_results="1" create_neutral_spectrum="0" incl_shifted_spectra="0" ret_residuals="0" incl_comp_details="0" show_comp_details="0" substance_class="1" extend_evelope="0" extend_before="1.00000000" extend_after="1.00000000" auto_apply="1" ><deconvolution_detailed_full perf_deconv="1" rel_isotop_deconv="0" resolve_isotop="1" exclude_reporter_ions="0" reporter_ions="0" abund_cutoff="2.50000000" envelope_cutoff="75.00000000" high_mass="4000.00000000" low_mass="250.00000000" mw_agreement="0.00000000" maximum_charge="4" max_charge_isotop="0" min_charge="4" min_peaks="3" precursor_deconv="0" max_components="10" adduct_ion_name_neg="-H" adduct_ion_mass_neg="-1.00782503" adduct_ion_name_pos="+H" adduct_ion_mass_pos="1.00727600" apply_min_max_mass_boundaries="0" />
+<deconvolution_detailed_max_res perf_deconv="1" rel_isotop_deconv="0" resolve_isotop="1" exclude_reporter_ions="0" reporter_ions="0" abund_cutoff="2.00000000" envelope_cutoff="75.00000000" high_mass="4000.00000000" low_mass="250.00000000" mw_agreement="5.00000000" maximum_charge="3" max_charge_isotop="0" min_charge="3" min_peaks="3" precursor_deconv="0" max_components="10" adduct_ion_name_neg="-H" adduct_ion_mass_neg="-1.00782503" adduct_ion_name_pos="+H" adduct_ion_mass_pos="1.00727600" apply_min_max_mass_boundaries="0" />
+<deconvolution_detailed_ms_n perf_deconv="1" rel_isotop_deconv="0" resolve_isotop="1" exclude_reporter_ions="0" reporter_ions="0" abund_cutoff="1.00000000" envelope_cutoff="75.00000000" high_mass="3000.00000000" low_mass="100.00000000" mw_agreement="5.00000000" maximum_charge="3" max_charge_isotop="0" min_charge="3" min_peaks="3" precursor_deconv="0" max_components="10" adduct_ion_name_neg="-H" adduct_ion_mass_neg="-1.00782503" adduct_ion_name_pos="+H" adduct_ion_mass_pos="1.00727600" apply_min_max_mass_boundaries="0" />
+<deconvolution_detailed_protein perf_deconv="1" rel_isotop_deconv="1" resolve_isotop="1" exclude_reporter_ions="0" reporter_ions="0" abund_cutoff="2.50000000" envelope_cutoff="75.00000000" high_mass="100000.00000000" low_mass="1000.00000000" mw_agreement="0.00000000" maximum_charge="75" max_charge_isotop="0" min_charge="75" min_peaks="3" precursor_deconv="0" max_components="20" adduct_ion_name_neg="-H" adduct_ion_mass_neg="-1.00782503" adduct_ion_name_pos="+H" adduct_ion_mass_pos="1.00727600" apply_min_max_mass_boundaries="1" />
+<max_entropy_deconvolution adduct_ion_name_pos="+H" adduct_ion_mass_pos="1.00727600" adduct_ion_name_neg="-H" adduct_ion_mass_neg="-1.00782503" low_mass="1000.00000000" high_mass="100000.00000000" spacint_out="0.00000000" resolving_power="1000.00000000" peak_width="0.00200000" width="0" maxentx="0" res="0" />
+</deconvolution><mascot_export globalchargelimit_apply="1" globalchargelimit="1+, 2+ and 3+" prefer_fullscan_deconvolution_results="1" deconvolution_export_type="1" msmssignals="100" threshold="100.00000000" mssignals_deconv="2" mssignals_non_deconv="0" normalize_msms="0" single_charged="0" />
+<process_parameters_chrom baseline_flatness="0.80000000"	baseline_addchild="1"	baseline_disableoriginal="1" baseline_usesamecolor="1" smoothing_algorithm="1" smoothing_width="0.20000000" smoothing_cycles="1" smoothing_addchild="1" smoothing_disableoriginal="1"	smoothing_usesamecolor="1" />
+<process_parameters_mobil baseline_flatness="0.80000000"	baseline_addchild="1"	baseline_disableoriginal="1" baseline_usesamecolor="1" smoothing_algorithm="1" smoothing_width="0.10000000" smoothing_cycles="1" smoothing_addchild="1" smoothing_disableoriginal="1"	smoothing_usesamecolor="1" />
+<process_parameters_ms baseline_flatness="0.80000000"	baseline_addchild="1"	baseline_disableoriginal="1" baseline_usesamecolor="1" smoothing_algorithm="1" smoothing_width="0.20000000" smoothing_cycles="1" smoothing_addchild="1" smoothing_disableoriginal="1"	smoothing_usesamecolor="1" />
+<display mass_precision="-1" time_precision="2" structure_size="30" chrom_peak_label="Index" />
+<calibration calibration_range="0.00500000" calibration_listname="neg_calibrants_PIP_NTwHMC" calibration_listgroupname="ESI" calibration_fit_mode="0" calibration_intensitythreshold="0.00000000" />
+<calibration_lockmass calibration_range="0.50000000" calibration_listname="" calibration_listgroupname="" calibration_intensitythreshold="0.00000000" calibration_lockmassmode="0" />
+<mobility_calibration calibration_range="0.10000000" calibration_listname="&lt;not set&gt;" calibration_listgroupname="ESI" calibration_intensitythreshold="0.00000000" />
+<library_search del_prev_res="1" ><library_search_basic accept_score="50" allowmasses_above="0" allowmasses_below="0" desired_score="900" increasedepth="0" maxnr_spectra="10" cross_match="0" sort_by="1" include_precursor_spectra="1" exclude_precursor_signals="0" skip_low_fragment_spectra="1" min_effective_score="500" minmatch_score="250" min_score="400" />
+<library_search_advanced add_int_range="5.00000000" extended="1" locnorm="0" root="0" hwfstp="50" hwscdp="7" intrangefac="1.89999998" locnormeqfac="1.00000000" locnormfac="2.00000000" locnormwin="25" masdisint="20" minsrcint="100" minspepresrc="35" threshfstp="40" maskadducts="0" maskprecursor="0" />
+<library_search_libraries add_unid="0" parallel="0" libraries="" librariey_unidentified="" />
+<library_search_match chrgdeconv="0" collenerg="0" fragampl="1" instrtp="2" ionmeth="3" isolwidth="0" msmsstg="2" ms_vs_msms="4" pkwidth="0" polarity="4" psd="0" lastprecion="0" precions="0" prodion="0" rgtgaspress="0" rgtion="0" refl="0" collgas="0" collgaspress="0" trapdrv="1" />
+<library_search_add add_confirm_mode="0" />
+<library_search_rt accepted_deviation="0.00000000" apply_rt_match="0" match_columnname="1" max_deviation="0.00000000" />
+</library_search><masslist_layout layout_columntypes="2 12 3 6 " layout_columnwidth="66 20 51 57 " />
+<cmpdlist_layout layout_columntypes="14 20 31 1 40 26 " layout_columnwidth="0 0 0 0 0 0 " />
+<molecular_formula_layout layout_columntypes="24 1 2 40 3 5 6 18 7 9 8 " layout_columnwidth="-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 " />
+<general_unknown_layout layout_columntypes="6 0 5 3 4 2 12 14 10 11 " layout_columnwidth="-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 " />
+<target_screening_layout layout_columntypes="15 14 6 5 43 11 1 2 17 7 8 9 10 4 3 39 40 41 42 16 18 19 25 20 21 22 23 24 31 26 27 28 29 30 37 32 33 34 35 36 " layout_columnwidth="-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 " />
+<exclusion_masses></exclusion_masses>
+<xml_export_parameters export_detailed_information="0" export_peptide_database_query_information="1" export_full_peptide_database_query_information="1" protein_analysis_export_mgf="1" protein_analysis_export_xml="1" />
+<smart_formula max_nr_formulae="50" z="1" rdb_min="0.00000000" rdb_max="80.00000000" tolerance_ppm="5.00000000" tolerance_abs="1.00000000" tolerance_ppm_MSn="5.00000000" tolerance_abs_MSn="2.00000000" use_rel_tolerance="0" use_rel_tolerance_MSn="0" lower_bound_formula="" upper_bound_formula="" electron_configuration="2" electron_configuration_MSn="0" sigma_limit="0.02000000" sigma_limit_MSn="0.05000000" HC_Ratio_min="0.00000000" HC_Ratio_max="3.00000000" filtering="1" patternsearch="0" filter_by_elementratio="1" estimate_carbon_count="1" relative_threshold_base_peak="1.00000000" delete_previous_results="1" filter_criteriy="0" adducts_positive_mode="M+H M+NH4 M+Na M+K " adducts_negative_mode="M-H M+Na-H2 M+K-H2 M+Cl " collect_adducts="0" />
+<smart_formula_3D tolerance_neutralloss="5.00000000" intensitythresholdabs2="0.00000000" intensity_threshold_abs_msms="0.00000000" auto_filter="0" nr_explained_peaks="5" highlight_unexplained_peaks="0" />
+<uv_parameters rt_offset="0.00000000" />
+<target_screening delta_rt="1.50000000" threshold_sigma="0.05000000" detection_tolerance="0.00500000" identification_tolerance="10.00000000" detection_tolerance_ppm="5.00000000" identification_tolerance_ppm="5.00000000" use_tolerance_ppm="0" compound_database="C:\BDALSystemData\BuildingBlocks\TargetScreeningDataBase.csv" use_sampleinfo_xml="0" rt_range_start="0.00000000" rt_range_end="0.00000000" additional_smoothing="0" create_chromatogram_time_slices="1" rt_window_halfwidth="45.00000000" enable_BPC="1" evaluate_qualifier_ions="1" qualifier_ion_intensity_threshold="0.00000000" group_id="" lc_method_id="" ms_method_id="" matrix_id="" useDB="0" sortanalytes="4" />
+<automatic_calibration use_calibration_segment="0" automatic_calibration="0.00000000/0.00000000" automatic_calibration_use_spectrum_type="0" automatic_calibration_retain_data="0" automatic_calibration_perform_lockmass="0" />
+<target_screening_scoring threshold1_qualityfactor="0.02000000" threshold2_qualityfactor="0.05000000" threshold1_massaccuracy="3.00000000" threshold2_massaccuracy="10.00000000" threshold1_retentiontime="20.00000000" threshold2_retentiontime="40.00000000" use_tolerance_ppm="0" />
+</DataAnalysis_processing_parameters>
+<ms_spectrum info="-MS" msmsinfo="All MS" polarity="-" scanmode="fullscan" seq_nr_start="1"  rt="3.47285000" rt_unit="min" >
+<ms_peaks><pk mz="160.386487" i="400693.3" sn="7.89" a="32.11" fwhm="0.000124" res="1293581.1" algo="FTMS"/>
+<pk mz="160.387442" i="465075.3" sn="9.48" a="43.81" fwhm="0.000113" res="1413251.0" algo="FTMS"/>
+<pk mz="160.387644" i="468070.0" sn="9.55" a="53.21" fwhm="0.000142" res="1131628.4" algo="FTMS"/>
+<pk mz="160.387911" i="371494.4" sn="7.17" a="21.13" fwhm="0.000125" res="1281154.0" algo="FTMS"/>
+<pk mz="160.387994" i="403576.5" sn="7.96" a="39.63" fwhm="0.000152" res="1053790.7" algo="FTMS"/>
+<pk mz="160.388470" i="369124.3" sn="7.11" a="22.55" fwhm="0.000087" res="1848941.1" algo="FTMS"/>
+<pk mz="160.648199" i="525786.9" sn="10.97" a="45.79" fwhm="0.000118" res="1367074.6" algo="FTMS"/>
+<pk mz="166.074891" i="415605.8" sn="8.26" a="43.28" fwhm="0.000139" res="1195609.2" algo="FTMS"/>
+<pk mz="166.991783" i="385573.4" sn="7.52" a="31.20" fwhm="0.000134" res="1241597.1" algo="FTMS"/>
+<pk mz="166.991989" i="403357.4" sn="7.95" a="32.29" fwhm="0.000110" res="1514919.7" algo="FTMS"/>
+<pk mz="166.992214" i="493961.4" sn="10.19" a="61.89" fwhm="0.000159" res="1047600.6" algo="FTMS"/>
+<pk mz="166.992464" i="376027.4" sn="7.28" a="32.02" fwhm="0.000136" res="1226449.0" algo="FTMS"/>
+<pk mz="166.992694" i="455309.9" sn="9.24" a="35.78" fwhm="0.000162" res="1030998.3" algo="FTMS"/>
+<pk mz="166.992728" i="455716.4" sn="9.25" a="30.35" fwhm="0.000133" res="1255734.6" algo="FTMS"/>
+<pk mz="166.992921" i="538678.4" sn="11.29" a="63.38" fwhm="0.000143" res="1167850.0" algo="FTMS"/>
+<pk mz="166.993275" i="481791.4" sn="9.89" a="62.00" fwhm="0.000164" res="1015969.3" algo="FTMS"/>
+<pk mz="166.993783" i="452131.4" sn="9.16" a="38.11" fwhm="0.000106" res="1570273.2" algo="FTMS"/>
+<pk mz="170.841879" i="389316.6" sn="7.61" a="44.37" fwhm="0.000162" res="1056405.9" algo="FTMS"/>
+<pk mz="173.659526" i="393060.1" sn="7.70" a="36.76" fwhm="0.000144" res="1202782.4" algo="FTMS"/>
+<pk mz="173.659692" i="421040.1" sn="8.39" a="44.27" fwhm="0.000175" res="993496.1" algo="FTMS"/>
+<pk mz="173.659962" i="562536.1" sn="11.88" a="64.73" fwhm="0.000162" res="1075100.1" algo="FTMS"/>
+<pk mz="173.660170" i="560036.1" sn="11.82" a="70.55" fwhm="0.000216" res="805449.6" algo="FTMS"/>
+<pk mz="173.660311" i="535056.1" sn="11.20" a="61.14" fwhm="0.000206" res="841947.2" algo="FTMS"/>
+<pk mz="173.660499" i="503126.1" sn="10.42" a="51.96" fwhm="0.000187" res="930034.2" algo="FTMS"/>
+<pk mz="173.660629" i="556534.1" sn="11.73" a="69.51" fwhm="0.000210" res="826696.2" algo="FTMS"/>
+<pk mz="173.660792" i="555972.1" sn="11.72" a="62.36" fwhm="0.000168" res="1033435.1" algo="FTMS"/>
+<pk mz="173.660942" i="539368.1" sn="11.31" a="41.95" fwhm="0.000124" res="1405171.6" algo="FTMS"/>
+<pk mz="173.661062" i="549764.1" sn="11.57" a="39.27" fwhm="0.000093" res="1860062.4" algo="FTMS"/>
+<pk mz="173.661162" i="659044.1" sn="14.26" a="105.07" fwhm="0.000257" res="676385.5" algo="FTMS"/>
+<pk mz="173.661353" i="588928.1" sn="12.53" a="55.79" fwhm="0.000140" res="1236653.7" algo="FTMS"/>
+<pk mz="173.661553" i="745456.1" sn="16.39" a="89.07" fwhm="0.000141" res="1230327.9" algo="FTMS"/>
+<pk mz="173.661724" i="682304.1" sn="14.84" a="67.73" fwhm="0.000129" res="1341968.4" algo="FTMS"/>
+<pk mz="173.661875" i="786920.1" sn="17.42" a="81.84" fwhm="0.000125" res="1391220.1" algo="FTMS"/>
+<pk mz="173.662029" i="512234.1" sn="10.64" a="53.99" fwhm="0.000180" res="963012.1" algo="FTMS"/>
+<pk mz="173.662225" i="800968.1" sn="17.76" a="99.51" fwhm="0.000134" res="1292910.0" algo="FTMS"/>
+<pk mz="173.662597" i="407128.1" sn="8.05" a="26.21" fwhm="0.000090" res="1928035.7" algo="FTMS"/>
+<pk mz="173.662831" i="457628.1" sn="9.30" a="52.50" fwhm="0.000138" res="1256417.5" algo="FTMS"/>
+<pk mz="173.663414" i="471528.0" sn="9.64" a="37.70" fwhm="0.000100" res="1731813.8" algo="FTMS"/>
+<pk mz="180.330058" i="379006.6" sn="7.36" a="40.08" fwhm="0.000139" res="1300944.0" algo="FTMS"/>
+<pk mz="180.330728" i="368950.6" sn="7.11" a="28.21" fwhm="0.000096" res="1871833.8" algo="FTMS"/>
+<pk mz="182.823468" i="674831.5" sn="14.65" a="104.86" fwhm="0.000172" res="1064905.8" algo="FTMS"/>
+<pk mz="184.871684" i="682385.3" sn="14.84" a="94.76" fwhm="0.000159" res="1160703.2" algo="FTMS"/>
+<pk mz="185.080475" i="384297.5" sn="7.48" a="47.24" fwhm="0.000165" res="1120109.6" algo="FTMS"/>
+<pk mz="187.660415" i="545067.4" sn="11.44" a="106.74" fwhm="0.000247" res="760591.3" algo="FTMS"/>
+<pk mz="187.660654" i="433861.4" sn="8.70" a="46.07" fwhm="0.000194" res="967783.3" algo="FTMS"/>
+<pk mz="187.660981" i="720725.4" sn="15.77" a="102.96" fwhm="0.000242" res="775571.0" algo="FTMS"/>
+<pk mz="187.661127" i="574009.4" sn="12.15" a="52.01" fwhm="0.000136" res="1377038.9" algo="FTMS"/>
+<pk mz="187.661273" i="801749.4" sn="17.77" a="102.82" fwhm="0.000216" res="868540.0" algo="FTMS"/>
+<pk mz="187.661669" i="731845.4" sn="16.04" a="93.77" fwhm="0.000295" res="635927.2" algo="FTMS"/>
+<pk mz="187.661804" i="874397.4" sn="19.56" a="120.23" fwhm="0.000218" res="860646.6" algo="FTMS"/>
+<pk mz="187.661951" i="843085.4" sn="18.79" a="118.30" fwhm="0.000218" res="860645.7" algo="FTMS"/>
+<pk mz="187.662250" i="853213.4" sn="19.04" a="113.50" fwhm="0.000218" res="860644.6" algo="FTMS"/>
+<pk mz="187.662407" i="975309.4" sn="22.05" a="132.27" fwhm="0.000218" res="860643.8" algo="FTMS"/>
+<pk mz="187.662573" i="962149.4" sn="21.72" a="193.28" fwhm="0.000300" res="625921.9" algo="FTMS"/>
+<pk mz="187.662819" i="925269.4" sn="20.81" a="141.59" fwhm="0.000206" res="908941.4" algo="FTMS"/>
+<pk mz="187.662993" i="707253.5" sn="15.44" a="55.43" fwhm="0.000107" res="1759522.0" algo="FTMS"/>
+<pk mz="187.663173" i="1574101.5" sn="36.80" a="230.00" fwhm="0.000153" res="1223445.0" algo="FTMS"/>
+<pk mz="187.663363" i="1045573.5" sn="23.78" a="152.28" fwhm="0.000211" res="890593.2" algo="FTMS"/>
+<pk mz="187.663537" i="774893.5" sn="17.11" a="105.71" fwhm="0.000218" res="860638.3" algo="FTMS"/>
+<pk mz="187.663844" i="1006277.5" sn="22.81" a="196.61" fwhm="0.000312" res="601528.8" algo="FTMS"/>
+<pk mz="187.664193" i="945317.5" sn="21.31" a="135.22" fwhm="0.000197" res="953853.8" algo="FTMS"/>
+<pk mz="187.664438" i="652357.5" sn="14.09" a="117.77" fwhm="0.000278" res="674548.1" algo="FTMS"/>
+<pk mz="187.664698" i="469493.5" sn="9.58" a="48.13" fwhm="0.000131" res="1436554.5" algo="FTMS"/>
+<pk mz="187.664867" i="447141.5" sn="9.03" a="42.32" fwhm="0.000124" res="1515277.5" algo="FTMS"/>
+<pk mz="187.665066" i="412125.5" sn="8.16" a="36.41" fwhm="0.000148" res="1269429.8" algo="FTMS"/>
+<pk mz="187.665141" i="401021.5" sn="7.89" a="40.39" fwhm="0.000166" res="1132048.2" algo="FTMS"/>
+<pk mz="188.327179" i="367969.8" sn="7.08" a="49.00" fwhm="0.000190" res="988817.1" algo="FTMS"/>
+<pk mz="188.327902" i="368017.8" sn="7.08" a="44.06" fwhm="0.000163" res="1154933.5" algo="FTMS"/>
+<pk mz="188.328787" i="491433.8" sn="10.12" a="69.92" fwhm="0.000188" res="1003998.1" algo="FTMS"/>
+<pk mz="188.328988" i="455529.8" sn="9.23" a="62.08" fwhm="0.000171" res="1101979.3" algo="FTMS"/>
+<pk mz="188.491596" i="720175.1" sn="15.76" a="131.88" fwhm="0.000241" res="783665.0" algo="FTMS"/>
+<pk mz="188.491768" i="629519.1" sn="13.52" a="72.67" fwhm="0.000168" res="1120243.1" algo="FTMS"/>
+<pk mz="188.492526" i="1380015.1" sn="32.02" a="307.33" fwhm="0.000252" res="748372.0" algo="FTMS"/>
+<pk mz="188.492739" i="1133711.1" sn="25.95" a="148.95" fwhm="0.000145" res="1297700.5" algo="FTMS"/>
+<pk mz="188.493424" i="695119.1" sn="15.14" a="133.01" fwhm="0.000215" res="875395.0" algo="FTMS"/>
+<pk mz="188.587065" i="607170.2" sn="12.94" a="82.98" fwhm="0.000159" res="1188398.6" algo="FTMS"/>
+<pk mz="188.587694" i="491602.2" sn="10.10" a="66.18" fwhm="0.000168" res="1124326.1" algo="FTMS"/>
+<pk mz="189.039016" i="559201.4" sn="11.76" a="73.74" fwhm="0.000151" res="1255238.6" algo="FTMS"/>
+<pk mz="190.956095" i="568674.9" sn="11.97" a="106.18" fwhm="0.000226" res="843285.7" algo="FTMS"/>
+<pk mz="192.681139" i="383832.7" sn="7.41" a="63.31" fwhm="0.000216" res="891101.8" algo="FTMS"/>
+<pk mz="196.705732" i="369902.7" sn="7.05" a="58.61" fwhm="0.000206" res="953032.2" algo="FTMS"/>
+<pk mz="202.979260" i="437863.0" sn="8.64" a="53.97" fwhm="0.000153" res="1324012.7" algo="FTMS"/>
+<pk mz="205.158426" i="1028044.4" sn="22.91" a="202.23" fwhm="0.000221" res="927176.0" algo="FTMS"/>
+<pk mz="206.258867" i="383692.6" sn="7.29" a="54.16" fwhm="0.000206" res="999724.2" algo="FTMS"/>
+<pk mz="209.153394" i="1113303.1" sn="24.84" a="239.79" fwhm="0.000227" res="919513.4" algo="FTMS"/>
+<pk mz="210.562477" i="395823.5" sn="7.55" a="46.23" fwhm="0.000170" res="1237918.4" algo="FTMS"/>
+<pk mz="210.563215" i="476767.6" sn="9.50" a="79.34" fwhm="0.000227" res="927156.7" algo="FTMS"/>
+<pk mz="211.132728" i="595031.9" sn="12.32" a="105.45" fwhm="0.000240" res="879237.0" algo="FTMS"/>
+<pk mz="211.561322" i="494242.6" sn="9.89" a="94.56" fwhm="0.000233" res="908702.5" algo="FTMS"/>
+<pk mz="211.562100" i="487074.7" sn="9.72" a="75.42" fwhm="0.000191" res="1107029.3" algo="FTMS"/>
+<pk mz="212.977953" i="1345970.5" sn="30.36" a="284.17" fwhm="0.000240" res="887561.0" algo="FTMS"/>
+<pk mz="212.978184" i="518066.5" sn="10.46" a="82.60" fwhm="0.000225" res="945205.2" algo="FTMS"/>
+<pk mz="213.490413" i="525927.4" sn="10.65" a="138.54" fwhm="0.000297" res="718697.2" algo="FTMS"/>
+<pk mz="213.491513" i="837351.5" sn="18.13" a="204.48" fwhm="0.000336" res="635264.2" algo="FTMS"/>
+<pk mz="213.491940" i="720615.6" sn="15.33" a="106.52" fwhm="0.000171" res="1250501.5" algo="FTMS"/>
+<pk mz="213.492719" i="632871.6" sn="13.22" a="148.36" fwhm="0.000277" res="770926.7" algo="FTMS"/>
+<pk mz="225.094835" i="417451.4" sn="7.90" a="90.40" fwhm="0.000273" res="825775.5" algo="FTMS"/>
+<pk mz="225.929380" i="392158.4" sn="7.30" a="68.36" fwhm="0.000227" res="994990.0" algo="FTMS"/>
+<pk mz="227.127864" i="436941.4" sn="8.36" a="68.42" fwhm="0.000205" res="1109618.8" algo="FTMS"/>
+<pk mz="237.581677" i="402591.1" sn="7.43" a="72.84" fwhm="0.000239" res="992740.8" algo="FTMS"/>
+<pk mz="239.127976" i="721753.6" sn="14.90" a="166.08" fwhm="0.000268" res="893098.8" algo="FTMS"/>
+<pk mz="240.581431" i="393231.8" sn="7.17" a="111.42" fwhm="0.000418" res="574953.3" algo="FTMS"/>
+<pk mz="240.581830" i="422055.9" sn="7.85" a="81.69" fwhm="0.000272" res="883412.8" algo="FTMS"/>
+<pk mz="240.582897" i="1143272.0" sn="24.68" a="499.30" fwhm="0.000489" res="491785.1" algo="FTMS"/>
+<pk mz="240.583432" i="920712.1" sn="19.49" a="209.12" fwhm="0.000250" res="962900.0" algo="FTMS"/>
+<pk mz="240.584413" i="801704.2" sn="16.71" a="235.77" fwhm="0.000328" res="734089.1" algo="FTMS"/>
+<pk mz="241.143581" i="536138.9" sn="10.51" a="119.23" fwhm="0.000241" res="1001308.5" algo="FTMS"/>
+<pk mz="242.985328" i="675557.1" sn="13.71" a="160.93" fwhm="0.000275" res="882524.3" algo="FTMS"/>
+<pk mz="250.489289" i="486780.0" sn="9.24" a="148.67" fwhm="0.000415" res="603577.2" algo="FTMS"/>
+<pk mz="250.489680" i="459804.0" sn="8.61" a="96.22" fwhm="0.000325" res="771257.8" algo="FTMS"/>
+<pk mz="250.491006" i="751004.1" sn="15.34" a="284.95" fwhm="0.000436" res="574272.9" algo="FTMS"/>
+<pk mz="250.491485" i="736316.2" sn="15.01" a="168.08" fwhm="0.000263" res="953782.1" algo="FTMS"/>
+<pk mz="251.095154" i="627805.9" sn="12.50" a="209.39" fwhm="0.000379" res="662304.3" algo="FTMS"/>
+<pk mz="251.159683" i="418308.9" sn="7.65" a="109.31" fwhm="0.000356" res="706160.2" algo="FTMS"/>
+<pk mz="253.143278" i="985048.4" sn="20.75" a="345.05" fwhm="0.000396" res="640001.9" algo="FTMS"/>
+<pk mz="253.143833" i="4298008.5" z="-1" sn="97.31" a="1278.34" fwhm="0.000308" res="821686.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="253.147427" isotopic_mass="253.147424"/>
+<pk mz="253.144125" i="2087448.5" sn="46.22" a="427.51" fwhm="0.000287" res="881865.8" algo="FTMS"/>
+<pk mz="253.144369" i="1491736.6" sn="32.46" a="427.68" fwhm="0.000337" res="751889.8" algo="FTMS"/>
+<pk mz="254.147198" i="943105.1" z="-1" sn="19.70" a="302.23" fwhm="0.000363" res="700176.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="253.147427" isotopic_mass="254.150786"/>
+<pk mz="255.123091" i="419173.0" sn="7.64" a="73.05" fwhm="0.000223" res="1144682.5" algo="FTMS"/>
+<pk mz="255.231726" i="2389232.0" sn="53.00" a="874.77" fwhm="0.000423" res="603126.0" algo="FTMS"/>
+<pk mz="255.232295" i="4942832.0" z="-1" sn="111.81" a="1726.15" fwhm="0.000346" res="736856.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="255.235870" isotopic_mass="255.235879"/>
+<pk mz="255.232666" i="2097136.1" sn="46.28" a="416.83" fwhm="0.000265" res="964041.1" algo="FTMS"/>
+<pk mz="255.232931" i="1282928.1" sn="27.53" a="380.77" fwhm="0.000358" res="713257.5" algo="FTMS"/>
+<pk mz="256.235589" i="973140.8" z="-1" sn="20.39" a="294.28" fwhm="0.000323" res="794036.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="255.235870" isotopic_mass="256.239170"/>
+<pk mz="257.139150" i="442925.8" sn="8.14" a="95.29" fwhm="0.000293" res="876264.2" algo="FTMS"/>
+<pk mz="257.888526" i="540662.3" sn="10.38" a="135.24" fwhm="0.000305" res="844832.4" algo="FTMS"/>
+<pk mz="260.491033" i="417928.9" sn="7.56" a="110.48" fwhm="0.000339" res="767546.9" algo="FTMS"/>
+<pk mz="260.492805" i="977513.1" sn="20.40" a="319.81" fwhm="0.000353" res="737463.7" algo="FTMS"/>
+<pk mz="260.494454" i="1619689.3" sn="35.12" a="546.94" fwhm="0.000403" res="646151.7" algo="FTMS"/>
+<pk mz="260.494724" i="1601513.3" sn="34.70" a="467.86" fwhm="0.000369" res="705631.8" algo="FTMS"/>
+<pk mz="260.495894" i="900073.4" sn="18.62" a="305.22" fwhm="0.000381" res="684461.4" algo="FTMS"/>
+<pk mz="262.972381" i="496259.2" sn="9.32" a="114.20" fwhm="0.000338" res="778340.8" algo="FTMS"/>
+<pk mz="262.972956" i="493699.2" sn="9.26" a="103.01" fwhm="0.000352" res="747525.2" algo="FTMS"/>
+<pk mz="262.973290" i="489347.3" sn="9.16" a="142.22" fwhm="0.000535" res="491341.5" algo="FTMS"/>
+<pk mz="262.973905" i="539459.3" sn="10.30" a="144.64" fwhm="0.000405" res="649346.8" algo="FTMS"/>
+<pk mz="262.974926" i="941507.4" sn="19.48" a="244.55" fwhm="0.000379" res="693320.8" algo="FTMS"/>
+<pk mz="262.975475" i="3751107.5" sn="83.63" a="1138.85" fwhm="0.000345" res="763289.2" algo="FTMS"/>
+<pk mz="262.975800" i="1887427.5" sn="41.08" a="548.21" fwhm="0.000439" res="599099.6" algo="FTMS"/>
+<pk mz="262.991792" i="543780.8" sn="10.40" a="210.96" fwhm="0.000473" res="556259.6" algo="FTMS"/>
+<pk mz="265.147377" i="792568.7" sn="16.01" a="222.32" fwhm="0.000314" res="844659.5" algo="FTMS"/>
+<pk mz="268.800457" i="459286.7" sn="8.42" a="103.12" fwhm="0.000285" res="942654.1" algo="FTMS"/>
+<pk mz="269.136631" i="473135.9" sn="8.70" a="105.06" fwhm="0.000271" res="992792.2" algo="FTMS"/>
+<pk mz="269.138409" i="533680.1" sn="10.07" a="156.96" fwhm="0.000349" res="770766.8" algo="FTMS"/>
+<pk mz="269.139005" i="1684144.1" sn="36.10" a="587.91" fwhm="0.000342" res="786001.7" algo="FTMS"/>
+<pk mz="269.139410" i="854768.1" sn="17.33" a="327.94" fwhm="0.000450" res="598100.8" algo="FTMS"/>
+<pk mz="270.498231" i="478708.2" sn="8.82" a="189.83" fwhm="0.000512" res="528359.8" algo="FTMS"/>
+<pk mz="276.991382" i="878414.6" sn="17.77" a="275.23" fwhm="0.000381" res="727563.2" algo="FTMS"/>
+<pk mz="276.991706" i="422110.6" sn="7.50" a="127.38" fwhm="0.000502" res="552245.4" algo="FTMS"/>
+<pk mz="277.180623" i="766426.7" sn="15.25" a="292.09" fwhm="0.000399" res="695515.2" algo="FTMS"/>
+<pk mz="278.848202" i="492675.6" sn="9.04" a="128.87" fwhm="0.000355" res="785510.6" algo="FTMS"/>
+<pk mz="281.492922" i="748388.3" sn="14.77" a="263.29" fwhm="0.000372" res="756463.1" algo="FTMS"/>
+<pk mz="281.495014" i="1822948.5" sn="38.85" a="856.06" fwhm="0.000477" res="589814.0" algo="FTMS"/>
+<pk mz="281.497090" i="3130596.5" sn="68.16" a="1792.02" fwhm="0.000602" res="467620.8" algo="FTMS"/>
+<pk mz="281.498952" i="490788.7" sn="8.99" a="155.31" fwhm="0.000401" res="701456.9" algo="FTMS"/>
+<pk mz="282.495934" i="677983.6" sn="13.12" a="213.55" fwhm="0.000464" res="608509.3" algo="FTMS"/>
+<pk mz="283.261355" i="414924.3" sn="7.25" a="104.19" fwhm="0.000328" res="862965.9" algo="FTMS"/>
+<pk mz="283.263429" i="1016396.4" sn="20.67" a="490.96" fwhm="0.000519" res="545820.4" algo="FTMS"/>
+<pk mz="283.264083" i="2920524.5" sn="63.14" a="1041.34" fwhm="0.000361" res="785094.6" algo="FTMS"/>
+<pk mz="283.264528" i="1624908.5" sn="34.24" a="454.29" fwhm="0.000382" res="742465.9" algo="FTMS"/>
+<pk mz="283.264883" i="860748.5" sn="17.20" a="287.66" fwhm="0.000448" res="632254.0" algo="FTMS"/>
+<pk mz="284.267488" i="601222.3" sn="11.41" a="167.43" fwhm="0.000333" res="852658.6" algo="FTMS"/>
+<pk mz="285.126010" i="794807.3" sn="15.72" a="288.19" fwhm="0.000372" res="765500.9" algo="FTMS"/>
+<pk mz="285.134210" i="555063.8" sn="10.38" a="191.69" fwhm="0.000348" res="819122.3" algo="FTMS"/>
+<pk mz="286.129504" i="577391.8" sn="10.87" a="159.51" fwhm="0.000323" res="885825.6" algo="FTMS"/>
+<pk mz="287.032261" i="661538.2" sn="12.68" a="208.11" fwhm="0.000354" res="809881.3" algo="FTMS"/>
+<pk mz="287.186235" i="482986.8" sn="8.72" a="122.50" fwhm="0.000346" res="830982.7" algo="FTMS"/>
+<pk mz="287.186728" i="408618.8" sn="7.07" a="128.52" fwhm="0.000465" res="617957.8" algo="FTMS"/>
+<pk mz="289.121178" i="423765.1" sn="7.41" a="111.11" fwhm="0.000359" res="806140.7" algo="FTMS"/>
+<pk mz="292.982286" i="946020.7" sn="18.89" a="357.56" fwhm="0.000489" res="599543.6" algo="FTMS"/>
+<pk mz="292.983001" i="3621988.8" sn="77.96" a="1374.80" fwhm="0.000396" res="739638.8" algo="FTMS"/>
+<pk mz="292.983422" i="2038116.8" sn="43.00" a="753.80" fwhm="0.000484" res="605658.2" algo="FTMS"/>
+<pk mz="292.984585" i="670564.8" sn="12.81" a="252.86" fwhm="0.000581" res="504467.5" algo="FTMS"/>
+<pk mz="293.175146" i="412526.9" sn="7.11" a="114.19" fwhm="0.000352" res="832016.3" algo="FTMS"/>
+<pk mz="293.175841" i="978286.9" sn="19.60" a="457.22" fwhm="0.000440" res="667045.7" algo="FTMS"/>
+<pk mz="295.155587" i="430743.8" sn="7.51" a="112.32" fwhm="0.000340" res="867869.4" algo="FTMS"/>
+<pk mz="297.153107" i="914753.2" sn="18.10" a="315.84" fwhm="0.000373" res="797568.4" algo="FTMS"/>
+<pk mz="299.150186" i="473514.6" sn="8.41" a="125.92" fwhm="0.000359" res="832620.9" algo="FTMS"/>
+<pk mz="301.048255" i="856335.3" sn="16.72" a="317.03" fwhm="0.000419" res="719087.4" algo="FTMS"/>
+<pk mz="301.048799" i="473039.3" sn="8.35" a="125.79" fwhm="0.000392" res="768657.9" algo="FTMS"/>
+<pk mz="301.129490" i="465171.6" sn="8.18" a="123.82" fwhm="0.000346" res="870825.4" algo="FTMS"/>
+<pk mz="303.003258" i="592439.8" sn="10.95" a="245.87" fwhm="0.000493" res="614109.9" algo="FTMS"/>
+<pk mz="303.473401" i="453841.1" sn="7.93" a="132.35" fwhm="0.000371" res="818437.5" algo="FTMS"/>
+<pk mz="304.471942" i="553479.2" sn="10.10" a="205.87" fwhm="0.000437" res="696333.2" algo="FTMS"/>
+<pk mz="304.882185" i="773341.5" sn="14.90" a="407.70" fwhm="0.000610" res="499697.9" algo="FTMS"/>
+<pk mz="306.878969" i="472267.3" sn="8.28" a="135.36" fwhm="0.000378" res="812838.6" algo="FTMS"/>
+<pk mz="306.880116" i="1661515.4" sn="34.10" a="764.37" fwhm="0.000492" res="623268.7" algo="FTMS"/>
+<pk mz="306.880612" i="886091.4" sn="17.26" a="295.14" fwhm="0.000548" res="559581.4" algo="FTMS"/>
+<pk mz="306.977586" i="469072.8" sn="8.21" a="117.82" fwhm="0.000366" res="837996.5" algo="FTMS"/>
+<pk mz="306.979459" i="577424.9" sn="10.56" a="272.48" fwhm="0.000584" res="526023.6" algo="FTMS"/>
+<pk mz="306.980259" i="520656.9" sn="9.33" a="165.98" fwhm="0.000480" res="639171.1" algo="FTMS"/>
+<pk mz="306.981786" i="1293265.0" sn="26.10" a="597.15" fwhm="0.000517" res="593777.5" algo="FTMS"/>
+<pk mz="306.982582" i="3841361.0" sn="81.42" a="1696.98" fwhm="0.000445" res="690617.5" algo="FTMS"/>
+<pk mz="306.983092" i="2050385.1" sn="42.54" a="793.65" fwhm="0.000575" res="534006.0" algo="FTMS"/>
+<pk mz="308.878098" i="1027771.5" sn="20.34" a="424.88" fwhm="0.000467" res="661219.2" algo="FTMS"/>
+<pk mz="308.878548" i="591931.5" sn="10.87" a="160.24" fwhm="0.000326" res="946574.2" algo="FTMS"/>
+<pk mz="309.171115" i="915916.1" sn="17.91" a="339.22" fwhm="0.000483" res="640246.9" algo="FTMS"/>
+<pk mz="309.171494" i="492524.2" sn="8.72" a="134.43" fwhm="0.000633" res="488059.6" algo="FTMS"/>
+<pk mz="311.150461" i="951486.3" sn="18.68" a="459.22" fwhm="0.000546" res="570163.5" algo="FTMS"/>
+<pk mz="311.166018" i="494527.2" sn="8.76" a="141.84" fwhm="0.000350" res="890210.6" algo="FTMS"/>
+<pk mz="311.168315" i="953151.4" sn="18.71" a="382.89" fwhm="0.000579" res="537063.6" algo="FTMS"/>
+<pk mz="311.169083" i="3358271.5" sn="70.93" a="1398.59" fwhm="0.000430" res="723182.9" algo="FTMS"/>
+<pk mz="311.169637" i="1510719.4" sn="30.82" a="643.94" fwhm="0.000549" res="566469.9" algo="FTMS"/>
+<pk mz="312.172380" i="557562.4" sn="10.06" a="199.38" fwhm="0.000412" res="757716.9" algo="FTMS"/>
+<pk mz="313.048556" i="703534.8" sn="13.21" a="225.12" fwhm="0.000367" res="853455.3" algo="FTMS"/>
+<pk mz="313.049094" i="467246.8" sn="8.11" a="140.71" fwhm="0.000352" res="889553.6" algo="FTMS"/>
+<pk mz="313.129784" i="978099.6" sn="19.14" a="392.69" fwhm="0.000445" res="703488.9" algo="FTMS"/>
+<pk mz="313.166148" i="729141.8" sn="13.77" a="282.88" fwhm="0.000454" res="689908.5" algo="FTMS"/>
+<pk mz="314.161395" i="435442.2" sn="7.43" a="103.79" fwhm="0.000390" res="805541.6" algo="FTMS"/>
+<pk mz="314.161792" i="417266.2" sn="7.03" a="87.45" fwhm="0.000300" res="1045990.7" algo="FTMS"/>
+<pk mz="315.064204" i="539817.8" sn="9.68" a="241.10" fwhm="0.000583" res="540389.3" algo="FTMS"/>
+<pk mz="315.137242" i="474286.3" sn="8.26" a="130.19" fwhm="0.000380" res="828280.1" algo="FTMS"/>
+<pk mz="315.145458" i="540334.8" sn="9.69" a="202.28" fwhm="0.000464" res="678494.2" algo="FTMS"/>
+<pk mz="315.146061" i="417710.8" sn="7.04" a="118.25" fwhm="0.000374" res="843235.4" algo="FTMS"/>
+<pk mz="315.181880" i="500273.1" sn="8.82" a="159.76" fwhm="0.000392" res="803266.2" algo="FTMS"/>
+<pk mz="319.039265" i="754729.0" sn="14.22" a="267.42" fwhm="0.000392" res="814372.6" algo="FTMS"/>
+<pk mz="319.131599" i="429871.1" sn="7.25" a="137.15" fwhm="0.000419" res="761424.5" algo="FTMS"/>
+<pk mz="319.132413" i="690991.2" sn="12.86" a="282.94" fwhm="0.000467" res="683726.0" algo="FTMS"/>
+<pk mz="320.135737" i="583154.7" sn="10.54" a="175.05" fwhm="0.000357" res="897243.2" algo="FTMS"/>
+<pk mz="323.162988" i="2249030.8" sn="45.85" a="1781.17" fwhm="0.000818" res="394956.6" algo="FTMS"/>
+<pk mz="323.163797" i="8535879.0" z="-1" sn="179.49" a="3799.50" fwhm="0.000489" res="660302.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="323.166607" isotopic_mass="323.166837"/>
+<pk mz="323.164275" i="5266247.0" sn="109.99" a="2108.11" fwhm="0.000395" res="817313.2" algo="FTMS"/>
+<pk mz="323.165756" i="2153287.0" sn="43.82" a="836.51" fwhm="0.000389" res="830845.8" algo="FTMS"/>
+<pk mz="324.167164" i="1334160.0" z="-1" sn="26.40" a="561.88" fwhm="0.000451" res="719438.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="323.166607" isotopic_mass="324.170192"/>
+<pk mz="324.167620" i="789264.0" sn="14.82" a="243.60" fwhm="0.000326" res="993022.6" algo="FTMS"/>
+<pk mz="325.093734" i="447828.9" sn="7.56" a="127.33" fwhm="0.000405" res="803486.3" algo="FTMS"/>
+<pk mz="325.160024" i="876633.9" sn="16.68" a="402.30" fwhm="0.000600" res="541732.5" algo="FTMS"/>
+<pk mz="325.160918" i="2173914.0" sn="44.25" a="1080.64" fwhm="0.000574" res="566153.9" algo="FTMS"/>
+<pk mz="325.161401" i="1427930.0" sn="28.39" a="458.90" fwhm="0.000420" res="774428.2" algo="FTMS"/>
+<pk mz="325.161893" i="816346.1" sn="15.39" a="335.16" fwhm="0.000534" res="609060.2" algo="FTMS"/>
+<pk mz="325.165494" i="557018.3" sn="9.88" a="137.11" fwhm="0.000306" res="1061736.4" algo="FTMS"/>
+<pk mz="325.166372" i="583898.4" z="-1" sn="10.45" a="177.55" fwhm="0.000387" res="840976.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="323.166607" isotopic_mass="325.169386"/>
+<pk mz="325.181828" i="513627.5" sn="8.96" a="187.08" fwhm="0.000584" res="556891.3" algo="FTMS"/>
+<pk mz="325.185060" i="3680731.8" z="-1" sn="76.28" a="1947.16" fwhm="0.000639" res="508960.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="325.188075" isotopic_mass="325.188074"/>
+<pk mz="325.187172" i="565723.9" sn="10.07" a="219.50" fwhm="0.000589" res="552205.2" algo="FTMS"/>
+<pk mz="325.187590" i="463804.0" sn="7.90" a="115.09" fwhm="0.000327" res="993355.5" algo="FTMS"/>
+<pk mz="325.187992" i="449308.0" sn="7.59" a="132.20" fwhm="0.000473" res="686859.1" algo="FTMS"/>
+<pk mz="325.188540" i="468508.0" sn="8.00" a="239.61" fwhm="0.000701" res="463772.5" algo="FTMS"/>
+<pk mz="326.164217" i="443174.3" sn="7.46" a="151.09" fwhm="0.000446" res="731271.2" algo="FTMS"/>
+<pk mz="326.188423" i="835624.2" z="-1" sn="15.80" a="366.14" fwhm="0.000478" res="683063.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="325.188075" isotopic_mass="326.191424"/>
+<pk mz="326.983592" i="1129893.9" sn="22.06" a="971.86" fwhm="0.001165" res="280664.9" algo="FTMS"/>
+<pk mz="326.985975" i="1671782.0" sn="33.57" a="1333.24" fwhm="0.001032" res="316748.3" algo="FTMS"/>
+<pk mz="326.988456" i="4833382.0" sn="100.78" a="2616.85" fwhm="0.000715" res="457241.5" algo="FTMS"/>
+<pk mz="326.989296" i="12974182.0" z="-1" sn="273.82" a="6338.37" fwhm="0.000498" res="656863.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="326.992289" isotopic_mass="326.992287"/>
+<pk mz="326.989798" i="6936678.5" sn="145.49" a="2285.51" fwhm="0.000377" res="868254.1" algo="FTMS"/>
+<pk mz="326.990277" i="3253350.5" sn="67.19" a="1605.18" fwhm="0.000575" res="568237.6" algo="FTMS"/>
+<pk mz="326.991453" i="1808998.5" sn="36.49" a="974.15" fwhm="0.000828" res="395150.4" algo="FTMS"/>
+<pk mz="327.145800" i="542706.6" sn="9.57" a="181.10" fwhm="0.000410" res="797278.9" algo="FTMS"/>
+<pk mz="327.182109" i="546805.4" sn="9.66" a="194.26" fwhm="0.000481" res="680065.6" algo="FTMS"/>
+<pk mz="327.992677" i="1177525.8" z="-1" sn="23.07" a="582.39" fwhm="0.000498" res="658137.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="326.992289" isotopic_mass="327.995654"/>
+<pk mz="329.080189" i="464397.8" sn="7.82" a="145.91" fwhm="0.000420" res="783605.6" algo="FTMS"/>
+<pk mz="329.161472" i="510804.5" sn="8.79" a="249.46" fwhm="0.000735" res="447614.8" algo="FTMS"/>
+<pk mz="331.140851" i="460538.4" sn="7.73" a="195.53" fwhm="0.000578" res="572907.1" algo="FTMS"/>
+<pk mz="331.177218" i="463933.5" sn="7.80" a="148.83" fwhm="0.000414" res="799053.2" algo="FTMS"/>
+<pk mz="333.112004" i="1104486.5" sn="21.26" a="508.97" fwhm="0.000494" res="674564.5" algo="FTMS"/>
+<pk mz="333.112736" i="527142.6" sn="9.13" a="273.11" fwhm="0.000760" res="438468.8" algo="FTMS"/>
+<pk mz="333.192868" i="485357.7" sn="8.25" a="166.10" fwhm="0.000424" res="786074.3" algo="FTMS"/>
+<pk mz="335.172229" i="456225.4" sn="7.54" a="173.43" fwhm="0.000450" res="745085.1" algo="FTMS"/>
+<pk mz="336.970436" i="441930.5" sn="7.24" a="110.14" fwhm="0.000343" res="981052.6" algo="FTMS"/>
+<pk mz="336.973105" i="553034.7" sn="9.55" a="316.44" fwhm="0.000784" res="429623.1" algo="FTMS"/>
+<pk mz="336.973932" i="1944522.8" sn="38.44" a="959.86" fwhm="0.000508" res="663027.6" algo="FTMS"/>
+<pk mz="336.974586" i="996042.9" sn="18.75" a="379.73" fwhm="0.000439" res="768308.6" algo="FTMS"/>
+<pk mz="337.049053" i="432146.0" sn="7.04" a="160.37" fwhm="0.000485" res="695405.0" algo="FTMS"/>
+<pk mz="339.159165" i="968351.5" sn="18.17" a="541.07" fwhm="0.000636" res="533224.6" algo="FTMS"/>
+<pk mz="339.182454" i="541985.8" sn="9.32" a="207.72" fwhm="0.000495" res="685556.1" algo="FTMS"/>
+<pk mz="339.201110" i="2152611.8" sn="42.76" a="1149.53" fwhm="0.000528" res="642739.5" algo="FTMS"/>
+<pk mz="339.201701" i="1023011.7" sn="19.30" a="573.83" fwhm="0.000744" res="455763.0" algo="FTMS"/>
+<pk mz="340.204986" i="451336.0" sn="7.43" a="142.27" fwhm="0.000407" res="835853.6" algo="FTMS"/>
+<pk mz="341.161768" i="742121.3" sn="13.47" a="400.32" fwhm="0.000642" res="531284.3" algo="FTMS"/>
+<pk mz="341.198130" i="660332.9" sn="11.77" a="239.35" fwhm="0.000433" res="787288.9" algo="FTMS"/>
+<pk mz="341.198793" i="485741.0" sn="8.14" a="216.40" fwhm="0.000585" res="583131.5" algo="FTMS"/>
+<pk mz="342.977274" i="605861.8" sn="10.51" a="283.40" fwhm="0.000578" res="593041.8" algo="FTMS"/>
+<pk mz="342.980167" i="1591590.0" sn="30.73" a="975.83" fwhm="0.000709" res="483822.4" algo="FTMS"/>
+<pk mz="342.981065" i="4340262.0" sn="87.11" a="2458.84" fwhm="0.000609" res="563179.9" algo="FTMS"/>
+<pk mz="343.104779" i="505971.2" sn="8.46" a="206.39" fwhm="0.000550" res="623677.3" algo="FTMS"/>
+<pk mz="343.141159" i="538423.0" sn="9.12" a="240.40" fwhm="0.000559" res="614074.2" algo="FTMS"/>
+<pk mz="343.177553" i="609594.9" sn="10.58" a="288.16" fwhm="0.000699" res="490797.7" algo="FTMS"/>
+<pk mz="343.213838" i="642366.7" sn="11.25" a="309.04" fwhm="0.000494" res="695080.9" algo="FTMS"/>
+<pk mz="344.136329" i="543520.8" sn="9.22" a="282.46" fwhm="0.000710" res="484598.0" algo="FTMS"/>
+<pk mz="345.156955" i="538638.9" sn="9.12" a="239.47" fwhm="0.000532" res="648196.0" algo="FTMS"/>
+<pk mz="345.193304" i="514066.9" sn="8.62" a="232.49" fwhm="0.000571" res="604458.3" algo="FTMS"/>
+<pk mz="345.229655" i="491414.8" sn="8.15" a="178.35" fwhm="0.000497" res="694696.9" algo="FTMS"/>
+<pk mz="347.118357" i="492263.1" sn="8.17" a="166.91" fwhm="0.000461" res="753473.3" algo="FTMS"/>
+<pk mz="348.955482" i="599990.9" sn="10.24" a="242.10" fwhm="0.000476" res="732626.1" algo="FTMS"/>
+<pk mz="349.107373" i="3574984.3" z="-1" sn="70.51" a="1803.80" fwhm="0.000589" res="592980.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="349.110041" isotopic_mass="349.110039"/>
+<pk mz="349.107923" i="1918152.4" sn="36.94" a="1072.51" fwhm="0.000763" res="457759.0" algo="FTMS"/>
+<pk mz="350.110747" i="718652.2" z="-1" sn="12.64" a="369.92" fwhm="0.000590" res="593435.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="349.110041" isotopic_mass="350.113397"/>
+<pk mz="351.046316" i="1064105.6" sn="19.64" a="577.33" fwhm="0.000595" res="589947.1" algo="FTMS"/>
+<pk mz="351.103500" i="531504.4" sn="8.85" a="208.86" fwhm="0.000493" res="712838.8" algo="FTMS"/>
+<pk mz="351.104493" i="1109680.5" sn="20.56" a="556.95" fwhm="0.000543" res="646385.4" algo="FTMS"/>
+<pk mz="351.105461" i="586224.6" sn="9.96" a="364.14" fwhm="0.000898" res="390895.2" algo="FTMS"/>
+<pk mz="355.141438" i="455703.6" sn="7.30" a="161.92" fwhm="0.000470" res="755018.5" algo="FTMS"/>
+<pk mz="355.177851" i="847772.1" sn="15.25" a="462.63" fwhm="0.000653" res="543968.0" algo="FTMS"/>
+<pk mz="356.796967" i="507622.1" sn="8.25" a="184.58" fwhm="0.000484" res="737483.3" algo="FTMS"/>
+<pk mz="356.979766" i="3350653.0" sn="65.10" a="2883.70" fwhm="0.000895" res="398974.2" algo="FTMS"/>
+<pk mz="356.980708" i="10103933.0" z="-1" sn="200.16" a="5574.88" fwhm="0.000539" res="662855.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="356.983241" isotopic_mass="356.983243"/>
+<pk mz="356.981344" i="5293181.5" z="-1" sn="103.95" a="2434.18" fwhm="0.000706" res="505378.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="356.983872" isotopic_mass="356.983878"/>
+<pk mz="356.983139" i="1480061.5" sn="27.69" a="850.81" fwhm="0.000758" res="470937.5" algo="FTMS"/>
+<pk mz="357.157135" i="748051.5" sn="13.05" a="389.86" fwhm="0.000579" res="616371.4" algo="FTMS"/>
+<pk mz="357.193530" i="1063064.1" sn="19.35" a="482.38" fwhm="0.000502" res="710932.9" algo="FTMS"/>
+<pk mz="357.194189" i="758936.2" sn="13.27" a="288.45" fwhm="0.000458" res="780310.9" algo="FTMS"/>
+<pk mz="357.229865" i="608284.7" sn="10.26" a="254.87" fwhm="0.000499" res="715971.0" algo="FTMS"/>
+<pk mz="357.984052" i="918780.5" z="-1" sn="16.46" a="447.63" fwhm="0.000563" res="635958.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="356.983241" isotopic_mass="357.986569"/>
+<pk mz="357.984636" i="558844.6" z="-1" sn="9.27" a="214.95" fwhm="0.000456" res="785383.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="356.983872" isotopic_mass="357.987153"/>
+<pk mz="358.188821" i="1946390.6" sn="37.01" a="1211.45" fwhm="0.000795" res="450679.7" algo="FTMS"/>
+<pk mz="358.189637" i="805478.8" sn="14.20" a="600.16" fwhm="0.000861" res="415854.7" algo="FTMS"/>
+<pk mz="358.758749" i="573919.8" sn="9.57" a="268.29" fwhm="0.000550" res="652258.8" algo="FTMS"/>
+<pk mz="359.172924" i="634773.1" sn="10.78" a="367.41" fwhm="0.000612" res="586448.5" algo="FTMS"/>
+<pk mz="359.209261" i="878233.8" sn="15.65" a="438.28" fwhm="0.000565" res="636137.7" algo="FTMS"/>
+<pk mz="362.147463" i="802075.4" sn="14.12" a="366.36" fwhm="0.000581" res="623753.8" algo="FTMS"/>
+<pk mz="362.148032" i="456603.5" sn="7.21" a="157.25" fwhm="0.000512" res="707500.3" algo="FTMS"/>
+<pk mz="362.970745" i="550601.6" sn="8.97" a="370.67" fwhm="0.000989" res="366983.1" algo="FTMS"/>
+<pk mz="362.971525" i="2069385.6" sn="38.94" a="1219.25" fwhm="0.000592" res="613010.7" algo="FTMS"/>
+<pk mz="362.972342" i="899465.8" sn="15.85" a="552.00" fwhm="0.000760" res="477413.4" algo="FTMS"/>
+<pk mz="362.983759" i="797323.3" sn="13.84" a="320.52" fwhm="0.000453" res="801061.9" algo="FTMS"/>
+<pk mz="362.986964" i="1618571.8" sn="30.05" a="857.20" fwhm="0.000724" res="501438.9" algo="FTMS"/>
+<pk mz="362.987865" i="5520268.0" z="-1" sn="107.05" a="3363.45" fwhm="0.000621" res="584822.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="362.990297" isotopic_mass="362.990293"/>
+<pk mz="362.988596" i="2432908.0" sn="46.12" a="1370.73" fwhm="0.000875" res="414854.7" algo="FTMS"/>
+<pk mz="363.046704" i="520467.8" sn="8.37" a="301.71" fwhm="0.000784" res="463282.6" algo="FTMS"/>
+<pk mz="363.150112" i="629921.7" sn="10.53" a="245.42" fwhm="0.000472" res="769529.5" algo="FTMS"/>
+<pk mz="363.158757" i="680226.8" sn="11.53" a="364.54" fwhm="0.000783" res="464077.6" algo="FTMS"/>
+<pk mz="363.159863" i="2314659.0" sn="43.78" a="1379.45" fwhm="0.000627" res="579219.5" algo="FTMS"/>
+<pk mz="363.160585" i="1052579.1" sn="18.87" a="548.21" fwhm="0.000667" res="544378.7" algo="FTMS"/>
+<pk mz="363.991259" i="653587.3" z="-1" sn="11.00" a="254.72" fwhm="0.000458" res="794985.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="362.990297" isotopic_mass="363.993669"/>
+<pk mz="364.163164" i="514346.7" sn="8.25" a="218.73" fwhm="0.000522" res="697008.4" algo="FTMS"/>
+<pk mz="365.061352" i="737957.2" sn="12.66" a="344.98" fwhm="0.000635" res="574843.9" algo="FTMS"/>
+<pk mz="365.062361" i="3100837.3" sn="59.29" a="1889.14" fwhm="0.000598" res="610974.3" algo="FTMS"/>
+<pk mz="365.063013" i="1488037.4" sn="27.46" a="861.10" fwhm="0.000513" res="710967.2" algo="FTMS"/>
+<pk mz="365.081062" i="686503.9" sn="11.65" a="267.52" fwhm="0.000479" res="762772.9" algo="FTMS"/>
+<pk mz="365.156916" i="936370.3" sn="16.58" a="469.56" fwhm="0.000556" res="656323.8" algo="FTMS"/>
+<pk mz="365.211891" i="662585.9" sn="11.17" a="396.79" fwhm="0.000889" res="410887.0" algo="FTMS"/>
+<pk mz="367.113486" i="1276865.1" sn="23.29" a="759.81" fwhm="0.000895" res="410166.5" algo="FTMS"/>
+<pk mz="367.114529" i="5506497.5" z="-1" sn="106.76" a="3091.55" fwhm="0.000687" res="534329.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="367.116893" isotopic_mass="367.116881"/>
+<pk mz="367.115008" i="3220417.3" sn="61.65" a="1628.32" fwhm="0.000867" res="423421.8" algo="FTMS"/>
+<pk mz="367.116901" i="1778625.6" sn="33.19" a="1100.81" fwhm="0.000581" res="632253.8" algo="FTMS"/>
+<pk mz="367.191240" i="674123.9" sn="11.40" a="341.24" fwhm="0.000609" res="603197.9" algo="FTMS"/>
+<pk mz="368.117978" i="838734.0" z="-1" sn="14.64" a="512.23" fwhm="0.000677" res="544094.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="367.116893" isotopic_mass="368.120312"/>
+<pk mz="369.106581" i="594137.9" sn="9.81" a="295.76" fwhm="0.000727" res="507911.7" algo="FTMS"/>
+<pk mz="369.108339" i="819162.2" sn="14.25" a="571.94" fwhm="0.000884" res="417439.5" algo="FTMS"/>
+<pk mz="369.109019" i="689626.3" sn="11.70" a="291.13" fwhm="0.000695" res="531269.1" algo="FTMS"/>
+<pk mz="369.109570" i="719322.4" sn="12.28" a="321.18" fwhm="0.000512" res="720382.9" algo="FTMS"/>
+<pk mz="369.111725" i="1499866.6" sn="27.69" a="769.42" fwhm="0.000752" res="490636.4" algo="FTMS"/>
+<pk mz="369.112551" i="6122203.0" z="-1" sn="118.91" a="4075.01" fwhm="0.000643" res="574007.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="369.114858" isotopic_mass="369.114865"/>
+<pk mz="369.113241" i="2936027.0" sn="56.03" a="1063.35" fwhm="0.000422" res="875148.2" algo="FTMS"/>
+<pk mz="369.113819" i="1735899.0" sn="32.34" a="849.08" fwhm="0.000640" res="576923.4" algo="FTMS"/>
+<pk mz="369.115008" i="2192091.3" sn="41.35" a="1014.27" fwhm="0.000587" res="628601.6" algo="FTMS"/>
+<pk mz="369.119906" i="716251.8" sn="12.22" a="368.17" fwhm="0.000563" res="655668.1" algo="FTMS"/>
+<pk mz="369.157418" i="526049.2" sn="8.47" a="195.15" fwhm="0.000486" res="760119.8" algo="FTMS"/>
+<pk mz="369.193838" i="720870.3" sn="12.31" a="396.11" fwhm="0.000624" res="591543.5" algo="FTMS"/>
+<pk mz="370.115855" i="959594.1" z="-1" sn="17.02" a="478.69" fwhm="0.000561" res="659965.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="369.114858" isotopic_mass="370.118151"/>
+<pk mz="370.116470" i="611946.1" sn="10.16" a="206.15" fwhm="0.000400" res="924980.0" algo="FTMS"/>
+<pk mz="370.129492" i="456364.0" sn="7.09" a="302.85" fwhm="0.000911" res="406292.1" algo="FTMS"/>
+<pk mz="371.173278" i="1009922.3" sn="17.77" a="533.29" fwhm="0.000610" res="608528.1" algo="FTMS"/>
+<pk mz="371.209630" i="995591.6" sn="17.49" a="573.93" fwhm="0.000625" res="594073.6" algo="FTMS"/>
+<pk mz="371.245975" i="526348.9" sn="8.35" a="268.41" fwhm="0.000608" res="610875.1" algo="FTMS"/>
+<pk mz="373.188970" i="946728.4" sn="16.53" a="569.00" fwhm="0.000711" res="525207.2" algo="FTMS"/>
+<pk mz="373.189675" i="534376.5" sn="8.50" a="206.92" fwhm="0.000489" res="762474.7" algo="FTMS"/>
+<pk mz="373.225253" i="560301.7" sn="9.01" a="196.79" fwhm="0.000568" res="657597.4" algo="FTMS"/>
+<pk mz="373.225762" i="563885.8" sn="9.08" a="331.54" fwhm="0.000815" res="458151.7" algo="FTMS"/>
+<pk mz="375.160150" i="571084.6" sn="9.21" a="279.49" fwhm="0.000567" res="661102.0" algo="FTMS"/>
+<pk mz="375.168082" i="467917.8" sn="7.20" a="189.08" fwhm="0.000571" res="657443.5" algo="FTMS"/>
+<pk mz="375.204619" i="750931.3" sn="12.71" a="406.83" fwhm="0.000601" res="624176.6" algo="FTMS"/>
+<pk mz="376.986484" i="14178143.0" z="-1" sn="274.11" a="13636.51" fwhm="0.001272" res="296387.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="376.988644" isotopic_mass="376.988645"/>
+<pk mz="376.987659" i="68829024.0" z="-1" sn="1338.04" a="44726.35" fwhm="0.000682" res="552804.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="376.989816" isotopic_mass="376.989820"/>
+<pk mz="376.988284" i="21997408.0" sn="426.33" a="13076.14" fwhm="0.000746" res="505532.5" algo="FTMS"/>
+<pk mz="377.060205" i="503146.5" sn="7.88" a="175.72" fwhm="0.000441" res="854226.9" algo="FTMS"/>
+<pk mz="377.061507" i="693738.7" sn="11.59" a="262.59" fwhm="0.000435" res="866692.6" algo="FTMS"/>
+<pk mz="377.062797" i="2865515.0" sn="53.87" a="2049.99" fwhm="0.000727" res="518569.9" algo="FTMS"/>
+<pk mz="377.063655" i="1174891.0" sn="20.96" a="610.04" fwhm="0.000840" res="448888.3" algo="FTMS"/>
+<pk mz="377.174765" i="5417852.0" sn="103.56" a="2573.72" fwhm="0.000661" res="570963.2" algo="FTMS"/>
+<pk mz="377.175973" i="21626748.0" z="-1" sn="419.11" a="20691.53" fwhm="0.000960" res="392791.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="377.178125" isotopic_mass="377.178131"/>
+<pk mz="377.178203" i="7278460.5" sn="139.78" a="4219.06" fwhm="0.000670" res="562783.5" algo="FTMS"/>
+<pk mz="377.983751" i="482166.9" sn="7.47" a="240.00" fwhm="0.000607" res="623069.4" algo="FTMS"/>
+<pk mz="377.989826" i="1115383.9" z="-1" sn="19.80" a="858.24" fwhm="0.000805" res="469644.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="376.988644" isotopic_mass="377.991968"/>
+<pk mz="377.990951" i="4422648.0" z="-1" sn="84.19" a="3301.56" fwhm="0.000705" res="536014.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="376.989816" isotopic_mass="377.993092"/>
+<pk mz="377.991847" i="1822200.3" sn="33.56" a="982.68" fwhm="0.000820" res="460990.7" algo="FTMS"/>
+<pk mz="378.125087" i="1205516.5" sn="21.55" a="664.84" fwhm="0.000638" res="592870.8" algo="FTMS"/>
+<pk mz="378.125732" i="537228.6" sn="8.54" a="225.35" fwhm="0.000891" res="424341.7" algo="FTMS"/>
+<pk mz="378.142862" i="1024015.3" sn="18.02" a="553.22" fwhm="0.000580" res="652187.2" algo="FTMS"/>
+<pk mz="378.143598" i="636431.4" sn="10.48" a="335.81" fwhm="0.000655" res="577517.1" algo="FTMS"/>
+<pk mz="378.179306" i="5070869.0" z="-1" sn="96.80" a="3253.47" fwhm="0.000629" res="600943.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="377.178125" isotopic_mass="378.181444"/>
+<pk mz="378.180056" i="2424341.0" sn="45.28" a="1877.72" fwhm="0.000836" res="452321.7" algo="FTMS"/>
+<pk mz="379.060914" i="946844.0" sn="16.29" a="521.55" fwhm="0.000623" res="608410.9" algo="FTMS"/>
+<pk mz="379.061799" i="480540.1" sn="7.33" a="223.78" fwhm="0.000634" res="597461.0" algo="FTMS"/>
+<pk mz="379.078471" i="1130654.6" sn="19.81" a="629.56" fwhm="0.000715" res="530463.8" algo="FTMS"/>
+<pk mz="379.079085" i="648222.8" sn="10.55" a="262.77" fwhm="0.000608" res="623541.9" algo="FTMS"/>
+<pk mz="379.165021" i="516652.0" sn="8.03" a="201.88" fwhm="0.000606" res="626143.6" algo="FTMS"/>
+<pk mz="379.165550" i="579564.1" sn="9.24" a="294.00" fwhm="0.000890" res="425974.0" algo="FTMS"/>
+<pk mz="379.166087" i="565932.2" sn="8.97" a="229.36" fwhm="0.000668" res="567964.2" algo="FTMS"/>
+<pk mz="379.166772" i="621740.3" sn="10.04" a="299.26" fwhm="0.000688" res="550752.9" algo="FTMS"/>
+<pk mz="379.167586" i="517036.4" sn="8.03" a="243.42" fwhm="0.000810" res="468100.8" algo="FTMS"/>
+<pk mz="379.168598" i="1041324.6" sn="18.10" a="703.38" fwhm="0.000757" res="501069.1" algo="FTMS"/>
+<pk mz="379.171946" i="2096301.0" sn="38.35" a="1616.52" fwhm="0.000977" res="388224.2" algo="FTMS"/>
+<pk mz="379.173069" i="7518381.0" z="-1" sn="142.43" a="5439.73" fwhm="0.000705" res="537506.1" algo="FTMS" component_name="" deconvoluted_molecular_mass="379.175194" isotopic_mass="379.175187"/>
+<pk mz="379.173790" i="4123821.3" sn="77.27" a="1781.99" fwhm="0.000495" res="765494.1" algo="FTMS"/>
+<pk mz="379.175863" i="1679021.6" sn="30.34" a="852.33" fwhm="0.000606" res="625362.9" algo="FTMS"/>
+<pk mz="380.175238" i="574920.0" sn="9.14" a="334.67" fwhm="0.000908" res="418750.0" algo="FTMS"/>
+<pk mz="380.176470" i="1754184.3" z="-1" sn="31.78" a="1233.35" fwhm="0.000761" res="499508.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="379.175194" isotopic_mass="380.178568"/>
+<pk mz="380.982805" i="503749.6" sn="7.77" a="251.84" fwhm="0.000652" res="584526.8" algo="FTMS"/>
+<pk mz="381.207371" i="2844136.5" sn="52.70" a="1740.96" fwhm="0.000695" res="548786.9" algo="FTMS"/>
+<pk mz="381.208073" i="1157864.8" sn="20.33" a="663.48" fwhm="0.000900" res="423691.7" algo="FTMS"/>
+<pk mz="382.210733" i="550789.8" sn="8.67" a="281.43" fwhm="0.000635" res="602110.6" algo="FTMS"/>
+<pk mz="383.053528" i="701450.7" sn="11.56" a="379.91" fwhm="0.000670" res="571749.4" algo="FTMS"/>
+<pk mz="383.109920" i="808211.6" sn="13.61" a="465.11" fwhm="0.000664" res="577150.5" algo="FTMS"/>
+<pk mz="383.173557" i="582429.7" sn="9.28" a="281.21" fwhm="0.000593" res="646121.3" algo="FTMS"/>
+<pk mz="383.204393" i="864802.6" sn="14.70" a="498.40" fwhm="0.000671" res="570682.9" algo="FTMS"/>
+<pk mz="383.205084" i="481314.7" sn="7.34" a="155.04" fwhm="0.000455" res="842967.5" algo="FTMS"/>
+<pk mz="383.209959" i="792355.4" sn="13.31" a="446.82" fwhm="0.000640" res="598530.0" algo="FTMS"/>
+<pk mz="384.792774" i="778783.3" sn="13.04" a="426.70" fwhm="0.000634" res="606764.4" algo="FTMS"/>
+<pk mz="384.793634" i="471135.4" sn="7.14" a="232.73" fwhm="0.000798" res="482089.1" algo="FTMS"/>
+<pk mz="385.107868" i="481617.7" sn="7.34" a="217.07" fwhm="0.000602" res="639541.2" algo="FTMS"/>
+<pk mz="385.189305" i="905694.7" sn="15.48" a="572.49" fwhm="0.000878" res="438686.1" algo="FTMS"/>
+<pk mz="385.225697" i="835684.6" sn="14.13" a="450.85" fwhm="0.000768" res="501918.1" algo="FTMS"/>
+<pk mz="385.226216" i="556484.6" sn="8.77" a="278.06" fwhm="0.001050" res="367035.1" algo="FTMS"/>
+<pk mz="386.790903" i="712032.8" sn="11.57" a="397.18" fwhm="0.000665" res="582062.3" algo="FTMS"/>
+<pk mz="386.972250" i="509182.2" sn="7.73" a="295.44" fwhm="0.000893" res="433338.6" algo="FTMS"/>
+<pk mz="387.168636" i="924318.0" sn="15.57" a="526.90" fwhm="0.000628" res="616763.3" algo="FTMS"/>
+<pk mz="387.205053" i="2106276.0" sn="37.90" a="1425.31" fwhm="0.000661" res="586010.4" algo="FTMS"/>
+<pk mz="387.205786" i="840612.1" sn="13.99" a="366.12" fwhm="0.000797" res="485598.6" algo="FTMS"/>
+<pk mz="387.241353" i="587817.8" sn="9.22" a="301.67" fwhm="0.000609" res="635789.7" algo="FTMS"/>
+<pk mz="389.184378" i="542439.2" sn="8.35" a="267.33" fwhm="0.000681" res="571868.0" algo="FTMS"/>
+<pk mz="389.220757" i="567533.2" sn="8.83" a="256.89" fwhm="0.000549" res="709366.0" algo="FTMS"/>
+<pk mz="391.191087" i="500274.8" sn="7.55" a="179.06" fwhm="0.000471" res="829770.9" algo="FTMS"/>
+<pk mz="391.192018" i="1299251.0" sn="22.64" a="1073.50" fwhm="0.000798" res="490262.4" algo="FTMS"/>
+<pk mz="391.200146" i="621364.3" sn="9.84" a="343.53" fwhm="0.000640" res="610778.2" algo="FTMS"/>
+<pk mz="392.158946" i="762068.1" sn="12.49" a="402.20" fwhm="0.000611" res="642041.4" algo="FTMS"/>
+<pk mz="392.979449" i="1375069.5" sn="24.07" a="935.76" fwhm="0.000699" res="562314.2" algo="FTMS"/>
+<pk mz="392.980290" i="638301.7" sn="10.15" a="297.54" fwhm="0.000554" res="709579.5" algo="FTMS"/>
+<pk mz="393.058243" i="2565482.8" sn="46.55" a="1692.41" fwhm="0.000681" res="577078.6" algo="FTMS"/>
+<pk mz="393.094662" i="632432.9" sn="10.04" a="370.75" fwhm="0.000853" res="460589.9" algo="FTMS"/>
+<pk mz="393.170372" i="870269.6" sn="14.53" a="509.97" fwhm="0.000805" res="488585.2" algo="FTMS"/>
+<pk mz="393.171396" i="2964861.8" sn="54.09" a="2233.80" fwhm="0.000768" res="511747.1" algo="FTMS"/>
+<pk mz="393.172304" i="1321854.0" sn="23.06" a="740.71" fwhm="0.000799" res="491917.2" algo="FTMS"/>
+<pk mz="393.175056" i="538238.4" sn="8.26" a="234.79" fwhm="0.000548" res="718047.9" algo="FTMS"/>
+<pk mz="394.174715" i="733734.9" sn="11.95" a="400.60" fwhm="0.000636" res="620133.1" algo="FTMS"/>
+<pk mz="394.998811" i="1707698.4" sn="30.34" a="1117.65" fwhm="0.000692" res="570658.4" algo="FTMS"/>
+<pk mz="394.999625" i="881202.6" sn="14.73" a="766.93" fwhm="0.001128" res="350132.2" algo="FTMS"/>
+<pk mz="395.001727" i="479410.9" sn="7.15" a="184.28" fwhm="0.000497" res="794118.1" algo="FTMS"/>
+<pk mz="395.056251" i="2153148.3" sn="38.76" a="1553.87" fwhm="0.000739" res="534853.6" algo="FTMS"/>
+<pk mz="395.057037" i="1031356.3" sn="17.57" a="554.39" fwhm="0.000878" res="450132.4" algo="FTMS"/>
+<pk mz="395.168544" i="1171919.3" sn="19.71" a="869.67" fwhm="0.000842" res="469378.4" algo="FTMS"/>
+<pk mz="395.187164" i="619474.4" sn="9.54" a="331.46" fwhm="0.000640" res="617177.8" algo="FTMS"/>
+<pk mz="397.189742" i="776744.4" sn="12.43" a="433.97" fwhm="0.000650" res="611176.3" algo="FTMS"/>
+<pk mz="397.226110" i="791854.6" sn="12.71" a="477.08" fwhm="0.000688" res="577767.8" algo="FTMS"/>
+<pk mz="399.169053" i="667645.8" sn="10.42" a="417.63" fwhm="0.000738" res="540725.1" algo="FTMS"/>
+<pk mz="399.182098" i="596992.0" sn="9.11" a="313.53" fwhm="0.000627" res="636818.9" algo="FTMS"/>
+<pk mz="399.205470" i="1183876.0" sn="19.92" a="1042.05" fwhm="0.000958" res="416759.4" algo="FTMS"/>
+<pk mz="399.241881" i="1097866.4" sn="18.33" a="798.10" fwhm="0.000778" res="513309.5" algo="FTMS"/>
+<pk mz="399.242855" i="493578.5" sn="7.21" a="255.11" fwhm="0.000800" res="498852.7" algo="FTMS"/>
+<pk mz="400.200797" i="2975281.0" sn="52.88" a="2225.16" fwhm="0.000756" res="529210.4" algo="FTMS"/>
+<pk mz="400.201629" i="1203761.3" sn="20.28" a="672.91" fwhm="0.000903" res="443390.6" algo="FTMS"/>
+<pk mz="401.184832" i="901852.9" sn="14.72" a="619.07" fwhm="0.000742" res="540712.9" algo="FTMS"/>
+<pk mz="401.185666" i="514781.1" sn="7.60" a="203.55" fwhm="0.000518" res="774529.7" algo="FTMS"/>
+<pk mz="401.204147" i="646880.3" sn="10.03" a="338.54" fwhm="0.000630" res="636957.8" algo="FTMS"/>
+<pk mz="401.204970" i="483808.5" sn="7.03" a="193.89" fwhm="0.000555" res="722518.1" algo="FTMS"/>
+<pk mz="401.221211" i="1255651.4" sn="21.23" a="811.56" fwhm="0.000727" res="551738.6" algo="FTMS"/>
+<pk mz="401.221938" i="517219.5" sn="7.64" a="343.61" fwhm="0.001315" res="305209.0" algo="FTMS"/>
+<pk mz="401.257587" i="688617.7" sn="10.79" a="395.00" fwhm="0.000660" res="608182.3" algo="FTMS"/>
+<pk mz="402.271479" i="1006235.9" sn="16.64" a="641.10" fwhm="0.000920" res="437188.4" algo="FTMS"/>
+<pk mz="402.272197" i="717852.0" sn="11.33" a="336.60" fwhm="0.000571" res="704481.3" algo="FTMS"/>
+<pk mz="403.200608" i="868800.1" sn="14.10" a="628.30" fwhm="0.000821" res="491095.9" algo="FTMS"/>
+<pk mz="403.236953" i="777542.4" sn="12.42" a="560.57" fwhm="0.000791" res="509706.4" algo="FTMS"/>
+<pk mz="403.273230" i="560076.9" sn="8.42" a="284.20" fwhm="0.000636" res="633626.4" algo="FTMS"/>
+<pk mz="404.195813" i="590576.8" sn="8.75" a="263.73" fwhm="0.000574" res="703634.5" algo="FTMS"/>
+<pk mz="405.014099" i="1257346.9" sn="20.70" a="776.63" fwhm="0.000765" res="529544.6" algo="FTMS"/>
+<pk mz="405.014786" i="689027.1" sn="10.51" a="339.87" fwhm="0.000588" res="688228.1" algo="FTMS"/>
+<pk mz="405.015671" i="569475.3" sn="8.37" a="308.03" fwhm="0.000669" res="605631.1" algo="FTMS"/>
+<pk mz="406.979131" i="1630436.8" sn="27.38" a="1089.09" fwhm="0.000886" res="459409.3" algo="FTMS"/>
+<pk mz="406.979884" i="1169124.9" sn="19.11" a="627.04" fwhm="0.000589" res="691214.1" algo="FTMS"/>
+<pk mz="407.109524" i="529276.4" sn="7.64" a="292.59" fwhm="0.000824" res="494237.6" algo="FTMS"/>
+<pk mz="407.110821" i="1836796.6" sn="31.08" a="1336.36" fwhm="0.000818" res="497596.4" algo="FTMS"/>
+<pk mz="407.111656" i="712700.8" sn="10.93" a="449.17" fwhm="0.000973" res="418210.1" algo="FTMS"/>
+<pk mz="407.113960" i="528381.2" sn="7.62" a="331.28" fwhm="0.000807" res="504230.6" algo="FTMS"/>
+<pk mz="407.187548" i="814602.6" sn="12.75" a="615.74" fwhm="0.000701" res="581121.8" algo="FTMS"/>
+<pk mz="409.014937" i="4041816.0" z="-1" sn="70.60" a="3051.40" fwhm="0.000754" res="542459.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="409.015685" isotopic_mass="409.016389"/>
+<pk mz="409.015862" i="1920088.1" sn="32.56" a="1323.28" fwhm="0.001003" res="407938.3" algo="FTMS"/>
+<pk mz="409.053776" i="579039.1" sn="8.52" a="376.51" fwhm="0.000817" res="500685.0" algo="FTMS"/>
+<pk mz="409.108808" i="1897577.1" sn="32.16" a="1285.02" fwhm="0.000759" res="539178.8" algo="FTMS"/>
+<pk mz="409.109564" i="790633.3" sn="12.32" a="562.01" fwhm="0.001248" res="327919.0" algo="FTMS"/>
+<pk mz="409.130509" i="574829.1" sn="8.45" a="325.93" fwhm="0.000682" res="599872.8" algo="FTMS"/>
+<pk mz="409.162765" i="511475.1" sn="7.31" a="272.29" fwhm="0.000665" res="615560.1" algo="FTMS"/>
+<pk mz="409.167003" i="881267.8" sn="13.94" a="669.86" fwhm="0.000869" res="470630.9" algo="FTMS"/>
+<pk mz="410.014566" i="936207.9" z="-1" sn="14.92" a="755.60" fwhm="0.000945" res="433954.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="409.015685" isotopic_mass="410.015993"/>
+<pk mz="411.160994" i="532708.4" sn="7.69" a="265.12" fwhm="0.000671" res="612691.0" algo="FTMS"/>
+<pk mz="411.182601" i="873448.4" sn="13.79" a="540.92" fwhm="0.000670" res="613284.0" algo="FTMS"/>
+<pk mz="411.205924" i="709356.8" sn="10.85" a="513.40" fwhm="0.000844" res="487146.0" algo="FTMS"/>
+<pk mz="411.242345" i="763891.6" sn="11.83" a="428.97" fwhm="0.000688" res="597889.6" algo="FTMS"/>
+<pk mz="412.985012" i="2240314.0" sn="38.29" a="2569.24" fwhm="0.001354" res="305035.6" algo="FTMS"/>
+<pk mz="412.986382" i="9455418.0" z="-1" sn="167.63" a="7822.89" fwhm="0.000797" res="518189.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="412.987749" isotopic_mass="412.987736"/>
+<pk mz="412.987181" i="4884282.5" sn="85.69" a="2117.09" fwhm="0.000528" res="782180.8" algo="FTMS"/>
+<pk mz="412.987843" i="2466618.5" sn="42.35" a="1923.73" fwhm="0.001243" res="332376.3" algo="FTMS"/>
+<pk mz="412.989737" i="1711930.9" sn="28.82" a="1135.74" fwhm="0.000730" res="565472.4" algo="FTMS"/>
+<pk mz="413.148830" i="498008.8" sn="7.06" a="284.05" fwhm="0.000682" res="606163.1" algo="FTMS"/>
+<pk mz="413.185225" i="764255.7" sn="11.83" a="467.21" fwhm="0.000731" res="565456.9" algo="FTMS"/>
+<pk mz="413.198442" i="671586.2" sn="10.17" a="432.78" fwhm="0.000785" res="526207.0" algo="FTMS"/>
+<pk mz="413.221652" i="1817446.6" sn="30.71" a="1330.68" fwhm="0.000803" res="514400.1" algo="FTMS"/>
+<pk mz="413.258061" i="1133421.5" sn="18.45" a="841.18" fwhm="0.000780" res="529521.3" algo="FTMS"/>
+<pk mz="413.989883" i="1003255.9" z="-1" sn="15.68" a="765.38" fwhm="0.000861" res="480694.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="412.987749" isotopic_mass="413.991212"/>
+<pk mz="414.216947" i="1949219.0" sn="32.19" a="1434.13" fwhm="0.000882" res="469477.4" algo="FTMS"/>
+<pk mz="414.217684" i="900643.2" sn="13.89" a="787.91" fwhm="0.001482" res="279492.8" algo="FTMS"/>
+<pk mz="414.220263" i="528931.7" sn="7.41" a="242.01" fwhm="0.000649" res="638685.2" algo="FTMS"/>
+<pk mz="414.224806" i="510500.6" sn="7.08" a="275.86" fwhm="0.000714" res="580379.2" algo="FTMS"/>
+<pk mz="415.060988" i="801731.9" sn="12.16" a="545.38" fwhm="0.000832" res="499138.1" algo="FTMS"/>
+<pk mz="415.177687" i="935898.3" sn="14.50" a="611.21" fwhm="0.000717" res="578773.1" algo="FTMS"/>
+<pk mz="415.201038" i="1428702.8" sn="23.10" a="975.13" fwhm="0.000743" res="558602.0" algo="FTMS"/>
+<pk mz="415.220191" i="661474.4" sn="9.72" a="531.38" fwhm="0.000887" res="467861.1" algo="FTMS"/>
+<pk mz="415.237378" i="1473253.6" sn="23.88" a="1024.96" fwhm="0.000790" res="525763.2" algo="FTMS"/>
+<pk mz="415.273789" i="681580.6" sn="10.07" a="529.85" fwhm="0.000991" res="418971.9" algo="FTMS"/>
+<pk mz="416.196260" i="511133.8" sn="7.09" a="236.99" fwhm="0.000657" res="633124.2" algo="FTMS"/>
+<pk mz="416.974984" i="1070644.4" sn="16.85" a="694.98" fwhm="0.000908" res="459320.5" algo="FTMS"/>
+<pk mz="416.980268" i="9341493.0" z="-1" sn="161.18" a="7352.73" fwhm="0.000799" res="521678.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="416.981526" isotopic_mass="416.981521"/>
+<pk mz="416.981098" i="4628021.5" sn="78.93" a="2657.64" fwhm="0.000807" res="516459.4" algo="FTMS"/>
+<pk mz="416.983665" i="1346614.0" sn="21.67" a="785.14" fwhm="0.000653" res="638846.8" algo="FTMS"/>
+<pk mz="416.984611" i="1037494.2" sn="16.27" a="861.69" fwhm="0.001198" res="348145.2" algo="FTMS"/>
+<pk mz="417.172298" i="1276506.6" sn="20.44" a="918.70" fwhm="0.000741" res="563092.6" algo="FTMS"/>
+<pk mz="417.173113" i="637786.8" sn="9.30" a="274.74" fwhm="0.000468" res="891408.5" algo="FTMS"/>
+<pk mz="417.214207" i="2944610.8" sn="49.55" a="2492.70" fwhm="0.000828" res="504010.4" algo="FTMS"/>
+<pk mz="417.215601" i="712739.0" sn="10.60" a="650.90" fwhm="0.001345" res="310302.5" algo="FTMS"/>
+<pk mz="417.216929" i="1059939.3" sn="16.66" a="918.27" fwhm="0.000926" res="450734.2" algo="FTMS"/>
+<pk mz="417.232020" i="1820262.3" sn="29.93" a="1315.48" fwhm="0.000780" res="535049.1" algo="FTMS"/>
+<pk mz="417.253146" i="1149802.3" sn="18.23" a="813.42" fwhm="0.000773" res="539853.5" algo="FTMS"/>
+<pk mz="417.983682" i="1187320.5" z="-1" sn="18.88" a="993.94" fwhm="0.000877" res="476359.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="416.981526" isotopic_mass="417.984910"/>
+<pk mz="418.175742" i="658718.1" sn="9.66" a="560.97" fwhm="0.001012" res="413143.4" algo="FTMS"/>
+<pk mz="418.217663" i="748582.3" sn="11.23" a="521.72" fwhm="0.000790" res="529066.8" algo="FTMS"/>
+<pk mz="419.111230" i="630741.7" sn="9.17" a="329.59" fwhm="0.000668" res="627039.3" algo="FTMS"/>
+<pk mz="419.224398" i="1686508.0" sn="27.59" a="1477.76" fwhm="0.000867" res="483470.8" algo="FTMS"/>
+<pk mz="419.232355" i="666861.5" sn="9.80" a="406.49" fwhm="0.000719" res="583081.9" algo="FTMS"/>
+<pk mz="420.227728" i="530610.4" sn="7.42" a="338.76" fwhm="0.000823" res="510667.6" algo="FTMS"/>
+<pk mz="421.109099" i="728674.1" sn="10.87" a="416.18" fwhm="0.000671" res="627451.1" algo="FTMS"/>
+<pk mz="421.125630" i="4098405.3" sn="69.67" a="1899.24" fwhm="0.000936" res="449874.0" algo="FTMS"/>
+<pk mz="421.126964" i="18259302.0" z="-1" sn="316.78" a="14044.82" fwhm="0.000934" res="450983.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="421.128122" isotopic_mass="421.128111"/>
+<pk mz="421.127720" i="11623782.0" sn="200.99" a="6987.06" fwhm="0.000608" res="692525.4" algo="FTMS"/>
+<pk mz="421.128492" i="7093606.0" z="-1" sn="121.94" a="3474.26" fwhm="0.000495" res="850462.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="421.129595" isotopic_mass="421.129638"/>
+<pk mz="421.129884" i="8052070.0" sn="138.66" a="5326.61" fwhm="0.000872" res="482865.1" algo="FTMS"/>
+<pk mz="421.159124" i="1975660.1" sn="32.63" a="2003.40" fwhm="0.001157" res="364045.5" algo="FTMS"/>
+<pk mz="421.203678" i="1619829.0" sn="26.42" a="1264.48" fwhm="0.000816" res="516269.3" algo="FTMS"/>
+<pk mz="421.221418" i="577912.6" sn="8.24" a="321.58" fwhm="0.000681" res="618115.9" algo="FTMS"/>
+<pk mz="421.240096" i="845308.3" sn="12.90" a="712.87" fwhm="0.000947" res="444632.3" algo="FTMS"/>
+<pk mz="422.130396" i="4031023.0" z="-1" sn="68.49" a="3660.19" fwhm="0.000886" res="476289.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="421.128122" isotopic_mass="422.131517"/>
+<pk mz="422.131587" i="1335599.4" z="-1" sn="21.46" a="921.60" fwhm="0.001110" res="380146.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="421.129595" isotopic_mass="422.132708"/>
+<pk mz="422.940357" i="1326290.9" sn="21.29" a="1152.27" fwhm="0.000851" res="496931.7" algo="FTMS"/>
+<pk mz="422.979425" i="880346.8" sn="13.51" a="706.41" fwhm="0.001141" res="370717.4" algo="FTMS"/>
+<pk mz="422.980852" i="3942107.0" z="-1" sn="66.94" a="3282.89" fwhm="0.000818" res="517352.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="422.981960" isotopic_mass="422.981950"/>
+<pk mz="422.981773" i="1905371.3" sn="31.40" a="1129.81" fwhm="0.000666" res="634884.3" algo="FTMS"/>
+<pk mz="422.985084" i="512219.9" sn="7.08" a="248.52" fwhm="0.000817" res="517769.0" algo="FTMS"/>
+<pk mz="422.985774" i="515548.0" sn="7.14" a="268.95" fwhm="0.000724" res="584107.3" algo="FTMS"/>
+<pk mz="423.123609" i="3731192.0" sn="63.25" a="3047.11" fwhm="0.001158" res="365528.2" algo="FTMS"/>
+<pk mz="423.124981" i="18013944.0" z="-1" sn="312.49" a="14352.03" fwhm="0.000859" res="492569.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="423.126085" isotopic_mass="423.126075"/>
+<pk mz="423.125783" i="9113336.0" sn="157.17" a="9910.08" fwhm="0.001286" res="329031.3" algo="FTMS"/>
+<pk mz="423.127674" i="8799993.0" sn="151.70" a="6178.36" fwhm="0.000892" res="474547.8" algo="FTMS"/>
+<pk mz="423.156231" i="693502.7" sn="10.25" a="464.83" fwhm="0.000796" res="531505.8" algo="FTMS"/>
+<pk mz="423.255768" i="806418.9" sn="12.22" a="584.27" fwhm="0.000812" res="521110.3" algo="FTMS"/>
+<pk mz="423.325394" i="603937.1" sn="8.68" a="324.34" fwhm="0.000659" res="642247.0" algo="FTMS"/>
+<pk mz="423.330791" i="4783906.0" z="-1" sn="81.62" a="4035.48" fwhm="0.000835" res="507100.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="423.331895" isotopic_mass="423.331880"/>
+<pk mz="423.331729" i="2221858.3" sn="36.92" a="1700.83" fwhm="0.000981" res="431568.4" algo="FTMS"/>
+<pk mz="423.984278" i="840359.4" z="-1" sn="12.46" a="582.37" fwhm="0.000798" res="531639.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="422.981960" isotopic_mass="423.985349"/>
+<pk mz="424.127300" i="945604.7" sn="14.25" a="634.52" fwhm="0.000958" res="442773.3" algo="FTMS"/>
+<pk mz="424.128408" i="3900357.0" z="-1" sn="64.41" a="3163.41" fwhm="0.000873" res="485634.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="423.126085" isotopic_mass="424.129475"/>
+<pk mz="424.129203" i="1506501.1" sn="23.77" a="896.22" fwhm="0.001253" res="338584.7" algo="FTMS"/>
+<pk mz="424.334219" i="1670127.1" z="-1" sn="26.55" a="1282.92" fwhm="0.000798" res="531942.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="423.331895" isotopic_mass="424.335281"/>
+<pk mz="424.978034" i="1274483.5" sn="19.83" a="860.49" fwhm="0.000732" res="580322.5" algo="FTMS"/>
+<pk mz="425.157109" i="539672.4" sn="7.35" a="323.93" fwhm="0.000864" res="492286.6" algo="FTMS"/>
+<pk mz="425.158417" i="2216600.8" sn="35.82" a="1732.54" fwhm="0.000881" res="482763.1" algo="FTMS"/>
+<pk mz="425.159343" i="843672.9" sn="12.51" a="635.85" fwhm="0.001005" res="423142.2" algo="FTMS"/>
+<pk mz="425.198782" i="590241.0" sn="8.21" a="337.80" fwhm="0.000707" res="601113.9" algo="FTMS"/>
+<pk mz="425.222176" i="1027493.9" sn="15.63" a="805.11" fwhm="0.000856" res="496948.9" algo="FTMS"/>
+<pk mz="425.235155" i="1588392.5" sn="25.15" a="1413.84" fwhm="0.000842" res="505184.5" algo="FTMS"/>
+<pk mz="425.258518" i="788653.4" sn="11.58" a="583.13" fwhm="0.000833" res="510220.4" algo="FTMS"/>
+<pk mz="426.961523" i="643343.6" sn="9.10" a="488.84" fwhm="0.000843" res="506657.9" algo="FTMS"/>
+<pk mz="426.963379" i="585488.1" sn="8.12" a="296.94" fwhm="0.000797" res="535790.5" algo="FTMS"/>
+<pk mz="426.964137" i="682512.2" sn="9.77" a="404.55" fwhm="0.000880" res="485246.7" algo="FTMS"/>
+<pk mz="426.966811" i="534672.8" sn="7.26" a="351.46" fwhm="0.001004" res="425435.7" algo="FTMS"/>
+<pk mz="426.967892" i="762001.0" sn="11.12" a="596.37" fwhm="0.001164" res="366790.8" algo="FTMS"/>
+<pk mz="426.968885" i="770321.2" sn="11.26" a="590.60" fwhm="0.001124" res="379893.2" algo="FTMS"/>
+<pk mz="426.970103" i="806161.4" sn="11.87" a="541.82" fwhm="0.000804" res="531149.2" algo="FTMS"/>
+<pk mz="426.971984" i="1633553.9" sn="25.92" a="1936.62" fwhm="0.001329" res="321355.3" algo="FTMS"/>
+<pk mz="426.972930" i="1566482.0" sn="24.78" a="1158.18" fwhm="0.001129" res="378280.9" algo="FTMS"/>
+<pk mz="426.984740" i="9531924.0" sn="160.00" a="4674.02" fwhm="0.000564" res="756541.6" algo="FTMS"/>
+<pk mz="426.986317" i="40190484.0" z="-1" sn="680.48" a="47556.66" fwhm="0.001203" res="354837.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="426.987300" isotopic_mass="426.987308"/>
+<pk mz="427.156416" i="2037304.5" sn="32.77" a="1533.40" fwhm="0.000777" res="549469.5" algo="FTMS"/>
+<pk mz="427.157351" i="1071160.8" sn="16.37" a="684.99" fwhm="0.000691" res="618060.5" algo="FTMS"/>
+<pk mz="427.178135" i="560957.1" sn="7.71" a="364.66" fwhm="0.000855" res="499635.8" algo="FTMS"/>
+<pk mz="427.201403" i="1295170.0" sn="20.17" a="1057.29" fwhm="0.000881" res="484879.1" algo="FTMS"/>
+<pk mz="427.237880" i="1167433.6" sn="18.00" a="863.99" fwhm="0.000871" res="490320.9" algo="FTMS"/>
+<pk mz="427.238692" i="624457.8" sn="8.78" a="349.91" fwhm="0.000864" res="494253.8" algo="FTMS"/>
+<pk mz="427.274189" i="852305.2" sn="12.65" a="643.59" fwhm="0.000892" res="479002.6" algo="FTMS"/>
+<pk mz="427.984006" i="597990.8" sn="8.33" a="304.57" fwhm="0.000639" res="670243.9" algo="FTMS"/>
+<pk mz="427.989591" i="3895016.0" z="-1" sn="64.30" a="3171.67" fwhm="0.000901" res="475205.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="426.987300" isotopic_mass="427.990556"/>
+<pk mz="427.990449" i="1471464.1" sn="23.16" a="1072.03" fwhm="0.001134" res="377381.5" algo="FTMS"/>
+<pk mz="427.995229" i="565737.1" sn="7.78" a="316.24" fwhm="0.000785" res="545297.2" algo="FTMS"/>
+<pk mz="429.077142" i="1815502.8" sn="29.00" a="1449.40" fwhm="0.000977" res="438981.1" algo="FTMS"/>
+<pk mz="429.077996" i="978382.9" sn="14.79" a="735.58" fwhm="0.001109" res="386782.2" algo="FTMS"/>
+<pk mz="429.180934" i="558692.9" sn="7.66" a="524.90" fwhm="0.001237" res="346921.3" algo="FTMS"/>
+<pk mz="429.193857" i="528359.6" sn="7.14" a="415.89" fwhm="0.000942" res="455807.5" algo="FTMS"/>
+<pk mz="429.217186" i="1083628.6" sn="16.57" a="846.33" fwhm="0.001062" res="404154.7" algo="FTMS"/>
+<pk mz="429.253600" i="1490932.4" sn="23.49" a="1143.87" fwhm="0.000791" res="542479.0" algo="FTMS"/>
+<pk mz="429.254584" i="740596.6" sn="10.75" a="360.15" fwhm="0.000652" res="658848.6" algo="FTMS"/>
+<pk mz="429.289966" i="539772.1" sn="7.34" a="311.72" fwhm="0.000728" res="589827.2" algo="FTMS"/>
+<pk mz="431.196363" i="589846.6" sn="8.18" a="393.61" fwhm="0.000913" res="472161.7" algo="FTMS"/>
+<pk mz="431.232904" i="1106078.5" sn="16.95" a="862.40" fwhm="0.000839" res="513802.0" algo="FTMS"/>
+<pk mz="431.269343" i="577830.4" sn="7.98" a="376.51" fwhm="0.000970" res="444670.7" algo="FTMS"/>
+<pk mz="432.025623" i="737611.2" sn="10.69" a="496.37" fwhm="0.000833" res="518345.4" algo="FTMS"/>
+<pk mz="432.191900" i="695919.5" sn="9.98" a="486.76" fwhm="0.000868" res="497894.9" algo="FTMS"/>
+<pk mz="433.204079" i="573646.1" sn="7.90" a="389.35" fwhm="0.000846" res="511870.1" algo="FTMS"/>
+<pk mz="433.248659" i="620631.9" sn="8.70" a="393.70" fwhm="0.000848" res="511031.7" algo="FTMS"/>
+<pk mz="434.207486" i="616236.6" sn="8.38" a="360.32" fwhm="0.000695" res="624610.0" algo="FTMS"/>
+<pk mz="434.991657" i="783323.8" sn="11.13" a="560.99" fwhm="0.000777" res="559705.0" algo="FTMS"/>
+<pk mz="435.143131" i="876797.8" sn="12.68" a="667.15" fwhm="0.000892" res="487950.7" algo="FTMS"/>
+<pk mz="435.183537" i="570758.9" sn="7.62" a="465.60" fwhm="0.000946" res="459968.1" algo="FTMS"/>
+<pk mz="435.219972" i="4911375.0" z="-1" sn="79.27" a="4264.25" fwhm="0.000860" res="505918.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="435.220725" isotopic_mass="435.220738"/>
+<pk mz="435.221002" i="2322703.3" sn="36.54" a="1317.13" fwhm="0.000681" res="638883.8" algo="FTMS"/>
+<pk mz="435.221842" i="1078031.5" sn="16.00" a="615.03" fwhm="0.000836" res="520350.0" algo="FTMS"/>
+<pk mz="435.224029" i="742927.9" sn="10.47" a="469.88" fwhm="0.000934" res="465994.2" algo="FTMS"/>
+<pk mz="435.224965" i="678160.2" sn="9.40" a="422.18" fwhm="0.000830" res="524329.6" algo="FTMS"/>
+<pk mz="436.223275" i="1163249.5" z="-1" sn="17.40" a="1021.14" fwhm="0.000947" res="460713.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="435.220725" isotopic_mass="436.224013"/>
+<pk mz="436.987323" i="4590239.5" z="-1" sn="73.96" a="3947.51" fwhm="0.000910" res="480213.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="436.988040" isotopic_mass="436.988040"/>
+<pk mz="436.988220" i="1822367.5" sn="28.28" a="1421.74" fwhm="0.001394" res="313489.8" algo="FTMS"/>
+<pk mz="437.059207" i="1262255.8" sn="19.03" a="1079.90" fwhm="0.000911" res="479617.6" algo="FTMS"/>
+<pk mz="437.122476" i="2335422.3" sn="36.75" a="2377.01" fwhm="0.000937" res="466376.3" algo="FTMS"/>
+<pk mz="437.141296" i="914370.4" sn="13.29" a="689.41" fwhm="0.000842" res="519181.7" algo="FTMS"/>
+<pk mz="437.199213" i="755919.7" sn="10.67" a="489.88" fwhm="0.000760" res="575431.3" algo="FTMS"/>
+<pk mz="437.217000" i="1429715.8" sn="21.80" a="1311.67" fwhm="0.001013" res="431729.9" algo="FTMS"/>
+<pk mz="437.243770" i="583769.9" sn="7.83" a="394.68" fwhm="0.000801" res="545640.2" algo="FTMS"/>
+<pk mz="437.990694" i="580101.3" z="-1" sn="7.77" a="413.80" fwhm="0.000852" res="514159.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="436.988040" isotopic_mass="437.991382"/>
+<pk mz="438.125828" i="633764.4" sn="8.65" a="406.68" fwhm="0.000801" res="546904.2" algo="FTMS"/>
+<pk mz="438.986647" i="722539.6" sn="10.12" a="482.88" fwhm="0.000805" res="545501.4" algo="FTMS"/>
+<pk mz="439.120583" i="2318474.8" sn="36.46" a="1809.49" fwhm="0.000880" res="498764.8" algo="FTMS"/>
+<pk mz="439.121456" i="1097611.0" sn="16.31" a="900.82" fwhm="0.001034" res="424859.6" algo="FTMS"/>
+<pk mz="439.128885" i="583820.8" sn="7.83" a="402.94" fwhm="0.000926" res="474243.5" algo="FTMS"/>
+<pk mz="439.193677" i="541211.8" sn="7.12" a="347.63" fwhm="0.000825" res="532246.1" algo="FTMS"/>
+<pk mz="439.214955" i="783776.8" sn="11.13" a="653.78" fwhm="0.000892" res="492238.9" algo="FTMS"/>
+<pk mz="439.238464" i="808102.3" sn="11.53" a="611.32" fwhm="0.000896" res="490118.1" algo="FTMS"/>
+<pk mz="439.251401" i="7521449.0" z="-1" sn="122.34" a="7150.65" fwhm="0.000904" res="485732.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="439.251660" isotopic_mass="439.252053"/>
+<pk mz="439.252333" i="3465385.5" sn="55.39" a="1645.56" fwhm="0.000597" res="735498.6" algo="FTMS"/>
+<pk mz="439.253060" i="1643177.6" sn="25.31" a="1229.69" fwhm="0.001612" res="272491.1" algo="FTMS"/>
+<pk mz="439.274698" i="572334.7" sn="7.64" a="349.40" fwhm="0.000716" res="613841.3" algo="FTMS"/>
+<pk mz="439.326389" i="2870458.8" sn="45.57" a="2883.70" fwhm="0.000985" res="446182.4" algo="FTMS"/>
+<pk mz="440.254792" i="2001812.0" z="-1" sn="31.23" a="1679.84" fwhm="0.000859" res="512337.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="439.251660" isotopic_mass="440.255416"/>
+<pk mz="440.255792" i="793492.2" sn="11.28" a="472.02" fwhm="0.000655" res="672226.0" algo="FTMS"/>
+<pk mz="440.329767" i="871333.6" sn="12.57" a="902.30" fwhm="0.001068" res="412117.5" algo="FTMS"/>
+<pk mz="440.951653" i="1033272.3" sn="15.24" a="712.26" fwhm="0.000790" res="558107.7" algo="FTMS"/>
+<pk mz="441.217693" i="1172343.3" sn="17.53" a="947.96" fwhm="0.000890" res="495986.9" algo="FTMS"/>
+<pk mz="441.248518" i="2400894.5" sn="37.81" a="2189.45" fwhm="0.000907" res="486603.8" algo="FTMS"/>
+<pk mz="441.249605" i="991614.8" sn="14.55" a="637.41" fwhm="0.001002" res="440413.5" algo="FTMS"/>
+<pk mz="441.254024" i="1014655.8" z="-1" sn="14.93" a="942.15" fwhm="0.001043" res="423007.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="439.251660" isotopic_mass="441.254619"/>
+<pk mz="441.290412" i="910984.4" sn="13.22" a="673.37" fwhm="0.000809" res="545359.2" algo="FTMS"/>
+<pk mz="442.251872" i="776301.5" sn="10.99" a="589.51" fwhm="0.000937" res="472214.6" algo="FTMS"/>
+<pk mz="442.978156" i="2166811.8" sn="33.94" a="2266.47" fwhm="0.000963" res="460213.1" algo="FTMS"/>
+<pk mz="443.139462" i="771394.8" sn="10.91" a="589.56" fwhm="0.000843" res="525429.8" algo="FTMS"/>
+<pk mz="443.170876" i="560458.3" sn="7.42" a="303.90" fwhm="0.000697" res="635415.5" algo="FTMS"/>
+<pk mz="443.175898" i="3617867.5" z="-1" sn="57.89" a="3392.32" fwhm="0.000999" res="443406.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="443.176452" isotopic_mass="443.176438"/>
+<pk mz="443.177051" i="1083339.8" sn="16.05" a="1072.76" fwhm="0.001857" res="238600.8" algo="FTMS"/>
+<pk mz="443.196945" i="785744.6" sn="11.14" a="539.40" fwhm="0.000805" res="550238.9" algo="FTMS"/>
+<pk mz="443.233432" i="1476697.4" sn="22.55" a="1216.83" fwhm="0.000865" res="512359.1" algo="FTMS"/>
+<pk mz="443.269787" i="1315426.3" sn="19.89" a="1153.38" fwhm="0.000890" res="498265.8" algo="FTMS"/>
+<pk mz="443.307142" i="637803.2" sn="8.70" a="430.64" fwhm="0.000902" res="491252.9" algo="FTMS"/>
+<pk mz="444.179352" i="807358.8" z="-1" sn="11.50" a="754.73" fwhm="0.001105" res="401838.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="443.176452" isotopic_mass="444.179863"/>
+<pk mz="444.228667" i="1809226.8" sn="28.03" a="1566.34" fwhm="0.000851" res="522071.5" algo="FTMS"/>
+<pk mz="444.273225" i="619861.6" sn="8.40" a="383.11" fwhm="0.000802" res="553803.0" algo="FTMS"/>
+<pk mz="445.176368" i="722226.7" sn="9.80" a="515.40" fwhm="0.000891" res="499591.5" algo="FTMS"/>
+<pk mz="445.191620" i="5554742.5" z="-1" sn="87.31" a="5299.29" fwhm="0.000976" res="456034.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="445.192109" isotopic_mass="445.192101"/>
+<pk mz="445.192623" i="2679350.8" sn="41.19" a="1874.05" fwhm="0.000986" res="451559.2" algo="FTMS"/>
+<pk mz="445.212780" i="884795.6" sn="12.41" a="627.53" fwhm="0.000852" res="522773.8" algo="FTMS"/>
+<pk mz="445.249142" i="1098820.6" sn="15.84" a="962.76" fwhm="0.000939" res="474144.2" algo="FTMS"/>
+<pk mz="445.285386" i="689485.5" sn="9.27" a="408.23" fwhm="0.000759" res="586705.3" algo="FTMS"/>
+<pk mz="445.321922" i="611670.5" sn="8.03" a="338.83" fwhm="0.000753" res="591751.9" algo="FTMS"/>
+<pk mz="446.195031" i="1676078.3" z="-1" sn="25.09" a="1633.47" fwhm="0.000965" res="462577.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="445.192109" isotopic_mass="446.195482"/>
+<pk mz="446.207802" i="608817.4" sn="7.98" a="413.22" fwhm="0.000898" res="497131.4" algo="FTMS"/>
+<pk mz="447.184022" i="895524.7" sn="12.57" a="737.93" fwhm="0.000948" res="471957.4" algo="FTMS"/>
+<pk mz="447.228438" i="642351.8" sn="8.51" a="415.63" fwhm="0.000835" res="535682.6" algo="FTMS"/>
+<pk mz="448.187472" i="704033.1" sn="9.50" a="528.71" fwhm="0.000935" res="479285.6" algo="FTMS"/>
+<pk mz="448.223708" i="587306.3" sn="7.62" a="392.19" fwhm="0.000837" res="535584.1" algo="FTMS"/>
+<pk mz="449.155046" i="671254.8" sn="8.97" a="451.05" fwhm="0.000830" res="540971.6" algo="FTMS"/>
+<pk mz="449.178687" i="2337308.8" sn="35.69" a="2251.97" fwhm="0.000963" res="466280.1" algo="FTMS"/>
+<pk mz="449.179824" i="826269.1" sn="11.45" a="709.42" fwhm="0.001169" res="384231.6" algo="FTMS"/>
+<pk mz="449.183805" i="563230.1" sn="7.23" a="334.80" fwhm="0.000744" res="603389.0" algo="FTMS"/>
+<pk mz="449.199723" i="901922.2" sn="12.67" a="667.68" fwhm="0.000875" res="513461.4" algo="FTMS"/>
+<pk mz="449.236188" i="964651.5" sn="13.67" a="790.07" fwhm="0.000900" res="499150.8" algo="FTMS"/>
+<pk mz="449.244152" i="563117.5" sn="7.23" a="429.36" fwhm="0.000980" res="458645.0" algo="FTMS"/>
+<pk mz="450.182139" i="873246.0" sn="12.20" a="764.73" fwhm="0.000981" res="459071.3" algo="FTMS"/>
+<pk mz="450.195025" i="848673.3" sn="11.81" a="720.23" fwhm="0.000999" res="450856.5" algo="FTMS"/>
+<pk mz="451.175826" i="847391.1" sn="11.78" a="530.60" fwhm="0.000731" res="617498.0" algo="FTMS"/>
+<pk mz="451.215588" i="967721.4" sn="13.71" a="774.49" fwhm="0.000943" res="478318.3" algo="FTMS"/>
+<pk mz="453.118187" i="616732.6" sn="8.08" a="370.55" fwhm="0.000760" res="596472.2" algo="FTMS"/>
+<pk mz="453.194730" i="743984.8" sn="10.12" a="573.98" fwhm="0.000885" res="511969.1" algo="FTMS"/>
+<pk mz="453.218166" i="577847.0" sn="7.45" a="302.86" fwhm="0.000898" res="504872.7" algo="FTMS"/>
+<pk mz="453.231347" i="578746.5" sn="7.47" a="544.19" fwhm="0.001281" res="353857.4" algo="FTMS"/>
+<pk mz="453.254582" i="641344.7" sn="8.47" a="533.82" fwhm="0.000962" res="471041.4" algo="FTMS"/>
+<pk mz="454.967886" i="2582538.5" sn="39.60" a="2508.20" fwhm="0.001020" res="446143.0" algo="FTMS"/>
+<pk mz="455.116391" i="561074.5" sn="7.17" a="443.83" fwhm="0.000970" res="469394.6" algo="FTMS"/>
+<pk mz="455.195198" i="836679.8" sn="11.59" a="688.28" fwhm="0.000958" res="475032.9" algo="FTMS"/>
+<pk mz="455.210622" i="1431628.0" sn="21.14" a="1309.96" fwhm="0.000972" res="468492.9" algo="FTMS"/>
+<pk mz="455.212037" i="566604.3" sn="7.26" a="412.48" fwhm="0.001204" res="377938.7" algo="FTMS"/>
+<pk mz="455.233859" i="1141330.3" sn="16.48" a="1175.44" fwhm="0.001060" res="429487.8" algo="FTMS"/>
+<pk mz="455.270313" i="1487452.1" sn="22.03" a="1255.38" fwhm="0.000866" res="525791.7" algo="FTMS"/>
+<pk mz="455.271435" i="582108.4" sn="7.51" a="330.60" fwhm="0.000962" res="473025.3" algo="FTMS"/>
+<pk mz="455.306778" i="622437.9" sn="8.16" a="429.48" fwhm="0.000838" res="543450.4" algo="FTMS"/>
+<pk mz="455.321952" i="835178.0" sn="11.57" a="592.73" fwhm="0.000826" res="551088.8" algo="FTMS"/>
+<pk mz="456.994435" i="1953329.8" sn="28.42" a="2350.48" fwhm="0.001120" res="408116.7" algo="FTMS"/>
+<pk mz="457.155825" i="885342.1" sn="11.91" a="848.18" fwhm="0.001362" res="335667.9" algo="FTMS"/>
+<pk mz="457.176731" i="578531.9" sn="7.17" a="405.93" fwhm="0.000887" res="515274.2" algo="FTMS"/>
+<pk mz="457.213327" i="977517.9" sn="13.34" a="788.04" fwhm="0.000920" res="497064.2" algo="FTMS"/>
+<pk mz="457.249714" i="1209463.9" sn="16.92" a="1282.45" fwhm="0.001029" res="444552.7" algo="FTMS"/>
+<pk mz="457.286024" i="1728641.9" sn="24.94" a="1457.13" fwhm="0.000882" res="518465.6" algo="FTMS"/>
+<pk mz="457.287214" i="665474.3" sn="8.52" a="478.35" fwhm="0.001051" res="434925.6" algo="FTMS"/>
+<pk mz="457.322648" i="635148.1" sn="8.05" a="518.88" fwhm="0.001085" res="421515.4" algo="FTMS"/>
+<pk mz="458.208551" i="1853313.1" sn="26.87" a="1846.52" fwhm="0.001041" res="440198.7" algo="FTMS"/>
+<pk mz="458.209750" i="955777.5" sn="13.00" a="820.84" fwhm="0.001100" res="416579.5" algo="FTMS"/>
+<pk mz="458.244821" i="601483.2" sn="7.52" a="520.22" fwhm="0.001078" res="425270.6" algo="FTMS"/>
+<pk mz="458.993615" i="715612.1" sn="9.28" a="503.19" fwhm="0.001030" res="445783.1" algo="FTMS"/>
+<pk mz="459.171480" i="15470734.0" z="-1" sn="237.28" a="13825.32" fwhm="0.001076" res="426899.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="459.171538" isotopic_mass="459.171538"/>
+<pk mz="459.172277" i="8814734.0" z="-1" sn="134.43" a="7309.55" fwhm="0.001027" res="447130.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="459.173565" isotopic_mass="459.172335"/>
+<pk mz="459.175454" i="3143823.0" sn="46.80" a="3278.57" fwhm="0.000963" res="476581.7" algo="FTMS"/>
+<pk mz="459.229023" i="1040286.1" sn="14.30" a="936.99" fwhm="0.001218" res="377188.9" algo="FTMS"/>
+<pk mz="459.265368" i="1309352.3" sn="18.46" a="1198.10" fwhm="0.000936" res="490840.0" algo="FTMS"/>
+<pk mz="459.301743" i="959154.5" sn="13.05" a="939.46" fwhm="0.001040" res="441639.7" algo="FTMS"/>
+<pk mz="460.174854" i="4659624.5" z="-1" sn="70.22" a="4611.67" fwhm="0.000945" res="486758.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="459.171538" isotopic_mass="460.174881"/>
+<pk mz="460.175942" i="1763241.0" sn="25.47" a="1652.98" fwhm="0.001260" res="365291.8" algo="FTMS"/>
+<pk mz="460.224383" i="721078.7" sn="9.36" a="477.91" fwhm="0.000872" res="527699.6" algo="FTMS"/>
+<pk mz="460.966574" i="1123977.6" sn="15.59" a="1066.87" fwhm="0.001192" res="386860.1" algo="FTMS"/>
+<pk mz="460.971964" i="10281611.0" z="-1" sn="157.09" a="10357.88" fwhm="0.000988" res="466387.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="460.971960" isotopic_mass="460.971965"/>
+<pk mz="460.973060" i="3942027.5" sn="59.13" a="3136.48" fwhm="0.001316" res="350381.2" algo="FTMS"/>
+<pk mz="461.123547" i="812982.5" sn="10.78" a="592.67" fwhm="0.000885" res="520805.6" algo="FTMS"/>
+<pk mz="461.187225" i="2337480.8" z="-1" sn="34.34" a="2411.90" fwhm="0.001066" res="432759.1" algo="FTMS" component_name="" deconvoluted_molecular_mass="459.173565" isotopic_mass="461.187220"/>
+<pk mz="461.244746" i="703321.1" sn="9.08" a="547.03" fwhm="0.000973" res="474021.7" algo="FTMS"/>
+<pk mz="461.281167" i="869091.6" sn="11.65" a="671.17" fwhm="0.000900" res="512432.0" algo="FTMS"/>
+<pk mz="461.975354" i="1352874.9" z="-1" sn="19.12" a="1479.92" fwhm="0.001219" res="379020.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="460.971960" isotopic_mass="461.975324"/>
+<pk mz="462.190647" i="571369.0" z="-1" sn="7.04" a="362.01" fwhm="0.000886" res="521402.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="459.173565" isotopic_mass="462.190610"/>
+<pk mz="462.240052" i="676599.2" sn="8.67" a="526.07" fwhm="0.000928" res="498293.8" algo="FTMS"/>
+<pk mz="462.977278" i="578508.9" sn="7.15" a="350.91" fwhm="0.000776" res="596753.0" algo="FTMS"/>
+<pk mz="462.978569" i="580813.3" z="-1" sn="7.18" a="360.81" fwhm="0.000857" res="540254.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="460.971960" isotopic_mass="462.978507"/>
+<pk mz="462.979741" i="737485.6" sn="9.60" a="515.00" fwhm="0.000933" res="496344.1" algo="FTMS"/>
+<pk mz="462.985224" i="5246159.0" sn="79.27" a="4898.20" fwhm="0.001041" res="444816.4" algo="FTMS"/>
+<pk mz="462.986188" i="2236623.5" sn="32.77" a="2343.25" fwhm="0.001568" res="295346.9" algo="FTMS"/>
+<pk mz="463.121553" i="871670.9" sn="11.68" a="639.62" fwhm="0.000845" res="547945.9" algo="FTMS"/>
+<pk mz="463.175843" i="1021446.8" sn="13.99" a="1015.10" fwhm="0.001040" res="445304.0" algo="FTMS"/>
+<pk mz="463.215995" i="707090.4" sn="9.13" a="482.95" fwhm="0.000888" res="521845.9" algo="FTMS"/>
+<pk mz="465.110383" i="1488703.8" sn="21.20" a="1454.90" fwhm="0.001041" res="446793.3" algo="FTMS"/>
+<pk mz="465.154988" i="1079629.0" sn="14.88" a="859.86" fwhm="0.000880" res="528397.7" algo="FTMS"/>
+<pk mz="465.158117" i="574925.9" sn="7.08" a="405.04" fwhm="0.000886" res="525123.1" algo="FTMS"/>
+<pk mz="465.159973" i="606478.5" sn="7.57" a="749.18" fwhm="0.001588" res="292876.1" algo="FTMS"/>
+<pk mz="465.163196" i="946767.4" sn="12.83" a="697.08" fwhm="0.001301" res="357439.9" algo="FTMS"/>
+<pk mz="465.174274" i="11110227.0" z="-1" sn="169.87" a="11031.57" fwhm="0.001008" res="461569.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="465.174129" isotopic_mass="465.174142"/>
+<pk mz="465.175340" i="6299475.0" sn="95.54" a="4557.73" fwhm="0.000760" res="612093.6" algo="FTMS"/>
+<pk mz="465.178481" i="2394964.0" sn="35.21" a="1897.53" fwhm="0.000895" res="519766.7" algo="FTMS"/>
+<pk mz="465.195721" i="591705.1" sn="7.34" a="546.17" fwhm="0.001230" res="378196.0" algo="FTMS"/>
+<pk mz="465.231862" i="690019.9" sn="8.86" a="592.93" fwhm="0.000977" res="476141.2" algo="FTMS"/>
+<pk mz="466.177691" i="2912382.3" z="-1" sn="43.20" a="3207.10" fwhm="0.001147" res="406550.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="465.174129" isotopic_mass="466.177527"/>
+<pk mz="466.999154" i="712693.8" sn="9.20" a="658.69" fwhm="0.001106" res="422229.8" algo="FTMS"/>
+<pk mz="467.108483" i="1503638.8" sn="21.42" a="1440.82" fwhm="0.000999" res="467746.3" algo="FTMS"/>
+<pk mz="467.153328" i="808868.4" sn="10.69" a="714.36" fwhm="0.000985" res="474086.3" algo="FTMS"/>
+<pk mz="467.171414" i="3729833.8" z="-1" sn="55.82" a="3616.05" fwhm="0.000959" res="487191.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="467.171254" isotopic_mass="467.171218"/>
+<pk mz="467.172481" i="1669034.1" sn="23.98" a="1205.49" fwhm="0.001190" res="392730.4" algo="FTMS"/>
+<pk mz="467.180516" i="603820.6" z="-1" sn="7.52" a="383.57" fwhm="0.000853" res="547831.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="465.174129" isotopic_mass="467.180320"/>
+<pk mz="467.211301" i="1147574.0" sn="15.92" a="1070.99" fwhm="0.001025" res="455691.1" algo="FTMS"/>
+<pk mz="467.234495" i="763836.9" sn="9.99" a="871.11" fwhm="0.001412" res="331005.0" algo="FTMS"/>
+<pk mz="467.270893" i="695240.0" sn="8.93" a="423.18" fwhm="0.000896" res="521417.2" algo="FTMS"/>
+<pk mz="468.174972" i="910043.3" z="-1" sn="12.25" a="964.67" fwhm="0.001202" res="389615.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="467.171254" isotopic_mass="468.174744"/>
+<pk mz="468.984195" i="8078291.5" z="-1" sn="117.69" a="8589.50" fwhm="0.001020" res="459706.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="468.983956" isotopic_mass="468.983941"/>
+<pk mz="468.985379" i="2884052.0" sn="40.90" a="3638.81" fwhm="0.001343" res="349176.1" algo="FTMS"/>
+<pk mz="469.186440" i="749586.1" sn="9.34" a="787.19" fwhm="0.001125" res="416876.3" algo="FTMS"/>
+<pk mz="469.213948" i="638746.6" sn="7.70" a="540.82" fwhm="0.001033" res="454078.7" algo="FTMS"/>
+<pk mz="469.226842" i="1038366.6" sn="13.61" a="901.94" fwhm="0.000930" res="504350.9" algo="FTMS"/>
+<pk mz="469.250098" i="1096485.8" sn="14.47" a="936.14" fwhm="0.001140" res="411665.3" algo="FTMS"/>
+<pk mz="469.250996" i="697382.1" sn="8.57" a="538.18" fwhm="0.001055" res="444865.8" algo="FTMS"/>
+<pk mz="469.286547" i="1058353.0" sn="13.90" a="981.18" fwhm="0.001273" res="368748.0" algo="FTMS"/>
+<pk mz="469.983795" i="1949961.3" sn="27.08" a="2100.02" fwhm="0.001058" res="444355.4" algo="FTMS"/>
+<pk mz="469.985486" i="648457.8" sn="7.84" a="467.42" fwhm="0.001141" res="411839.6" algo="FTMS"/>
+<pk mz="469.987746" i="786442.4" z="-1" sn="9.88" a="749.61" fwhm="0.001046" res="449132.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="468.983956" isotopic_mass="469.987458"/>
+<pk mz="470.981054" i="1257024.9" sn="16.83" a="1300.09" fwhm="0.001013" res="465034.6" algo="FTMS"/>
+<pk mz="471.184583" i="757888.8" sn="9.45" a="673.89" fwhm="0.001079" res="436507.7" algo="FTMS"/>
+<pk mz="471.206198" i="749447.6" sn="9.33" a="724.75" fwhm="0.001188" res="396617.5" algo="FTMS"/>
+<pk mz="471.229518" i="1220751.0" sn="16.30" a="1312.70" fwhm="0.001152" res="409176.9" algo="FTMS"/>
+<pk mz="471.265873" i="1695898.4" sn="23.32" a="1476.77" fwhm="0.001038" res="454182.8" algo="FTMS"/>
+<pk mz="471.266863" i="925594.7" sn="11.93" a="679.63" fwhm="0.000832" res="566525.6" algo="FTMS"/>
+<pk mz="471.302351" i="1429669.9" sn="19.38" a="1199.28" fwhm="0.001015" res="464221.1" algo="FTMS"/>
+<pk mz="471.303382" i="676646.3" sn="8.25" a="555.07" fwhm="0.001189" res="396476.7" algo="FTMS"/>
+<pk mz="472.219128" i="1314759.6" sn="17.68" a="1009.90" fwhm="0.000987" res="478281.7" algo="FTMS"/>
+<pk mz="472.220072" i="1137096.0" sn="15.06" a="738.84" fwhm="0.000938" res="503614.3" algo="FTMS"/>
+<pk mz="472.224875" i="11456457.0" z="-1" sn="167.61" a="11813.85" fwhm="0.001017" res="464428.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="472.224519" isotopic_mass="472.224514"/>
+<pk mz="472.225962" i="5099466.0" sn="73.63" a="3451.97" fwhm="0.000836" res="565175.9" algo="FTMS"/>
+<pk mz="472.226941" i="3394506.3" z="-1" sn="48.43" a="2980.92" fwhm="0.001096" res="430873.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="472.226370" isotopic_mass="472.226580"/>
+<pk mz="472.229128" i="2482122.8" sn="34.94" a="2261.96" fwhm="0.000887" res="532417.4" algo="FTMS"/>
+<pk mz="472.269450" i="601815.7" sn="7.14" a="458.83" fwhm="0.000999" res="472913.7" algo="FTMS"/>
+<pk mz="473.151393" i="3010800.8" sn="42.75" a="2845.06" fwhm="0.001052" res="449844.4" algo="FTMS"/>
+<pk mz="473.152475" i="1310961.1" sn="17.62" a="1036.77" fwhm="0.001178" res="401542.9" algo="FTMS"/>
+<pk mz="473.221703" i="663815.3" sn="8.05" a="537.94" fwhm="0.000997" res="474876.7" algo="FTMS"/>
+<pk mz="473.228279" i="2765065.3" z="-1" sn="39.12" a="2812.64" fwhm="0.001043" res="453918.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="472.224519" isotopic_mass="473.227885"/>
+<pk mz="473.229493" i="1160713.8" z="-1" sn="15.40" a="1258.03" fwhm="0.001502" res="315146.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="472.226370" isotopic_mass="473.229099"/>
+<pk mz="473.245422" i="1113870.9" sn="14.71" a="900.00" fwhm="0.001039" res="455651.0" algo="FTMS"/>
+<pk mz="473.246278" i="599951.1" sn="7.11" a="343.53" fwhm="0.000832" res="569011.4" algo="FTMS"/>
+<pk mz="473.281303" i="1656090.4" sn="22.72" a="1535.35" fwhm="0.000898" res="527072.5" algo="FTMS"/>
+<pk mz="473.288695" i="13082909.0" z="-1" sn="191.65" a="13208.47" fwhm="0.001020" res="463999.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="473.288305" isotopic_mass="473.288299"/>
+<pk mz="473.289839" i="6572317.0" sn="95.40" a="5899.97" fwhm="0.001191" res="397412.5" algo="FTMS"/>
+<pk mz="474.154813" i="866611.1" sn="11.05" a="764.71" fwhm="0.000991" res="478480.5" algo="FTMS"/>
+<pk mz="474.204263" i="619331.1" sn="7.39" a="422.15" fwhm="0.000874" res="542846.4" algo="FTMS"/>
+<pk mz="474.240678" i="911694.9" sn="11.71" a="814.16" fwhm="0.001018" res="465802.4" algo="FTMS"/>
+<pk mz="474.292095" i="4507231.5" z="-1" sn="64.87" a="4621.63" fwhm="0.001151" res="411972.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="473.288305" isotopic_mass="474.291666"/>
+<pk mz="474.293269" i="1476703.9" sn="20.07" a="1777.45" fwhm="0.001704" res="278291.7" algo="FTMS"/>
+<pk mz="475.150290" i="1054325.6" sn="13.82" a="1247.45" fwhm="0.001315" res="361195.0" algo="FTMS"/>
+<pk mz="475.167111" i="21762940.0" z="-1" sn="319.97" a="20652.27" fwhm="0.001099" res="432483.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="475.166674" isotopic_mass="475.166652"/>
+<pk mz="475.168011" i="12637051.0" sn="185.05" a="10320.32" fwhm="0.000858" res="554117.8" algo="FTMS"/>
+<pk mz="475.253027" i="962199.1" sn="12.46" a="851.60" fwhm="0.001034" res="459815.9" algo="FTMS"/>
+<pk mz="475.261011" i="629401.7" sn="7.54" a="456.04" fwhm="0.000935" res="508089.3" algo="FTMS"/>
+<pk mz="475.268090" i="663708.1" sn="8.04" a="448.31" fwhm="0.000884" res="537349.5" algo="FTMS"/>
+<pk mz="475.295466" i="835236.9" z="-1" sn="10.58" a="695.60" fwhm="0.000976" res="486869.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="473.288305" isotopic_mass="475.295003"/>
+<pk mz="476.165416" i="625601.3" sn="7.47" a="458.10" fwhm="0.001125" res="423271.9" algo="FTMS"/>
+<pk mz="476.170571" i="5895363.0" z="-1" sn="85.38" a="5789.41" fwhm="0.001064" res="447687.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="475.166674" isotopic_mass="476.170079"/>
+<pk mz="476.171727" i="2142403.5" sn="29.90" a="2521.12" fwhm="0.001459" res="326268.1" algo="FTMS"/>
+<pk mz="476.183450" i="846023.3" sn="10.73" a="624.39" fwhm="0.000841" res="565935.4" algo="FTMS"/>
+<pk mz="476.220045" i="597203.2" sn="7.05" a="451.07" fwhm="0.001001" res="475757.9" algo="FTMS"/>
+<pk mz="476.256441" i="640735.1" sn="7.70" a="620.69" fwhm="0.001164" res="409091.6" algo="FTMS"/>
+<pk mz="476.985100" i="13948367.0" z="-1" sn="204.43" a="14844.15" fwhm="0.001000" res="477160.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="476.984591" isotopic_mass="476.984580"/>
+<pk mz="476.986169" i="7108047.5" sn="103.31" a="4091.13" fwhm="0.000704" res="677238.6" algo="FTMS"/>
+<pk mz="476.986985" i="3615183.8" sn="51.67" a="3007.60" fwhm="0.001632" res="292257.7" algo="FTMS"/>
+<pk mz="477.020680" i="1538010.8" sn="20.96" a="1342.57" fwhm="0.000995" res="479202.4" algo="FTMS"/>
+<pk mz="477.174069" i="610573.5" z="-1" sn="7.25" a="641.41" fwhm="0.001289" res="370312.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="475.166674" isotopic_mass="477.173543"/>
+<pk mz="477.268779" i="860716.8" sn="10.95" a="851.61" fwhm="0.001097" res="435056.3" algo="FTMS"/>
+<pk mz="477.988579" i="1548571.6" z="-1" sn="21.11" a="1436.64" fwhm="0.000965" res="495240.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="476.984591" isotopic_mass="477.988026"/>
+<pk mz="479.017678" i="608883.4" sn="7.21" a="410.90" fwhm="0.000867" res="552468.5" algo="FTMS"/>
+<pk mz="479.154178" i="1586337.1" sn="21.66" a="1584.27" fwhm="0.001179" res="406568.2" algo="FTMS"/>
+<pk mz="479.155126" i="1010849.5" sn="13.16" a="980.19" fwhm="0.001658" res="289066.1" algo="FTMS"/>
+<pk mz="479.165463" i="797604.9" sn="10.00" a="694.49" fwhm="0.001054" res="454824.8" algo="FTMS"/>
+<pk mz="479.171360" i="4065447.0" z="-1" sn="58.31" a="4110.59" fwhm="0.001116" res="429353.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="479.170764" isotopic_mass="479.170767"/>
+<pk mz="479.176138" i="672680.5" sn="8.16" a="638.33" fwhm="0.001363" res="351438.0" algo="FTMS"/>
+<pk mz="479.211750" i="679348.5" sn="8.25" a="551.61" fwhm="0.001072" res="446967.7" algo="FTMS"/>
+<pk mz="479.248032" i="2334912.8" sn="32.73" a="2661.69" fwhm="0.001070" res="447941.1" algo="FTMS"/>
+<pk mz="480.174721" i="849913.0" z="-1" sn="10.77" a="666.67" fwhm="0.001000" res="479970.1" algo="FTMS" component_name="" deconvoluted_molecular_mass="479.170764" isotopic_mass="480.174093"/>
+<pk mz="480.206865" i="610307.9" sn="7.23" a="437.87" fwhm="0.000948" res="506812.9" algo="FTMS"/>
+<pk mz="480.251391" i="676627.0" sn="8.21" a="608.23" fwhm="0.001043" res="460473.2" algo="FTMS"/>
+<pk mz="480.967953" i="1122822.0" sn="14.80" a="1045.02" fwhm="0.001583" res="303907.7" algo="FTMS"/>
+<pk mz="480.979064" i="13466378.0" z="-1" sn="197.29" a="13509.68" fwhm="0.001010" res="476019.1" algo="FTMS" component_name="" deconvoluted_molecular_mass="480.978419" isotopic_mass="480.978409"/>
+<pk mz="480.980190" i="6961930.0" sn="101.13" a="6386.43" fwhm="0.001186" res="405589.0" algo="FTMS"/>
+<pk mz="481.010641" i="708372.6" sn="8.67" a="624.54" fwhm="0.001151" res="417869.6" algo="FTMS"/>
+<pk mz="481.132728" i="644030.1" sn="7.72" a="799.81" fwhm="0.001494" res="322144.8" algo="FTMS"/>
+<pk mz="481.138822" i="607552.2" sn="7.18" a="507.21" fwhm="0.001131" res="425411.7" algo="FTMS"/>
+<pk mz="481.141038" i="626432.9" sn="7.46" a="647.47" fwhm="0.001592" res="302296.4" algo="FTMS"/>
+<pk mz="481.142396" i="684353.4" sn="8.32" a="529.93" fwhm="0.001412" res="340679.3" algo="FTMS"/>
+<pk mz="481.143219" i="693825.7" sn="8.46" a="610.20" fwhm="0.001580" res="304574.6" algo="FTMS"/>
+<pk mz="481.145495" i="693826.4" sn="8.46" a="570.30" fwhm="0.001433" res="335692.5" algo="FTMS"/>
+<pk mz="481.146746" i="807874.9" sn="10.14" a="655.58" fwhm="0.001433" res="335691.9" algo="FTMS"/>
+<pk mz="481.147765" i="929603.3" sn="11.94" a="850.51" fwhm="0.001468" res="327654.9" algo="FTMS"/>
+<pk mz="481.149077" i="904515.7" sn="11.57" a="1400.85" fwhm="0.001810" res="265876.2" algo="FTMS"/>
+<pk mz="481.151876" i="2317124.8" sn="32.46" a="3429.34" fwhm="0.001793" res="268410.5" algo="FTMS"/>
+<pk mz="481.152930" i="1981893.0" sn="27.50" a="2516.85" fwhm="0.002288" res="210266.8" algo="FTMS"/>
+<pk mz="481.170116" i="51051340.0" z="-1" sn="720.03" a="65912.45" fwhm="0.001424" res="337989.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="481.169402" isotopic_mass="481.169455"/>
+<pk mz="481.227392" i="747358.4" sn="8.85" a="637.97" fwhm="0.001207" res="398839.6" algo="FTMS"/>
+<pk mz="481.287172" i="991090.8" sn="12.29" a="933.62" fwhm="0.001072" res="448978.0" algo="FTMS"/>
+<pk mz="481.300222" i="1018231.2" sn="12.67" a="843.28" fwhm="0.000937" res="513517.3" algo="FTMS"/>
+<pk mz="481.982535" i="1693280.4" z="-1" sn="22.22" a="1709.82" fwhm="0.001064" res="452986.1" algo="FTMS" component_name="" deconvoluted_molecular_mass="480.978419" isotopic_mass="481.981845"/>
+<pk mz="482.173306" i="13245602.0" z="-1" sn="185.54" a="13564.82" fwhm="0.001192" res="404545.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="481.169402" isotopic_mass="482.172610"/>
+<pk mz="482.174244" i="7480482.0" sn="104.03" a="5643.98" fwhm="0.001141" res="422512.5" algo="FTMS"/>
+<pk mz="482.175270" i="3740834.5" sn="51.16" a="3327.46" fwhm="0.001055" res="457089.2" algo="FTMS"/>
+<pk mz="482.909560" i="682655.0" sn="7.92" a="491.71" fwhm="0.000874" res="552291.4" algo="FTMS"/>
+<pk mz="483.008718" i="672449.2" sn="7.78" a="496.88" fwhm="0.000929" res="520021.1" algo="FTMS"/>
+<pk mz="483.161136" i="1878517.8" sn="24.83" a="2502.59" fwhm="0.001817" res="265921.7" algo="FTMS"/>
+<pk mz="483.167052" i="17276408.0" z="-1" sn="242.52" a="18443.91" fwhm="0.001031" res="468616.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="483.166336" isotopic_mass="483.166322"/>
+<pk mz="483.168173" i="7450104.0" z="-1" sn="103.60" a="4582.29" fwhm="0.000723" res="668574.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="483.167402" isotopic_mass="483.167443"/>
+<pk mz="483.168981" i="4908536.5" sn="67.67" a="3600.32" fwhm="0.000840" res="575456.9" algo="FTMS"/>
+<pk mz="483.176305" i="1771003.0" z="-1" sn="23.31" a="1457.51" fwhm="0.001047" res="461491.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="481.169402" isotopic_mass="483.175574"/>
+<pk mz="483.196816" i="662274.1" sn="7.63" a="627.89" fwhm="0.001624" res="297484.0" algo="FTMS"/>
+<pk mz="483.202820" i="5654020.0" z="-1" sn="78.21" a="5583.34" fwhm="0.001030" res="468946.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="483.201987" isotopic_mass="483.202088"/>
+<pk mz="483.203934" i="2055172.6" sn="27.33" a="1810.28" fwhm="0.001446" res="334262.3" algo="FTMS"/>
+<pk mz="483.206802" i="1822213.6" sn="24.03" a="1799.59" fwhm="0.001076" res="449022.4" algo="FTMS"/>
+<pk mz="483.230111" i="864269.6" sn="10.49" a="708.90" fwhm="0.000980" res="492941.9" algo="FTMS"/>
+<pk mz="483.266496" i="1347098.1" sn="17.31" a="1437.48" fwhm="0.001066" res="453171.1" algo="FTMS"/>
+<pk mz="483.303008" i="1227814.8" sn="15.63" a="1257.21" fwhm="0.001115" res="433303.6" algo="FTMS"/>
+<pk mz="484.170469" i="3874643.5" z="-1" sn="53.04" a="3902.27" fwhm="0.001103" res="439001.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="483.166336" isotopic_mass="484.169704"/>
+<pk mz="484.171637" i="1625428.0" z="-1" sn="21.25" a="1858.18" fwhm="0.001768" res="273858.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="483.167402" isotopic_mass="484.170873"/>
+<pk mz="484.206104" i="1318240.0" z="-1" sn="16.90" a="1233.47" fwhm="0.001047" res="462627.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="483.201987" isotopic_mass="484.205338"/>
+<pk mz="484.207170" i="743264.3" sn="8.77" a="492.27" fwhm="0.000713" res="678948.9" algo="FTMS"/>
+<pk mz="485.010757" i="1296760.6" sn="16.59" a="1311.28" fwhm="0.001259" res="385331.6" algo="FTMS"/>
+<pk mz="485.174062" i="623537.7" z="-1" sn="7.08" a="430.03" fwhm="0.000870" res="557708.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="483.166336" isotopic_mass="485.173262"/>
+<pk mz="485.200863" i="5972155.0" z="-1" sn="82.69" a="6075.47" fwhm="0.001093" res="443775.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="485.200060" isotopic_mass="485.200063"/>
+<pk mz="485.201977" i="2194619.5" sn="29.29" a="2399.19" fwhm="0.001388" res="349472.1" algo="FTMS"/>
+<pk mz="485.205087" i="1525436.6" sn="19.83" a="1477.91" fwhm="0.000971" res="499634.8" algo="FTMS"/>
+<pk mz="485.208736" i="781757.9" z="-1" sn="9.31" a="671.88" fwhm="0.001018" res="476403.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="483.201987" isotopic_mass="485.207935"/>
+<pk mz="485.222577" i="855234.7" sn="10.35" a="713.46" fwhm="0.000955" res="508237.5" algo="FTMS"/>
+<pk mz="485.245821" i="1255626.8" sn="16.01" a="1332.14" fwhm="0.001075" res="451455.0" algo="FTMS"/>
+<pk mz="485.282269" i="1357015.5" sn="17.44" a="1067.10" fwhm="0.001025" res="473675.3" algo="FTMS"/>
+<pk mz="485.283227" i="807255.9" sn="9.67" a="613.48" fwhm="0.001056" res="459655.9" algo="FTMS"/>
+<pk mz="485.318586" i="1097700.3" sn="13.78" a="1107.90" fwhm="0.001136" res="427307.1" algo="FTMS"/>
+<pk mz="486.204227" i="1363995.5" z="-1" sn="17.54" a="1390.74" fwhm="0.001098" res="442662.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="485.200060" isotopic_mass="486.203392"/>
+<pk mz="486.205612" i="794139.9" sn="9.48" a="639.99" fwhm="0.001082" res="449244.3" algo="FTMS"/>
+<pk mz="487.001425" i="621365.0" sn="7.04" a="403.96" fwhm="0.000793" res="614369.8" algo="FTMS"/>
+<pk mz="487.006390" i="3007286.8" sn="40.77" a="3879.62" fwhm="0.001165" res="417876.6" algo="FTMS"/>
+<pk mz="487.261577" i="1198993.3" sn="15.20" a="1267.25" fwhm="0.001057" res="461013.3" algo="FTMS"/>
+<pk mz="487.298025" i="1181598.1" sn="14.95" a="1112.52" fwhm="0.001049" res="464577.7" algo="FTMS"/>
+<pk mz="488.256973" i="624627.3" sn="7.08" a="390.00" fwhm="0.000893" res="546562.7" algo="FTMS"/>
+<pk mz="489.147081" i="2627121.8" sn="35.38" a="3103.16" fwhm="0.001250" res="391205.2" algo="FTMS"/>
+<pk mz="489.217734" i="1108555.1" sn="13.91" a="1201.30" fwhm="0.001206" res="405492.9" algo="FTMS"/>
+<pk mz="489.232895" i="1686096.5" sn="22.08" a="1696.57" fwhm="0.001111" res="440464.5" algo="FTMS"/>
+<pk mz="489.234199" i="952401.0" sn="11.70" a="772.09" fwhm="0.001179" res="414986.1" algo="FTMS"/>
+<pk mz="489.277390" i="957024.5" sn="11.77" a="876.74" fwhm="0.001066" res="458911.8" algo="FTMS"/>
+<pk mz="489.284378" i="944227.0" sn="11.59" a="904.52" fwhm="0.001158" res="422389.5" algo="FTMS"/>
+<pk mz="490.150496" i="785050.7" sn="9.33" a="711.90" fwhm="0.001056" res="464152.1" algo="FTMS"/>
+<pk mz="490.236114" i="1017273.6" sn="12.62" a="840.27" fwhm="0.000946" res="518428.4" algo="FTMS"/>
+<pk mz="491.162877" i="2042121.0" sn="27.10" a="1969.86" fwhm="0.001154" res="425753.4" algo="FTMS"/>
+<pk mz="491.163819" i="906121.4" sn="11.04" a="679.23" fwhm="0.001677" res="292797.5" algo="FTMS"/>
+<pk mz="491.248861" i="851240.2" sn="10.26" a="868.08" fwhm="0.001271" res="386360.5" algo="FTMS"/>
+<pk mz="491.293058" i="654136.3" sn="7.48" a="469.36" fwhm="0.000901" res="545097.8" algo="FTMS"/>
+<pk mz="493.130122" i="740310.7" sn="8.69" a="672.48" fwhm="0.001019" res="484034.2" algo="FTMS"/>
+<pk mz="493.134198" i="1283544.3" sn="16.37" a="1896.11" fwhm="0.002006" res="245786.7" algo="FTMS"/>
+<pk mz="493.228001" i="896250.6" sn="10.89" a="779.51" fwhm="0.001032" res="477943.4" algo="FTMS"/>
+<pk mz="493.259422" i="892166.2" sn="10.83" a="872.09" fwhm="0.001397" res="352988.2" algo="FTMS"/>
+<pk mz="493.264407" i="8379400.0" z="-1" sn="116.69" a="8900.78" fwhm="0.001188" res="415106.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="493.263333" isotopic_mass="493.263322"/>
+<pk mz="493.265471" i="3889160.3" sn="53.20" a="4330.50" fwhm="0.001680" res="293550.3" algo="FTMS"/>
+<pk mz="494.267834" i="2652537.3" z="-1" sn="35.71" a="2975.03" fwhm="0.001143" res="432588.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="493.263333" isotopic_mass="494.266713"/>
+<pk mz="495.127984" i="767415.4" sn="8.66" a="827.19" fwhm="0.001251" res="395790.1" algo="FTMS"/>
+<pk mz="495.149908" i="4179647.5" z="-1" sn="54.77" a="4745.25" fwhm="0.001252" res="395458.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="495.148753" isotopic_mass="495.148754"/>
+<pk mz="495.151058" i="1822655.9" sn="22.92" a="2511.48" fwhm="0.001547" res="320013.1" algo="FTMS"/>
+<pk mz="495.167119" i="798661.8" sn="9.08" a="670.43" fwhm="0.000998" res="495965.7" algo="FTMS"/>
+<pk mz="495.185870" i="657868.8" sn="7.18" a="480.18" fwhm="0.000909" res="544955.2" algo="FTMS"/>
+<pk mz="495.243664" i="669154.2" sn="7.33" a="535.84" fwhm="0.001073" res="461403.5" algo="FTMS"/>
+<pk mz="495.261535" i="3235560.8" sn="42.01" a="4116.86" fwhm="0.001172" res="422699.2" algo="FTMS"/>
+<pk mz="496.153283" i="1207348.3" z="-1" sn="14.60" a="1105.63" fwhm="0.001102" res="450317.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="495.148753" isotopic_mass="496.152093"/>
+<pk mz="496.265183" i="692574.0" sn="7.64" a="595.79" fwhm="0.001130" res="439122.2" algo="FTMS"/>
+<pk mz="497.147060" i="1692071.4" sn="21.14" a="2379.80" fwhm="0.001570" res="316649.4" algo="FTMS"/>
+<pk mz="497.149197" i="969128.1" sn="11.37" a="1009.23" fwhm="0.001310" res="379590.6" algo="FTMS"/>
+<pk mz="497.165628" i="13189550.0" z="-1" sn="176.51" a="20532.58" fwhm="0.001549" res="321020.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="497.164419" isotopic_mass="497.164402"/>
+<pk mz="497.282887" i="929498.2" sn="10.84" a="1054.42" fwhm="0.001560" res="318670.5" algo="FTMS"/>
+<pk mz="497.319194" i="1052647.9" sn="12.50" a="955.90" fwhm="0.001007" res="494045.1" algo="FTMS"/>
+<pk mz="498.150467" i="723743.8" sn="8.05" a="468.20" fwhm="0.000832" res="598945.0" algo="FTMS"/>
+<pk mz="498.169099" i="3059494.8" z="-1" sn="39.62" a="3267.98" fwhm="0.001234" res="403830.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="497.164419" isotopic_mass="498.167836"/>
+<pk mz="498.170259" i="1578279.3" sn="19.60" a="1378.26" fwhm="0.001266" res="393390.2" algo="FTMS"/>
+<pk mz="498.171337" i="769319.7" sn="8.67" a="597.20" fwhm="0.001483" res="336031.0" algo="FTMS"/>
+<pk mz="499.162814" i="3930269.5" z="-1" sn="51.38" a="4876.08" fwhm="0.001293" res="386119.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="499.161501" isotopic_mass="499.161515"/>
+<pk mz="499.164637" i="1351838.1" sn="16.54" a="1698.52" fwhm="0.001668" res="299224.1" algo="FTMS"/>
+<pk mz="499.225796" i="668085.3" sn="7.30" a="705.70" fwhm="0.001256" res="397374.3" algo="FTMS"/>
+<pk mz="499.262218" i="1460419.0" sn="18.00" a="1593.88" fwhm="0.001162" res="429647.9" algo="FTMS"/>
+<pk mz="499.298563" i="1426128.8" sn="17.54" a="1659.06" fwhm="0.001191" res="419274.2" algo="FTMS"/>
+<pk mz="499.334985" i="957150.5" sn="11.20" a="966.54" fwhm="0.001197" res="417164.8" algo="FTMS"/>
+<pk mz="500.166138" i="1196057.4" z="-1" sn="14.43" a="1226.21" fwhm="0.001107" res="451919.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="499.161501" isotopic_mass="500.164802"/>
+<pk mz="500.921171" i="693816.4" sn="7.63" a="556.22" fwhm="0.001068" res="469104.7" algo="FTMS"/>
+<pk mz="500.967385" i="1877322.0" sn="23.63" a="2507.32" fwhm="0.001942" res="257928.7" algo="FTMS"/>
+<pk mz="500.986466" i="48035664.0" sn="647.35" a="70721.83" fwhm="0.001505" res="332806.8" algo="FTMS"/>
+<pk mz="501.241612" i="838834.6" sn="9.59" a="883.50" fwhm="0.001129" res="443938.6" algo="FTMS"/>
+<pk mz="501.277988" i="1236416.4" sn="14.96" a="1616.49" fwhm="0.001204" res="416209.4" algo="FTMS"/>
+<pk mz="501.314363" i="1061326.3" sn="12.60" a="1008.68" fwhm="0.001232" res="406935.4" algo="FTMS"/>
+<pk mz="501.977788" i="724171.7" sn="8.04" a="518.96" fwhm="0.000864" res="580887.6" algo="FTMS"/>
+<pk mz="501.982142" i="677325.4" sn="7.41" a="477.98" fwhm="0.001012" res="496188.7" algo="FTMS"/>
+<pk mz="501.983293" i="821453.8" sn="9.35" a="638.06" fwhm="0.001072" res="468475.1" algo="FTMS"/>
+<pk mz="501.984358" i="654286.2" sn="7.09" a="453.82" fwhm="0.000928" res="540939.8" algo="FTMS"/>
+<pk mz="501.989749" i="6041808.5" sn="79.90" a="7526.89" fwhm="0.001283" res="391153.7" algo="FTMS"/>
+<pk mz="502.236871" i="1581358.9" sn="19.62" a="1607.84" fwhm="0.001065" res="471378.7" algo="FTMS"/>
+<pk mz="502.273190" i="711740.8" sn="7.87" a="564.32" fwhm="0.000973" res="516180.1" algo="FTMS"/>
+<pk mz="503.257311" i="714422.4" sn="7.90" a="569.40" fwhm="0.000989" res="509002.5" algo="FTMS"/>
+<pk mz="503.293679" i="821700.4" sn="9.35" a="1022.91" fwhm="0.001602" res="314260.8" algo="FTMS"/>
+<pk mz="504.158719" i="1163281.6" sn="13.96" a="1057.82" fwhm="0.001005" res="501737.7" algo="FTMS"/>
+<pk mz="504.252539" i="669109.9" sn="7.28" a="684.96" fwhm="0.001245" res="405128.6" algo="FTMS"/>
+<pk mz="505.017841" i="1487709.8" sn="18.34" a="1461.00" fwhm="0.001054" res="479353.3" algo="FTMS"/>
+<pk mz="505.142864" i="1995662.1" sn="25.20" a="2547.18" fwhm="0.001340" res="377058.1" algo="FTMS"/>
+<pk mz="505.144393" i="903310.8" sn="10.44" a="839.06" fwhm="0.001291" res="391288.9" algo="FTMS"/>
+<pk mz="505.216059" i="696618.6" sn="7.65" a="851.47" fwhm="0.001572" res="321418.4" algo="FTMS"/>
+<pk mz="505.273285" i="703936.8" sn="7.75" a="604.90" fwhm="0.001129" res="447456.0" algo="FTMS"/>
+<pk mz="506.146138" i="655379.5" sn="7.09" a="523.80" fwhm="0.001068" res="473910.2" algo="FTMS"/>
+<pk mz="507.222668" i="658871.1" sn="7.13" a="636.09" fwhm="0.001232" res="411596.6" algo="FTMS"/>
+<pk mz="509.125928" i="2185120.5" sn="26.50" a="2653.27" fwhm="0.001224" res="415821.3" algo="FTMS"/>
+<pk mz="509.130022" i="2152866.0" sn="26.08" a="2682.35" fwhm="0.001297" res="392407.6" algo="FTMS"/>
+<pk mz="509.166467" i="724784.4" sn="7.65" a="836.97" fwhm="0.001545" res="329510.1" algo="FTMS"/>
+<pk mz="509.260093" i="789973.2" sn="8.49" a="786.50" fwhm="0.001212" res="420258.6" algo="FTMS"/>
+<pk mz="509.283468" i="718686.4" sn="7.57" a="873.22" fwhm="0.001439" res="353851.4" algo="FTMS"/>
+<pk mz="511.123908" i="2101940.3" sn="25.42" a="2630.95" fwhm="0.001679" res="304430.9" algo="FTMS"/>
+<pk mz="511.145583" i="3173052.8" sn="39.24" a="3886.20" fwhm="0.001578" res="323835.9" algo="FTMS"/>
+<pk mz="511.162909" i="714819.6" sn="7.51" a="724.32" fwhm="0.001488" res="343576.7" algo="FTMS"/>
+<pk mz="511.239304" i="854753.8" sn="9.32" a="901.25" fwhm="0.001553" res="329228.6" algo="FTMS"/>
+<pk mz="511.262749" i="1133803.1" sn="12.92" a="1757.70" fwhm="0.001772" res="288447.6" algo="FTMS"/>
+<pk mz="511.299303" i="1452537.6" sn="17.03" a="2056.90" fwhm="0.001586" res="322291.7" algo="FTMS"/>
+<pk mz="511.335822" i="759816.1" sn="8.09" a="1040.58" fwhm="0.001730" res="295587.1" algo="FTMS"/>
+<pk mz="512.149005" i="866122.3" sn="9.46" a="721.06" fwhm="0.001025" res="499741.7" algo="FTMS"/>
+<pk mz="512.824560" i="1021270.6" sn="11.46" a="863.95" fwhm="0.000976" res="525656.7" algo="FTMS"/>
+<pk mz="513.142753" i="809045.3" sn="8.72" a="934.37" fwhm="0.001452" res="353290.2" algo="FTMS"/>
+<pk mz="513.161327" i="1359836.6" sn="15.83" a="1551.38" fwhm="0.001251" res="410207.0" algo="FTMS"/>
+<pk mz="513.242204" i="867836.8" sn="9.48" a="927.23" fwhm="0.001333" res="385108.5" algo="FTMS"/>
+<pk mz="513.255086" i="1099266.0" sn="12.46" a="1136.92" fwhm="0.001195" res="429358.9" algo="FTMS"/>
+<pk mz="513.278573" i="1199627.3" sn="13.76" a="1282.04" fwhm="0.001533" res="334860.4" algo="FTMS"/>
+<pk mz="513.314932" i="1485849.8" sn="17.45" a="1908.40" fwhm="0.001432" res="358396.5" algo="FTMS"/>
+<pk mz="513.351406" i="713256.3" sn="7.48" a="637.38" fwhm="0.001268" res="404891.4" algo="FTMS"/>
+<pk mz="514.273912" i="915352.1" sn="10.09" a="1140.95" fwhm="0.001421" res="361866.6" algo="FTMS"/>
+<pk mz="514.822614" i="943731.4" sn="10.45" a="870.73" fwhm="0.001091" res="471922.1" algo="FTMS"/>
+<pk mz="514.937657" i="2210977.3" sn="26.81" a="2720.49" fwhm="0.001298" res="396853.0" algo="FTMS"/>
+<pk mz="515.028291" i="3548357.5" z="-1" sn="44.07" a="5000.79" fwhm="0.001327" res="388001.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="515.025752" isotopic_mass="515.026393"/>
+<pk mz="515.258006" i="1128225.5" sn="12.83" a="1070.41" fwhm="0.001162" res="443460.8" algo="FTMS"/>
+<pk mz="515.294265" i="1311536.1" sn="15.19" a="1668.58" fwhm="0.001325" res="388887.7" algo="FTMS"/>
+<pk mz="515.330729" i="1046334.6" sn="11.77" a="971.82" fwhm="0.001112" res="463506.9" algo="FTMS"/>
+<pk mz="515.910999" i="1761319.1" sn="21.00" a="1925.44" fwhm="0.001200" res="429893.8" algo="FTMS"/>
+<pk mz="516.027938" i="734550.1" z="-1" sn="7.74" a="706.08" fwhm="0.001247" res="413793.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="515.025752" isotopic_mass="516.026001"/>
+<pk mz="516.253255" i="751536.5" sn="7.96" a="672.40" fwhm="0.001142" res="452150.2" algo="FTMS"/>
+<pk mz="517.133002" i="1038610.1" sn="11.66" a="1240.36" fwhm="0.001326" res="390063.3" algo="FTMS"/>
+<pk mz="517.179873" i="705828.9" sn="7.37" a="890.54" fwhm="0.001484" res="348512.8" algo="FTMS"/>
+<pk mz="517.273949" i="768074.7" sn="8.17" a="1086.49" fwhm="0.001834" res="282093.8" algo="FTMS"/>
+<pk mz="517.310121" i="958553.3" sn="10.63" a="929.21" fwhm="0.001238" res="417901.0" algo="FTMS"/>
+<pk mz="518.269030" i="945883.7" sn="10.46" a="870.72" fwhm="0.001123" res="461635.6" algo="FTMS"/>
+<pk mz="519.195657" i="1027409.9" sn="11.51" a="1155.48" fwhm="0.001309" res="396660.1" algo="FTMS"/>
+<pk mz="519.244711" i="685669.8" sn="7.09" a="594.48" fwhm="0.001165" res="445561.8" algo="FTMS"/>
+<pk mz="519.256360" i="1237354.5" sn="14.22" a="1590.32" fwhm="0.001224" res="424273.3" algo="FTMS"/>
+<pk mz="520.154492" i="3903702.0" z="-1" sn="48.63" a="5526.72" fwhm="0.001378" res="377516.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="520.152383" isotopic_mass="520.152393"/>
+<pk mz="520.284943" i="719626.9" sn="7.53" a="837.26" fwhm="0.001588" res="327630.2" algo="FTMS"/>
+<pk mz="520.953968" i="963610.2" sn="10.67" a="1006.67" fwhm="0.001366" res="381474.2" algo="FTMS"/>
+<pk mz="520.957345" i="874267.6" sn="9.52" a="1347.69" fwhm="0.002520" res="206694.0" algo="FTMS"/>
+<pk mz="520.958417" i="920860.1" sn="10.12" a="842.13" fwhm="0.001588" res="328018.6" algo="FTMS"/>
+<pk mz="520.960574" i="1061148.9" sn="11.93" a="1554.34" fwhm="0.002232" res="233385.1" algo="FTMS"/>
+<pk mz="520.961985" i="1002525.5" sn="11.18" a="1076.80" fwhm="0.001875" res="277814.2" algo="FTMS"/>
+<pk mz="520.963548" i="1109534.1" sn="12.56" a="1278.34" fwhm="0.001676" res="310833.5" algo="FTMS"/>
+<pk mz="520.965191" i="1036830.8" sn="11.62" a="929.89" fwhm="0.001313" res="396876.9" algo="FTMS"/>
+<pk mz="520.966542" i="1342495.3" sn="15.56" a="1642.95" fwhm="0.002100" res="248028.0" algo="FTMS"/>
+<pk mz="520.967897" i="1362463.9" sn="15.82" a="1339.73" fwhm="0.001653" res="315099.3" algo="FTMS"/>
+<pk mz="520.969682" i="1357344.5" sn="15.76" a="2535.49" fwhm="0.002941" res="177161.6" algo="FTMS"/>
+<pk mz="520.972424" i="3210785.8" sn="39.68" a="4586.03" fwhm="0.001635" res="318562.2" algo="FTMS"/>
+<pk mz="520.973456" i="3130146.0" sn="38.64" a="5211.97" fwhm="0.002311" res="225476.5" algo="FTMS"/>
+<pk mz="520.993797" i="80877096.0" sn="1042.18" a="123879.87" fwhm="0.001622" res="321269.5" algo="FTMS"/>
+<pk mz="521.157830" i="1056365.0" z="-1" sn="11.87" a="1124.61" fwhm="0.001223" res="426288.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="520.152383" isotopic_mass="521.155692"/>
+<pk mz="521.202860" i="761983.3" sn="8.07" a="823.88" fwhm="0.001314" res="396630.5" algo="FTMS"/>
+<pk mz="521.254349" i="1184916.1" sn="13.53" a="1205.25" fwhm="0.001213" res="429792.2" algo="FTMS"/>
+<pk mz="521.297105" i="707749.5" sn="7.37" a="558.71" fwhm="0.001018" res="512320.4" algo="FTMS"/>
+<pk mz="521.997017" i="9844674.0" sn="125.30" a="11544.91" fwhm="0.001312" res="397750.1" algo="FTMS"/>
+<pk mz="521.998369" i="4002754.5" sn="49.90" a="4930.38" fwhm="0.001663" res="313970.8" algo="FTMS"/>
+<pk mz="522.974198" i="996943.9" sn="11.09" a="1031.79" fwhm="0.001229" res="425645.1" algo="FTMS"/>
+<pk mz="523.182545" i="814500.7" sn="8.74" a="857.65" fwhm="0.001324" res="395242.9" algo="FTMS"/>
+<pk mz="523.199876" i="1893291.8" sn="22.66" a="2479.48" fwhm="0.001358" res="385332.2" algo="FTMS"/>
+<pk mz="523.276435" i="840907.1" sn="9.08" a="784.84" fwhm="0.001146" res="456467.1" algo="FTMS"/>
+<pk mz="524.801831" i="878649.9" sn="9.13" a="762.11" fwhm="0.000987" res="531927.5" algo="FTMS"/>
+<pk mz="525.107274" i="862134.8" sn="8.92" a="909.45" fwhm="0.001497" res="350697.2" algo="FTMS"/>
+<pk mz="525.109097" i="930231.5" sn="9.76" a="1374.37" fwhm="0.002119" res="247835.0" algo="FTMS"/>
+<pk mz="525.114532" i="1291961.8" sn="14.22" a="1805.40" fwhm="0.002109" res="248973.0" algo="FTMS"/>
+<pk mz="525.121659" i="10882237.0" z="-1" sn="132.44" a="12895.71" fwhm="0.001287" res="407888.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="525.118739" isotopic_mass="525.119363"/>
+<pk mz="525.122948" i="5129405.0" sn="61.52" a="4686.08" fwhm="0.001193" res="439993.1" algo="FTMS"/>
+<pk mz="525.124077" i="3310781.8" sn="39.11" a="3297.99" fwhm="0.001315" res="399318.7" algo="FTMS"/>
+<pk mz="525.126489" i="3464382.8" sn="41.00" a="3272.16" fwhm="0.001190" res="441341.7" algo="FTMS"/>
+<pk mz="525.198345" i="2986204.0" sn="35.10" a="4181.16" fwhm="0.001639" res="320524.7" algo="FTMS"/>
+<pk mz="525.230677" i="735721.3" sn="7.36" a="611.00" fwhm="0.001109" res="473517.9" algo="FTMS"/>
+<pk mz="525.251860" i="802289.9" sn="8.18" a="793.38" fwhm="0.001220" res="430366.7" algo="FTMS"/>
+<pk mz="525.256089" i="764659.7" sn="7.72" a="861.95" fwhm="0.001397" res="376106.0" algo="FTMS"/>
+<pk mz="525.279368" i="1020669.3" sn="10.87" a="891.71" fwhm="0.001073" res="489717.5" algo="FTMS"/>
+<pk mz="525.315524" i="1245964.0" sn="13.65" a="1341.50" fwhm="0.001261" res="416658.8" algo="FTMS"/>
+<pk mz="525.352244" i="712987.0" sn="7.08" a="649.84" fwhm="0.001184" res="443639.2" algo="FTMS"/>
+<pk mz="526.125089" i="2726487.5" z="-1" sn="31.90" a="3808.10" fwhm="0.001425" res="369114.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="525.118739" isotopic_mass="526.122752"/>
+<pk mz="526.157314" i="2735716.8" sn="32.01" a="3033.75" fwhm="0.001247" res="422042.1" algo="FTMS"/>
+<pk mz="526.158647" i="974949.3" sn="10.31" a="846.62" fwhm="0.001286" res="409301.2" algo="FTMS"/>
+<pk mz="526.159333" i="831941.6" sn="8.54" a="703.80" fwhm="0.001782" res="295210.2" algo="FTMS"/>
+<pk mz="526.201557" i="808054.9" sn="8.25" a="770.10" fwhm="0.001180" res="446056.5" algo="FTMS"/>
+<pk mz="526.970484" i="797106.2" sn="8.11" a="1273.99" fwhm="0.002337" res="225505.2" algo="FTMS"/>
+<pk mz="526.972288" i="745266.9" sn="7.47" a="725.49" fwhm="0.001477" res="356878.6" algo="FTMS"/>
+<pk mz="526.973864" i="829875.6" sn="8.51" a="770.15" fwhm="0.001358" res="388131.2" algo="FTMS"/>
+<pk mz="526.976056" i="1001908.5" sn="10.63" a="1403.85" fwhm="0.002116" res="249095.7" algo="FTMS"/>
+<pk mz="526.977475" i="1204661.0" sn="13.13" a="1138.27" fwhm="0.001488" res="354253.5" algo="FTMS"/>
+<pk mz="526.978531" i="966197.4" sn="10.19" a="1314.75" fwhm="0.001950" res="270312.1" algo="FTMS"/>
+<pk mz="526.984510" i="9674680.0" sn="117.55" a="13217.39" fwhm="0.001428" res="369073.1" algo="FTMS"/>
+<pk mz="526.991857" i="1198522.9" sn="13.06" a="1298.82" fwhm="0.001406" res="374824.1" algo="FTMS"/>
+<pk mz="527.016264" i="1157061.0" sn="12.55" a="1196.15" fwhm="0.001146" res="459722.4" algo="FTMS"/>
+<pk mz="527.017593" i="724421.5" sn="7.21" a="608.13" fwhm="0.001053" res="500368.8" algo="FTMS"/>
+<pk mz="527.105146" i="812905.4" sn="8.30" a="1395.38" fwhm="0.002595" res="203096.9" algo="FTMS"/>
+<pk mz="527.107229" i="909546.3" sn="9.50" a="1138.75" fwhm="0.002041" res="258244.4" algo="FTMS"/>
+<pk mz="527.112870" i="1206508.6" sn="13.16" a="1754.30" fwhm="0.002365" res="222850.9" algo="FTMS"/>
+<pk mz="527.119745" i="11362287.0" z="-1" sn="138.35" a="13743.47" fwhm="0.001300" res="405502.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="527.117366" isotopic_mass="527.117368"/>
+<pk mz="527.120973" i="4757488.0" sn="56.93" a="4695.27" fwhm="0.001072" res="491507.7" algo="FTMS"/>
+<pk mz="527.122171" i="2978800.5" sn="35.00" a="2526.83" fwhm="0.001078" res="488795.9" algo="FTMS"/>
+<pk mz="527.124864" i="2930673.5" z="-1" sn="34.41" a="3306.42" fwhm="0.001109" res="475386.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="525.118739" isotopic_mass="527.122487"/>
+<pk mz="527.195569" i="960270.6" sn="10.12" a="1120.86" fwhm="0.001359" res="387889.7" algo="FTMS"/>
+<pk mz="527.249964" i="782116.9" sn="7.92" a="752.12" fwhm="0.001198" res="440181.6" algo="FTMS"/>
+<pk mz="527.258878" i="756264.6" sn="7.61" a="913.25" fwhm="0.001589" res="331787.7" algo="FTMS"/>
+<pk mz="527.271585" i="801069.8" sn="8.16" a="609.44" fwhm="0.001180" res="446767.9" algo="FTMS"/>
+<pk mz="527.295188" i="1424951.5" sn="15.85" a="1824.58" fwhm="0.001401" res="376411.8" algo="FTMS"/>
+<pk mz="527.331346" i="1097798.4" sn="11.82" a="1105.02" fwhm="0.001162" res="453808.4" algo="FTMS"/>
+<pk mz="527.455872" i="1031801.4" sn="11.00" a="883.95" fwhm="0.001218" res="432980.2" algo="FTMS"/>
+<pk mz="527.987846" i="1218387.9" sn="13.30" a="1285.21" fwhm="0.001285" res="410852.2" algo="FTMS"/>
+<pk mz="528.123119" i="2948491.5" z="-1" sn="34.63" a="3859.53" fwhm="0.001431" res="369085.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="527.117366" isotopic_mass="528.120701"/>
+<pk mz="528.945512" i="812253.8" sn="8.29" a="671.58" fwhm="0.001007" res="525434.2" algo="FTMS"/>
+<pk mz="528.946861" i="917726.3" sn="9.59" a="755.01" fwhm="0.001216" res="434890.2" algo="FTMS"/>
+<pk mz="528.948190" i="864990.8" sn="8.94" a="968.29" fwhm="0.001751" res="302027.1" algo="FTMS"/>
+<pk mz="528.953984" i="6875873.0" z="-1" sn="83.03" a="8408.17" fwhm="0.001365" res="387393.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="528.950634" isotopic_mass="528.951532"/>
+<pk mz="528.955277" i="3198689.8" sn="37.71" a="3296.67" fwhm="0.001413" res="374231.5" algo="FTMS"/>
+<pk mz="529.250930" i="923995.4" sn="9.66" a="848.13" fwhm="0.001180" res="448571.9" algo="FTMS"/>
+<pk mz="529.274323" i="1114725.1" sn="12.01" a="1239.01" fwhm="0.001311" res="403814.9" algo="FTMS"/>
+<pk mz="529.310700" i="1186164.0" sn="12.89" a="1638.16" fwhm="0.001341" res="394740.4" algo="FTMS"/>
+<pk mz="529.347194" i="1047939.1" sn="11.19" a="1236.43" fwhm="0.001284" res="412207.9" algo="FTMS"/>
+<pk mz="529.464318" i="839091.3" sn="8.62" a="773.46" fwhm="0.001057" res="500757.5" algo="FTMS"/>
+<pk mz="529.471604" i="6421430.0" z="-1" sn="77.43" a="9479.63" fwhm="0.001411" res="375266.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="529.469140" isotopic_mass="529.469131"/>
+<pk mz="529.473239" i="2276791.0" sn="26.34" a="2239.96" fwhm="0.002088" res="253586.4" algo="FTMS"/>
+<pk mz="529.479308" i="841145.4" sn="8.64" a="784.98" fwhm="0.001385" res="382226.5" algo="FTMS"/>
+<pk mz="529.953600" i="2151548.8" z="-1" sn="24.79" a="2398.81" fwhm="0.001225" res="432623.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="528.950634" isotopic_mass="529.951108"/>
+<pk mz="529.954839" i="778781.3" sn="7.87" a="558.36" fwhm="0.001057" res="501537.7" algo="FTMS"/>
+<pk mz="530.186328" i="1057756.8" sn="11.31" a="1278.83" fwhm="0.001383" res="383352.0" algo="FTMS"/>
+<pk mz="530.269663" i="777215.1" sn="7.85" a="737.13" fwhm="0.001176" res="450962.9" algo="FTMS"/>
+<pk mz="530.475024" i="2082131.6" z="-1" sn="23.93" a="2875.11" fwhm="0.001420" res="373597.1" algo="FTMS" component_name="" deconvoluted_molecular_mass="529.469140" isotopic_mass="530.472509"/>
+<pk mz="530.950921" i="1466391.9" sn="16.34" a="1492.42" fwhm="0.001170" res="453649.9" algo="FTMS"/>
+<pk mz="531.290200" i="846499.9" sn="8.70" a="977.63" fwhm="0.001328" res="400098.9" algo="FTMS"/>
+<pk mz="531.326739" i="836019.0" sn="8.57" a="869.87" fwhm="0.001278" res="415795.3" algo="FTMS"/>
+<pk mz="532.285259" i="842814.7" sn="8.65" a="926.49" fwhm="0.001400" res="380123.5" algo="FTMS"/>
+<pk mz="533.128801" i="1473947.3" sn="16.42" a="1848.00" fwhm="0.001674" res="318481.7" algo="FTMS"/>
+<pk mz="533.184725" i="1397170.4" sn="15.48" a="1892.80" fwhm="0.001524" res="349937.2" algo="FTMS"/>
+<pk mz="533.261324" i="826066.1" sn="8.44" a="986.32" fwhm="0.001385" res="385068.9" algo="FTMS"/>
+<pk mz="535.182868" i="1190125.3" sn="12.91" a="1465.26" fwhm="0.001368" res="391166.4" algo="FTMS"/>
+<pk mz="535.191283" i="1298672.8" sn="14.25" a="1514.22" fwhm="0.001333" res="401595.7" algo="FTMS"/>
+<pk mz="536.990388" i="725978.1" sn="7.18" a="576.02" fwhm="0.001044" res="514203.2" algo="FTMS"/>
+<pk mz="537.216184" i="6555703.5" z="-1" sn="79.05" a="12844.85" fwhm="0.001626" res="330436.3" algo="FTMS" component_name="" deconvoluted_molecular_mass="537.212967" isotopic_mass="537.213391"/>
+<pk mz="537.220992" i="2664505.8" sn="31.08" a="2851.92" fwhm="0.001226" res="438207.0" algo="FTMS"/>
+<pk mz="537.231039" i="799293.9" sn="8.09" a="671.04" fwhm="0.001029" res="521844.4" algo="FTMS"/>
+<pk mz="537.256748" i="728392.5" sn="7.21" a="653.36" fwhm="0.001407" res="381822.0" algo="FTMS"/>
+<pk mz="538.219591" i="1732567.8" z="-1" sn="19.58" a="2467.75" fwhm="0.001289" res="417428.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="537.212967" isotopic_mass="538.216756"/>
+<pk mz="539.101960" i="848454.0" sn="8.68" a="801.41" fwhm="0.001233" res="437175.0" algo="FTMS"/>
+<pk mz="539.178384" i="1054053.6" sn="11.22" a="1221.32" fwhm="0.001222" res="441342.7" algo="FTMS"/>
+<pk mz="539.198781" i="723310.2" sn="7.14" a="677.29" fwhm="0.001125" res="479131.1" algo="FTMS"/>
+<pk mz="539.205943" i="823921.2" sn="8.38" a="1157.59" fwhm="0.001871" res="288144.3" algo="FTMS"/>
+<pk mz="539.214339" i="5546868.5" z="-1" sn="66.60" a="7147.10" fwhm="0.001528" res="352951.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="539.211468" isotopic_mass="539.211462"/>
+<pk mz="539.215540" i="2940789.3" sn="34.47" a="2988.21" fwhm="0.001485" res="362998.5" algo="FTMS"/>
+<pk mz="539.217158" i="1708917.9" sn="19.29" a="1897.21" fwhm="0.001487" res="362562.3" algo="FTMS"/>
+<pk mz="539.219934" i="1366903.0" z="-1" sn="15.07" a="1372.52" fwhm="0.001120" res="481385.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="537.212967" isotopic_mass="539.217057"/>
+<pk mz="539.283605" i="714641.4" sn="7.03" a="710.31" fwhm="0.001562" res="345357.0" algo="FTMS"/>
+<pk mz="539.295731" i="989590.4" sn="10.42" a="1272.98" fwhm="0.001559" res="345863.1" algo="FTMS"/>
+<pk mz="540.217755" i="1393429.4" z="-1" sn="14.69" a="2110.43" fwhm="0.001952" res="276802.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="539.211468" isotopic_mass="540.214835"/>
+<pk mz="540.720934" i="754662.6" sn="7.18" a="939.56" fwhm="0.001699" res="318272.0" algo="FTMS"/>
+<pk mz="541.000905" i="29595226.0" sn="346.54" a="39020.43" fwhm="0.001677" res="322551.0" algo="FTMS"/>
+<pk mz="541.100234" i="837508.3" sn="8.15" a="1040.38" fwhm="0.001449" res="373402.4" algo="FTMS"/>
+<pk mz="541.117421" i="2759307.5" sn="30.76" a="4065.47" fwhm="0.001549" res="349346.2" algo="FTMS"/>
+<pk mz="541.194146" i="9414315.0" z="-1" sn="109.07" a="12258.19" fwhm="0.001468" res="368657.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="541.191219" isotopic_mass="541.191185"/>
+<pk mz="541.195373" i="4243116.0" sn="48.22" a="5036.93" fwhm="0.001795" res="301549.6" algo="FTMS"/>
+<pk mz="541.199982" i="1155757.8" sn="11.89" a="1627.50" fwhm="0.001933" res="279944.3" algo="FTMS"/>
+<pk mz="541.251673" i="947907.3" sn="9.45" a="1031.38" fwhm="0.001298" res="416858.3" algo="FTMS"/>
+<pk mz="541.311461" i="1354460.3" sn="14.23" a="1383.96" fwhm="0.001150" res="470766.7" algo="FTMS"/>
+<pk mz="541.347772" i="1201899.3" sn="12.43" a="1404.29" fwhm="0.001529" res="354156.0" algo="FTMS"/>
+<pk mz="542.002635" i="994299.9" sn="9.99" a="837.09" fwhm="0.001210" res="447834.7" algo="FTMS"/>
+<pk mz="542.004320" i="3915772.5" sn="44.37" a="5016.91" fwhm="0.001445" res="375202.2" algo="FTMS"/>
+<pk mz="542.005695" i="1746941.1" sn="18.85" a="2151.15" fwhm="0.001931" res="280740.6" algo="FTMS"/>
+<pk mz="542.153222" i="1873978.6" sn="20.34" a="2574.34" fwhm="0.001424" res="380772.2" algo="FTMS"/>
+<pk mz="542.197711" i="2214477.0" z="-1" sn="24.35" a="3209.08" fwhm="0.001608" res="337120.6" algo="FTMS" component_name="" deconvoluted_molecular_mass="541.191219" isotopic_mass="542.194708"/>
+<pk mz="542.719040" i="934694.3" sn="9.28" a="1097.06" fwhm="0.001414" res="383800.9" algo="FTMS"/>
+<pk mz="542.992237" i="1155480.3" sn="11.88" a="1245.31" fwhm="0.001210" res="448897.0" algo="FTMS"/>
+<pk mz="543.115623" i="2591179.8" sn="28.77" a="3207.57" fwhm="0.001368" res="397158.8" algo="FTMS"/>
+<pk mz="543.116961" i="991436.3" sn="9.95" a="1509.77" fwhm="0.002530" res="214690.8" algo="FTMS"/>
+<pk mz="543.191374" i="2423275.5" sn="26.80" a="3568.47" fwhm="0.001522" res="356799.5" algo="FTMS"/>
+<pk mz="543.267652" i="918795.3" sn="9.09" a="1079.60" fwhm="0.001379" res="393948.1" algo="FTMS"/>
+<pk mz="543.290768" i="1133076.9" sn="11.62" a="1506.10" fwhm="0.001299" res="418159.6" algo="FTMS"/>
+<pk mz="543.327414" i="853540.1" sn="8.33" a="1099.80" fwhm="0.001601" res="339306.6" algo="FTMS"/>
+<pk mz="544.118865" i="816494.6" sn="7.89" a="782.56" fwhm="0.001261" res="431507.7" algo="FTMS"/>
+<pk mz="544.150078" i="766331.8" sn="7.30" a="617.18" fwhm="0.001020" res="533440.2" algo="FTMS"/>
+<pk mz="544.194849" i="754062.4" sn="7.15" a="928.04" fwhm="0.001988" res="273699.2" algo="FTMS"/>
+<pk mz="544.249563" i="893349.3" sn="8.79" a="799.01" fwhm="0.001133" res="480330.7" algo="FTMS"/>
+<pk mz="544.717131" i="762216.8" sn="7.24" a="681.13" fwhm="0.001166" res="466982.8" algo="FTMS"/>
+<pk mz="545.013830" i="1007333.0" sn="10.13" a="1003.93" fwhm="0.001444" res="377520.7" algo="FTMS"/>
+<pk mz="545.212451" i="859192.1" sn="8.38" a="885.82" fwhm="0.001279" res="426329.8" algo="FTMS"/>
+<pk mz="545.343250" i="1057646.9" sn="10.72" a="1102.97" fwhm="0.001284" res="424644.0" algo="FTMS"/>
+<pk mz="547.277926" i="2533531.3" sn="28.08" a="3524.06" fwhm="0.001446" res="378478.7" algo="FTMS"/>
+<pk mz="548.281280" i="892737.8" sn="8.76" a="954.93" fwhm="0.001661" res="330064.8" algo="FTMS"/>
+<pk mz="548.983093" i="2174826.3" sn="23.85" a="2641.25" fwhm="0.001365" res="402112.8" algo="FTMS"/>
+<pk mz="548.984459" i="913514.8" sn="9.00" a="1009.62" fwhm="0.001996" res="275101.1" algo="FTMS"/>
+<pk mz="549.274944" i="850405.5" sn="8.26" a="777.22" fwhm="0.001135" res="483737.2" algo="FTMS"/>
+<pk mz="550.130130" i="770383.8" sn="7.31" a="779.71" fwhm="0.001724" res="319063.0" algo="FTMS"/>
+<pk mz="551.309357" i="771652.8" sn="7.32" a="894.13" fwhm="0.001487" res="370740.7" algo="FTMS"/>
+<pk mz="553.021673" i="5612064.0" z="-1" sn="64.27" a="8673.02" fwhm="0.001636" res="337984.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="553.018201" isotopic_mass="553.018202"/>
+<pk mz="553.081924" i="824633.6" sn="7.94" a="897.31" fwhm="0.001412" res="391620.0" algo="FTMS"/>
+<pk mz="553.325017" i="802721.7" sn="7.68" a="818.18" fwhm="0.001666" res="332216.0" algo="FTMS"/>
+<pk mz="554.025055" i="1066958.3" z="-1" sn="10.78" a="1303.43" fwhm="0.001445" res="383386.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="553.018201" isotopic_mass="554.021539"/>
+<pk mz="555.097540" i="1579932.1" sn="16.81" a="2564.37" fwhm="0.001703" res="325905.5" algo="FTMS"/>
+<pk mz="555.174330" i="822717.3" sn="7.90" a="938.64" fwhm="0.001486" res="373692.4" algo="FTMS"/>
+<pk mz="555.327840" i="1021695.5" sn="10.24" a="1478.82" fwhm="0.001753" res="316700.9" algo="FTMS"/>
+<pk mz="555.364234" i="939535.3" sn="9.28" a="872.98" fwhm="0.001171" res="474422.7" algo="FTMS"/>
+<pk mz="556.133135" i="836187.9" sn="8.06" a="897.11" fwhm="0.001303" res="426808.2" algo="FTMS"/>
+<pk mz="557.095705" i="1429246.0" sn="14.34" a="1858.58" fwhm="0.001455" res="382871.7" algo="FTMS"/>
+<pk mz="557.189993" i="839974.9" sn="7.72" a="1295.83" fwhm="0.001714" res="325137.5" algo="FTMS"/>
+<pk mz="557.343770" i="1120106.0" sn="10.87" a="1384.46" fwhm="0.001412" res="394602.6" algo="FTMS"/>
+<pk mz="558.266128" i="918780.6" sn="8.60" a="1443.08" fwhm="0.001997" res="279527.0" algo="FTMS"/>
+<pk mz="559.286811" i="790972.1" sn="7.16" a="909.06" fwhm="0.001360" res="411364.8" algo="FTMS"/>
+<pk mz="559.323190" i="844748.1" sn="7.77" a="1033.83" fwhm="0.001577" res="354646.2" algo="FTMS"/>
+<pk mz="559.359423" i="808412.1" sn="7.36" a="945.84" fwhm="0.001828" res="305919.7" algo="FTMS"/>
+<pk mz="562.113814" i="832415.3" sn="7.61" a="968.36" fwhm="0.001461" res="384705.7" algo="FTMS"/>
+<pk mz="562.983752" i="9023268.0" sn="99.54" a="14011.02" fwhm="0.002208" res="255020.3" algo="FTMS"/>
+<pk mz="562.985055" i="8022820.5" sn="88.31" a="11149.52" fwhm="0.002359" res="238675.8" algo="FTMS"/>
+<pk mz="562.986949" i="7683877.5" sn="84.50" a="10720.23" fwhm="0.001962" res="286896.3" algo="FTMS"/>
+<pk mz="562.990092" i="12262183.0" sn="135.89" a="32269.13" fwhm="0.003922" res="143563.9" algo="FTMS"/>
+<pk mz="562.991924" i="16005928.0" sn="177.90" a="39272.99" fwhm="0.002817" res="199839.8" algo="FTMS"/>
+<pk mz="562.999843" i="134372144.0" sn="1506.34" a="234025.41" fwhm="0.001551" res="362998.9" algo="FTMS"/>
+<pk mz="563.985193" i="848869.6" sn="7.79" a="942.13" fwhm="0.001764" res="319702.5" algo="FTMS"/>
+<pk mz="563.987164" i="1122790.5" sn="10.86" a="1670.80" fwhm="0.002309" res="244261.2" algo="FTMS"/>
+<pk mz="563.988296" i="1128167.0" sn="10.92" a="1068.68" fwhm="0.001436" res="392654.9" algo="FTMS"/>
+<pk mz="563.989838" i="1139431.8" sn="11.05" a="1390.03" fwhm="0.001959" res="287877.8" algo="FTMS"/>
+<pk mz="563.993412" i="1560297.4" sn="15.77" a="2084.17" fwhm="0.002216" res="254563.7" algo="FTMS"/>
+<pk mz="563.995770" i="1755114.4" sn="17.96" a="3423.08" fwhm="0.002676" res="210767.8" algo="FTMS"/>
+<pk mz="564.003077" i="12627182.0" sn="139.98" a="19156.49" fwhm="0.001936" res="291273.1" algo="FTMS"/>
+<pk mz="564.006060" i="2839791.0" sn="30.13" a="3788.64" fwhm="0.001665" res="338747.6" algo="FTMS"/>
+<pk mz="564.996917" i="33824432.0" sn="377.87" a="80641.16" fwhm="0.002407" res="234683.1" algo="FTMS"/>
+<pk mz="565.433773" i="938356.4" sn="8.79" a="1017.59" fwhm="0.001629" res="347137.4" algo="FTMS"/>
+<pk mz="565.443094" i="1250936.8" sn="12.29" a="1972.69" fwhm="0.002449" res="230881.4" algo="FTMS"/>
+<pk mz="565.450362" i="8398716.0" z="-1" sn="92.51" a="12587.64" fwhm="0.001876" res="301417.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="565.446312" isotopic_mass="565.446333"/>
+<pk mz="565.467368" i="918915.7" sn="8.57" a="763.12" fwhm="0.000984" res="574444.6" algo="FTMS"/>
+<pk mz="566.000171" i="4487286.0" sn="48.61" a="6809.16" fwhm="0.001775" res="318882.3" algo="FTMS"/>
+<pk mz="566.003449" i="1069943.5" sn="10.26" a="1567.39" fwhm="0.001820" res="310972.0" algo="FTMS"/>
+<pk mz="566.453678" i="3130692.8" z="-1" sn="33.39" a="4696.40" fwhm="0.002027" res="279430.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="565.446312" isotopic_mass="566.449603"/>
+<pk mz="567.447463" i="3004172.0" sn="31.96" a="5561.76" fwhm="0.001967" res="288533.3" algo="FTMS"/>
+<pk mz="568.450882" i="1332442.4" sn="13.19" a="1607.50" fwhm="0.001391" res="408650.2" algo="FTMS"/>
+<pk mz="568.754538" i="874086.9" sn="8.05" a="1511.71" fwhm="0.002183" res="260535.8" algo="FTMS"/>
+<pk mz="568.924082" i="953269.4" sn="8.94" a="1078.95" fwhm="0.001342" res="424030.8" algo="FTMS"/>
+<pk mz="569.308166" i="855143.7" sn="7.83" a="954.51" fwhm="0.001432" res="397504.2" algo="FTMS"/>
+<pk mz="569.344710" i="892920.6" sn="8.26" a="1354.25" fwhm="0.001900" res="299708.2" algo="FTMS"/>
+<pk mz="570.109199" i="963548.9" sn="9.04" a="1098.08" fwhm="0.001357" res="420172.8" algo="FTMS"/>
+<pk mz="570.751851" i="826377.7" sn="7.50" a="1032.07" fwhm="0.001737" res="328642.0" algo="FTMS"/>
+<pk mz="571.323907" i="1021462.4" sn="9.69" a="1282.71" fwhm="0.001412" res="404688.3" algo="FTMS"/>
+<pk mz="571.360273" i="1239079.5" sn="12.13" a="1622.82" fwhm="0.001476" res="386972.2" algo="FTMS"/>
+<pk mz="572.750016" i="981177.1" sn="9.23" a="1275.76" fwhm="0.001438" res="398369.4" algo="FTMS"/>
+<pk mz="573.028873" i="1110333.8" sn="10.68" a="1472.69" fwhm="0.001442" res="397470.5" algo="FTMS"/>
+<pk mz="574.907602" i="784322.4" sn="7.01" a="737.25" fwhm="0.001447" res="397178.3" algo="FTMS"/>
+<pk mz="574.998544" i="5865710.0" z="-1" sn="64.04" a="8470.19" fwhm="0.001667" res="344835.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="574.993216" isotopic_mass="574.994072"/>
+<pk mz="575.000039" i="2886895.0" sn="30.60" a="4905.35" fwhm="0.001783" res="322481.4" algo="FTMS"/>
+<pk mz="575.995394" i="871633.3" sn="7.61" a="1069.52" fwhm="0.001371" res="420195.7" algo="FTMS"/>
+<pk mz="575.998194" i="1739986.6" z="-1" sn="16.89" a="2290.91" fwhm="0.001731" res="332826.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="574.993216" isotopic_mass="575.993675"/>
+<pk mz="576.979798" i="1243825.9" sn="11.58" a="1983.90" fwhm="0.001851" res="311788.6" algo="FTMS"/>
+<pk mz="576.995314" i="1215673.4" sn="11.28" a="1832.63" fwhm="0.001483" res="388998.8" algo="FTMS"/>
+<pk mz="578.995469" i="1173652.6" sn="10.82" a="1500.07" fwhm="0.001774" res="326399.6" algo="FTMS"/>
+<pk mz="579.038796" i="1390762.1" sn="13.14" a="2057.97" fwhm="0.001518" res="381516.8" algo="FTMS"/>
+<pk mz="579.265643" i="1233947.0" sn="11.46" a="1733.96" fwhm="0.001702" res="340289.3" algo="FTMS"/>
+<pk mz="581.263642" i="887814.4" sn="7.75" a="918.21" fwhm="0.001624" res="357988.0" algo="FTMS"/>
+<pk mz="583.035164" i="2223245.3" sn="22.02" a="3042.20" fwhm="0.001522" res="383089.8" algo="FTMS"/>
+<pk mz="583.036745" i="969870.1" sn="8.62" a="899.30" fwhm="0.001435" res="406347.1" algo="FTMS"/>
+<pk mz="583.324446" i="1020705.9" sn="9.16" a="1576.79" fwhm="0.001716" res="339968.9" algo="FTMS"/>
+<pk mz="583.360703" i="852020.6" sn="7.36" a="1002.61" fwhm="0.001437" res="405902.3" algo="FTMS"/>
+<pk mz="583.372016" i="1666362.4" sn="16.07" a="2903.26" fwhm="0.001602" res="364102.1" algo="FTMS"/>
+<pk mz="585.031990" i="862614.4" sn="7.46" a="894.87" fwhm="0.001664" res="351639.9" algo="FTMS"/>
+<pk mz="585.146251" i="2361554.0" sn="23.49" a="3211.66" fwhm="0.001590" res="367979.0" algo="FTMS"/>
+<pk mz="585.147778" i="1042386.9" sn="9.38" a="1308.83" fwhm="0.001764" res="331748.9" algo="FTMS"/>
+<pk mz="585.303687" i="896548.3" sn="7.82" a="1383.36" fwhm="0.001779" res="329064.2" algo="FTMS"/>
+<pk mz="585.340174" i="1033015.4" sn="9.28" a="1345.59" fwhm="0.001953" res="299713.6" algo="FTMS"/>
+<pk mz="585.376939" i="1166410.6" sn="10.71" a="1548.31" fwhm="0.001644" res="356024.2" algo="FTMS"/>
+<pk mz="586.105196" i="952776.8" sn="8.42" a="985.95" fwhm="0.001764" res="332165.3" algo="FTMS"/>
+<pk mz="587.144261" i="1579758.0" sn="15.12" a="1960.34" fwhm="0.001698" res="345791.7" algo="FTMS"/>
+<pk mz="587.145791" i="1159918.9" sn="10.63" a="1349.01" fwhm="0.001689" res="347629.7" algo="FTMS"/>
+<pk mz="587.296532" i="842814.9" sn="7.24" a="1334.28" fwhm="0.002132" res="275470.3" algo="FTMS"/>
+<pk mz="587.356147" i="1008222.6" sn="9.01" a="1477.66" fwhm="0.001738" res="337889.1" algo="FTMS"/>
+<pk mz="588.314853" i="821598.7" sn="7.00" a="1152.89" fwhm="0.001798" res="327217.6" algo="FTMS"/>
+<pk mz="588.860384" i="1132676.0" sn="10.33" a="1661.34" fwhm="0.001709" res="344464.8" algo="FTMS"/>
+<pk mz="588.924296" i="3348646.3" sn="34.03" a="5348.35" fwhm="0.001578" res="373181.4" algo="FTMS"/>
+<pk mz="589.923911" i="1028291.6" sn="9.20" a="1029.49" fwhm="0.001260" res="468055.8" algo="FTMS"/>
+<pk mz="590.020181" i="1232631.9" sn="11.39" a="1808.29" fwhm="0.002120" res="278371.8" algo="FTMS"/>
+<pk mz="590.858663" i="1130946.0" sn="10.30" a="1892.53" fwhm="0.002050" res="288272.7" algo="FTMS"/>
+<pk mz="590.921544" i="862436.3" sn="7.43" a="1189.03" fwhm="0.001813" res="325976.0" algo="FTMS"/>
+<pk mz="591.230166" i="1574285.9" sn="15.04" a="2361.63" fwhm="0.001682" res="351466.7" algo="FTMS"/>
+<pk mz="592.737638" i="999632.6" sn="8.88" a="1176.11" fwhm="0.001487" res="398564.6" algo="FTMS"/>
+<pk mz="593.228202" i="1542114.5" sn="14.68" a="2556.85" fwhm="0.002299" res="258004.1" algo="FTMS"/>
+<pk mz="597.341190" i="1002764.4" sn="8.21" a="1379.24" fwhm="0.001784" res="334807.0" algo="FTMS"/>
+<pk mz="597.377713" i="990497.8" sn="8.09" a="1302.62" fwhm="0.001816" res="328923.2" algo="FTMS"/>
+<pk mz="597.413741" i="946998.6" sn="7.66" a="1110.05" fwhm="0.001414" res="422579.7" algo="FTMS"/>
+<pk mz="597.442047" i="1514311.1" sn="13.26" a="1917.25" fwhm="0.001460" res="409103.8" algo="FTMS"/>
+<pk mz="598.962990" i="976578.0" sn="7.94" a="1077.50" fwhm="0.001405" res="426182.3" algo="FTMS"/>
+<pk mz="599.356917" i="1089962.9" sn="9.06" a="1794.40" fwhm="0.002098" res="285682.4" algo="FTMS"/>
+<pk mz="600.924319" i="1277777.9" sn="10.91" a="1910.71" fwhm="0.002171" res="276852.7" algo="FTMS"/>
+<pk mz="601.336166" i="910921.9" sn="7.28" a="1116.70" fwhm="0.001579" res="380841.5" algo="FTMS"/>
+<pk mz="602.922873" i="1398798.4" sn="12.09" a="2142.54" fwhm="0.001681" res="358563.3" algo="FTMS"/>
+<pk mz="606.942433" i="2982364.3" sn="27.71" a="3939.04" fwhm="0.002100" res="289010.4" algo="FTMS"/>
+<pk mz="606.943805" i="3491293.0" sn="32.74" a="6171.10" fwhm="0.002742" res="221379.9" algo="FTMS"/>
+<pk mz="606.951843" i="24884706.0" sn="244.11" a="48803.69" fwhm="0.002497" res="243028.0" algo="FTMS"/>
+<pk mz="607.955324" i="3157092.3" sn="29.43" a="6926.69" fwhm="0.002358" res="257828.9" algo="FTMS"/>
+<pk mz="608.941602" i="3225825.3" sn="30.10" a="8505.86" fwhm="0.003435" res="177298.4" algo="FTMS"/>
+<pk mz="608.950024" i="24595174.0" sn="241.24" a="57329.80" fwhm="0.002608" res="233467.0" algo="FTMS"/>
+<pk mz="609.402505" i="1023501.1" sn="8.34" a="1210.26" fwhm="0.001488" res="409455.9" algo="FTMS"/>
+<pk mz="609.953329" i="3426677.3" sn="32.08" a="5849.91" fwhm="0.001850" res="329712.3" algo="FTMS"/>
+<pk mz="611.400568" i="1015087.9" sn="8.25" a="1506.23" fwhm="0.001797" res="340270.8" algo="FTMS"/>
+<pk mz="613.373416" i="935770.1" sn="7.45" a="1428.24" fwhm="0.002027" res="302540.3" algo="FTMS"/>
+<pk mz="615.352870" i="1024416.6" sn="7.65" a="1275.15" fwhm="0.001649" res="373211.0" algo="FTMS"/>
+<pk mz="616.275196" i="1208861.9" sn="9.32" a="1747.84" fwhm="0.001753" res="351494.9" algo="FTMS"/>
+<pk mz="619.351340" i="1306768.3" sn="10.19" a="1967.01" fwhm="0.001834" res="337642.4" algo="FTMS"/>
+<pk mz="620.932130" i="4582141.5" sn="39.98" a="7630.62" fwhm="0.002068" res="300247.6" algo="FTMS"/>
+<pk mz="620.933638" i="2531326.8" sn="21.32" a="5604.98" fwhm="0.003143" res="197578.9" algo="FTMS"/>
+<pk mz="622.930164" i="4154539.0" sn="36.07" a="8518.78" fwhm="0.002742" res="227216.6" algo="FTMS"/>
+<pk mz="628.989309" i="1137264.9" sn="8.59" a="1568.54" fwhm="0.001739" res="361609.0" algo="FTMS"/>
+<pk mz="629.369262" i="1084821.3" sn="8.11" a="1424.34" fwhm="0.001635" res="385044.6" algo="FTMS"/>
+<pk mz="634.969254" i="3869897.5" z="-1" sn="33.40" a="7096.83" fwhm="0.002400" res="264618.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="634.960713" isotopic_mass="634.961717"/>
+<pk mz="634.993457" i="3599581.0" sn="30.94" a="6805.53" fwhm="0.002156" res="294583.6" algo="FTMS"/>
+<pk mz="635.968956" i="1442542.3" z="-1" sn="11.31" a="3613.18" fwhm="0.003218" res="197604.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="634.960713" isotopic_mass="635.961364"/>
+<pk mz="636.966034" i="973078.4" sn="7.04" a="1305.80" fwhm="0.001660" res="383693.1" algo="FTMS"/>
+<pk mz="641.020809" i="8546342.0" z="-1" sn="69.91" a="15627.45" fwhm="0.001989" res="322323.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="641.012951" isotopic_mass="641.012936"/>
+<pk mz="641.022643" i="5732391.0" sn="46.33" a="7884.86" fwhm="0.001469" res="436230.5" algo="FTMS"/>
+<pk mz="641.369951" i="1136969.8" sn="7.83" a="1439.77" fwhm="0.001593" res="402585.2" algo="FTMS"/>
+<pk mz="642.024306" i="1639790.9" z="-1" sn="12.03" a="2818.58" fwhm="0.002033" res="315788.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="641.012951" isotopic_mass="642.016376"/>
+<pk mz="653.317963" i="1338334.4" sn="9.43" a="2522.44" fwhm="0.001976" res="330561.6" algo="FTMS"/>
+<pk mz="654.990380" i="1322952.3" sn="9.28" a="1654.66" fwhm="0.001828" res="358316.5" algo="FTMS"/>
+<pk mz="654.992197" i="1457097.8" sn="10.41" a="2071.36" fwhm="0.002115" res="309689.5" algo="FTMS"/>
+<pk mz="655.001156" i="10627026.0" z="-1" sn="87.25" a="20304.00" fwhm="0.002225" res="294332.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="654.992491" isotopic_mass="654.992486"/>
+<pk mz="655.002890" i="5039572.0" sn="40.43" a="12250.10" fwhm="0.004080" res="160531.0" algo="FTMS"/>
+<pk mz="655.386815" i="1203505.1" sn="8.28" a="2073.49" fwhm="0.002110" res="310657.6" algo="FTMS"/>
+<pk mz="656.004595" i="1717605.4" z="-1" sn="12.58" a="3201.74" fwhm="0.002169" res="302456.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="654.992491" isotopic_mass="655.995867"/>
+<pk mz="659.073979" i="6801013.0" z="-1" sn="55.16" a="13824.96" fwhm="0.002269" res="290441.4" algo="FTMS" component_name="" deconvoluted_molecular_mass="659.064486" isotopic_mass="659.065073"/>
+<pk mz="660.073425" i="1184793.0" z="-1" sn="8.09" a="1565.89" fwhm="0.001776" res="371650.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="659.064486" isotopic_mass="660.064460"/>
+<pk mz="661.071051" i="2970048.5" sn="23.04" a="5870.52" fwhm="0.002059" res="321064.1" algo="FTMS"/>
+<pk mz="671.285532" i="5682245.0" z="-1" sn="41.10" a="11629.89" fwhm="0.002438" res="275380.5" algo="FTMS" component_name="" deconvoluted_molecular_mass="671.275947" isotopic_mass="671.275901"/>
+<pk mz="671.287650" i="2869831.3" sn="19.90" a="4742.89" fwhm="0.002311" res="290534.8" algo="FTMS"/>
+<pk mz="672.289106" i="2148393.0" z="-1" sn="14.45" a="4276.22" fwhm="0.002156" res="311823.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="671.275947" isotopic_mass="672.279415"/>
+<pk mz="672.941674" i="1390259.3" sn="8.73" a="2021.04" fwhm="0.001807" res="372448.8" algo="FTMS"/>
+<pk mz="673.282689" i="1738759.6" sn="11.36" a="2386.51" fwhm="0.001945" res="346236.1" algo="FTMS"/>
+<pk mz="674.939943" i="1439366.8" sn="9.09" a="2364.08" fwhm="0.002014" res="335201.6" algo="FTMS"/>
+<pk mz="681.014187" i="1504961.5" sn="9.53" a="3312.53" fwhm="0.002575" res="264436.8" algo="FTMS"/>
+<pk mz="694.940561" i="2414702.8" sn="14.64" a="5334.64" fwhm="0.002409" res="288443.7" algo="FTMS"/>
+<pk mz="715.238657" i="7613400.5" z="-1" sn="45.27" a="18702.84" fwhm="0.003153" res="226837.7" algo="FTMS" component_name="" deconvoluted_molecular_mass="715.226207" isotopic_mass="715.226250"/>
+<pk mz="715.253118" i="1465320.4" sn="7.33" a="2679.42" fwhm="0.002314" res="309159.0" algo="FTMS"/>
+<pk mz="716.241912" i="2930743.0" z="-1" sn="16.37" a="7362.27" fwhm="0.003062" res="233877.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="715.226207" isotopic_mass="716.229439"/>
+<pk mz="717.236767" i="6558861.0" z="-1" sn="38.75" a="15733.75" fwhm="0.003127" res="229390.8" algo="FTMS" component_name="" deconvoluted_molecular_mass="717.224245" isotopic_mass="717.224228"/>
+<pk mz="718.240228" i="3340524.8" z="-1" sn="18.88" a="8562.92" fwhm="0.002713" res="264693.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="717.224245" isotopic_mass="718.227622"/>
+<pk mz="733.391701" i="1453264.9" sn="7.13" a="2890.05" fwhm="0.002600" res="282022.5" algo="FTMS"/>
+<pk mz="740.988586" i="1663860.5" sn="8.38" a="3340.92" fwhm="0.002413" res="307054.8" algo="FTMS"/>
+<pk mz="1063.031117" i="1512518.3" sn="7.72" a="5722.59" fwhm="0.005058" res="210148.9" algo="FTMS"/>
+<pk mz="1077.848723" i="1411407.6" sn="7.09" a="6677.42" fwhm="0.006350" res="169738.3" algo="FTMS"/>
+<pk mz="1179.009249" i="2972478.8" sn="17.42" a="21913.34" fwhm="0.008505" res="138625.5" algo="FTMS"/>
+<pk mz="1179.099390" i="3583807.5" z="-1" sn="21.41" a="23230.78" fwhm="0.007306" res="161380.0" algo="FTMS" component_name="" deconvoluted_molecular_mass="1179.038162" isotopic_mass="1179.041619"/>
+<pk mz="1180.007010" i="2120519.3" sn="11.86" a="13531.34" fwhm="0.007483" res="157692.2" algo="FTMS"/>
+<pk mz="1180.094076" i="1444168.0" sn="7.44" a="6173.89" fwhm="0.007683" res="153601.1" algo="FTMS"/>
+<pk mz="1180.099546" i="1930056.1" z="-1" sn="10.61" a="10695.43" fwhm="0.008434" res="139921.2" algo="FTMS" component_name="" deconvoluted_molecular_mass="1179.038162" isotopic_mass="1180.041646"/>
+<pk mz="1181.005426" i="1776978.1" sn="9.61" a="11671.00" fwhm="0.008013" res="147393.2" algo="FTMS"/>
+<pk mz="1181.096674" i="2039635.3" z="-1" sn="11.33" a="9338.59" fwhm="0.005646" res="209197.9" algo="FTMS" component_name="" deconvoluted_molecular_mass="1179.038162" isotopic_mass="1181.038644"/>
+<pk mz="1193.028032" i="1937200.0" sn="10.66" a="16963.88" fwhm="0.010987" res="108589.6" algo="FTMS"/>
+<pk mz="1194.031605" i="1598784.8" sn="8.45" a="12452.13" fwhm="0.010665" res="111955.8" algo="FTMS"/>
+</ms_peaks>
+<deconvolution_results><deconvolution_component component_name="A" deconvoluted_molecular_mass="376.987654" standard_deviation="0.0000" absolute_abundance="68829024.0" relative_abundance="100.00" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="376.987659" abs_charge_state="1" isotopic_mass="376.987659" peak_fit="376.987654"/>
+<deconvolution_peak m_over_z="377.990951" abs_charge_state="1" isotopic_mass="377.990951" peak_fit="377.991018"/>
+</deconvolution_component>
+<deconvolution_component component_name="B" deconvoluted_molecular_mass="481.170063" standard_deviation="0.0003" absolute_abundance="51051340.0" relative_abundance="74.17" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="481.170116" abs_charge_state="1" isotopic_mass="481.170116" peak_fit="481.170063"/>
+<deconvolution_peak m_over_z="482.173306" abs_charge_state="1" isotopic_mass="482.173306" peak_fit="482.173442"/>
+<deconvolution_peak m_over_z="483.176305" abs_charge_state="1" isotopic_mass="483.176305" peak_fit="483.176820"/>
+</deconvolution_component>
+<deconvolution_component component_name="C" deconvoluted_molecular_mass="426.986308" standard_deviation="0.0001" absolute_abundance="40190484.0" relative_abundance="58.39" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="426.986317" abs_charge_state="1" isotopic_mass="426.986317" peak_fit="426.986308"/>
+<deconvolution_peak m_over_z="427.989591" abs_charge_state="1" isotopic_mass="427.989591" peak_fit="427.989679"/>
+</deconvolution_component>
+<deconvolution_component component_name="D" deconvoluted_molecular_mass="475.167133" standard_deviation="0.0001" absolute_abundance="21762940.0" relative_abundance="31.62" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="475.167111" abs_charge_state="1" isotopic_mass="475.167111" peak_fit="475.167133"/>
+<deconvolution_peak m_over_z="476.170571" abs_charge_state="1" isotopic_mass="476.170571" peak_fit="476.170510"/>
+<deconvolution_peak m_over_z="477.174069" abs_charge_state="1" isotopic_mass="477.174069" peak_fit="477.173888"/>
+</deconvolution_component>
+<deconvolution_component component_name="E" deconvoluted_molecular_mass="377.175967" standard_deviation="0.0000" absolute_abundance="21626748.0" relative_abundance="31.42" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="377.175973" abs_charge_state="1" isotopic_mass="377.175973" peak_fit="377.175967"/>
+<deconvolution_peak m_over_z="378.179306" abs_charge_state="1" isotopic_mass="378.179306" peak_fit="378.179331"/>
+</deconvolution_component>
+<deconvolution_component component_name="F" deconvoluted_molecular_mass="421.126976" standard_deviation="0.0000" absolute_abundance="18259302.0" relative_abundance="26.53" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="421.126964" abs_charge_state="1" isotopic_mass="421.126964" peak_fit="421.126976"/>
+<deconvolution_peak m_over_z="422.130396" abs_charge_state="1" isotopic_mass="422.130396" peak_fit="422.130346"/>
+</deconvolution_component>
+<deconvolution_component component_name="G" deconvoluted_molecular_mass="423.124991" standard_deviation="0.0000" absolute_abundance="18013944.0" relative_abundance="26.17" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="423.124981" abs_charge_state="1" isotopic_mass="423.124981" peak_fit="423.124991"/>
+<deconvolution_peak m_over_z="424.128408" abs_charge_state="1" isotopic_mass="424.128408" peak_fit="424.128361"/>
+</deconvolution_component>
+<deconvolution_component component_name="H" deconvoluted_molecular_mass="483.167066" standard_deviation="0.0001" absolute_abundance="17276408.0" relative_abundance="25.10" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="483.167052" abs_charge_state="1" isotopic_mass="483.167052" peak_fit="483.167066"/>
+<deconvolution_peak m_over_z="484.170469" abs_charge_state="1" isotopic_mass="484.170469" peak_fit="484.170444"/>
+<deconvolution_peak m_over_z="485.174062" abs_charge_state="1" isotopic_mass="485.174062" peak_fit="485.173823"/>
+</deconvolution_component>
+<deconvolution_component component_name="I" deconvoluted_molecular_mass="459.171480" standard_deviation="0.0000" absolute_abundance="15470734.0" relative_abundance="22.48" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="459.171480" abs_charge_state="1" isotopic_mass="459.171480" peak_fit="459.171480"/>
+<deconvolution_peak m_over_z="460.174854" abs_charge_state="1" isotopic_mass="460.174854" peak_fit="460.174855"/>
+</deconvolution_component>
+<deconvolution_component component_name="J" deconvoluted_molecular_mass="376.986482" standard_deviation="0.0000" absolute_abundance="14178143.0" relative_abundance="20.60" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="376.986484" abs_charge_state="1" isotopic_mass="376.986484" peak_fit="376.986482"/>
+<deconvolution_peak m_over_z="377.989826" abs_charge_state="1" isotopic_mass="377.989826" peak_fit="377.989846"/>
+</deconvolution_component>
+<deconvolution_component component_name="K" deconvoluted_molecular_mass="476.985110" standard_deviation="0.0001" absolute_abundance="13948367.0" relative_abundance="20.27" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="476.985100" abs_charge_state="1" isotopic_mass="476.985100" peak_fit="476.985110"/>
+<deconvolution_peak m_over_z="477.988579" abs_charge_state="1" isotopic_mass="477.988579" peak_fit="477.988488"/>
+</deconvolution_component>
+<deconvolution_component component_name="L" deconvoluted_molecular_mass="480.979074" standard_deviation="0.0001" absolute_abundance="13466378.0" relative_abundance="19.56" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="480.979064" abs_charge_state="1" isotopic_mass="480.979064" peak_fit="480.979074"/>
+<deconvolution_peak m_over_z="481.982535" abs_charge_state="1" isotopic_mass="481.982535" peak_fit="481.982452"/>
+</deconvolution_component>
+<deconvolution_component component_name="M" deconvoluted_molecular_mass="497.165645" standard_deviation="0.0001" absolute_abundance="13189550.0" relative_abundance="19.16" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="497.165628" abs_charge_state="1" isotopic_mass="497.165628" peak_fit="497.165645"/>
+<deconvolution_peak m_over_z="498.169099" abs_charge_state="1" isotopic_mass="498.169099" peak_fit="498.169025"/>
+</deconvolution_component>
+<deconvolution_component component_name="N" deconvoluted_molecular_mass="473.288702" standard_deviation="0.0000" absolute_abundance="13082909.0" relative_abundance="19.01" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="473.288695" abs_charge_state="1" isotopic_mass="473.288695" peak_fit="473.288702"/>
+<deconvolution_peak m_over_z="474.292095" abs_charge_state="1" isotopic_mass="474.292095" peak_fit="474.292079"/>
+<deconvolution_peak m_over_z="475.295466" abs_charge_state="1" isotopic_mass="475.295466" peak_fit="475.295456"/>
+</deconvolution_component>
+<deconvolution_component component_name="O" deconvoluted_molecular_mass="326.989298" standard_deviation="0.0000" absolute_abundance="12974182.0" relative_abundance="18.85" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="326.989296" abs_charge_state="1" isotopic_mass="326.989296" peak_fit="326.989298"/>
+<deconvolution_peak m_over_z="327.992677" abs_charge_state="1" isotopic_mass="327.992677" peak_fit="327.992656"/>
+</deconvolution_component>
+<deconvolution_component component_name="P" deconvoluted_molecular_mass="472.224880" standard_deviation="0.0000" absolute_abundance="11456457.0" relative_abundance="16.64" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="472.224875" abs_charge_state="1" isotopic_mass="472.224875" peak_fit="472.224880"/>
+<deconvolution_peak m_over_z="473.228279" abs_charge_state="1" isotopic_mass="473.228279" peak_fit="473.228257"/>
+</deconvolution_component>
+<deconvolution_component component_name="Q" deconvoluted_molecular_mass="527.119743" standard_deviation="0.0000" absolute_abundance="11362287.0" relative_abundance="16.51" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="527.119745" abs_charge_state="1" isotopic_mass="527.119745" peak_fit="527.119743"/>
+<deconvolution_peak m_over_z="528.123119" abs_charge_state="1" isotopic_mass="528.123119" peak_fit="528.123128"/>
+</deconvolution_component>
+<deconvolution_component component_name="R" deconvoluted_molecular_mass="465.174261" standard_deviation="0.0003" absolute_abundance="11110227.0" relative_abundance="16.14" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="465.174274" abs_charge_state="1" isotopic_mass="465.174274" peak_fit="465.174261"/>
+<deconvolution_peak m_over_z="466.177691" abs_charge_state="1" isotopic_mass="466.177691" peak_fit="466.177637"/>
+<deconvolution_peak m_over_z="467.180516" abs_charge_state="1" isotopic_mass="467.180516" peak_fit="467.181014"/>
+</deconvolution_component>
+<deconvolution_component component_name="S" deconvoluted_molecular_mass="525.121035" standard_deviation="0.0018" absolute_abundance="10882237.0" relative_abundance="15.81" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="525.121659" abs_charge_state="1" isotopic_mass="525.121659" peak_fit="525.121035"/>
+<deconvolution_peak m_over_z="526.125089" abs_charge_state="1" isotopic_mass="526.125089" peak_fit="526.124420"/>
+<deconvolution_peak m_over_z="527.124864" abs_charge_state="1" isotopic_mass="527.124864" peak_fit="527.127804"/>
+</deconvolution_component>
+<deconvolution_component component_name="T" deconvoluted_molecular_mass="655.001161" standard_deviation="0.0000" absolute_abundance="10627026.0" relative_abundance="15.44" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="655.001156" abs_charge_state="1" isotopic_mass="655.001156" peak_fit="655.001161"/>
+<deconvolution_peak m_over_z="656.004595" abs_charge_state="1" isotopic_mass="656.004595" peak_fit="656.004563"/>
+</deconvolution_component>
+<deconvolution_component component_name="U" deconvoluted_molecular_mass="460.971958" standard_deviation="0.0001" absolute_abundance="10281611.0" relative_abundance="14.94" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="460.971964" abs_charge_state="1" isotopic_mass="460.971964" peak_fit="460.971958"/>
+<deconvolution_peak m_over_z="461.975354" abs_charge_state="1" isotopic_mass="461.975354" peak_fit="461.975334"/>
+<deconvolution_peak m_over_z="462.978569" abs_charge_state="1" isotopic_mass="462.978569" peak_fit="462.978710"/>
+</deconvolution_component>
+<deconvolution_component component_name="V" deconvoluted_molecular_mass="356.980707" standard_deviation="0.0000" absolute_abundance="10103933.0" relative_abundance="14.68" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="356.980708" abs_charge_state="1" isotopic_mass="356.980708" peak_fit="356.980707"/>
+<deconvolution_peak m_over_z="357.984052" abs_charge_state="1" isotopic_mass="357.984052" peak_fit="357.984068"/>
+</deconvolution_component>
+<deconvolution_component component_name="W" deconvoluted_molecular_mass="412.986395" standard_deviation="0.0001" absolute_abundance="9455418.0" relative_abundance="13.74" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="412.986382" abs_charge_state="1" isotopic_mass="412.986382" peak_fit="412.986395"/>
+<deconvolution_peak m_over_z="413.989883" abs_charge_state="1" isotopic_mass="413.989883" peak_fit="413.989764"/>
+</deconvolution_component>
+<deconvolution_component component_name="X" deconvoluted_molecular_mass="541.194180" standard_deviation="0.0001" absolute_abundance="9414315.0" relative_abundance="13.68" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="541.194146" abs_charge_state="1" isotopic_mass="541.194146" peak_fit="541.194180"/>
+<deconvolution_peak m_over_z="542.197711" abs_charge_state="1" isotopic_mass="542.197711" peak_fit="542.197566"/>
+</deconvolution_component>
+<deconvolution_component component_name="Y" deconvoluted_molecular_mass="416.980273" standard_deviation="0.0000" absolute_abundance="9341493.0" relative_abundance="13.57" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="416.980268" abs_charge_state="1" isotopic_mass="416.980268" peak_fit="416.980273"/>
+<deconvolution_peak m_over_z="417.983682" abs_charge_state="1" isotopic_mass="417.983682" peak_fit="417.983643"/>
+</deconvolution_component>
+<deconvolution_component component_name="Z" deconvoluted_molecular_mass="459.173507" standard_deviation="0.0051" absolute_abundance="8814734.0" relative_abundance="12.81" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="459.172277" abs_charge_state="1" isotopic_mass="459.172277" peak_fit="459.173507"/>
+<deconvolution_peak m_over_z="460.174854" abs_charge_state="1" isotopic_mass="460.174854" peak_fit="460.176883"/>
+<deconvolution_peak m_over_z="461.187225" abs_charge_state="1" isotopic_mass="461.187225" peak_fit="461.180258"/>
+<deconvolution_peak m_over_z="462.190647" abs_charge_state="1" isotopic_mass="462.190647" peak_fit="462.183634"/>
+</deconvolution_component>
+<deconvolution_component component_name="a" deconvoluted_molecular_mass="641.020824" standard_deviation="0.0001" absolute_abundance="8546342.0" relative_abundance="12.42" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="641.020809" abs_charge_state="1" isotopic_mass="641.020809" peak_fit="641.020824"/>
+<deconvolution_peak m_over_z="642.024306" abs_charge_state="1" isotopic_mass="642.024306" peak_fit="642.024225"/>
+</deconvolution_component>
+<deconvolution_component component_name="b" deconvoluted_molecular_mass="323.163567" standard_deviation="0.0023" absolute_abundance="8535879.0" relative_abundance="12.40" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="323.163797" abs_charge_state="1" isotopic_mass="323.163797" peak_fit="323.163567"/>
+<deconvolution_peak m_over_z="324.167164" abs_charge_state="1" isotopic_mass="324.167164" peak_fit="324.166924"/>
+<deconvolution_peak m_over_z="325.166372" abs_charge_state="1" isotopic_mass="325.166372" peak_fit="325.170281"/>
+</deconvolution_component>
+<deconvolution_component component_name="c" deconvoluted_molecular_mass="565.450342" standard_deviation="0.0000" absolute_abundance="8398716.0" relative_abundance="12.20" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="565.450362" abs_charge_state="1" isotopic_mass="565.450362" peak_fit="565.450342"/>
+<deconvolution_peak m_over_z="566.453678" abs_charge_state="1" isotopic_mass="566.453678" peak_fit="566.453732"/>
+</deconvolution_component>
+<deconvolution_component component_name="d" deconvoluted_molecular_mass="493.264418" standard_deviation="0.0000" absolute_abundance="8379400.0" relative_abundance="12.17" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="493.264407" abs_charge_state="1" isotopic_mass="493.264407" peak_fit="493.264418"/>
+<deconvolution_peak m_over_z="494.267834" abs_charge_state="1" isotopic_mass="494.267834" peak_fit="494.267798"/>
+</deconvolution_component>
+<deconvolution_component component_name="e" deconvoluted_molecular_mass="468.984211" standard_deviation="0.0001" absolute_abundance="8078291.5" relative_abundance="11.74" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="468.984195" abs_charge_state="1" isotopic_mass="468.984195" peak_fit="468.984211"/>
+<deconvolution_peak m_over_z="469.987746" abs_charge_state="1" isotopic_mass="469.987746" peak_fit="469.987588"/>
+</deconvolution_component>
+<deconvolution_component component_name="f" deconvoluted_molecular_mass="715.238614" standard_deviation="0.0001" absolute_abundance="7613400.5" relative_abundance="11.06" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="715.238657" abs_charge_state="1" isotopic_mass="715.238657" peak_fit="715.238614"/>
+<deconvolution_peak m_over_z="716.241912" abs_charge_state="1" isotopic_mass="716.241912" peak_fit="716.242024"/>
+</deconvolution_component>
+<deconvolution_component component_name="g" deconvoluted_molecular_mass="439.251007" standard_deviation="0.0022" absolute_abundance="7521449.0" relative_abundance="10.93" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="439.251401" abs_charge_state="1" isotopic_mass="439.251401" peak_fit="439.251007"/>
+<deconvolution_peak m_over_z="440.254792" abs_charge_state="1" isotopic_mass="440.254792" peak_fit="440.254380"/>
+<deconvolution_peak m_over_z="441.254024" abs_charge_state="1" isotopic_mass="441.254024" peak_fit="441.257753"/>
+</deconvolution_component>
+<deconvolution_component component_name="h" deconvoluted_molecular_mass="379.173076" standard_deviation="0.0000" absolute_abundance="7518381.0" relative_abundance="10.92" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="379.173069" abs_charge_state="1" isotopic_mass="379.173069" peak_fit="379.173076"/>
+<deconvolution_peak m_over_z="380.176470" abs_charge_state="1" isotopic_mass="380.176470" peak_fit="380.176441"/>
+</deconvolution_component>
+<deconvolution_component component_name="i" deconvoluted_molecular_mass="483.168132" standard_deviation="0.0005" absolute_abundance="7450104.0" relative_abundance="10.82" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="483.168173" abs_charge_state="1" isotopic_mass="483.168173" peak_fit="483.168132"/>
+<deconvolution_peak m_over_z="484.171637" abs_charge_state="1" isotopic_mass="484.171637" peak_fit="484.171511"/>
+<deconvolution_peak m_over_z="485.174062" abs_charge_state="1" isotopic_mass="485.174062" peak_fit="485.174889"/>
+</deconvolution_component>
+<deconvolution_component component_name="j" deconvoluted_molecular_mass="421.128448" standard_deviation="0.0002" absolute_abundance="7093606.0" relative_abundance="10.31" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="421.128492" abs_charge_state="1" isotopic_mass="421.128492" peak_fit="421.128448"/>
+<deconvolution_peak m_over_z="422.131587" abs_charge_state="1" isotopic_mass="422.131587" peak_fit="422.131818"/>
+</deconvolution_component>
+<deconvolution_component component_name="k" deconvoluted_molecular_mass="528.953086" standard_deviation="0.0021" absolute_abundance="6875873.0" relative_abundance="9.99" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="528.953984" abs_charge_state="1" isotopic_mass="528.953984" peak_fit="528.953086"/>
+<deconvolution_peak m_over_z="529.953600" abs_charge_state="1" isotopic_mass="529.953600" peak_fit="529.956471"/>
+</deconvolution_component>
+<deconvolution_component component_name="l" deconvoluted_molecular_mass="659.073392" standard_deviation="0.0024" absolute_abundance="6801013.0" relative_abundance="9.88" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="659.073979" abs_charge_state="1" isotopic_mass="659.073979" peak_fit="659.073392"/>
+<deconvolution_peak m_over_z="660.073425" abs_charge_state="1" isotopic_mass="660.073425" peak_fit="660.076795"/>
+</deconvolution_component>
+<deconvolution_component component_name="m" deconvoluted_molecular_mass="717.236784" standard_deviation="0.0000" absolute_abundance="6558861.0" relative_abundance="9.53" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="717.236767" abs_charge_state="1" isotopic_mass="717.236767" peak_fit="717.236784"/>
+<deconvolution_peak m_over_z="718.240228" abs_charge_state="1" isotopic_mass="718.240228" peak_fit="718.240195"/>
+</deconvolution_component>
+<deconvolution_component component_name="n" deconvoluted_molecular_mass="537.215760" standard_deviation="0.0015" absolute_abundance="6555703.5" relative_abundance="9.52" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="537.216184" abs_charge_state="1" isotopic_mass="537.216184" peak_fit="537.215760"/>
+<deconvolution_peak m_over_z="538.219591" abs_charge_state="1" isotopic_mass="538.219591" peak_fit="538.219146"/>
+<deconvolution_peak m_over_z="539.219934" abs_charge_state="1" isotopic_mass="539.219934" peak_fit="539.222532"/>
+</deconvolution_component>
+<deconvolution_component component_name="o" deconvoluted_molecular_mass="529.471613" standard_deviation="0.0000" absolute_abundance="6421430.0" relative_abundance="9.33" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="529.471604" abs_charge_state="1" isotopic_mass="529.471604" peak_fit="529.471613"/>
+<deconvolution_peak m_over_z="530.475024" abs_charge_state="1" isotopic_mass="530.475024" peak_fit="530.474998"/>
+</deconvolution_component>
+<deconvolution_component component_name="p" deconvoluted_molecular_mass="369.112543" standard_deviation="0.0000" absolute_abundance="6122203.0" relative_abundance="8.89" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="369.112551" abs_charge_state="1" isotopic_mass="369.112551" peak_fit="369.112543"/>
+<deconvolution_peak m_over_z="370.115855" abs_charge_state="1" isotopic_mass="370.115855" peak_fit="370.115906"/>
+</deconvolution_component>
+<deconvolution_component component_name="q" deconvoluted_molecular_mass="485.200861" standard_deviation="0.0000" absolute_abundance="5972155.0" relative_abundance="8.68" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="485.200863" abs_charge_state="1" isotopic_mass="485.200863" peak_fit="485.200861"/>
+<deconvolution_peak m_over_z="486.204227" abs_charge_state="1" isotopic_mass="486.204227" peak_fit="486.204240"/>
+</deconvolution_component>
+<deconvolution_component component_name="r" deconvoluted_molecular_mass="574.997688" standard_deviation="0.0021" absolute_abundance="5865710.0" relative_abundance="8.52" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="574.998544" abs_charge_state="1" isotopic_mass="574.998544" peak_fit="574.997688"/>
+<deconvolution_peak m_over_z="575.998194" abs_charge_state="1" isotopic_mass="575.998194" peak_fit="576.001079"/>
+</deconvolution_component>
+<deconvolution_component component_name="s" deconvoluted_molecular_mass="671.285578" standard_deviation="0.0001" absolute_abundance="5682245.0" relative_abundance="8.26" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="671.285532" abs_charge_state="1" isotopic_mass="671.285532" peak_fit="671.285578"/>
+<deconvolution_peak m_over_z="672.289106" abs_charge_state="1" isotopic_mass="672.289106" peak_fit="672.288983"/>
+</deconvolution_component>
+<deconvolution_component component_name="t" deconvoluted_molecular_mass="483.202719" standard_deviation="0.0004" absolute_abundance="5654020.0" relative_abundance="8.21" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="483.202820" abs_charge_state="1" isotopic_mass="483.202820" peak_fit="483.202719"/>
+<deconvolution_peak m_over_z="484.206104" abs_charge_state="1" isotopic_mass="484.206104" peak_fit="484.206097"/>
+<deconvolution_peak m_over_z="485.208736" abs_charge_state="1" isotopic_mass="485.208736" peak_fit="485.209476"/>
+</deconvolution_component>
+<deconvolution_component component_name="u" deconvoluted_molecular_mass="553.021672" standard_deviation="0.0000" absolute_abundance="5612064.0" relative_abundance="8.15" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="553.021673" abs_charge_state="1" isotopic_mass="553.021673" peak_fit="553.021672"/>
+<deconvolution_peak m_over_z="554.025055" abs_charge_state="1" isotopic_mass="554.025055" peak_fit="554.025061"/>
+</deconvolution_component>
+<deconvolution_component component_name="v" deconvoluted_molecular_mass="445.191629" standard_deviation="0.0000" absolute_abundance="5554742.5" relative_abundance="8.07" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="445.191620" abs_charge_state="1" isotopic_mass="445.191620" peak_fit="445.191629"/>
+<deconvolution_peak m_over_z="446.195031" abs_charge_state="1" isotopic_mass="446.195031" peak_fit="446.195002"/>
+</deconvolution_component>
+<deconvolution_component component_name="w" deconvoluted_molecular_mass="539.214345" standard_deviation="0.0000" absolute_abundance="5546868.5" relative_abundance="8.06" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="539.214339" abs_charge_state="1" isotopic_mass="539.214339" peak_fit="539.214345"/>
+<deconvolution_peak m_over_z="540.217755" abs_charge_state="1" isotopic_mass="540.217755" peak_fit="540.217731"/>
+</deconvolution_component>
+<deconvolution_component component_name="x" deconvoluted_molecular_mass="362.987869" standard_deviation="0.0000" absolute_abundance="5520268.0" relative_abundance="8.02" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="362.987865" abs_charge_state="1" isotopic_mass="362.987865" peak_fit="362.987869"/>
+<deconvolution_peak m_over_z="363.991259" abs_charge_state="1" isotopic_mass="363.991259" peak_fit="363.991231"/>
+</deconvolution_component>
+<deconvolution_component component_name="y" deconvoluted_molecular_mass="367.114540" standard_deviation="0.0001" absolute_abundance="5506497.5" relative_abundance="8.00" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="367.114529" abs_charge_state="1" isotopic_mass="367.114529" peak_fit="367.114540"/>
+<deconvolution_peak m_over_z="368.117978" abs_charge_state="1" isotopic_mass="368.117978" peak_fit="368.117903"/>
+</deconvolution_component>
+<deconvolution_component component_name="z" deconvoluted_molecular_mass="356.981337" standard_deviation="0.0000" absolute_abundance="5293181.5" relative_abundance="7.69" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="356.981344" abs_charge_state="1" isotopic_mass="356.981344" peak_fit="356.981337"/>
+<deconvolution_peak m_over_z="357.984636" abs_charge_state="1" isotopic_mass="357.984636" peak_fit="357.984699"/>
+</deconvolution_component>
+<deconvolution_component component_name="AA" deconvoluted_molecular_mass="255.232286" standard_deviation="0.0000" absolute_abundance="4942832.0" relative_abundance="7.18" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="255.232295" abs_charge_state="1" isotopic_mass="255.232295" peak_fit="255.232286"/>
+<deconvolution_peak m_over_z="256.235589" abs_charge_state="1" isotopic_mass="256.235589" peak_fit="256.235634"/>
+</deconvolution_component>
+<deconvolution_component component_name="AB" deconvoluted_molecular_mass="435.219958" standard_deviation="0.0000" absolute_abundance="4911375.0" relative_abundance="7.14" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="435.219972" abs_charge_state="1" isotopic_mass="435.219972" peak_fit="435.219958"/>
+<deconvolution_peak m_over_z="436.223275" abs_charge_state="1" isotopic_mass="436.223275" peak_fit="436.223331"/>
+</deconvolution_component>
+<deconvolution_component component_name="AC" deconvoluted_molecular_mass="423.330806" standard_deviation="0.0000" absolute_abundance="4783906.0" relative_abundance="6.95" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="423.330791" abs_charge_state="1" isotopic_mass="423.330791" peak_fit="423.330806"/>
+<deconvolution_peak m_over_z="424.334219" abs_charge_state="1" isotopic_mass="424.334219" peak_fit="424.334176"/>
+</deconvolution_component>
+<deconvolution_component component_name="AD" deconvoluted_molecular_mass="436.987323" standard_deviation="0.0000" absolute_abundance="4590239.5" relative_abundance="6.67" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="436.987323" abs_charge_state="1" isotopic_mass="436.987323" peak_fit="436.987323"/>
+<deconvolution_peak m_over_z="437.990694" abs_charge_state="1" isotopic_mass="437.990694" peak_fit="437.990695"/>
+</deconvolution_component>
+<deconvolution_component component_name="AE" deconvoluted_molecular_mass="253.143836" standard_deviation="0.0000" absolute_abundance="4298008.5" relative_abundance="6.24" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="253.143833" abs_charge_state="1" isotopic_mass="253.143833" peak_fit="253.143836"/>
+<deconvolution_peak m_over_z="254.147198" abs_charge_state="1" isotopic_mass="254.147198" peak_fit="254.147183"/>
+</deconvolution_component>
+<deconvolution_component component_name="AF" deconvoluted_molecular_mass="495.149906" standard_deviation="0.0000" absolute_abundance="4179647.5" relative_abundance="6.07" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="495.149908" abs_charge_state="1" isotopic_mass="495.149908" peak_fit="495.149906"/>
+<deconvolution_peak m_over_z="496.153283" abs_charge_state="1" isotopic_mass="496.153283" peak_fit="496.153287"/>
+</deconvolution_component>
+<deconvolution_component component_name="AG" deconvoluted_molecular_mass="479.171357" standard_deviation="0.0000" absolute_abundance="4065447.0" relative_abundance="5.91" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="479.171360" abs_charge_state="1" isotopic_mass="479.171360" peak_fit="479.171357"/>
+<deconvolution_peak m_over_z="480.174721" abs_charge_state="1" isotopic_mass="480.174721" peak_fit="480.174735"/>
+</deconvolution_component>
+<deconvolution_component component_name="AH" deconvoluted_molecular_mass="409.014234" standard_deviation="0.0022" absolute_abundance="4041816.0" relative_abundance="5.87" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="409.014937" abs_charge_state="1" isotopic_mass="409.014937" peak_fit="409.014234"/>
+<deconvolution_peak m_over_z="410.014566" abs_charge_state="1" isotopic_mass="410.014566" peak_fit="410.017602"/>
+</deconvolution_component>
+<deconvolution_component component_name="AI" deconvoluted_molecular_mass="422.980862" standard_deviation="0.0000" absolute_abundance="3942107.0" relative_abundance="5.73" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="422.980852" abs_charge_state="1" isotopic_mass="422.980852" peak_fit="422.980862"/>
+<deconvolution_peak m_over_z="423.984278" abs_charge_state="1" isotopic_mass="423.984278" peak_fit="423.984232"/>
+</deconvolution_component>
+<deconvolution_component component_name="AJ" deconvoluted_molecular_mass="499.162801" standard_deviation="0.0000" absolute_abundance="3930269.5" relative_abundance="5.71" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="499.162814" abs_charge_state="1" isotopic_mass="499.162814" peak_fit="499.162801"/>
+<deconvolution_peak m_over_z="500.166138" abs_charge_state="1" isotopic_mass="500.166138" peak_fit="500.166181"/>
+</deconvolution_component>
+<deconvolution_component component_name="AK" deconvoluted_molecular_mass="520.154482" standard_deviation="0.0000" absolute_abundance="3903702.0" relative_abundance="5.67" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="520.154492" abs_charge_state="1" isotopic_mass="520.154492" peak_fit="520.154482"/>
+<deconvolution_peak m_over_z="521.157830" abs_charge_state="1" isotopic_mass="521.157830" peak_fit="521.157866"/>
+</deconvolution_component>
+<deconvolution_component component_name="AL" deconvoluted_molecular_mass="634.968250" standard_deviation="0.0020" absolute_abundance="3869897.5" relative_abundance="5.62" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="634.969254" abs_charge_state="1" isotopic_mass="634.969254" peak_fit="634.968250"/>
+<deconvolution_peak m_over_z="635.968956" abs_charge_state="1" isotopic_mass="635.968956" peak_fit="635.971649"/>
+</deconvolution_component>
+<deconvolution_component component_name="AM" deconvoluted_molecular_mass="467.171450" standard_deviation="0.0001" absolute_abundance="3729833.8" relative_abundance="5.42" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="467.171414" abs_charge_state="1" isotopic_mass="467.171414" peak_fit="467.171450"/>
+<deconvolution_peak m_over_z="468.174972" abs_charge_state="1" isotopic_mass="468.174972" peak_fit="468.174826"/>
+</deconvolution_component>
+<deconvolution_component component_name="AN" deconvoluted_molecular_mass="325.185061" standard_deviation="0.0000" absolute_abundance="3680731.8" relative_abundance="5.35" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="325.185060" abs_charge_state="1" isotopic_mass="325.185060" peak_fit="325.185061"/>
+<deconvolution_peak m_over_z="326.188423" abs_charge_state="1" isotopic_mass="326.188423" peak_fit="326.188418"/>
+</deconvolution_component>
+<deconvolution_component component_name="AO" deconvoluted_molecular_mass="443.175913" standard_deviation="0.0000" absolute_abundance="3617867.5" relative_abundance="5.26" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="443.175898" abs_charge_state="1" isotopic_mass="443.175898" peak_fit="443.175913"/>
+<deconvolution_peak m_over_z="444.179352" abs_charge_state="1" isotopic_mass="444.179352" peak_fit="444.179286"/>
+</deconvolution_component>
+<deconvolution_component component_name="AP" deconvoluted_molecular_mass="1179.095933" standard_deviation="0.0041" absolute_abundance="3583807.5" relative_abundance="5.21" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="1179.099390" abs_charge_state="1" isotopic_mass="1179.099390" peak_fit="1179.095933"/>
+<deconvolution_peak m_over_z="1180.099546" abs_charge_state="1" isotopic_mass="1180.099546" peak_fit="1180.099406"/>
+<deconvolution_peak m_over_z="1181.096674" abs_charge_state="1" isotopic_mass="1181.096674" peak_fit="1181.102881"/>
+</deconvolution_component>
+<deconvolution_component component_name="AQ" deconvoluted_molecular_mass="349.107375" standard_deviation="0.0000" absolute_abundance="3574984.3" relative_abundance="5.19" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="349.107373" abs_charge_state="1" isotopic_mass="349.107373" peak_fit="349.107375"/>
+<deconvolution_peak m_over_z="350.110747" abs_charge_state="1" isotopic_mass="350.110747" peak_fit="350.110736"/>
+</deconvolution_component>
+<deconvolution_component component_name="AR" deconvoluted_molecular_mass="515.027650" standard_deviation="0.0022" absolute_abundance="3548357.5" relative_abundance="5.16" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="515.028291" abs_charge_state="1" isotopic_mass="515.028291" peak_fit="515.027650"/>
+<deconvolution_peak m_over_z="516.027938" abs_charge_state="1" isotopic_mass="516.027938" peak_fit="516.031033"/>
+</deconvolution_component>
+<deconvolution_component component_name="AS" deconvoluted_molecular_mass="472.226731" standard_deviation="0.0005" absolute_abundance="3394506.3" relative_abundance="4.93" deconvoluted_ion="[M - H]-"><deconvolution_peak m_over_z="472.226941" abs_charge_state="1" isotopic_mass="472.226941" peak_fit="472.226731"/>
+<deconvolution_peak m_over_z="473.229493" abs_charge_state="1" isotopic_mass="473.229493" peak_fit="473.230108"/>
+</deconvolution_component>
+</deconvolution_results>
+<annotation_list/>
+<GMF_results>
+</GMF_results>
+</ms_spectrum></DataAnalysis>
+</analysis>
+<checksums/>
+</root>
