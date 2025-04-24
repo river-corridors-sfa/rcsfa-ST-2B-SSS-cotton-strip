@@ -32,13 +32,16 @@ response_variable <- 'scale_cube_Mean_Decay_Rate_per_day'
 # =================================== find files ===============================
  # degree_decay_rate = Kdd; Decay_Rate_per_day = Kcc
 decay_temp <- read_csv('./Outputs/Decay_Data.csv') %>%
-  select(Parent_ID, sum_mean_daily_temp, degree_decay_rate, Decay_Rate_per_day )%>%
+  select(Parent_ID, sum_mean_daily_temp, degree_decay_rate, Decay_Rate_per_day )
+
+decay_temp_means <- decay_temp%>%
   group_by(Parent_ID) %>%
   summarise(Mean_sum_mean_daily_temp = mean(sum_mean_daily_temp),
             Mean_degree_decay_rate = mean(degree_decay_rate),
             Mean_Decay_Rate_per_day = mean(Decay_Rate_per_day),
   ) %>%
   ungroup()
+
 
 
 er_gpp <- read_csv('../SSS_metabolism/v2_SSS_Water_Sediment_Total_Respiration_GPP.csv',
@@ -169,7 +172,7 @@ cube_root <- function(x) sign(x) * (abs(x))^(1/3)
 
 # =============================== combine data ===============================
 
-all_data <- decay_temp %>%
+all_data <- decay_temp_means %>%
   full_join(er_gpp, by = 'Parent_ID')%>%
   full_join(d50_o2, by = 'Parent_ID')%>%
   full_join(slope_vel_dis, by = 'Site_ID')%>%
@@ -484,11 +487,11 @@ dev.off()
 # Performing multiple regressions
 day_mult_mod <- lm(cube_Mean_Decay_Rate_per_day ~ cube_Water_Column_Respiration + cube_Sediment_Respiration, data = cube_data)
 day_mult_inter_mod <- lm(cube_Mean_Decay_Rate_per_day ~ cube_Water_Column_Respiration * cube_Sediment_Respiration, data = cube_data)
-degree_mult_mod <- lm(cube_Mean_Decay_Rate_per_day ~ cube_Water_Column_Respiration + cube_Sediment_Respiration, data = cube_data)
-degree_mult_inter_mod <- lm(cube_Mean_Decay_Rate_per_day ~ cube_Water_Column_Respiration * cube_Sediment_Respiration, data = cube_data)
+degree_mult_mod <- lm(cube_Mean_degree_decay_rate ~ cube_Water_Column_Respiration + cube_Sediment_Respiration, data = cube_data)
+degree_mult_inter_mod <- lm(cube_Mean_degree_decay_rate ~ cube_Water_Column_Respiration * cube_Sediment_Respiration, data = cube_data)
 
 day_ERtot_mod <- lm(cube_Mean_Decay_Rate_per_day ~ cube_Total_Ecosystem_Respiration, data = cube_data)
-degree_ERtot_mod <- lm(cube_Mean_Decay_Rate_per_day ~ cube_Total_Ecosystem_Respiration, data = cube_data)
+degree_ERtot_mod <- lm(cube_Mean_degree_decay_rate ~ cube_Total_Ecosystem_Respiration, data = cube_data)
 
 # AIC values for model comparison
 AIC(day_ERtot_mod)
@@ -522,3 +525,60 @@ mtext("B", cex = 2, side = 1, adj = 0.05, line = -1.5)
 
 dev.off()
 
+## ==========  Decay Rate Hists Scatters ==========
+
+# function to generate scatter plot with adjacent histograms
+# original version modified and pulled from https://www.r-bloggers.com/2011/06/example-8-41-scatterplot-with-marginal-histograms/
+# some hard coding in this function to tweak the plot aesthetics
+
+scatterhist = function(x, y, xlab.use="", ylab.use=""){
+  zones=matrix(c(2,0,1,3), ncol=2, byrow=TRUE)
+  layout(zones, widths=c(4/5,1/5), heights=c(1/5,4/5))
+  xhist = hist(x, plot=FALSE,breaks=20)
+  yhist = hist(y, plot=FALSE,breaks=20)
+  top = max(c(xhist$counts, yhist$counts))
+  par(mar=c(6,6,1,1))
+  plot(x,y,cex.axis=1.5,cex=1.5,xlab="",ylab="",cex.lab=2.5)
+  points(lowess(y~x),typ="l",col=4,lwd=2)
+  par(mar=c(0,5,1,1))
+  barplot(xhist$counts, axes=FALSE, ylim=c(0, top), space=0)
+  par(mar=c(5,0,1,1))
+  barplot(yhist$counts, axes=FALSE, xlim=c(0, top), space=0, horiz=TRUE)
+  par(oma=c(3,3,0,0))
+  mtext(xlab.use, side=1, line=1, outer=TRUE, adj=0, cex = 2,
+        at=1.75 * (mean(x) - min(x))/(max(x)-min(x)))
+  mtext(ylab.use, side=2, line=0.5, outer=TRUE, adj=0,cex = 2, 
+        at=(1.5 * (mean(y) - min(y))/(max(y) - min(y))))
+}
+
+# generate the plot
+
+pdf("Outputs/Decay_Scatter_Hists.pdf")
+scatterhist(x = decay_temp$degree_decay_rate,y = decay_temp$Decay_Rate_per_day, xlab.use = expression(K[dd]), ylab.use = expression(K[cd]))
+dev.off()
+
+# regress decay per day against summed temperature
+
+scatter.no.hist = function(x, y, xlab.use="", ylab.use=""){ # this keeps everything the same for sizing, but doesn't plot the histograms
+  zones=matrix(c(2,0,1,3), ncol=2, byrow=TRUE)
+  layout(zones, widths=c(4/5,1/5), heights=c(1/5,4/5))
+  xhist = hist(x, plot=FALSE,breaks=20)
+  yhist = hist(y, plot=FALSE,breaks=20)
+  top = max(c(xhist$counts, yhist$counts))
+  par(mar=c(6,6,1,1))
+  plot(x,y,cex.axis=1.5,cex=1.5,xlab="",ylab="",cex.lab=2.5)
+  points(lowess(y~x),typ="l",col=4,lwd=2)
+  par(mar=c(0,5,1,1))
+  barplot(xhist$counts, axes=FALSE, ylim=c(0, top), space=0,plot=FALSE)
+  par(mar=c(5,0,1,1))
+  barplot(yhist$counts, axes=FALSE, xlim=c(0, top), space=0, horiz=TRUE,plot=FALSE)
+  par(oma=c(3,3,0,0))
+  mtext(xlab.use, side=1, line=1, outer=TRUE, adj=0, cex = 2,
+        at=.15 * (mean(x) - min(x))/(max(x)-min(x)))
+  mtext(ylab.use, side=2, line=0.5, outer=TRUE, adj=0,cex = 2, 
+        at=(1.5 * (mean(y) - min(y))/(max(y) - min(y))))
+}
+
+pdf("Outputs/Decay_v_Temp.pdf")
+scatter.no.hist(x = decay_temp$sum_mean_daily_temp,y = decay_temp$Decay_Rate_per_day,xlab.use = expression(Summed~Temperature~(degree*C)),ylab.use = expression(K[cd]))
+dev.off()
