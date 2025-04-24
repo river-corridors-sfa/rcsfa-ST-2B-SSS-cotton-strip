@@ -23,10 +23,22 @@ rm(list=ls(all=T))
 current_path <- rstudioapi::getActiveDocumentContext()$path 
 setwd(dirname(current_path))
 
-# =================================== find files ===============================
+# =================================== user input ===============================
+# toggle between response variables to run LASSO on each 
 
+response_variable <- 'scale_cube_Mean_Decay_Rate_per_day'
+# response_variable <- 'scale_cube_Mean_degree_decay_rate'
+
+# =================================== find files ===============================
+ # degree_decay_rate = Kdd; Decay_Rate_per_day = Kcc
 decay_temp <- read_csv('./Outputs/Decay_Data.csv') %>%
-  select(sum_mean_daily_temp, )
+  select(Parent_ID, sum_mean_daily_temp, degree_decay_rate, Decay_Rate_per_day )%>%
+  group_by(Parent_ID) %>%
+  summarise(Mean_sum_mean_daily_temp = mean(sum_mean_daily_temp),
+            Mean_degree_decay_rate = mean(degree_decay_rate),
+            Mean_Decay_Rate_per_day = mean(Decay_Rate_per_day),
+  ) %>%
+  ungroup()
 
 
 er_gpp <- read_csv('../SSS_metabolism/v2_SSS_Water_Sediment_Total_Respiration_GPP.csv',
@@ -82,20 +94,74 @@ water_npoc_tn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_W
   ungroup()
 
 #downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
+sed_npoc_tn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Sediment_NPOC_TN.csv',
+                          skip = 2, na = c('', 'N/A', '-9999'))%>%
+  filter(!is.na(Sample_Name),
+         str_detect(Sample_Name, 'SSS')) %>%
+  mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}"),
+         'Extractable_TN_mg_per_kg' = case_when(str_detect(`Extractable_TN_mg_per_kg`, 'Standard') ~ 0.05, # replace below standard values with half standard (standard = 0.1)
+                                              TRUE ~ as.numeric(`Extractable_TN_mg_per_kg`))) %>%
+  select(Parent_ID, contains('NPOC'), Extractable_TN_mg_per_kg) %>%
+  group_by(Parent_ID) %>%
+  summarise(Extractable_NPOC_mg_per_kg = round(mean(`Extractable_TN_mg_per_kg`), 2),
+            Mean_Extractable_NPOC_mg_per_kg = round(mean(`Extractable_NPOC_mg_per_kg`), 2),
+  ) %>%
+  ungroup()
+
+
+#downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
 cn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Sediment_CN.csv',
                           skip = 2, na = c('', 'N/A', '-9999'))%>%
   filter(!is.na(Sample_Name),
          str_detect(Sample_Name, 'SSS')) %>%
-  mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}")) %>%
+  mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}"),
+         `01395_C_percent_per_mg` = as.numeric(`01395_C_percent_per_mg`),
+         `01397_N_percent_per_mg` = as.numeric(`01397_N_percent_per_mg`)) %>%
   select(Parent_ID, `01395_C_percent_per_mg`, `01397_N_percent_per_mg`)
 
 #downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
-# ions <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Water_Ions.csv',
-#                skip = 2, na = c('', 'N/A', '-9999'))%>%
-#   filter(!is.na(Sample_Name),
-#          str_detect(Sample_Name, 'SSS')) %>%
-#   mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}")) %>%
-#   select(Parent_ID, )
+ions <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Water_Ions.csv',
+               skip = 2, na = c('', 'N/A', '-9999'))%>%
+  filter(!is.na(Sample_Name),
+         str_detect(Sample_Name, 'SSS')) %>%
+  mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}")) %>%
+  select(Parent_ID, `00915_Ca_mg_per_L`, `00940_Cl_mg_per_L`, `00945_SO4_mg_per_L_as_SO4`)%>%
+  group_by(Parent_ID) %>%
+  summarise(Mean_00915_Ca_mg_per_L  = round(mean(as.numeric(`00915_Ca_mg_per_L` ), na.rm = T), 2),
+            Mean_00940_Cl_mg_per_L  = round(mean(as.numeric(`00940_Cl_mg_per_L` ), na.rm = T), 2),
+            Mean_00945_SO4_mg_per_L_as_SO4  = round(mean(as.numeric(`00945_SO4_mg_per_L_as_SO4` ), na.rm = T), 2)) %>%
+  ungroup()
+
+
+#downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
+resp <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v2_CM_SSS_Sediment_Normalized_Respiration_Rates.csv',
+                 skip = 2, na = c('', 'N/A', '-9999'))%>%
+  filter(!is.na(Sample_Name),
+         str_detect(Sample_Name, 'SSS')) %>%
+  mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}")) %>%
+  group_by(Parent_ID) %>%
+  summarise(Mean_Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment  = round(mean(as.numeric(Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment ), na.rm = T), 2)) %>%
+  ungroup()
+
+
+#downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
+iron <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Sediment_Fe.csv',
+                 skip = 2, na = c('', 'N/A', '-9999'))%>%
+  filter(!is.na(Sample_Name),
+         str_detect(Sample_Name, 'SSS')) %>%
+  mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}")) %>%
+  group_by(Parent_ID) %>%
+  summarise(Mean_Fe_mg_per_kg = round(mean(as.numeric(Fe_mg_per_kg), na.rm = T), 2)) %>%
+  ungroup()
+
+#downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
+sand <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Sediment_Grain_Size.csv',
+               skip = 2, na = c('', 'N/A', '-9999'))%>%
+  filter(!is.na(Sample_Name),
+         str_detect(Sample_Name, 'SSS')) %>%
+  mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}"),
+         Percent_Tot_Sand = as.numeric(Percent_Tot_Sand)) %>%
+  select(Parent_ID, Percent_Tot_Sand)
 
 # =============================== cube function ===============================
 
@@ -103,15 +169,25 @@ cube_root <- function(x) sign(x) * (abs(x))^(1/3)
 
 # =============================== combine data ===============================
 
-all_data <- er_gpp %>%
-  full_join(geospatial, by = 'Site_ID')%>%
+all_data <- decay_temp %>%
+  full_join(er_gpp, by = 'Parent_ID')%>%
+  full_join(d50_o2, by = 'Parent_ID')%>%
   full_join(slope_vel_dis, by = 'Site_ID')%>%
-  full_join(d50, by = 'Parent_ID')%>%
+  full_join(geospatial, by = 'Site_ID')%>%
   full_join(tss, by = 'Parent_ID')%>%
-  full_join(npoc_tn, by = 'Parent_ID')%>%
   full_join(depth, by = 'Parent_ID')%>%
-  full_join(hobo_temp, by = 'Parent_ID') %>%
-  filter(!is.na(Sediment_Respiration)) 
+  full_join(water_npoc_tn, by = 'Parent_ID')%>%
+  full_join(sed_npoc_tn, by = 'Parent_ID')%>%
+  full_join(cn, by = 'Parent_ID')%>%
+  full_join(ions, by = 'Parent_ID')%>%
+  full_join(resp, by = 'Parent_ID')%>%
+  full_join(iron, by = 'Parent_ID')%>%
+  full_join(sand, by = 'Parent_ID') %>%
+  filter(!is.na(Sediment_Respiration)) %>%
+  filter(!is.na(Mean_degree_decay_rate)) # dropping sites that are missing ERsed or decay data
+
+all_data %>%
+  filter(if_any(everything(), is.na))
 
 # ======================= assess co-correlation ===============================
 
@@ -266,113 +342,10 @@ spearman <- cor(cube_data %>% select(-Site_ID, -Parent_ID), method = "spearman",
 # 
 # dev.off()
 
-## ===== run function to automatically determine best variable ====
-cube_pearson <- cor(cube_data %>% select(-Site_ID, -Parent_ID), method = "pearson")
-
-pearson_df <- as.data.frame(cube_pearson)
-
-row_names_pearson <- rownames(pearson_df)
-
-pearson_df$Variable <- row_names_pearson
-
-pearson_melted <- reshape2::melt(pearson_df, id.vars = "Variable") %>% 
-  filter(value != 1) %>% # remove everything correlated with self
-  mutate(value = abs(value)) %>% # do this so it removes in order, and doesn't leave out high negative correlations
-  filter(!grepl("cube_Sediment_Respiration", Variable)) # %>% # remove ERsed, don't want it to be removed 
-
-# pull out ersed correlations only
-ersed_melted <- pearson_melted %>% 
-  filter(grepl("cube_Sediment_Respiration", variable)) 
-
-choose_melted <- pearson_melted %>% 
-  filter(!grepl("cube_Sediment_Respiration", variable)) %>%
-  left_join(ersed_melted, by = "Variable") %>% 
-  rename(Variable_1 = Variable) %>% 
-  rename(Variable_2 = variable.x) %>% 
-  rename(Correlation = value.x) %>% 
-  rename(Variable_1_ERsed_Correlation = value.y) %>% 
-  select(-c(variable.y)) %>% 
-  left_join(ersed_melted, by = c("Variable_2" = "Variable")) %>% 
-  rename(Variable_2_ERsed_Correlation = value) %>% 
-  select(-c(variable))
-
-loop_melt = choose_melted %>% 
-  arrange(desc(Correlation))
-
-#Pearson correlation coefficient to remove above
-correlation = 0.7
-
-## Start loop to remove highly correlated (> 0.7)
-ersed_filter = function(loop_melt) {
-  
-  rows_to_keep = rep(TRUE, nrow(loop_melt))
-  
-  for (i in seq_len(nrow(loop_melt))) {
-    
-    if (!rows_to_keep[i]) next
-    
-    row = loop_melt[i, ]
-    
-    if (row$Correlation < correlation) next
-    
-    if(row$Variable_1_ERsed_Correlation >= row$Variable_2_ERsed_Correlation) {
-      
-      var_to_keep = row$Variable_1
-      var_to_remove = row$Variable_2
-      
-    } else {
-      
-      var_to_keep = row$Variable_2
-      var_to_remove = row$Variable_1
-      
-    }
-    
-    loop_melt$Variable_to_Keep[i] = var_to_keep
-    loop_melt$Variable_to_Remove[i] = var_to_remove
-    
-    for (j in seq(i + 1, nrow(loop_melt))) {
-      
-      if(loop_melt$Variable_1[j] == var_to_remove || loop_melt$Variable_2[j] == var_to_remove) {
-        
-        rows_to_keep[j] = FALSE
-        
-      }
-      
-    }
-    
-    
-  }
-  
-  return(loop_melt[rows_to_keep, ])
-  
-}
-
-filtered_data <-  ersed_filter(loop_melt) 
-
-# pull out variables to remove
-removed_variables <-  filtered_data %>% 
-  distinct(Variable_to_Remove)
-
-# pull out all variables 
-all_variables <-  ersed_melted %>% 
-  select(c(Variable))
-
-# remove variables from all variables to get variables to keep for LASSO 
-kept_variables <- ersed_melted %>%
-  filter(!Variable %in% removed_variables$Variable) %>%
-  pull(Variable) %>%
-  unique() 
-
-col_to_keep = c(kept_variables, "cube_Sediment_Respiration")
-
-cube_variables = cube_data %>%
-  # select(all_of(col_to_keep)) # decided to not remove any variables 
-  select(-Parent_ID, -Site_ID) # remove character columns before lasso
-
 # ======== LASSO  ============
 
 ## scale data
-scale_cube_variables = as.data.frame(scale(cube_variables))%>% 
+scale_cube_variables = as.data.frame(scale(cube_data %>% select(-Parent_ID, -Site_ID)))%>% 
   rename_with(where(is.numeric), .fn = ~ paste0("scale_", .x))
 
 ## Loop through LASSO to get average over a lot of seeds ####
@@ -380,8 +353,9 @@ scale_cube_variables = as.data.frame(scale(cube_variables))%>%
 num_seeds = 100
 seeds = sample(1:500, num_seeds)
 
-## Set response variable (cube_Sediment_Respiration) and scale
-yvar <- data.matrix(scale_cube_variables$scale_cube_Sediment_Respiration)
+
+## Set response variable (scale_cube_Mean_Decay_Rate_per_day/scale_cube_Mean_degree_decay_rate) and scale
+yvar <- data.matrix(scale_cube_variables %>% pull(response_variable))
 round(mean(yvar), 4)
 sd(yvar)
 
@@ -391,10 +365,10 @@ lasso_coefs_pull = list()
 r2_scores = numeric(num_seeds)
 
 ## Set predictor variables and scale
-exclude_col = "scale_cube_Sediment_Respiration"
+exclude_col = c("scale_cube_Mean_Decay_Rate_per_day", 'scale_cube_Mean_degree_decay_rate')
 
 x_cube_variables = scale_cube_variables %>%
-  select(-exclude_col)
+  select(-exclude_col, -scale_cube_Total_Oxygen_Consumed_g_per_m2_per_day)
 
 xvars <- data.matrix(x_cube_variables)
 
