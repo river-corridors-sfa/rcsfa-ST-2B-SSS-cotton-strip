@@ -48,9 +48,9 @@ er_gpp <- read_csv('../SSS_metabolism/v2_SSS_Water_Sediment_Total_Respiration_GP
                    comment = '#', na = '-9999') %>%
   select(Parent_ID, Site_ID, Sediment_Respiration, Total_Ecosystem_Respiration, Water_Column_Respiration, Gross_Primary_Production)
 
-d50_o2 <- read_csv('../SSS_metabolism/v2_SSS_ER_d50_TotalOxygenConsumed.csv', 
+d50 <- read_csv('../SSS_metabolism/v2_SSS_ER_d50_TotalOxygenConsumed.csv', 
                 comment = '#', na = '-9999') %>%
-  select(Parent_ID, D50_m, Total_Oxygen_Consumed_g_per_m2_per_day)
+  select(Parent_ID, D50_m)
 
 slope_vel_dis <- read_csv('../SSS_metabolism/Stream_Metabolizer/Inputs/v2_SSS_Slope_Discharge_Velocity.csv',
                           comment = '#', na = '-9999') %>%
@@ -174,7 +174,7 @@ cube_root <- function(x) sign(x) * (abs(x))^(1/3)
 
 all_data <- decay_temp_means %>%
   full_join(er_gpp, by = 'Parent_ID')%>%
-  full_join(d50_o2, by = 'Parent_ID')%>%
+  full_join(d50, by = 'Parent_ID')%>%
   full_join(slope_vel_dis, by = 'Site_ID')%>%
   full_join(geospatial, by = 'Site_ID')%>%
   full_join(tss, by = 'Parent_ID')%>%
@@ -189,6 +189,10 @@ all_data <- decay_temp_means %>%
   filter(!is.na(Sediment_Respiration)) %>%
   filter(!is.na(Mean_degree_decay_rate)) # dropping sites that are missing ERsed or decay data
 
+#check that there are no NA values
+# if returns any obs, there are NA values 
+# if returns 0 obs, no NA values 
+# retruning 0 x 33 so no NA values 
 all_data %>%
   filter(if_any(everything(), is.na))
 
@@ -371,7 +375,7 @@ r2_scores = numeric(num_seeds)
 exclude_col = c("scale_cube_Mean_Decay_Rate_per_day", 'scale_cube_Mean_degree_decay_rate')
 
 x_cube_variables = scale_cube_variables %>%
-  select(-exclude_col, -scale_cube_Total_Oxygen_Consumed_g_per_m2_per_day)
+  select(-exclude_col)
 
 xvars <- data.matrix(x_cube_variables)
 
