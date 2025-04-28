@@ -448,6 +448,20 @@ results_r2 = as.data.frame(r2_scores)
 mean(results_r2$r2_scores)
 sd(results_r2$r2_scores)
 
+clipr::write_clip(mean_coeffs_df%>% 
+  mutate(abs_mean = abs(mean),
+         mean = signif(mean, 5) ,
+         sd = signif(sd, 5)) %>% 
+  arrange(desc(abs_mean))%>% 
+    select(RowNames, mean, sd) ) 
+
+clipr::write_clip(lasso_coef_means%>% 
+                    mutate(abs_mean = abs(mean),
+                           mean = signif(mean, 5) ,
+                           sd = signif(sd, 5)) %>% 
+                    arrange(desc(abs_mean))%>% 
+                    select(RowNames, mean, sd) ) 
+
 # ================================ create plots ===============================
 
 ## ==========  Decay vs ERs ==========
