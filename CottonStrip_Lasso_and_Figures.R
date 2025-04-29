@@ -24,10 +24,8 @@ current_path <- rstudioapi::getActiveDocumentContext()$path
 setwd(dirname(current_path))
 
 # =================================== user input ===============================
-# toggle between response variables to run LASSO on each 
 
-response_variable <- 'scale_cube_Mean_Decay_Rate_per_day'
-# response_variable <- 'scale_cube_Mean_degree_decay_rate'
+response_variable <- c('scale_cube_Mean_Decay_Rate_per_day', 'scale_cube_Mean_degree_decay_rate')
 
 # =================================== find files ===============================
  # degree_decay_rate = Kdd; Decay_Rate_per_day = Kcc
@@ -210,11 +208,15 @@ ggplot() +
 
 spearman <- cor(all_data %>% select(-Site_ID, -Parent_ID), method = "spearman", use = "complete.obs")
 
-# png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()),"_Scale_Spearman_Correlation_Matrix.png"), width = 12, height = 12, units = "in", res = 300)
+png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Scale_Spearman_Correlation_Matrix.png"), width = 12, height = 12, units = "in", res = 300)
 
-# corrplot(spearman,type = "upper", method = "number", tl.col = "black", tl.cex = 1.6, cl.cex = 1.25,  title = "Spearman Correlation")
+# Reduce number.cex to make numbers smaller
+corrplot(spearman, type = "upper", method = "number", tl.col = "black", tl.cex = 0.5, number.cex = 0.5, cl.cex = 1.25, title = "Spearman Correlation")
 
-# dev.off()
+dev.off()
+
+
+
 
 spear.panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
 {
@@ -256,14 +258,14 @@ panel.hist <- function(x, ...) {
 }
 
 # png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()),"_Pairs_Spearman_Correlation_Matrix.png"), width = 12, height = 12, units = "in", res = 300)
-
+# 
 # pairs(all_data %>% select(-Site_ID, -Parent_ID),
-#       lower.panel = panel.smooth, 
-#       upper.panel = spear.panel.cor, 
+#       lower.panel = panel.smooth,
+#       upper.panel = spear.panel.cor,
 #       diag.panel = panel.hist,
 #       labels = colnames(all_data %>% select(-Site_ID, -Parent_ID)),
-#       cex.labels = 0.8) 
-
+#       cex.labels = 0.8)
+# 
 # dev.off()
 
 ## ======== Pearson correlation before transformations ============
@@ -356,13 +358,14 @@ scale_cube_variables = as.data.frame(scale(cube_data %>% select(-Parent_ID, -Sit
   rename_with(where(is.numeric), .fn = ~ paste0("scale_", .x))
 
 ## Loop through LASSO to get average over a lot of seeds ####
+for (variable in response_variable) {
+  
 
 num_seeds = 100
 seeds = sample(1:500, num_seeds)
 
-
 ## Set response variable (scale_cube_Mean_Decay_Rate_per_day/scale_cube_Mean_degree_decay_rate) and scale
-yvar <- data.matrix(scale_cube_variables %>% pull(response_variable))
+yvar <- data.matrix(scale_cube_variables %>% pull(variable))
 round(mean(yvar), 4)
 sd(yvar)
 
@@ -371,11 +374,10 @@ norm_coeffs = list()
 lasso_coefs_pull = list()
 r2_scores = numeric(num_seeds)
 
-## Set predictor variables and scale
-exclude_col = c("scale_cube_Mean_Decay_Rate_per_day", 'scale_cube_Mean_degree_decay_rate')
+## Set predictor variables; exclude response variable(s)
 
 x_cube_variables = scale_cube_variables %>%
-  select(-exclude_col)
+  select(-response_variable)
 
 xvars <- data.matrix(x_cube_variables)
 
@@ -424,10 +426,13 @@ lasso_coef_means = lasso_coef_mat %>%
   mutate(RowNames = rownames(lasso_coef_mat)) %>% 
   rowwise() %>% 
   mutate(mean = mean(c_across(contains("s1"))), 
-         sd = sd(c_across(contains("s1")))) %>% 
+         sd = sd(c_across(contains("s1"))),
+         cv = mean/sd) %>% 
   relocate(mean, .before = s1) %>% 
   relocate(sd, .before = s1) %>% 
-  relocate(RowNames, .before = mean)
+  relocate(RowNames, .before = mean)%>% 
+  relocate(cv, .after = sd) %>%
+  add_column(response_variable = variable)
 
 norm_coeffs_matrix = do.call(cbind, norm_coeffs)
 
@@ -435,32 +440,47 @@ mean_coeffs = as.data.frame(norm_coeffs_matrix, row.names = rownames(norm_coeffs
 
 colnames(mean_coeffs) = make.names(colnames(mean_coeffs), unique = T)
 
-mean_coeffs_df = mean_coeffs %>% 
+norm_lasso_coef_means = mean_coeffs %>% 
   mutate(RowNames = rownames(mean_coeffs)) %>% 
   rowwise() %>% 
   mutate(mean = mean(c_across(contains("s1"))), 
-         sd = sd(c_across(contains("s1")))) %>% 
+         sd = sd(c_across(contains("s1"))),
+         cv = mean/sd) %>% 
   relocate(mean, .before = s1) %>% 
   relocate(sd, .before = s1) %>% 
-  relocate(RowNames, .before = mean)
+  relocate(RowNames, .before = mean)%>% 
+  relocate(cv, .after = sd) %>% 
+  add_column(response_variable = variable)
 
 results_r2 = as.data.frame(r2_scores) 
 mean(results_r2$r2_scores)
 sd(results_r2$r2_scores)
 
-clipr::write_clip(mean_coeffs_df%>% 
-  mutate(abs_mean = abs(mean),
-         mean = signif(mean, 5) ,
-         sd = signif(sd, 5)) %>% 
-  arrange(desc(abs_mean))%>% 
-    select(RowNames, mean, sd) ) 
+if(match(variable, response_variable) == 1){
+  
+  lasso_coef_means_all <- lasso_coef_means
+  norm_lasso_coef_means_all <- norm_lasso_coef_means
+  mean_r2_all <- tibble(mean_r2 = mean(results_r2$r2_scores),
+                        sd = sd(results_r2$r2_scores),
+                        response_variable = variable)
+  
+} else{
+  
+  lasso_coef_means_all <- lasso_coef_means_all %>%
+    add_row(lasso_coef_means)
+  
+  norm_lasso_coef_means_all <- norm_lasso_coef_means_all %>%
+    add_row(norm_lasso_coef_means)
+  
+  mean_r2_all <- mean_r2_all %>%
+    add_row(mean_r2 = mean(results_r2$r2_scores),
+           sd = sd(results_r2$r2_scores),
+           response_variable = variable)
+}
 
-clipr::write_clip(lasso_coef_means%>% 
-                    mutate(abs_mean = abs(mean),
-                           mean = signif(mean, 5) ,
-                           sd = signif(sd, 5)) %>% 
-                    arrange(desc(abs_mean))%>% 
-                    select(RowNames, mean, sd) ) 
+
+
+}
 
 # ================================ create plots ===============================
 
