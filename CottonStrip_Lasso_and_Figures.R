@@ -101,12 +101,12 @@ sed_npoc_tn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Sedime
          str_detect(Sample_Name, 'SSS')) %>%
   mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}"),
          'Extractable_TN_mg_per_kg' = case_when(str_detect(`Extractable_TN_mg_per_kg`, 'Standard') ~ 0.05, # replace below standard values with half standard (standard = 0.1)
-                                              TRUE ~ as.numeric(`Extractable_TN_mg_per_kg`))) %>%
-  select(Parent_ID, contains('NPOC'), Extractable_TN_mg_per_kg) %>%
+                                              TRUE ~ as.numeric(`Extractable_TN_mg_per_kg`)),
+         Extractable_NPOC_mg_per_kg = as.numeric(Extractable_NPOC_mg_per_kg)) %>%
+  select(Parent_ID, Extractable_NPOC_mg_per_kg, Extractable_TN_mg_per_kg) %>%
   group_by(Parent_ID) %>%
-  summarise(Extractable_NPOC_mg_per_kg = round(mean(`Extractable_TN_mg_per_kg`), 2),
-            Mean_Extractable_NPOC_mg_per_kg = round(mean(`Extractable_NPOC_mg_per_kg`), 2),
-  ) %>%
+  summarise(Mean_Extractable_TN_mg_per_kg = round(mean(`Extractable_TN_mg_per_kg`), 2),
+            Mean_Extractable_NPOC_mg_per_kg = round(mean(`Extractable_NPOC_mg_per_kg`), 2)) %>%
   ungroup()
 
 
@@ -199,46 +199,93 @@ all_data %>%
 long_data <-  all_data %>% 
   pivot_longer(cols = -c(Site_ID, Parent_ID), names_to = "variable", values_to = "value")
 
-ggplot() + 
-  geom_histogram(long_data, mapping = aes(x = value)) + 
-  facet_wrap(~ variable, scales = "free") +
-  theme_minimal()
+# ggplot() + 
+#   geom_histogram(long_data, mapping = aes(x = value)) + 
+#   facet_wrap(~ variable, scales = "free") +
 
-## ======== Spearman correlation before transformations ============
+## ======== Custom Variable Name Mapping ===========
+# Define a tibble mapping original, scaled, and plot labels
+variable_names <- tibble(
+  original = c("Mean_sum_mean_daily_temp", "Mean_degree_decay_rate", "Mean_Decay_Rate_per_day", "Sediment_Respiration",
+               "Total_Ecosystem_Respiration", "Water_Column_Respiration", "Gross_Primary_Production", "D50_m", "Slope",
+               "Discharge", "Velocity", "totdasqkm", "PctFst", "AridityWs", "PctAg", "pctshrb2019ws", "minelevsmo",
+               "00530_TSS_mg_per_L", "Average_Depth", "Mean_00602_TN_mg_per_L_as_N", "Mean_00681_NPOC_mg_per_L_as_C",
+               "Mean_Extractable_NPOC_mg_per_kg", "Mean_Extractable_TN_mg_per_kg", "01395_C_percent_per_mg", "01397_N_percent_per_mg",
+               "Mean_00915_Ca_mg_per_L", "Mean_00940_Cl_mg_per_L", "Mean_00945_SO4_mg_per_L_as_SO4", "Mean_Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment",
+               "Mean_Fe_mg_per_kg", "Percent_Tot_Sand"),
+  labels = c("Summed Temperature", "Decay Rate per degree day (Kdd)", "Decay Rate per chronological day (Kcd)", "Sediment Respiration",
+             "Total Ecosystem Respiration", "Water Column Respiration", "Gross Primary Production", "D50", "Slope", "Discharge",
+             "Velocity", "Drainage Area", "Percent Forest Cover", "Aridity", "Percent Agricultural Cover", "Percent Shrub Cover",
+             "Minimum Elevation", "TSS", "Depth", "Water TDN", "Water NPOC", "Sediment NPOC", "Sediment TN", "Percent C", "Percent N",
+             "Calcium", "Chloride", "Sulfate", "Respiration (Lab)", "Iron", "Percent Sand") 
+) %>%
+  mutate(cubed = paste0("cube_",original))
 
-spearman <- cor(all_data %>% select(-Site_ID, -Parent_ID), method = "spearman", use = "complete.obs")
+## ======== Spearman Correlation before Transformations ===========
+renamed_all_data <- all_data %>%
+  select(-Site_ID, -Parent_ID) %>%
+  rename_with(~ ifelse(!is.na(match(., variable_names$original)),
+                       variable_names$labels[match(., variable_names$original)],
+                       .), .cols = names(all_data %>% select(-Site_ID, -Parent_ID)))
+
+spearman <- cor(renamed_all_data, method = "spearman", use = "complete.obs")
+
+rdylbu_colors <- c("#a50026", "#d73027", "#f46d43", "#fdae61", "#fee090",
+                   "#ffffbf", "#e0f3f8", "#abd9e9", "#74add1", "#4575b4", "#313695")
 
 png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Scale_Spearman_Correlation_Matrix.png"), width = 12, height = 12, units = "in", res = 300)
-
-# Reduce number.cex to make numbers smaller
-corrplot(spearman, type = "upper", method = "number", tl.col = "black", tl.cex = 0.5, number.cex = 0.5, cl.cex = 1.25, title = "Spearman Correlation")
-
+corrplot(spearman, type = "upper", method = "number", 
+         col = colorRampPalette(rdylbu_colors)(200), tl.col = "black", tl.cex = 0.5, 
+         number.cex = 0.5, cl.cex = 1.25, mar = c(0, 0, 2, 0), title = "Spearman Correlation", 
+         tl.labels = variable_names %>% filter(original %in% colnames(spearman)) %>% pull(labels))
 dev.off()
 
+## ======== Pearson Correlation before Transformations ===========
+pearson <- cor(renamed_all_data , method = "pearson", use = "complete.obs")
 
+png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Scale_Pearson_Correlation_Matrix.png"), width = 12, height = 12, units = "in", res = 300)
+corrplot(pearson, type = "upper", method = "number", 
+         col = colorRampPalette(rdylbu_colors)(200), tl.col = "black", tl.cex = 0.5, 
+         number.cex = 0.5, cl.cex = 1.25, mar = c(0, 0, 2, 0), title = "Pearson Correlation", 
+         tl.labels = variable_names %>% filter(original %in% colnames(pearson)) %>% pull(labels))
+dev.off()
 
-
+## ======== Custom Correlation Panel Functions ===========
 spear.panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
 {
-  
   usr <- par("usr"); on.exit(par(usr))
   par(usr = c(0, 1, 0, 1))
   
-  r = (cor(x, y, method = c("spearman")))
+  r <- cor(x, y, method = "spearman")
   txt <- format(c(r, 0.123456789), digits=digits)[1]
   txt <- paste(prefix, txt, sep="")
   
   if(missing(cex.cor)) {cex.cor <- 0.8/strwidth(txt)}
   text(0.5, 0.5, txt, cex = cex.cor * (1 + abs(r))/2)
   
-  # if(missing(cex.cor)) {cex <- 1.2/strwidth(txt)} else {cex = cex.cor}
-  # text(0.5, 0.5, txt, cex = cex * sin(sqrt(abs(r))))
-  
-  test <- cor.test(x,y, method = "spearman")
-  Signif <- symnum(test$p.value, corr = FALSE, na = FALSE, cutpoints = c(0, 0.001, 0.01, 0.05, 1), symbols = c("***", "**", "*", " "))
-  #text(0.5, 0.5, txt, cex = cex * r)
+  test <- cor.test(x, y, method = "spearman")
+  Signif <- symnum(test$p.value, corr = FALSE, na = FALSE, 
+                   cutpoints = c(0, 0.001, 0.01, 0.05, 1), symbols = c("***", "**", "*", " "))
   text(.5, .8, Signif, cex=cex.cor, col=2)
+}
+
+pear.panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
+{
+  usr <- par("usr"); on.exit(par(usr))
+  par(usr = c(0, 1, 0, 1))
   
+  r <- cor(x, y, method = "pearson")
+  txt <- format(c(r, 0.123456789), digits=digits)[1]
+  txt <- paste(prefix, txt, sep="")
+  
+  if(missing(cex.cor)) {cex.cor <- 0.8/strwidth(txt)} 
+  text(0.5, 0.5, txt, cex = cex.cor * (1 + abs(r))/2)
+  
+  test <- cor.test(x, y)
+  Signif <- symnum(test$p.value, corr = FALSE, na = FALSE, 
+                   cutpoints = c(0, 0.001, 0.01, 0.05, 1), symbols = c("***", "**", "*", " "))
+  
+  text(.5, .8, Signif, cex=cex.cor, col=2)
 }
 
 panel.smooth <- function(x, y) {
@@ -257,99 +304,83 @@ panel.hist <- function(x, ...) {
   rect(breaks[-nB], 0, breaks[-1], y, col="grey", border="white", ...)
 }
 
-# png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()),"_Pairs_Spearman_Correlation_Matrix.png"), width = 12, height = 12, units = "in", res = 300)
-# 
-# pairs(all_data %>% select(-Site_ID, -Parent_ID),
-#       lower.panel = panel.smooth,
-#       upper.panel = spear.panel.cor,
-#       diag.panel = panel.hist,
-#       labels = colnames(all_data %>% select(-Site_ID, -Parent_ID)),
-#       cex.labels = 0.8)
-# 
-# dev.off()
+## ======== Spearman Pairwise Plot ===========
+png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Pairs_Spearman_Correlation_Matrix.png"), width = 24, height = 24, units = "in", res = 300)
+pairs(all_data %>% select(-Site_ID, -Parent_ID),
+      lower.panel = panel.smooth,
+      upper.panel = spear.panel.cor,
+      diag.panel = panel.hist,
+      labels = variable_names %>% filter(original %in% colnames(all_data %>% select(-Site_ID, -Parent_ID))) %>% pull(labels),
+      cex.labels = 0.5)  # Reduced labels size for clarity
+dev.off()
 
-## ======== Pearson correlation before transformations ============
-# function for pearson corr matrix
+## ======== Pearson Pairwise Plot ===========
+png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Pairs_Pearson_Correlation_Matrix.png"), width = 24, height = 24, units = "in", res = 300)
+pairs(all_data %>% select(-Site_ID, -Parent_ID),
+      lower.panel = panel.smooth,
+      upper.panel = pear.panel.cor,
+      diag.panel = panel.hist,
+      labels = variable_names %>% filter(original %in% colnames(all_data %>% select(-Site_ID, -Parent_ID))) %>% pull(labels),
+      cex.labels = 0.5)  # Reduced labels size for clarity
+dev.off()
 
-pear.panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
-{
-  usr <- par("usr"); on.exit(par(usr))
-  par(usr = c(0, 1, 0, 1))
-  r = (cor(x, y, method = c("pearson")))
-  txt <- format(c(r, 0.123456789), digits=digits)[1]
-  txt <- paste(prefix, txt, sep="")
-  if(missing(cex.cor)) {cex.cor <- 0.8/strwidth(txt)} 
-  text(0.5, 0.5, txt, cex = cex.cor * (1 + abs(r))/2)
-  
-  # if(missing(cex.cor)) {cex <- 1.2/strwidth(txt)} else {cex = cex.cor}
-  # text(0.5, 0.5, txt, cex = cex * sin(sqrt(abs(r))))
-  
-  test <- cor.test(x,y)
-  Signif <- symnum(test$p.value, corr = FALSE, na = FALSE, cutpoints = c(0, 0.001, 0.01, 0.05, 1), symbols = c("***", "**", "*", " "))
-  #text(0.5, 0.5, txt, cex = cex * r)
-  text(.5, .8, Signif, cex=cex.cor, col=2)
-  
-}
-
-# png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()),"_Pairs_Pearson_Correlation_Matrix.png"), width = 12, height = 12, units = "in", res = 300)
-
-# pairs(all_data %>% select(-Site_ID, -Parent_ID),
-#       lower.panel = panel.smooth, 
-#       upper.panel = pear.panel.cor, 
-#       diag.panel = panel.hist,
-#       labels = colnames(all_data %>% select(-Site_ID, -Parent_ID)),
-#       cex.labels = 0.8) 
-
-# dev.off()
-
-## ======== Cube root ======
-
-cube_data <-  all_data %>% 
+## ======== Cube Root Transformation ===========
+cube_data <- all_data %>% 
   mutate(across(where(is.numeric), cube_root)) %>% 
-  rename_with(where(is.numeric), .fn = ~ paste0("cube_", .x)) 
+  rename_with(.fn = ~ paste0("cube_", .x), .cols = where(is.numeric))
 
-long_cube_data <-  cube_data %>%
+## ======== Histogram of Cubed Data ===========
+long_cube_data <- cube_data %>%
   pivot_longer(cols = -c(Site_ID, Parent_ID), names_to = "variable", values_to = "value")
 
-ggplot() +
-  geom_histogram(long_cube_data, mapping = aes(x = value)) +
-  facet_wrap(~ variable, scales = "free") +
-  theme_minimal()
+# ggplot() +
+#   geom_histogram(long_cube_data, mapping = aes(x = value)) +
+#   facet_wrap(~ variable, scales = "free") +
+#   theme_minimal()
 
-### ======== Spearman correlation with cube transformation ============
+## ======== Spearman Correlation with Cube Transformation ===========
+renamed_cube_data <- cube_data %>%
+  select(-Site_ID, -Parent_ID) %>%
+  rename_with(~ ifelse(!is.na(match(., variable_names$cubed)),
+                       variable_names$labels[match(., variable_names$cubed)],
+                       .), .cols = names(cube_data %>% select(-Site_ID, -Parent_ID)))
 
-spearman <- cor(cube_data %>% select(-Site_ID, -Parent_ID), method = "spearman", use = "complete.obs")
+spearman_cubed <- cor(renamed_cube_data, method = "spearman", use = "complete.obs")
 
-# png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()),"_Scale_Spearman_Correlation_Matrix_Cubed.png"), width = 12, height = 12, units = "in", res = 300)
+png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Scale_Spearman_Correlation_Matrix_Cubed.png"), width = 12, height = 12, units = "in", res = 300)
+corrplot(spearman_cubed, type = "upper", method = "number", 
+         col = colorRampPalette(rdylbu_colors)(200), tl.col = "black", tl.cex = 0.5, 
+         number.cex = 0.5, cl.cex = 1.25, mar = c(0, 0, 2, 0), title = "Spearman Correlation Cubed")
+dev.off()
 
-# corrplot(spearman,type = "upper", method = "number", tl.col = "black", tl.cex = 1.6, cl.cex = 1.25,  title = "Spearman Correlation")
+## ======== Spearman Pairwise Plot with Cube Transformation ===========
+png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Pairs_Spearman_Correlation_Matrix_Cubed.png"), width = 24, height = 24, units = "in", res = 300)
+pairs(cube_data %>% select(-Site_ID, -Parent_ID),
+      lower.panel = panel.smooth,
+      upper.panel = spear.panel.cor,
+      diag.panel = panel.hist,
+      labels = variable_names %>% filter(cubed %in% colnames(cube_data %>% select(-Site_ID, -Parent_ID))) %>% pull(labels),
+      cex.labels = 0.5)
+dev.off()
 
-# dev.off()
+## ======== Pearson Correlation Matrix with Cube Transformation ===========
+pearson_cubed <- cor(renamed_cube_data, method = "pearson", use = "complete.obs")
 
-# png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()),"_Pairs_Spearman_Correlation_Matrix_Cubed.png"), width = 12, height = 12, units = "in", res = 300)
+png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Scale_Pearson_Correlation_Matrix_Cubed.png"), width = 12, height = 12, units = "in", res = 300)
+corrplot(pearson_cubed, type = "upper", method = "number", 
+         col = colorRampPalette(rdylbu_colors)(200), tl.col = "black", tl.cex = 0.5, 
+         number.cex = 0.5, cl.cex = 1.25, mar = c(0, 0, 2, 0), title = "Pearson Correlation Cubed")
+dev.off()
 
-# pairs(cube_data %>% select(-Site_ID, -Parent_ID),
-#       lower.panel = panel.smooth, 
-#       upper.panel = spear.panel.cor, 
-#       diag.panel = panel.hist,
-#       labels = colnames(cube_data %>% select(-Site_ID, -Parent_ID)),
-#       cex.labels = 0.8) 
-
-# dev.off()
-
-### ======== Pearson correlation cube transformation ============
-# function for pearson corr matrix
-
-# png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()),"_Pairs_Pearson_Correlation_Matrix_Cubed.png"), width = 12, height = 12, units = "in", res = 300)
-# 
-# pairs(cube_data %>% select(-Site_ID, -Parent_ID),
-#       lower.panel = panel.smooth, 
-#       upper.panel = pear.panel.cor, 
-#       diag.panel = panel.hist,
-#       labels = colnames(cube_data %>% select(-Site_ID, -Parent_ID)),
-#       cex.labels = 0.8) 
-# 
-# dev.off()
+## ======== Pearson Pairwise Plot with Cube Transformation ===========
+png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Pairs_Pearson_Correlation_Matrix_Cubed.png"), width = 24, height = 24, units = "in", res = 300)
+pairs(cube_data %>% select(-Site_ID, -Parent_ID),
+      lower.panel = panel.smooth,
+      upper.panel = pear.panel.cor,
+      diag.panel = panel.hist,
+      labels = variable_names %>% filter(cubed %in% colnames(cube_data %>% select(-Site_ID, -Parent_ID))) %>% pull(labels),
+      cex.labels = 0.5)
+dev.off()
 
 # ======== LASSO  ============
 
@@ -378,6 +409,12 @@ r2_scores = numeric(num_seeds)
 
 x_cube_variables = scale_cube_variables %>%
   select(-response_variable)
+
+if(variable == 'scale_cube_Mean_degree_decay_rate'){
+  
+  x_cube_variables = x_cube_variables %>%
+    select( -scale_cube_Mean_sum_mean_daily_temp)
+}
 
 xvars <- data.matrix(x_cube_variables)
 
@@ -427,7 +464,7 @@ lasso_coef_means = lasso_coef_mat %>%
   rowwise() %>% 
   mutate(mean = mean(c_across(contains("s1"))), 
          sd = sd(c_across(contains("s1"))),
-         cv = mean/sd) %>% 
+         cv = sd/mean) %>% 
   relocate(mean, .before = s1) %>% 
   relocate(sd, .before = s1) %>% 
   relocate(RowNames, .before = mean)%>% 
@@ -445,7 +482,7 @@ norm_lasso_coef_means = mean_coeffs %>%
   rowwise() %>% 
   mutate(mean = mean(c_across(contains("s1"))), 
          sd = sd(c_across(contains("s1"))),
-         cv = mean/sd) %>% 
+         cv = sd/mean) %>% 
   relocate(mean, .before = s1) %>% 
   relocate(sd, .before = s1) %>% 
   relocate(RowNames, .before = mean)%>% 
@@ -481,6 +518,111 @@ if(match(variable, response_variable) == 1){
 
 
 }
+
+# ================================ investigate cv ==============================
+
+all_results_long <- bind_rows(
+  lasso_coef_means_all %>%
+    select(RowNames, mean, sd, cv, response_variable) %>%
+    add_column(type = 'Not_Normalized'),
+  
+  norm_lasso_coef_means_all %>%
+    select(RowNames, mean, sd, cv, response_variable) %>%
+    add_column(type = 'Normalized')
+) %>%
+  mutate(cv = round(cv, 3))
+
+# absolute cv vs absolute mean; all norm/not norm + response variables
+ggplot(data = all_results_long, aes(x = abs(cv), y = abs(mean))) + 
+  geom_point()+
+  theme_bw()
+
+# absolute cv vs absolute mean; all norm/not norm + response variables; filtered cv <= 1
+ggplot(data = all_results_long %>% filter(abs(cv) <= 1), aes(x = abs(cv), y = abs(mean))) + 
+  geom_point()+
+  theme_bw()
+
+
+# absolute cv vs absolute mean; pivoted by norm/not norm and response variable 
+ggplot(data = all_results_long, aes(x = abs(cv), y = abs(mean))) + 
+  geom_point()+
+  facet_grid(response_variable ~ type)+
+  theme_bw()
+
+# absolute cv vs absolute mean; pivoted by norm/not norm and response variable; filtered cv <= 1
+ggplot(data = all_results_long %>% filter(abs(cv) <= 1), aes(x = abs(cv), y = abs(mean))) + 
+  geom_point()+
+  facet_grid(response_variable ~ type)+
+  theme_bw()
+
+#cv histo; all norm/not norm + response variables
+ggplot(data = all_results_long, aes(x = abs(cv))) + 
+  geom_histogram()+
+  theme_bw()
+
+#cv histo; all norm/not norm + response variables; filtered cv <= 1
+ggplot(data = all_results_long %>% filter(abs(cv) <= 1), aes(x = abs(cv))) + 
+  geom_histogram()+
+  theme_bw()
+
+#cv histo; pivoted by norm/not norm and response variable
+ggplot(data = all_results_long, aes(x = abs(cv))) + 
+  geom_histogram()+
+  facet_grid(response_variable ~ type)+
+  theme_bw()
+
+#cv histo; pivoted by norm/not norm and response variable; filtered cv <= 1
+ggplot(data = all_results_long %>% filter(abs(cv) <= 1), aes(x = abs(cv))) + 
+  geom_histogram()+
+  facet_grid(response_variable ~ type)+
+  theme_bw()
+
+#cv rank; norm decay rate per day
+filtered_data1 <- all_results_long %>%
+  filter(response_variable == 'scale_cube_Mean_Decay_Rate_per_day',
+         type == 'Normalized') %>%
+  arrange(abs(cv)) %>%  # Ensure order before setting factor
+  mutate(RowNames = factor(RowNames, levels = unique(RowNames)))  # Explicit ordering
+ggplot(filtered_data1, aes(x = abs(cv), y = RowNames)) + 
+  geom_point() +
+  theme_bw()+
+  ggtitle("norm decay rate per day")
+
+#cv rank; not norm decay rate per day
+filtered_data2 <- all_results_long %>%
+  filter(response_variable == 'scale_cube_Mean_Decay_Rate_per_day',
+         type == 'Not_Normalized') %>%
+  arrange(abs(cv)) %>%  # Ensure order before setting factor
+  mutate(RowNames = factor(RowNames, levels = unique(RowNames)))  # Explicit ordering
+
+ggplot(filtered_data2, aes(x = abs(cv), y = RowNames)) + 
+  geom_point() +
+  theme_bw()+
+  ggtitle("not norm decay rate per day")
+
+#cv rank; norm degree decay rate
+filtered_data3 <- all_results_long %>%
+  filter(response_variable == 'scale_cube_Mean_degree_decay_rate',
+         type == 'Normalized') %>%
+  arrange(abs(cv)) %>%  # Ensure order before setting factor
+  mutate(RowNames = factor(RowNames, levels = unique(RowNames)))  # Explicit ordering
+
+ggplot(filtered_data3, aes(x = abs(cv), y = RowNames)) + 
+  geom_point() +
+  theme_bw()+
+  ggtitle("norm degree decay rate")
+
+#cv rank; not norm degree decay rate
+filtered_data4 <- all_results_long %>%
+  filter(response_variable == 'scale_cube_Mean_degree_decay_rate',
+         type == 'Not_Normalized') %>%
+  arrange(abs(cv)) %>%  # Ensure order before setting factor
+  mutate(RowNames = factor(RowNames, levels = unique(RowNames)))  # Explicit ordering
+
+ggplot(filtered_data4, aes(x = abs(cv), y = RowNames)) + 
+  geom_point() +
+  theme_bw()+
+  ggtitle("not norm degree decay rate")
 
 # ================================ create plots ===============================
 
