@@ -544,10 +544,23 @@ ggplot(data = all_results_long %>% filter(abs(cv) <= 1), aes(x = abs(cv), y = ab
 
 
 # absolute cv vs absolute mean; pivoted by norm/not norm and response variable 
-ggplot(data = all_results_long, aes(x = abs(cv), y = abs(mean))) + 
+cv_plot <- ggplot(data = all_results_long %>% mutate(response_variable = case_when(response_variable == 'scale_cube_Mean_degree_decay_rate' ~ 'Kdd',
+                                                                        response_variable == 'scale_cube_Mean_Decay_Rate_per_day' ~ 'Kcd'),
+                                          type = str_replace(type, 'Not_Normalized', 'Not Normalized' )), aes(x = abs(cv), y = abs(mean))) + 
   geom_point()+
   facet_grid(response_variable ~ type)+
   theme_bw()
+
+
+ggsave(
+  plot_out_path,
+  cv_plot,
+  device = 'pdf',
+  width = 8,
+  height = 2,
+  units = 'in',
+  dpi = 300
+)
 
 # absolute cv vs absolute mean; pivoted by norm/not norm and response variable; filtered cv <= 1
 ggplot(data = all_results_long %>% filter(abs(cv) <= 1), aes(x = abs(cv), y = abs(mean))) + 
