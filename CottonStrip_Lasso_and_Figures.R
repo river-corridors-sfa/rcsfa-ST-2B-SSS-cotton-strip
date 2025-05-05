@@ -624,6 +624,37 @@ ggplot(filtered_data4, aes(x = abs(cv), y = RowNames)) +
   theme_bw()+
   ggtitle("not norm degree decay rate")
 
+# ================================ create out table ============================
+
+output <- all_results_long %>%
+  mutate(mean = signif(mean, 3),
+         abs_mean = abs(mean),
+         sd = signif(sd, 3),
+         cv = signif(cv, 3),
+         abs_cv = abs(cv),
+         cv = case_when(is.na(cv) ~ '',
+                        TRUE ~ as.character(cv)),
+         RowNames = str_remove(RowNames, 'scale_cube_'),
+         response_variable = case_when(response_variable == 'scale_cube_Mean_degree_decay_rate' ~ 'Kdd',
+                                       response_variable == 'scale_cube_Mean_Decay_Rate_per_day' ~ 'Kcd'),
+         type = str_replace(type, 'Not_Normalized', 'Not Normalized' )) %>%
+  left_join(variable_names %>% select(original, labels), by = c('RowNames' = 'original')) %>%
+  rename(Predictor = labels)%>% 
+  # group_by(response_variable, type) %>%
+  # arrange(desc(abs_mean)) %>%
+  # ungroup() %>%
+  # select(response_variable, type, Predictor, mean, sd, cv)
+  clipr::write_clip()
+  
+out_r2 <- mean_r2_all %>%
+  mutate(mean_r2 = signif(mean_r2, 3),
+         sd = signif(sd, 3))%>%
+  rename('Mean R2' = mean_r2) %>%
+  mutate('Response Variable' = case_when(response_variable == 'scale_cube_Mean_degree_decay_rate' ~ 'Kdd',
+                                       response_variable == 'scale_cube_Mean_Decay_Rate_per_day' ~ 'Kcd')) %>%
+  select('Response Variable', 'Mean R2', sd) %>%
+  clipr::write_clip()
+
 # ================================ create plots ===============================
 
 ## ==========  Decay vs ERs ==========
