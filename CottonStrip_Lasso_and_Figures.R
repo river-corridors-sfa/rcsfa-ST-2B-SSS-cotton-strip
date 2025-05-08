@@ -553,11 +553,10 @@ cv_plot <- ggplot(data = all_results_long %>% mutate(response_variable = case_wh
 
 
 ggsave(
-  plot_out_path,
+  paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Mean_vs_CV.png"),
   cv_plot,
-  device = 'pdf',
   width = 8,
-  height = 2,
+  height = 8,
   units = 'in',
   dpi = 300
 )
@@ -726,11 +725,12 @@ AIC(degree_ERtot_mod)
 AIC(degree_mult_mod)
 AIC(degree_mult_inter_mod)
 
-# Plotting regression of rates vs. drainage area
+## Plotting regression of rates vs. drainage area
 pdf(file = "Outputs/Decay_vs_Drainage.pdf", height = 14, width = 10)
 
 par(pty = "s", mfrow = c(2, 1), oma = c(4, 4, 4, 4), mar = c(5, 5, 2, 1), mgp = c(3.5, 1, 0))
 
+# First plot with label "A"
 mod_to_plot1 <- lm(cube_Mean_Decay_Rate_per_day ~ cube_totdasqkm, data = cube_data)
 mod_sum1 <- summary(mod_to_plot1)
 plot(cube_data$cube_totdasqkm, cube_data$cube_Mean_Decay_Rate_per_day, xlab = bquote(Drainage ~ Area ~ (km^-2)^{1/3}), ylab = expression((K[cd])^{1/3}), cex.lab = 2, cex.axis = 1.5)
@@ -739,6 +739,7 @@ mtext(bquote(R^2 == .(round(mod_sum1$r.squared, digits = 2))), side = 1, adj = 0
 mtext(paste0("p = ", round(mod_sum1$coefficients[2, 4], digits = 3)), side = 1, adj = 0.95, line = -2)
 mtext("A", cex = 2, side = 1, adj = 0.05, line = -1.5)
 
+# Second plot with label "B"
 mod_to_plot2 <- lm(cube_Mean_degree_decay_rate ~ cube_totdasqkm, data = cube_data)
 mod_sum2 <- summary(mod_to_plot2)
 plot(cube_data$cube_totdasqkm, cube_data$cube_Mean_degree_decay_rate, xlab = bquote(Drainage ~ Area ~ (km^-2)^{1/3}), ylab = expression((K[dd])^{1/3}), cex.lab = 2, cex.axis = 1.5)
