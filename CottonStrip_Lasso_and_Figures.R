@@ -164,10 +164,6 @@ sand <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Sediment_G
          Percent_Tot_Sand = as.numeric(Percent_Tot_Sand)) %>%
   select(Parent_ID, Percent_Tot_Sand)
 
-# =============================== cube function ===============================
-
-cube_root <- function(x) sign(x) * (abs(x))^(1/3)
-
 # =============================== combine data ===============================
 
 all_data <- decay_temp_means %>%
@@ -203,7 +199,7 @@ long_data <-  all_data %>%
 #   geom_histogram(long_data, mapping = aes(x = value)) + 
 #   facet_wrap(~ variable, scales = "free") +
 
-## ======== Custom Variable Name Mapping ===========
+## ======== Variable Name Mapping ===========
 # Define a tibble mapping original, scaled, and plot labels
 variable_names <- tibble(
   original = c("Mean_sum_mean_daily_temp", "Mean_degree_decay_rate", "Mean_Decay_Rate_per_day", "Sediment_Respiration",
@@ -221,110 +217,10 @@ variable_names <- tibble(
 ) %>%
   mutate(cubed = paste0("cube_",original))
 
-## ======== Spearman Correlation before Transformations ===========
-renamed_all_data <- all_data %>%
-  select(-Site_ID, -Parent_ID) %>%
-  rename_with(~ ifelse(!is.na(match(., variable_names$original)),
-                       variable_names$labels[match(., variable_names$original)],
-                       .), .cols = names(all_data %>% select(-Site_ID, -Parent_ID)))
-
-spearman <- cor(renamed_all_data, method = "spearman", use = "complete.obs")
-
-rdylbu_colors <- c("#a50026", "#d73027", "#f46d43", "#fdae61", "#fee090",
-                   "#ffffbf", "#e0f3f8", "#abd9e9", "#74add1", "#4575b4", "#313695")
-
-png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Scale_Spearman_Correlation_Matrix.png"), width = 12, height = 12, units = "in", res = 300)
-corrplot(spearman, type = "upper", method = "number", 
-         col = colorRampPalette(rdylbu_colors)(200), tl.col = "black", tl.cex = 0.5, 
-         number.cex = 0.5, cl.cex = 1.25, mar = c(0, 0, 2, 0), title = "Spearman Correlation", 
-         tl.labels = variable_names %>% filter(original %in% colnames(spearman)) %>% pull(labels))
-dev.off()
-
-## ======== Pearson Correlation before Transformations ===========
-pearson <- cor(renamed_all_data , method = "pearson", use = "complete.obs")
-
-png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Scale_Pearson_Correlation_Matrix.png"), width = 12, height = 12, units = "in", res = 300)
-corrplot(pearson, type = "upper", method = "number", 
-         col = colorRampPalette(rdylbu_colors)(200), tl.col = "black", tl.cex = 0.5, 
-         number.cex = 0.5, cl.cex = 1.25, mar = c(0, 0, 2, 0), title = "Pearson Correlation", 
-         tl.labels = variable_names %>% filter(original %in% colnames(pearson)) %>% pull(labels))
-dev.off()
-
-## ======== Custom Correlation Panel Functions ===========
-spear.panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
-{
-  usr <- par("usr"); on.exit(par(usr))
-  par(usr = c(0, 1, 0, 1))
-  
-  r <- cor(x, y, method = "spearman")
-  txt <- format(c(r, 0.123456789), digits=digits)[1]
-  txt <- paste(prefix, txt, sep="")
-  
-  if(missing(cex.cor)) {cex.cor <- 0.8/strwidth(txt)}
-  text(0.5, 0.5, txt, cex = cex.cor * (1 + abs(r))/2)
-  
-  test <- cor.test(x, y, method = "spearman")
-  Signif <- symnum(test$p.value, corr = FALSE, na = FALSE, 
-                   cutpoints = c(0, 0.001, 0.01, 0.05, 1), symbols = c("***", "**", "*", " "))
-  text(.5, .8, Signif, cex=cex.cor, col=2)
-}
-
-pear.panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
-{
-  usr <- par("usr"); on.exit(par(usr))
-  par(usr = c(0, 1, 0, 1))
-  
-  r <- cor(x, y, method = "pearson")
-  txt <- format(c(r, 0.123456789), digits=digits)[1]
-  txt <- paste(prefix, txt, sep="")
-  
-  if(missing(cex.cor)) {cex.cor <- 0.8/strwidth(txt)} 
-  text(0.5, 0.5, txt, cex = cex.cor * (1 + abs(r))/2)
-  
-  test <- cor.test(x, y)
-  Signif <- symnum(test$p.value, corr = FALSE, na = FALSE, 
-                   cutpoints = c(0, 0.001, 0.01, 0.05, 1), symbols = c("***", "**", "*", " "))
-  
-  text(.5, .8, Signif, cex=cex.cor, col=2)
-}
-
-panel.smooth <- function(x, y) {
-  points(x, y, pch = 19, col = rgb(0.1, 0.2, 0.5, alpha = 0.3))
-  abline(lm(y ~ x), col = 'blue', lty = 2)
-}
-
-panel.hist <- function(x, ...) {
-  usr <- par("usr"); on.exit(par(usr))
-  par(usr = c(usr[1:2], 0, 1))
-  
-  h <- hist(x, plot = FALSE, breaks = "FD")
-  breaks <- h$breaks; nB <- length(breaks)
-  y <- h$counts; y <- y/max(y)
-  
-  rect(breaks[-nB], 0, breaks[-1], y, col="grey", border="white", ...)
-}
-
-## ======== Spearman Pairwise Plot ===========
-png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Pairs_Spearman_Correlation_Matrix.png"), width = 24, height = 24, units = "in", res = 300)
-pairs(all_data %>% select(-Site_ID, -Parent_ID),
-      lower.panel = panel.smooth,
-      upper.panel = spear.panel.cor,
-      diag.panel = panel.hist,
-      labels = variable_names %>% filter(original %in% colnames(all_data %>% select(-Site_ID, -Parent_ID))) %>% pull(labels),
-      cex.labels = 0.5)  # Reduced labels size for clarity
-dev.off()
-
-## ======== Pearson Pairwise Plot ===========
-png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Pairs_Pearson_Correlation_Matrix.png"), width = 24, height = 24, units = "in", res = 300)
-pairs(all_data %>% select(-Site_ID, -Parent_ID),
-      lower.panel = panel.smooth,
-      upper.panel = pear.panel.cor,
-      diag.panel = panel.hist,
-      labels = variable_names %>% filter(original %in% colnames(all_data %>% select(-Site_ID, -Parent_ID))) %>% pull(labels),
-      cex.labels = 0.5)  # Reduced labels size for clarity
-dev.off()
-
 ## ======== Cube Root Transformation ===========
+
+cube_root <- function(x) sign(x) * (abs(x))^(1/3)
+
 cube_data <- all_data %>% 
   mutate(across(where(is.numeric), cube_root)) %>% 
   rename_with(.fn = ~ paste0("cube_", .x), .cols = where(is.numeric))
@@ -338,48 +234,23 @@ long_cube_data <- cube_data %>%
 #   facet_wrap(~ variable, scales = "free") +
 #   theme_minimal()
 
-## ======== Spearman Correlation with Cube Transformation ===========
+
+## ======== Pearson Correlation Matrix with Cube Transformation ===========
 renamed_cube_data <- cube_data %>%
   select(-Site_ID, -Parent_ID) %>%
   rename_with(~ ifelse(!is.na(match(., variable_names$cubed)),
                        variable_names$labels[match(., variable_names$cubed)],
                        .), .cols = names(cube_data %>% select(-Site_ID, -Parent_ID)))
 
-spearman_cubed <- cor(renamed_cube_data, method = "spearman", use = "complete.obs")
-
-png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Scale_Spearman_Correlation_Matrix_Cubed.png"), width = 12, height = 12, units = "in", res = 300)
-corrplot(spearman_cubed, type = "upper", method = "number", 
-         col = colorRampPalette(rdylbu_colors)(200), tl.col = "black", tl.cex = 0.5, 
-         number.cex = 0.5, cl.cex = 1.25, mar = c(0, 0, 2, 0), title = "Spearman Correlation Cubed")
-dev.off()
-
-## ======== Spearman Pairwise Plot with Cube Transformation ===========
-png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Pairs_Spearman_Correlation_Matrix_Cubed.png"), width = 24, height = 24, units = "in", res = 300)
-pairs(cube_data %>% select(-Site_ID, -Parent_ID),
-      lower.panel = panel.smooth,
-      upper.panel = spear.panel.cor,
-      diag.panel = panel.hist,
-      labels = variable_names %>% filter(cubed %in% colnames(cube_data %>% select(-Site_ID, -Parent_ID))) %>% pull(labels),
-      cex.labels = 0.5)
-dev.off()
-
-## ======== Pearson Correlation Matrix with Cube Transformation ===========
 pearson_cubed <- cor(renamed_cube_data, method = "pearson", use = "complete.obs")
 
-png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Scale_Pearson_Correlation_Matrix_Cubed.png"), width = 12, height = 12, units = "in", res = 300)
+rdylbu_colors <- c("#a50026", "#d73027", "#f46d43", "#fdae61", "#fee090",
+                   "#ffffbf", "#e0f3f8", "#abd9e9", "#74add1", "#4575b4", "#313695")
+
+png(file = "./Figures/FigureS1_Pearson_Correlation_Matrix_Cubed.png", width = 12, height = 12, units = "in", res = 300)
 corrplot(pearson_cubed, type = "upper", method = "number", 
          col = colorRampPalette(rdylbu_colors)(200), tl.col = "black", tl.cex = 0.5, 
-         number.cex = 0.5, cl.cex = 1.25, mar = c(0, 0, 2, 0), title = "Pearson Correlation Cubed")
-dev.off()
-
-## ======== Pearson Pairwise Plot with Cube Transformation ===========
-png(file = paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Pairs_Pearson_Correlation_Matrix_Cubed.png"), width = 24, height = 24, units = "in", res = 300)
-pairs(cube_data %>% select(-Site_ID, -Parent_ID),
-      lower.panel = panel.smooth,
-      upper.panel = pear.panel.cor,
-      diag.panel = panel.hist,
-      labels = variable_names %>% filter(cubed %in% colnames(cube_data %>% select(-Site_ID, -Parent_ID))) %>% pull(labels),
-      cex.labels = 0.5)
+         number.cex = 0.5, cl.cex = 1.25, mar = c(0, 0, 2, 0))
 dev.off()
 
 # ======== LASSO  ============
