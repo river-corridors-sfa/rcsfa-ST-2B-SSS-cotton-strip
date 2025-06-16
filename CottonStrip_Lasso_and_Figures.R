@@ -678,3 +678,42 @@ scatter.no.hist = function(x, y, xlab.use="", ylab.use=""){ # this keeps everyth
 pdf("Outputs/Decay_v_Temp.pdf")
 scatter.no.hist(x = decay_temp$sum_mean_daily_temp,y = decay_temp$Decay_Rate_per_day,xlab.use = expression(Summed~Temperature~(degree*C)),ylab.use = expression(K[cd]))
 dev.off()
+
+## ==========  Hists: YRB vs global ==========
+
+# compare statistical distributions of cotton strip decay rates between those observed in the YRB and those from a global dataset
+
+global.cotton.Kcd = read_csv('https://github.com/dmcostello/CELLDEX2018/raw/refs/heads/master/str_k.csv')
+range(global.cotton.Kcd$k)
+
+global.cotton.Kdd = read_csv('https://github.com/dmcostello/CELLDEX2018/raw/refs/heads/master/str_k_dd.csv')
+range(global.cotton.Kdd$k)
+
+
+yrb.trim = decay_temp[,c("degree_decay_rate","Decay_Rate_per_day")]
+range(yrb.trim$degree_decay_rate)
+range(yrb.trim$Decay_Rate_per_day)
+
+# generate kernels
+global.Kcd.kern = density(global.cotton.Kcd$k,from = 0)
+global.Kdd.kern = density(global.cotton.Kdd$k,from = 0)
+yrb.Kdd.kern = density(yrb.trim$degree_decay_rate,from = 0)
+yrb.Kcd.kern = density(yrb.trim$Decay_Rate_per_day,from = 0)
+
+# make plots
+
+pdf("Outputs/Global_YRB_Kern.pdf",width = 10,height = 5)
+
+par(pty="s",mfrow=c(1,2))
+
+
+plot(global.Kdd.kern,typ="l",main="",xlab = "Kdd",lwd=2,xlim=c(0,0.025),ylim=c(0,250),cex.lab=2,cex.axis=1.5)
+points(yrb.Kdd.kern,typ="l",col=2,lwd=2)
+legend(x = 0.012,y=250,col = c(1,2),lwd=2,legend = c('Global','YRB'),cex = 1.25)
+
+plot(global.Kcd.kern,typ="l",main="",xlab = "Kcd",lwd=2,xlim=c(0,0.25),cex.lab=2,cex.axis=1.5)
+points(yrb.Kcd.kern,typ="l",col=2,lwd=2)
+
+
+dev.off()
+
