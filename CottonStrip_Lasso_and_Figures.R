@@ -546,7 +546,7 @@ out_r2 <- mean_r2_all %>%
 pdf("Outputs/Decay_vs_ERs.pdf", width = 14, height = 9)
 
 # Setting plotting parameters
-par(pty = "s", mfrow = c(2, 3), oma = c(4, 4, 4, 4), mar = c(5, 5, 2, 1), mgp = c(3.5, 1, 0))
+par(pty = "s", mfrow = c(2, 3), oma = c(4, 4, 4, 4), mar = c(6, 6, 2, 1), mgp = c(4.5, 1, 0))
 
 # Defining a function to create each plot
 create_plot <- function(x, y, xlab, ylab, label) {
