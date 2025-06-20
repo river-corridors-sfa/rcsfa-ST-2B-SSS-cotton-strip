@@ -552,15 +552,14 @@ par(pty = "s", mfrow = c(2, 3), oma = c(4, 4, 4, 4), mar = c(5, 5, 2, 1), mgp = 
 create_plot <- function(x, y, xlab, ylab, label) {
   mod_to_plot <- lm(as.formula(paste(y, "~", x)), data = cube_data)
   mod_sum <- summary(mod_to_plot)
-  plot(cube_data[[x]], cube_data[[y]], xlab = xlab, ylab = ylab, cex.lab = 2, cex.axis = 1.5)
+  plot(cube_data[[x]], cube_data[[y]], xlab = xlab, ylab = ylab, cex.lab = 2.8, cex.axis = 2.0)
   
   # Add the regression line
   abline(mod_to_plot, lwd = 3)
   
   # Add R-squared and p-value
-  mtext(bquote(R^2 == .(round(mod_sum$r.squared, digits = 2))), side = 3, adj = 0.85, line = -2)
-  mtext(paste0("p = ", round(mod_sum$coefficients[2, 4], digits = 3)), side = 3, adj = 0.85, line = -3.5)
-  
+  mtext(bquote(R^2 == .(round(mod_sum$r.squared, digits = 2))), side = 3, adj = 0.85, line = -2, cex = 1.2)
+  mtext(paste0("p = ", round(mod_sum$coefficients[2, 4], digits = 3)), side = 3, adj = 0.85, line = -3.5, cex = 1.2)
   
   # Add label
   mtext(label, cex = 2, side = 1, adj = 0.05, line = -1.5)
@@ -577,6 +576,8 @@ create_plot("cube_Sediment_Respiration", "cube_Mean_degree_decay_rate", expressi
 create_plot("cube_Water_Column_Respiration", "cube_Mean_degree_decay_rate", expression(ER[wc]~(g~O[2]~m^-2~day^-1)^{1/3}), "", "F")
 
 dev.off()
+
+
 
 # Performing multiple regressions
 day_mult_mod <- lm(cube_Mean_Decay_Rate_per_day ~ cube_Water_Column_Respiration + cube_Sediment_Respiration, data = cube_data)
@@ -599,27 +600,28 @@ AIC(degree_mult_inter_mod)
 ## Plotting regression of rates vs. drainage area
 pdf(file = "Outputs/Decay_vs_Drainage.pdf", height = 14, width = 10)
 
-par(pty = "s", mfrow = c(2, 1), oma = c(4, 4, 4, 4), mar = c(5, 5, 2, 1), mgp = c(3.5, 1, 0))
+par(pty = "s", mfrow = c(2, 1), oma = c(4, 4, 4, 4), mar = c(5, 5, 2, 1), mgp = c(4, 0.75, 0))
 
 # First plot with label "A"
 mod_to_plot1 <- lm(cube_Mean_Decay_Rate_per_day ~ cube_totdasqkm, data = cube_data)
 mod_sum1 <- summary(mod_to_plot1)
-plot(cube_data$cube_totdasqkm, cube_data$cube_Mean_Decay_Rate_per_day, xlab = bquote(Drainage ~ Area ~ (km^-2)^{1/3}), ylab = expression((K[cd])^{1/3}), cex.lab = 2, cex.axis = 1.5)
+plot(cube_data$cube_totdasqkm, cube_data$cube_Mean_Decay_Rate_per_day, xlab = bquote(Drainage ~ Area ~ (km^-2)^{1/3}), ylab = expression((K[cd])^{1/3}), cex.lab = 3, cex.axis = 1.5)
 abline(mod_to_plot1, lwd = 3)
-mtext(bquote(R^2 == .(round(mod_sum1$r.squared, digits = 2))), side = 1, adj = 0.95, line = -3.5)
-mtext(paste0("p = ", round(mod_sum1$coefficients[2, 4], digits = 3)), side = 1, adj = 0.95, line = -2)
-mtext("A", cex = 2, side = 1, adj = 0.05, line = -1.5)
+mtext(bquote(R^2 == .(round(mod_sum1$r.squared, digits = 2))), side = 1, adj = 0.95, line = -3.5, cex = 2)
+mtext(paste0("p = ", round(mod_sum1$coefficients[2, 4], digits = 3)), side = 1, adj = 0.95, line = -2, cex = 2)
+mtext("A", cex = 3, side = 1, adj = 0.05, line = -1.5)
 
 # Second plot with label "B"
 mod_to_plot2 <- lm(cube_Mean_degree_decay_rate ~ cube_totdasqkm, data = cube_data)
 mod_sum2 <- summary(mod_to_plot2)
-plot(cube_data$cube_totdasqkm, cube_data$cube_Mean_degree_decay_rate, xlab = bquote(Drainage ~ Area ~ (km^-2)^{1/3}), ylab = expression((K[dd])^{1/3}), cex.lab = 2, cex.axis = 1.5)
+plot(cube_data$cube_totdasqkm, cube_data$cube_Mean_degree_decay_rate, xlab = bquote(Drainage ~ Area ~ (km^-2)^{1/3}), ylab = expression((K[dd])^{1/3}), cex.lab = 3, cex.axis = 1.5)
 abline(mod_to_plot2, lwd = 3)
-mtext(bquote(R^2 == .(round(mod_sum2$r.squared, digits = 2))), side = 1, adj = 0.95, line = -3.5)
-mtext(paste0("p = ", round(mod_sum2$coefficients[2, 4], digits = 3)), side = 1, adj = 0.95, line = -2)
-mtext("B", cex = 2, side = 1, adj = 0.05, line = -1.5)
+mtext(bquote(R^2 == .(round(mod_sum2$r.squared, digits = 2))), side = 1, adj = 0.95, line = -3.5, cex = 2)
+mtext(paste0("p = ", round(mod_sum2$coefficients[2, 4], digits = 3)), side = 1, adj = 0.95, line = -2, cex = 2)
+mtext("B", cex = 3, side = 1, adj = 0.05, line = -1.5)
 
 dev.off()
+
 
 ## ==========  Decay Rate Hists Scatters ==========
 
