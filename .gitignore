@@ -47,7 +47,7 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
-data/v3_SSS_Data_Package/Sensor_Data/BarotrollAtm/Plots_and_Summary_Statistics/v3_SSS_Air_Press_Temp_TsPlot.pdf
-data/v3_SSS_Data_Package/Sensor_Data/MantaRiver/Plots_and_Summary_Statistics/v3_SSS_Water_Temp_SpC_Turb_pH_ChlA_TsPlot.pdf
-data/v3_SSS_Data_Package/Sensor_Data/miniDOT/Plots_and_Summary_Statistics/v3_SSS_Water_DO_Temp_TsPlot.pdf
-data/v3_SSS_Data_Package/Sensor_Data/miniDOTManualChamber/Plots_and_Summary_Statistics/v3_SSS_MC_Water_DO_Temp_TsPlot.pdf
+v3_SSS_Air_Press_Temp_TsPlot.pdf
+v3_SSS_Water_Temp_SpC_Turb_pH_ChlA_TsPlot.pdf
+v3_SSS_Water_DO_Temp_TsPlot.pdf
+v3_SSS_MC_Water_DO_Temp_TsPlot.pdf
