@@ -1,0 +1,144 @@
+---
+title: "smet_results_analysis"
+author: "Matt Kaufman and Vanessa Garayburu-Caruso"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file()) # Sets working Directory to the R project
+
+```
+
+##Matt Kaufman and Vanessa Garayburu-Caruso, vanessa.garayburu-caruso@pnnl.gov, Pacific Northwest National Laboratory
+
+This code assembles average values for ecosystem respiration, gross primary production, and K600 across the deployment period for each of the SSS sites into one summary file. It also calculates a period-average depth and uses that to compute per-volume rates from the per-area rates that stream metabolizer produces.
+
+##import GPP and ER daily means from SM results and combine
+```{r import, echo=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+folder<-'Outputs/'
+filenamelist<-list.files(folder, pattern='daily_prediction_results')
+
+SITE_IDlist<-sapply(strsplit(filenamelist, "_"), "[", 3)
+PARENT_IDlist<-sapply(strsplit(filenamelist, "_"), "[", 2)
+
+depthfolder<-'Inputs/Sensor_Files/'
+depthfilenamelist<-list.files(depthfolder, pattern='csv')
+depthPARENT_IDlist<-  sapply(strsplit(depthfilenamelist, "_"), "[", 2)
+
+
+# Initialize results dataframe
+SMresults <- data.frame(matrix(ncol = 13, nrow = 0))
+colnames(SMresults) <- c("Parent_ID", "Site_ID", "daysofdata",                      "ERdailymeanmean_gO2/m2day", "GPPdailymeanmean_gO2/m2day",                           "K600dailymeanmean_m/day", "mean_depth_m",
+                          "ERdailymeanmean_gO2/m3day","GPPdailymeanmean_gO2/m3day","K600vsERrsq", "K600vsERp", "ER_removed", "GPP_removed")
+
+# Loop through each file
+for(i in 1:length(PARENT_IDlist)) { 
+  # Load data
+  data <- read.csv(paste(folder, filenamelist[i], sep = ''), header = TRUE)
+  numdays <- length(data$ER_daily_mean[!is.na(data$ER_daily_mean)])
+
+  # Count initial number of non-NA values for each variable
+  initial_counts <- data %>%
+    summarise(
+      ER_initial_count = sum(!is.na(ER_daily_mean)),
+      GPP_initial_count = sum(!is.na(GPP_daily_mean)),
+      ER_positive_count = sum(ER_daily_mean > 0, na.rm = TRUE),
+      GPP_negative_count = sum(GPP_daily_mean < 0, na.rm = TRUE)
+
+    )
+
+  if (initial_counts$ER_positive_count == numdays|initial_counts$ER_positive_count > 27){
+  ER_daily_mean_mean <- mean(data$ER_daily_mean, na.rm = TRUE)
+  GPP_daily_mean_mean <- mean(data$GPP_daily_mean, na.rm = TRUE)
+  K600_daily_mean_mean <- mean(data$K600_daily_mean, na.rm = TRUE)
+  
+  removed_counts <- initial_counts %>%
+    mutate(
+      ER_removed = ER_positive_count,
+      GPP_removed = GPP_negative_count) %>%
+    dplyr::select(ER_removed, GPP_removed)
+
+  }else{
+  # Filter out ER > 0.5 and GPP < -0.5
+  filtered_data <- data %>%
+    filter(!(ER_daily_mean > 0.5 | GPP_daily_mean < -0.5))
+
+  # Count the number of removed values per variable
+  removed_counts <- initial_counts %>%
+    mutate(
+      ER_removed = ER_initial_count - sum(!is.na(filtered_data$ER_daily_mean)),
+      GPP_removed = GPP_initial_count - sum(!is.na(filtered_data$GPP_daily_mean))
+    ) %>%
+    dplyr::select(ER_removed, GPP_removed)
+
+  # Calculate means for filtered data
+  ER_daily_mean_mean <- mean(filtered_data$ER_daily_mean, na.rm = TRUE)
+  GPP_daily_mean_mean <- mean(filtered_data$GPP_daily_mean, na.rm = TRUE)
+  K600_daily_mean_mean <- mean(filtered_data$K600_daily_mean, na.rm = TRUE)
+}
+  # Reshape data for ggplot
+  data_long <- data %>%
+    dplyr::select(ER_daily_mean, GPP_daily_mean, K600_daily_mean) %>%
+    pivot_longer(cols = everything(), names_to = "Variable", values_to = "Value")
+
+  # Plot histograms
+  plot <- ggplot(data_long, aes(x = Value, fill = Variable)) +
+    geom_histogram(bins = 30, alpha = 0.7, position = "identity") +
+    facet_wrap(~ Variable, scales = "free_x") +
+    labs(title = paste("Histograms of ER, GPP, and K600 Daily Means for", PARENT_IDlist[i], SITE_IDlist[i]),
+         x = "Daily Mean Value",
+         y = "Frequency") +
+    theme_bw() +
+    scale_fill_manual(values = c("ER_daily_mean" = "skyblue", "GPP_daily_mean" = "salmon", "K600_daily_mean" = "lightgreen")) +
+    theme(legend.position = "none", aspect.ratio = 1) +
+    geom_vline(data = data_long %>% filter(Variable == "ER_daily_mean"), aes(xintercept = 0), color = "blue", linetype = "solid") +
+    geom_vline(data = data_long %>% filter(Variable == "GPP_daily_mean"), aes(xintercept = 0), color = "blue", linetype = "solid") +
+    geom_vline(data = data_long %>% filter(Variable == "ER_daily_mean"), aes(xintercept = 0.5), color = "red", linetype = "solid") +
+    geom_vline(data = data_long %>% filter(Variable == "GPP_daily_mean"), aes(xintercept = -0.5), color = "red", linetype = "solid")
+
+  # Save histogram
+  ggsave(filename = paste0("Histogram_Plots/histogram_", PARENT_IDlist[i], "_", SITE_IDlist[i], ".png"), plot = plot, width = 8, height = 6)
+
+  # Calculate depth information
+  depthfilenumber <- which(depthPARENT_IDlist == PARENT_IDlist[i])
+ depthdata <- read_csv(
+  paste0(depthfolder, depthfilenamelist[depthfilenumber]),
+  comment = '#',
+  na = c('N/A', '', 'NA', '-9999')
+)
+  meandepthm <- mean(depthdata$Depth, na.rm = TRUE)
+  ERdailymeanmeanm3 <- ER_daily_mean_mean / meandepthm
+  GPPdailymeanmeanm3 <- GPP_daily_mean_mean / meandepthm
+
+  # Linear regression and statistics
+  lmK600ER <- lm(ER_daily_mean ~ K600_daily_mean, data = data)
+  K600vsERp <- summary(lmK600ER)$coefficients[2, 4]
+  K600vsERrsq <- summary(lmK600ER)$r.squared
+
+SMresults[nrow(SMresults) + 1, ] <- c(
+  PARENT_IDlist[i], SITE_IDlist[i], numdays,
+  ER_daily_mean_mean, GPP_daily_mean_mean, K600_daily_mean_mean,
+  meandepthm, ERdailymeanmeanm3, GPPdailymeanmeanm3,
+  K600vsERrsq, K600vsERp,
+  removed_counts$ER_removed, removed_counts$GPP_removed
+)
+}
+
+# Flag as -9999 sites where SM failed or where the overall SM parameters are nonsensical 
+SMresults <- SMresults %>%
+  mutate_at(
+    vars("ERdailymeanmean_gO2/m2day", "GPPdailymeanmean_gO2/m2day", "K600dailymeanmean_m/day", "ERdailymeanmean_gO2/m3day", "GPPdailymeanmean_gO2/m3day", "K600vsERrsq", "K600vsERp"),
+    # funs(ifelse(Parent_ID %in% c("SSS001", "SSS007","SSS010","SSS011", "SSS016","SSS022","SSS023","SSS028","SSS033","SSS034","SSS038","SSS040","SSS042","SSS044","SSS045"), -9999, .))
+     funs(ifelse(Parent_ID %in% c("SSS023","SSS028","SSS038"), -9999, .))
+  )
+```
+##write CSV outupt
+```{r output, echo=FALSE}
+write.csv(SMresults, paste(folder,"v2_SSS_combined_SM_results.csv",sep=""), row.names=FALSE)
+```

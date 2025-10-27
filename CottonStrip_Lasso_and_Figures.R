@@ -2,14 +2,12 @@
 #
 # LASSO analysis for SSS Cotton Strips
 #
-# Status: In progress
-#
-# Note: Will need to download ERsed dp and change paths once published
+# Status: Complete
 #
 # ==============================================================================
 #
 # Author: Brieanne Forbes 
-# 22 April 2025
+# 27 Oct 2025
 #
 # ==============================================================================
 library(tidyverse) 
@@ -42,15 +40,15 @@ decay_temp_means <- decay_temp%>%
 
 
 
-er_gpp <- read_csv('../SSS_metabolism/v2_SSS_Water_Sediment_Total_Respiration_GPP.csv',
+er_gpp <- read_csv('./Published_Data/v2_SSS_Ecosystem_Respiration_Data_Package/v2_SSS_Water_Sediment_Total_Respiration_GPP.csv',
                    comment = '#', na = '-9999') %>%
   select(Parent_ID, Site_ID, Sediment_Respiration, Total_Ecosystem_Respiration, Water_Column_Respiration, Gross_Primary_Production)
 
-d50 <- read_csv('../SSS_metabolism/v2_SSS_ER_d50_TotalOxygenConsumed.csv', 
+d50 <- read_csv('./Published_Data/v2_SSS_Ecosystem_Respiration_Data_Package/v2_SSS_ER_d50_TotalOxygenConsumed.csv', 
                 comment = '#', na = '-9999') %>%
   select(Parent_ID, D50_m)
 
-slope_vel_dis <- read_csv('../SSS_metabolism/Stream_Metabolizer/Inputs/v2_SSS_Slope_Discharge_Velocity.csv',
+slope_vel_dis <- read_csv('./Published_Data/v2_SSS_Ecosystem_Respiration_Data_Package/Stream_Metabolizer/Inputs/v2_SSS_Slope_Discharge_Velocity.csv',
                           comment = '#', na = '-9999') %>%
   select(Site_ID, Slope, Discharge, Velocity)
 
