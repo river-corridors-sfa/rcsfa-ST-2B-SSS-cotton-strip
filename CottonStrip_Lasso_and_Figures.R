@@ -62,7 +62,7 @@ geospatial <- read_csv('https://github.com/river-corridors-sfa/Geospatial_variab
   select(Site_ID, totdasqkm, PctFst, AridityWs, PctAg, pctshrb2019ws, minelevsmo)
 
 # downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1969566
-tss <- read_csv('./data/v3_SSS_Data_Package/Sample_Data/SSS_Water_TSS.csv',
+tss <- read_csv('./Published_Data/v3_SSS_Data_Package/Sample_Data/SSS_Water_TSS.csv',
                 skip = 2, na = c('', 'N/A', '-9999')) %>%
   filter(!is.na(Sample_Name)) %>%
   mutate(Parent_ID = str_extract(Sample_Name, "^.{1,6}"),
@@ -71,12 +71,12 @@ tss <- read_csv('./data/v3_SSS_Data_Package/Sample_Data/SSS_Water_TSS.csv',
   select(Parent_ID, contains('TSS')) 
 
 # downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1969566
-depth <- read_csv('./data/v3_SSS_Data_Package/v3_SSS_Water_Depth_Summary.csv',
+depth <- read_csv('./Published_Data/v3_SSS_Data_Package/v3_SSS_Water_Depth_Summary.csv',
                   comment = '#', na = c('', 'N/A', '-9999')) %>%
   select(Parent_ID, Average_Depth)
 
 #downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
-water_npoc_tn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Water_NPOC_TN.csv',
+water_npoc_tn <- read_csv('./Published_Data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Water_NPOC_TN.csv',
                     skip = 2, na = c('', 'N/A', '-9999'))%>%
   filter(!is.na(Sample_Name),
          str_detect(Sample_Name, 'SSS')) %>%
@@ -93,7 +93,7 @@ water_npoc_tn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_W
   ungroup()
 
 #downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
-sed_npoc_tn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Sediment_NPOC_TN.csv',
+sed_npoc_tn <- read_csv('./Published_Data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Sediment_NPOC_TN.csv',
                           skip = 2, na = c('', 'N/A', '-9999'))%>%
   filter(!is.na(Sample_Name),
          str_detect(Sample_Name, 'SSS')) %>%
@@ -109,7 +109,7 @@ sed_npoc_tn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Sedime
 
 
 #downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
-cn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Sediment_CN.csv',
+cn <- read_csv('./Published_Data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Sediment_CN.csv',
                           skip = 2, na = c('', 'N/A', '-9999'))%>%
   filter(!is.na(Sample_Name),
          str_detect(Sample_Name, 'SSS')) %>%
@@ -119,7 +119,7 @@ cn <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Sediment_CN.csv
   select(Parent_ID, `01395_C_percent_per_mg`, `01397_N_percent_per_mg`)
 
 #downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
-ions <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Water_Ions.csv',
+ions <- read_csv('./Published_Data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Water_Ions.csv',
                skip = 2, na = c('', 'N/A', '-9999'))%>%
   filter(!is.na(Sample_Name),
          str_detect(Sample_Name, 'SSS')) %>%
@@ -133,7 +133,7 @@ ions <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/CM_SSS_Water_Ions.cs
 
 
 #downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
-resp <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v2_CM_SSS_Sediment_Normalized_Respiration_Rates.csv',
+resp <- read_csv('./Published_Data/v5_CM_SSS_Data_Package/Sample_Data/v2_CM_SSS_Sediment_Normalized_Respiration_Rates.csv',
                  skip = 2, na = c('', 'N/A', '-9999'))%>%
   filter(!is.na(Sample_Name),
          str_detect(Sample_Name, 'SSS')) %>%
@@ -144,7 +144,7 @@ resp <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v2_CM_SSS_Sediment_N
 
 
 #downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
-iron <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Sediment_Fe.csv',
+iron <- read_csv('./Published_Data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Sediment_Fe.csv',
                  skip = 2, na = c('', 'N/A', '-9999'))%>%
   filter(!is.na(Sample_Name),
          str_detect(Sample_Name, 'SSS')) %>%
@@ -154,7 +154,7 @@ iron <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Sediment_F
   ungroup()
 
 #downloaded from https://data.ess-dive.lbl.gov/datasets/doi:10.15485/1923689
-sand <- read_csv('./data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Sediment_Grain_Size.csv',
+sand <- read_csv('./Published_Data/v5_CM_SSS_Data_Package/Sample_Data/v3_CM_SSS_Sediment_Grain_Size.csv',
                skip = 2, na = c('', 'N/A', '-9999'))%>%
   filter(!is.na(Sample_Name),
          str_detect(Sample_Name, 'SSS')) %>%
@@ -184,7 +184,7 @@ all_data <- decay_temp_means %>%
 #check that there are no NA values
 # if returns any obs, there are NA values 
 # if returns 0 obs, no NA values 
-# retruning 0 x 33 so no NA values 
+# returning 0 x 33 so no NA values 
 all_data %>%
   filter(if_any(everything(), is.na))
 
@@ -309,6 +309,7 @@ for (i in 1:num_seeds) {
                              #, standardize = TRUE, standardize.response = FALSE, intercept = FALSE
   )
   
+  
   lasso_coefs = as.matrix(coef(best_lasso_model, s = best_lambda))
   
   lasso_coefs_pull[[as.character(seed)]] = lasso_coefs[-1, , drop = FALSE]
@@ -326,7 +327,7 @@ for (i in 1:num_seeds) {
 }
 
 lasso_coef_mat = as.data.frame(do.call(cbind, lasso_coefs_pull)) 
-colnames(lasso_coef_mat) = make.names(colnames(lasso_coef_mat), unique = T)
+colnames(lasso_coef_mat) <- paste0("s", seq_len(ncol(lasso_coef_mat)))
 # Make DF of all LASSO results with mean and std. dev  
 lasso_coef_means = lasso_coef_mat %>% 
   mutate(RowNames = rownames(lasso_coef_mat)) %>% 
@@ -343,8 +344,7 @@ lasso_coef_means = lasso_coef_mat %>%
 norm_coeffs_matrix = do.call(cbind, norm_coeffs)
 
 mean_coeffs = as.data.frame(norm_coeffs_matrix, row.names = rownames(norm_coeffs_matrix))
-
-colnames(mean_coeffs) = make.names(colnames(mean_coeffs), unique = T)
+colnames(mean_coeffs) <- paste0("s", seq_len(ncol(mean_coeffs)))
 
 norm_lasso_coef_means = mean_coeffs %>% 
   mutate(RowNames = rownames(mean_coeffs)) %>% 
@@ -421,14 +421,14 @@ cv_plot <- ggplot(data = all_results_long %>% mutate(response_variable = case_wh
   theme_bw()
 
 
-ggsave(
-  paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Mean_vs_CV.png"),
-  cv_plot,
-  width = 8,
-  height = 8,
-  units = 'in',
-  dpi = 300
-)
+# ggsave(
+#   paste0("./Figures/LASSO_Analysis/", as.character(Sys.Date()), "_Mean_vs_CV.png"),
+#   cv_plot,
+#   width = 8,
+#   height = 8,
+#   units = 'in',
+#   dpi = 300
+# )
 
 # absolute cv vs absolute mean; pivoted by norm/not norm and response variable; filtered cv <= 1
 ggplot(data = all_results_long %>% filter(abs(cv) <= 1), aes(x = abs(cv), y = abs(mean))) + 
