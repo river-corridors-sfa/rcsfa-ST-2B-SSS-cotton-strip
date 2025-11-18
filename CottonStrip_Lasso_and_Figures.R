@@ -248,7 +248,7 @@ rdylbu_colors <- c("#a50026", "#d73027", "#f46d43", "#fdae61", "#fee090",
 png(file = "./Figures/FigureS1_Pearson_Correlation_Matrix_Cubed.png", width = 12, height = 12, units = "in", res = 300)
 corrplot(pearson_cubed, type = "upper", method = "number", 
          col = colorRampPalette(rdylbu_colors)(200), tl.col = "black", tl.cex = 0.5, 
-         number.cex = 0.5, cl.cex = 1.25, mar = c(0, 0, 2, 0))
+         number.cex = 0.5, cl.cex = 1.25, mar = c(0, 0, 2, 0), bg = "black")
 dev.off()
 
 # ======== LASSO  ============
