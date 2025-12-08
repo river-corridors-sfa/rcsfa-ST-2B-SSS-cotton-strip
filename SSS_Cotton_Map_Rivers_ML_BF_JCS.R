@@ -2,20 +2,18 @@
 #
 # Make map for Cotton Strips
 #
-# Status: JCS edits are complete
+# Status: complete
 #
 # ==============================================================================
 #
-# Author: Brieanne Forbes 
-# 4 August 2023
-# Edited: JCS
+# Author: Brieanne Forbes, James Stegen
 # 20 Dec 2024
 # ==============================================================================
+
 library(tidyverse) #keep it tidy
 library(raster) # work with rasters, NOTE: masks dplyr::select
 library(janitor) # clean_names()
 library(ggthemes) # theme_map()
-library(ggsflabel) # add labels to sf objects
 library(ggnewscale) # set multiple color scales
 library(ggspatial) # add north arrow and scale bar
 library(nhdplusTools) # get watershed boundary/flowlines
@@ -29,28 +27,25 @@ library(viridis)
 
 rm(list=ls(all=T))
 
-# Setting wd to parent folder
-#current_path <- rstudioapi::getActiveDocumentContext()$path 
-#setwd(dirname(current_path))
-#setwd("./..")
+# Setting wd 
+current_path <- rstudioapi::getActiveDocumentContext()$path
+setwd(dirname(current_path))
 
 # ================================= User inputs ================================
 
-metadata_file <- 'v3_SSS_Data_Package/v2_SSS_Field_Metadata.csv'
+metadata_file <- './Published_Data/v3_SSS_Data_Package/v2_SSS_Field_Metadata.csv'
 
-data_file <- 'Outputs/Decay_Data.csv'
+data_file <- './Outputs/Decay_Data.csv'
 
-summary = read.csv("v3_SSS_Data_Package/Sample_Data/SSS_CottonStrip_TensileStrength_DecayRate_Summary.csv", skip = 2, header = TRUE)
-
-summary = summary %>% 
-  mutate(Sample_Name = stringr::str_extract(Sample_Name,"SSS[0-9]{3}")) %>% 
-  filter(!row_number() %in% c(1:11)) %>% 
+summary <-  read_csv("./Published_Data/v3_SSS_Data_Package/Sample_Data/SSS_CottonStrip_TensileStrength_DecayRate_Summary.csv", skip = 2)%>% 
+  mutate(Sample_Name = str_extract(Sample_Name,"SSS[0-9]{3}")) %>% 
+  filter(!is.na(Sample_Name)) %>% 
   dplyr::select(Sample_Name, Mean_Decay_Rate_per_day)
 
 
-yrb_shp_dir <- 'data/YakimaRiverBasin_Boundary/'
+yrb_shp_dir <- './Published_Data/v2_SSS_Ecosystem_Respiration_Data_Package/Figures/Map_Layers/YakimaRiverBasin_Boundary/'
 
-cluster_shp_dir <- 'data/YRB_Cluster/'
+cluster_shp_dir <- './Published_Data/v2_SSS_Ecosystem_Respiration_Data_Package/Figures/Map_Layers/YRB_Cluster/'
 
 common_crs = 4326
 
@@ -69,9 +64,6 @@ data <- data %>%
 
 merge <- data %>%
   left_join(metadata, by = c('Parent_ID' = 'Parent_ID')) 
-
-# %>%
-#   mutate(ER_wc = if_else(ER_wc > 0, 0, ER_wc))
   
 # ============================ read in YRB shp file ============================
 
@@ -86,11 +78,9 @@ sites <- st_as_sf(merge, coords = c('Longitude','Latitude'), crs = common_crs)
 
 # ======================== pull NHD data and elevation =========================
 
-#geometry <- 
-
 YRB_flowlines <- get_nhdplus(AOI = YRB_boundary$geometry, streamorder = 3)
 
-elevation_raw <- get_elev_raster(YRB_boundary, z = 10) # was YRB_boundary$geometry
+elevation_raw <- get_elev_raster(YRB_boundary, z = 10)
 
 elevation_crop <- mask(elevation_raw, YRB_boundary)
 
@@ -152,10 +142,9 @@ kdd_map <- ggplot()+
   theme(legend.position = c(0.75,0.7))
 
 full <- ggdraw() +
-  draw_plot(kdd_map) #+
-  #draw_plot(insert, x = 0.4, y = 0.4, width = 0.3, height = 0.3)
+  draw_plot(kdd_map) 
 
-ggsave('Outputs/SPS_kdd_Map.pdf',
+ggsave('./Outputs/SPS_kdd_Map.pdf',
        full,
        width = 8,
        height = 5
@@ -192,10 +181,9 @@ kcd_map <- ggplot()+
   theme(legend.position = c(0.75,0.7))
 
 full <- ggdraw() +
-  draw_plot(kcd_map) #+
-#draw_plot(insert, x = 0.4, y = 0.4, width = 0.3, height = 0.3)
+  draw_plot(kcd_map) 
 
-ggsave('Outputs/SPS_kcd_Map.pdf',
+ggsave('./Outputs/SPS_kcd_Map.pdf',
        full,
        width = 8,
        height = 5
@@ -207,23 +195,13 @@ ggsave('Outputs/SPS_kcd_Map.pdf',
 Cotton_map_cluster <- ggplot()+
   geom_sf(data = YRB_boundary)+
   geom_sf(data = cluster, aes(fill = as.factor(ClusterNum), color = as.factor(ClusterNum)), show.legend = T)+
-  # scale_fill_manual(values = alpha(c('#1a9850', 'steelblue1', '#91cf60', '#8c510a', '#d9ef8b', '#f6e8c3'), 0.3))+
-  # scale_color_manual(values = alpha(c('#1a9850', 'steelblue1', '#91cf60', '#8c510a', '#d9ef8b', '#f6e8c3'), 0.2))+
   scale_fill_manual(values = c('#1a9850', 'steelblue1', '#91cf60', '#8c510a', '#d9ef8b', '#f6e8c3'))+
   scale_color_manual(values = c('#1a9850', 'steelblue1', '#91cf60', '#8c510a', '#d9ef8b', '#f6e8c3'))+
   geom_sf(data = YRB_flowlines, color = "royalblue")+
   new_scale_fill()+
   new_scale_color()+
-  # geom_sf(data = sites, aes(color = ER_wc, size = ER_wc), show.legend = T) +
-  # geom_sf(data = sites, aes(size = ER_wc), show.legend = T, shape = 18, fill = 'white', color = 'black') +
   geom_sf(data = sites, show.legend = F, size = 3) +
-  # scale_fill_viridis(option = 'B', begin = 0.3)+
-  # scale_color_viridis(option = 'B', begin = 0.3)+
-  # scale_fill_gradient(low = 'white', high = 'black')+
-  # scale_color_gradient(low = 'white', high = 'black')+
-  # scale_size(range = c(0.1, 10), trans = 'reverse')+
   theme_map() +
-  # labs(x = "", y = "", color = "Water Column\nRespiration\n(mg O2 L-1 day-1)") +
   ggspatial::annotation_scale(
     location = "br",
     pad_x = unit(0.5, "in"),
@@ -231,7 +209,6 @@ Cotton_map_cluster <- ggplot()+
   ggspatial::annotation_north_arrow(
     location = "tl", which_north = "true",
     pad_x = unit(1.5, "in"),
-    # pad_y = unit(0.5, "in"),
     style = ggspatial::north_arrow_nautical(
       fill = c("black", "white"),
       line_col = "grey20"))
@@ -240,7 +217,7 @@ full_cluster <- ggdraw() +
   draw_plot(Cotton_map_cluster) +
   draw_plot(insert, x = 0.4, y = 0.4, width = 0.3, height = 0.3)
 
-ggsave('Outputs/Cotton_Map_Cluster.pdf',
+ggsave('./Outputs/Cotton_Map_Cluster.pdf',
        full_cluster,
        width = 8,
        height = 5
