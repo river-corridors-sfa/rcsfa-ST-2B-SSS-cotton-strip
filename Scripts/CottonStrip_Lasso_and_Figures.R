@@ -20,6 +20,7 @@ rm(list=ls(all=T))
 # Setting wd to parent folder
 current_path <- rstudioapi::getActiveDocumentContext()$path 
 setwd(dirname(current_path))
+setwd('./../')
 
 # =================================== user input ===============================
 

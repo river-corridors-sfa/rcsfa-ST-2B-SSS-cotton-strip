@@ -13,7 +13,7 @@ library(tidyverse);library(dplyr);library(ggplot2)
 
 ```{r Data}
 
-site_id_full <- read.csv("v3_SSS_Data_Package/v2_SSS_Field_Metadata.csv")
+site_id_full <- read.csv("./Published_Data/v3_SSS_Data_Package/v2_SSS_Field_Metadata.csv")
 
 site_id <- site_id_full %>% 
   mutate(Site_ID = ifelse(Site_ID == "S55","S55N", Site_ID)) %>% 
