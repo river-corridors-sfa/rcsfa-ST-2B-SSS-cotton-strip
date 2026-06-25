@@ -22,5 +22,7 @@ The manuscript associated with this repo can be found below:
 ## Data Reference
 In addition to this repo, the Data Package is published and publicly available on ESS-DIVE. If using these data, please cite the Data Package with the following citation and DOI:  
 > Stegen J C ; Barnes M E ; Delgado D ; Forbes B ; Garayburu-Caruso V A ; Goldman A E ; Laan M ; McKever S A ; Regier P ; Renteria L ; Tiegs S D (2025): Data and scripts associated with “Basin-scale connections between reach-scale sediment respiration and point-scale organic-matter decomposition”. River Corridor Hydro-biogeochemistry from Molecular to Multi-Basin Scales SFA, ESS-DIVE repository. Dataset. [doi:10.15485/3008446](https://data.ess-dive.lbl.gov/datasets/doi:10.15485/3008446)
+## License
+This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/. Please also see this [disclaimer](https://github.com/river-corridors-sfa/RCSFA_GitHub_Organization_Guidance/blob/main/DISCLAIMER.md).
 ## Contact
 James Stegen, james.stegen@pnnl.gov
